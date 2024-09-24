@@ -86,6 +86,9 @@
                 margin-top: 10rem;
                 margin-bottom: 5rem;
             }
+            .img-container{
+                border-radius: 0;
+            }
         }
         .titles p{
             font-family: 'Sora', sans-serif;
@@ -570,8 +573,110 @@
     opacity: 1;
     transform: translateY(0); 
 }
+.imgtasks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 50%;
+    border-radius: 30px;
+    height: auto;
+}
+.tasks-container2{
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem;
+    background-color: red;
+    border-radius: 30px;
+}
+.info-tasks{
+    display: flex;
+    justify-content: center;
+}
 
+.container-tasks2 {
+    display: flex;
+    max-width: 100%;
+    margin: 5rem 0 0 0;
+    background-color: #00b389;
+    justify-content: space-around;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
 
+.content {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 20px 0;
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.sidebar {
+    width: 40%;
+
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    padding: 0 5rem 3rem 5rem;
+}
+
+.sidebar p {
+    font-size: 16px;
+    padding: 0 0 2rem 2rem;
+}
+@media (max-width: 768px) {
+    .container-tasks2 {
+        flex-direction: column; 
+    }
+
+    .content {
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-tasks2 {
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+
+    .content {
+        padding: 5px;
+    }
+
+    .sidebar h3 {
+        font-size: 18px; 
+        padding: 3rem 3rem 1rem 3rem;
+    }
+
+    .sidebar p {
+        font-size: 14px;
+        text-align: center;
+        padding: 0 2rem 2rem 2rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -752,6 +857,7 @@
     </div>
     </div>
 
+    <!-- TASKS SECTION -->
     <section class="tasks-section">
         <h2>Tipos de secciones y tareas</h2>
         <div class="tasks-container">
@@ -781,6 +887,25 @@
             </div>
         </div>
     </section>
+
+    <div class="container-tasks2">
+        <div class="content">
+            <img src="./img/dc1.png" alt="Contenido de integridad académica" class="content-image">
+        </div>
+        <div class="sidebar">
+            <h3>Desarrollos de contenido</h3>
+            <p>Haciendo click en el botón de editar puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</p>
+        </div>
+    </div>
+    <div class="container-tasks2">
+        <div class="sidebar">
+            <h3>Foros</h3>
+            <p>Haciendo click en el botón de editar puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</p>
+        </div>
+        <div class="content">
+            <img src="./img/dc1.png" alt="Contenido de integridad académica" class="content-image">
+        </div>
+    </div>
 
     <script>
 window.addEventListener('scroll', function() {
