@@ -1,0 +1,1181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inducción a la Plataforma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,600,0,0" />
+    <link rel="stylesheet" href="./normalize.css">
+    <!-- <a href="https://lordicon.com/">Icons by Lordicon.com</a> -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-size: 62.5%;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            font-size: 1.6rem;
+        }
+        @media only screen and (min-width: 1200px) {
+            body {
+                width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .img-container {
+            position: relative;
+            display: block;
+            width: 100%;
+            max-height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 0 0 16px 16px;
+            overflow: hidden;
+        }
+        .img-container img {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            max-height: auto;
+            opacity: 0.3; /* Adjusted for a stronger overlay effect */
+        }
+        .img-container::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+        }
+        .img-text {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4.5rem; /* Larger font size */
+            color: white;
+            font-family: 'Sora', sans-serif;
+            font-weight: bold; /* Bold text */
+            text-align: center;
+            z-index: 1;
+        }
+        @media (max-width: 576px) {
+        .img-text{
+            font-size: 2.2rem;
+            top: 40%;
+            left: 50%;
+        }
+        }
+        .titles{
+            font-size: clamp(30px, calc(3rem + 2vw), 60px);
+            text-align: center;
+            margin-top: 10rem;
+            margin-bottom: 10rem;
+            transition: ease-in;
+        }
+        @media (max-width: 768px) {
+            .titles{
+                margin-top: 10rem;
+                margin-bottom: 5rem;
+            }
+            .img-container{
+                border-radius: 0;
+            }
+        }
+        .titles p{
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+        }
+        .img-sct1{
+            position: relative;
+            display: block;
+            width: 80%;
+            max-height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 0 0 30px 30px;
+            overflow: hidden;
+            margin-top: 6rem;
+            border-radius: 30px 30px;
+        }
+        .img-sct1 img{
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            max-height: auto;
+            opacity: 0; /* Oculto inicialmente */
+            transition: opacity 1s ease-in-out; /* Transición suave de opacidad */
+        }
+        @media (max-width: 576px) {
+            .img-sct1{
+                border-radius: 0;
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            .text-sct1{
+                margin: 5rem !important;
+            }
+        }
+        .text-sct1{
+            margin: 5rem 15rem 5rem 15rem;
+            font-size: clamp(20px, calc(1rem + 1vw), 32px);
+            text-align: justify;
+            line-height: 1.2em;
+        }
+        .text-sct1 p{
+            font-family: "Poppins", sans-serif;
+        }
+                /* Section Primeros Pasos */
+                .section-container-steps{
+            background-color: #fde7e7;
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            flex-direction: column;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5rem 5rem 15rem 5rem;
+            margin: 10rem 0 10rem 0;
+            opacity: 0; 
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            transform: translateY(50px); 
+        }
+        .section-container-steps.visible {
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+        .section-container-steps-title{
+            display: flex;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 5rem;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: clamp(20px, calc(3rem + 2vw), 30px);
+        }
+        .section-container-steps-subtitle{
+            margin: 0 auto;
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            line-height: 36px;
+            margin-top: 4rem;
+            width: 80%;
+            font-size: clamp(12px, calc(1rem + 2vw), 20px);
+        }
+        .section-container-steps1{
+            position: relative;
+            display: block;
+            width: 80%;
+            max-height: 600px; 
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            margin-top: 6rem;
+            border-radius: 30px;  
+        }
+        .section-container-steps1 img{
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            max-height: auto;
+        }
+        .sub-section-container-steps{
+            justify-content: space-evenly;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            max-width: 100%;
+            height: auto;
+            margin: 5rem 0 0 0;
+        }
+        .sub-section-steps-img1{
+            display: flex;
+            width: 40%;
+            max-height: 600px;
+            overflow: hidden;
+            margin-top: 6rem;
+            height: auto;
+            border-radius: 30px 30px;  
+        }
+        .sub-section-steps-img1 img{
+            width: 100%;
+            max-height: 600px;
+            height: auto;
+            object-fit: contain;
+        }
+        .sub-section-steps-text-1{
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            font-family: "Sora", sans-serif;
+        }
+        .sub-section-steps-text-2{
+            font-family: "Poppins", sans-serif;
+            font-size: 1.6rem;
+            margin-top: 3rem;
+            line-height: 25px;
+        }
+        .sub-text-container-steps-1{
+            max-width: 100%;
+            height: auto;
+            width: 40rem;
+        }
+        @media (max-width: 768px) {
+            .section-container-steps1{
+                width: 100%;
+            }
+            .sub-section-steps-img1{
+                width: 100%;
+                margin-bottom: 5rem;
+            }
+            .invert{
+                flex-direction: column-reverse !important;
+            }
+            .sub-section-steps-text-2{
+                text-align: center;
+            }
+        }
+/* PROFILE */
+        .section-container-profile{
+            background-color: rgb(253, 238, 231);
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            flex-direction: column;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5rem 5rem 15rem 5rem;
+            margin: 10rem 0 10rem 0;
+            opacity: 0; 
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            transform: translateY(50px); 
+        }
+        .section-container-profile.visible {
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+        .section-container-profile-title{
+            display: flex;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 5rem;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: clamp(20px, calc(3rem + 2vw), 30px);
+        }
+        .section-container-profile-subtitle{
+            margin: 0 auto;
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin-top: 4rem;
+            font-size: clamp(16px, calc(3rem + 2vw), 20px);
+        }
+        .section-container-profile1{
+            position: relative;
+            display: block;
+            width: 80%;
+            max-height: 600px; 
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            margin-top: 6rem;
+            border-radius: 30px 30px;  
+        }
+        .section-container-profile1 img{
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            max-height: auto;
+        }
+        .sub-section-container-profile{
+            justify-content: space-evenly;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            max-width: 100%;
+            height: auto;
+            margin: 5rem 0 0 0;
+        }
+        .sub-section-img1{
+            display: flex;
+            width: 40%;
+            max-height: 600px;
+            overflow: hidden;
+            margin-top: 6rem;
+            height: auto;
+            border-radius: 30px 30px;  
+        }
+        .sub-section-img1 img{
+            width: 100%;
+            max-height: 600px;
+            height: auto;
+            object-fit: contain;
+        }
+        .sub-section-text-1{
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            font-family: "Sora", sans-serif;
+        }
+        .sub-section-text-2{
+            font-family: "Poppins", sans-serif;
+            font-size: 1.6rem;
+            margin-top: 3rem;
+            line-height: 25px;
+        }
+        .sub-text-container-1{
+            max-width: 100%;
+            height: auto;
+            width: 40rem;
+        }
+        @media (max-width: 768px) {
+            .section-container-profile1{
+                width: 100%;
+            }
+            .sub-section-img1{
+                width: 100%;
+                margin-bottom: 5rem;
+            }
+            .invert{
+                flex-direction: column-reverse !important;
+            }
+            .sub-section-text-2{
+                text-align: center;
+            }
+        }
+
+        lord-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            margin: 0 auto;
+            margin-top: 5rem;
+            width: 100%; 
+            height: auto;
+            display: block; 
+}
+
+/* CLASES */
+.section-container-clases{
+            background-color: #e7f0fd;
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            flex-direction: column;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5rem 5rem 10rem 5rem;
+            margin: 10rem 0 5rem 0;
+            opacity: 0; 
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            transform: translateY(50px); 
+        }
+        .section-container-clases.visible {
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+        .section-container-clases-title{
+            display: flex;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 5rem;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: clamp(20px, calc(3rem + 2vw), 30px);
+        }
+        .section-container-clases-subtitle{
+            margin: 0 auto;
+            display: flex;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin-top: 4rem;
+            font-size: clamp(16px, calc(3rem + 2vw), 20px);
+        }
+        .section-container-clases1{
+            position: relative;
+            display: block;
+            width: 80%;
+            max-height: 600px; 
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            margin-top: 6rem;
+            border-radius: 30px 30px;  
+        }
+        .section-container-clases1 img{
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            max-height: auto;
+        }
+        .sub-section-container-clases{
+            justify-content: space-evenly;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            max-width: 100%;
+            height: auto;
+            margin: 5rem 0 0 0;
+        }
+        .sub-section-img1{
+            display: flex;
+            width: 40%;
+            max-height: 600px;
+            overflow: hidden;
+            margin-top: 6rem;
+            height: auto;
+            border-radius: 30px 30px;  
+        }
+        .sub-section-img1 img{
+            width: 100%;
+            max-height: 600px;
+            height: auto;
+            object-fit: contain;
+        }
+        .sub-section-text-1{
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            font-family: "Sora", sans-serif;
+        }
+        .sub-section-text-2{
+            font-family: "Poppins", sans-serif;
+            font-size: 1.6rem;
+            margin-top: 3rem;
+            line-height: 25px;
+        }
+        .sub-text-container-1{
+            max-width: 100%;
+            height: auto;
+            width: 40rem;
+        }
+        @media (max-width: 768px) {
+            .section-container-clases1{
+                width: 100%;
+            }
+            .sub-section-img1{
+                width: 100%;
+                margin-bottom: 5rem;
+            }
+            .invert{
+                flex-direction: column-reverse !important;
+            }
+            .sub-section-text-2{
+                text-align: center;
+            }
+        }
+
+        /* BLOCK-CONTAINER */
+        .tasks-section {
+    background-color: #424242;
+    color: white;
+    padding: 40px;
+    border-radius: 60px;
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+}
+
+.tasks-section h2 {
+    font-size: 4rem;
+    margin: 4rem;
+}
+
+.tasks-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los items hagan wrap en pantallas pequeñas */
+    margin: 0 auto;
+    justify-content: space-around;
+    width: 70%;
+    padding: 5rem 0 5rem 0;
+    gap: 20px;
+}
+
+.task-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.task-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.task-item p {
+    font-size: 1.6rem;
+}
+
+.material-symbols-outlined {
+    font-size: 7rem !important;
+    margin-bottom: 2rem;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 100;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .tasks-section{
+        border-radius: 16px;
+        padding: 2rem;
+    }
+    .tasks-container {
+        flex-direction: column;
+        width: 100%; 
+        padding: 5rem 0; 
+    }
+    
+    .task-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .material-symbols-outlined {
+        font-size: 5rem !important;
+    }
+
+    .task-item p {
+        font-size: 1.4rem; 
+    }
+
+    .tasks-section h2 {
+        font-size: 2.5rem;
+        margin: 2rem;
+    }
+}
+
+.tasks-section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(50px); 
+}
+
+.tasks-section.visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+.imgtasks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 50%;
+    border-radius: 30px;
+    height: auto;
+}
+.tasks-container2{
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem;
+    background-color: red;
+    border-radius: 30px;
+}
+.info-tasks{
+    display: flex;
+    justify-content: center;
+}
+
+.container-tasks2 {
+    display: flex;
+    max-width: 100%;
+    margin: 3rem 0 0 0;
+    justify-content: space-around;
+    border-radius: 30px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.frstcolor {
+    background-color: #00b389;
+}
+.scndcolor {
+    background-color: #009eb3;
+}
+.trdcolor {
+    background-color: #b30048;
+}
+.frthcolor {
+    background-color: #b30074;
+}
+
+.content {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 20px 0;
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.sidebar {
+    width: 40%;
+
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    padding: 0 5rem 3rem 5rem;
+}
+
+.sidebar p {
+    font-size: 16px;
+    padding: 0 0 2rem 2rem;
+}
+@media (max-width: 768px) {
+    .container-tasks2 {
+        flex-direction: column; 
+        border-radius: 16px;
+    }
+
+    .content {
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+}
+@media (max-width: 576px) {
+    .container-tasks2 {
+        padding: 2rem;
+        margin: 2rem 0;
+    }
+
+    .content {
+        padding: 5px;
+    }
+
+    .sidebar h3 {
+        font-size: 18px; 
+        padding: 3rem 3rem 1rem 3rem;
+    }
+
+    .sidebar p {
+        font-size: 14px;
+        text-align: center;
+        padding: 0 2rem 2rem 2rem;
+    }
+    .reverse{
+        flex-direction: column-reverse !important;
+    }
+}
+.tasks2-section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(50px); 
+    margin-top: 5rem;
+}
+
+.tasks2-section.visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+.container-tasks3{
+    display: flex;
+    max-width: 100%;
+    margin: 3rem 0 0 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    background-color: #424242;
+}
+.sb-ctn-1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding: 7rem 5rem 3rem 5rem;
+    text-align: center;
+    color: #ffffffff;
+}
+.sb-ctn-2{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    padding: 5rem;
+    color: #ffffffff;
+}
+.sb-ctn-3{
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    width: 100%;
+    margin: 5rem;
+    margin: 0 auto;
+}
+.sb-ctn-3 img{
+    border-radius: 30px;
+    width: 100%;
+    margin: 0 5rem 5rem 5rem;
+}
+@media (max-width: 768px) {
+    .container-tasks3 {
+        border-radius: 16px;
+    }
+    .sb-ctn-3{
+        padding: 2rem;
+    }
+}
+.logos-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.logo-img, .logo-img2 {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .logos-container {
+        flex-direction: row;
+        justify-content: center;
+        top: 5%;
+    }
+
+    .logo-img, .logo-img2 {
+        max-width: 150px;
+        margin: 1rem 2rem 2rem 2rem !important;
+    }
+}
+.mobile-container{
+    display: flex;
+    max-width: 100%;
+    margin: 3rem 0 0 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    background-color: #424242;
+}
+.mobile-img{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 5rem;
+    margin: 0 auto;
+}
+.mobile-img img{
+    border-radius: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.mobile-title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding: 7rem 5rem 3rem 5rem;
+    text-align: center;
+    color: #ffffffff;
+}
+.mobile-text{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5rem;
+    color: #ffffffff;
+}
+.mobile-text2{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 5rem;
+    color: #ffffffff;
+}
+.mobile-text3{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5rem;
+    color: #ffffffff;
+}
+.mobile-text3{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5rem;
+    color: #ffffffff;
+}
+    </style>
+</head>
+<body>
+    <div class="img-container">
+        <img src="./img/pexels-fauxels-3184170.jpg" alt="Inducción a la plataforma">
+        <div class="logos-container">
+            <img src="./img/LogoUSBMxBco (4).png" alt="Logo"class="logo-img2">
+        <img src="./img/USBOnline_bco (5).png" alt="Logo"class="logo-img">
+    </div>
+        <div class="img-text">Inducción a la plataforma</div>
+    </div>
+    <div class="titles"><p>Acceso a la plataforma</p></div>
+    <div class="img-sct1"><img src="./img/Captura de pantalla 2024-08-27 a la(s) 18.18.28.png" alt=""></div>
+    <div class="text-sct1"><p>Acceder a NeoLMS es el primer paso para iniciar tu experiencia de aprendizaje en línea en USBOnline. Una vez dentro, podrás explorar los cursos, interactuar con tus profesores y compañeros, y utilizar las herramientas que ofrece la plataforma para optimizar tu proceso de estudio.</p>
+        <p>En las siguientes secciones, te familiarizarás con el proceso de inicio de sesión, la modificación de tu perfil y otras secciones específicas.</p>
+    
+    </div>
+    
+    <div class="section-container-steps">
+        <div class="section-container-steps-title">Primeros pasos</div>
+        <!-- ¡Genial! Si estás leyendo esto, significa que ya has logrado iniciar sesión correctamente.  -->
+        <div class="section-container-steps-subtitle">Ahora, tomémonos un momento para repasar juntos los primeros pasos para que puedas aprovechar al máximo la plataforma</div>
+        <lord-icon
+        src="https://cdn.lordicon.com/lomfljuq.json"
+        trigger="in"
+        delay="500"
+        state="in-check"
+        colors="primary:#16c72e"
+        style="width:125px;height:125px">
+        </lord-icon>        
+        <div class="sub-section-container-steps">
+            <div class="sub-section-steps-img1"><img src="./img/steps-1.jpg" alt=""></div>
+            <div class="sub-text-container-steps-1">
+                <div class="sub-section-steps-text-1">Ingreso a la plataforma</div>
+                <div class="sub-section-steps-text-2">Previo al inicio de un curso te será enviado a tu correo electrónico institucional, a través de USBOnline un usuario y contraseña para ingresar a la plataforma.
+                    *No olvides revisar las sección de notificaciones de tu bandeja de entrada.</div>
+            </div>
+            </div>
+            <div class="sub-section-container-steps invert">
+                <div class="sub-text-container-steps-1">
+                    <div class="sub-section-steps-text-1">Inicio de sesión</div>
+                    <div class="sub-section-steps-text-2">Ingresar a la plataforma con el ID de
+                        usuario y contraseña.
+                        En caso de tener una contraseña encriptada
+                        (*****) deberás copiarla y pegarla desde el correo.</div>
+                </div>
+                <div class="sub-section-img1"><img src="./img/steps-2.jpg" alt=""></div>
+
+                <div class="sub-section-container-steps">
+                    <div class="sub-section-steps-img1"><img src="./img/steps-3.jpg" alt=""></div>
+                    <div class="sub-text-container-steps-1">
+                        <div class="sub-section-steps-text-1">Pantalla principal</div>
+                        <div class="sub-section-steps-text-2">Esta es la pantalla principal de la plataforma NEOLMS de la USBOnline, donde tendrás acceso a tus clases.</div>
+                    </div>
+                    </div>
+                    <div class="sub-section-container-steps invert">
+                        <div class="sub-text-container-steps-1">
+                            <div class="sub-section-steps-text-1">Cierre de sesión</div>
+                            <div class="sub-section-steps-text-2">
+                                Para cerrar sesión, haz clic en la flecha desplegable y selecciona "Cerrar Sesión" en la ventana emergente.
+                            </div>
+                        </div>
+                        <div class="sub-section-img1"><img src="./img/steps-4.jpg" alt=""></div>
+                </div>
+                <div class="sub-section-container-steps">
+                    <div class="sub-section-steps-img1"><img src="./img/steps-5.jpg" alt=""></div>
+                    <div class="sub-text-container-steps-1">
+                        <div class="sub-section-steps-text-1">Acceso a plataformas</div>
+                        <div class="sub-section-steps-text-2">A través de los botones del panel derecho podras accesar a las diversas multiplataformas de la universidad, Sayal, Innovat y Elibro</div>
+                    </div>
+                    </div>
+        </div>
+    </div>
+
+    <!-- PROFILE SECTION -->
+
+    <div class="section-container-profile">
+        <div class="section-container-profile-title">Modificar perfil</div>
+        <div class="section-container-profile-subtitle">Puedes aplicar cambios en tu perfil entrando en la sección con tu nombre</div>
+        <lord-icon
+        src="https://cdn.lordicon.com/hrjifpbq.json"
+        trigger="in"
+        delay="500"
+        state="in-account"
+        colors="primary:#30c9e8"
+        style="width:125px;height:125px">
+        </lord-icon>
+        <div class="section-container-profile1"><img src="./img/Captura de pantalla 2024-08-27 a la(s) 20.13.27.png" alt=""></div>
+        <div class="sub-section-container-profile">
+            <div class="sub-section-img1"><img src="./img/Captura de pantalla 2024-09-03 a la(s) 17.12.22.png" alt=""></div>
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Clic en editar</div>
+                <div class="sub-section-text-2">Haciendo clic en el botón de editar se desplegará una ventana emergente de opciones para poder editar tu perfil.</div>
+            </div>
+            </div>
+            <div class="sub-section-container-profile invert">
+                <div class="sub-text-container-1">
+                    <div class="sub-section-text-1">Edición</div>
+                    <div class="sub-section-text-2">En esta ventana puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</div>
+                </div>
+                <div class="sub-section-img1"><img src="./img/Captura de pantalla 2024-09-03 a la(s) 17.20.18.png" alt=""></div>
+                </div>
+        </div>
+    </div>
+
+    <!-- CLASES SECTION -->
+
+    <div class="section-container-clases">
+        <div class="section-container-clases-title">Acciones y funciones de clases</div>
+        <div class="section-container-clases-subtitle">Conoce las principales acciones y funciones dentro de la plataforma</div>
+        <lord-icon
+        src="https://cdn.lordicon.com/depeqmsz.json"
+        trigger="in"
+        delay="500"
+        state="in-article"
+        colors="primary:#e88c30"
+        style="width:125px;height:125px">
+        </lord-icon>
+        <div class="sub-section-container-clases">
+            <div class="sub-section-img1"><img src="./img/clases0.png" alt=""></div>
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Matriculación</div>
+                <div class="sub-section-text-2">En este paso, ya estarás matriculado o
+                    inscrito a la (s) clase (s). También te llegará
+                    por correo una notificación.</div>
+            </div>
+        </div>
+        <div class="sub-section-container-clases invert">
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Acceso a clases</div>
+                <div class="sub-section-text-2">Pasa el cursor sobre el panel izquierdo en "Clases". Luego, haz clic en la ventana emergente para entrar. En este punto ya estarás matriculado en alguna clase.</div>
+            </div>
+            <div class="sub-section-img1"><img src="./img/clases1.jpg" alt=""></div>
+        </div>
+        <div class="sub-section-container-clases">
+            <div class="sub-section-img1"><img src="./img/clases2.jpg" alt=""></div>
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Lecciones</div>
+                <div class="sub-section-text-2">Al ingresar, verás las lecciones de la clase. Da clic desde la lección de bienvenida para iniciar con tu curso.</div>
+            </div>
+        </div>
+        <div class="sub-section-container-clases invert">
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Secciones</div>
+                <div class="sub-section-text-2">Accederás a secciones específicas donde podrás avanzar paso a paso en tu estudio y completar el contenido.</div>
+            </div>
+            <div class="sub-section-img1"><img src="./img/clases3.jpg" alt=""></div>
+        </div>
+        <div class="sub-section-container-clases">
+            <div class="sub-section-img1"><img src="./img/clases4.jpg" alt=""></div>
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Tareas</div>
+                <div class="sub-section-text-2">Accede a "Tareas" para ver el estado, fechas límite y calificaciones de tus actividades.</div>
+            </div>
+        </div>
+        <div class="sub-section-container-clases invert">
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Recursos</div>
+                <div class="sub-section-text-2">Aquí podrás acceder a materiales compartidos que enriquecerán tu aprendizaje y facilitarán tu estudio.</div>
+            </div>
+            <div class="sub-section-img1"><img src="./img/clases5.jpg" alt=""></div>
+        </div>
+        <div class="sub-section-container-clases">
+            <div class="sub-section-img1"><img src="./img/clases6.jpg" alt=""></div>
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Profesores</div>
+                <div class="sub-section-text-2">En el área de profesores, podrás contactarlos para resolver dudas, obtener retroalimentación y recibir apoyo en tu proceso de aprendizaje.</div>
+            </div>
+        </div>
+        <div class="sub-section-container-clases invert">
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Estudiantes</div>
+                <div class="sub-section-text-2">En el apartado de estudiantes, podrás interactuar con tus compañeros y colaborar en proyectos.</div>
+            </div>
+            <div class="sub-section-img1"><img src="./img/clases7.jpg" alt=""></div>
+        </div>
+        <div class="sub-section-container-clases">
+            <div class="sub-section-img1"><img src="./img/clases8.jpg" alt=""></div>
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Asistencia</div>
+                <div class="sub-section-text-2">Podrás registrar tu asistencia en las sesiones síncronas programas por tu docente.</div>
+            </div>
+        </div>
+        <div class="sub-section-container-clases invert">
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Portafolio</div>
+                <div class="sub-section-text-2">En este espacio, podrás recopilar y mostrar tus trabajos y proyectos.</div>
+            </div>
+            <div class="sub-section-img1"><img src="./img/clases9.jpg" alt=""></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- TASKS SECTION -->
+    <section class="tasks-section">
+        <h2>Tipos de secciones y tareas</h2>
+        <div class="tasks-container">
+            <div class="task-item">
+                <span class="material-symbols-outlined">
+                    description
+                    </span>
+                <p>Desarrollos de contenido</p>
+            </div>
+            <div class="task-item">
+                <span class="material-symbols-outlined">
+                    campaign
+                    </span>
+                <p>Foros</p>
+            </div>
+            <div class="task-item">
+                <span class="material-symbols-outlined">
+                    assignment
+                    </span>
+                <p>Cuestionarios</p>
+            </div>
+            <div class="task-item">
+                <span class="material-symbols-outlined">
+                    cloud_upload
+                    </span>
+                <p>Espacio para subir en la nube</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="tasks2-section">
+    <div class="container-tasks2 frstcolor">
+        <div class="content">
+            <img src="./img/dc1.png" alt="Contenido de integridad académica" class="content-image">
+        </div>
+        <div class="sidebar">
+            <h3>Desarrollos de contenido</h3>
+            <p>Aquí podrás explorar la exposición del tema y subtemas de tu clase, además de disfrutar de contenido dinámico diseñado para ayudarte en tu aprendizaje.</p>
+        </div>
+    </div>
+    <div class="container-tasks2 invert scndcolor">
+        <div class="sidebar">
+            <h3>Foros</h3>
+            <p>En este espacio, podrás presentarte y participar en diversas discusiones sobre temas relevantes con tus compañeros y profesores.</p>
+        </div>
+        <div class="content">
+            <img src="./img/fr1.png" alt="Contenido de integridad académica" class="content-image">
+        </div>
+    </div>
+    <div class="container-tasks2 trdcolor">
+        <div class="content">
+            <img src="./img/cu1.png" alt="Contenido de integridad académica" class="content-image">
+        </div>
+        <div class="sidebar">
+            <h3>Cuestionarios</h3>
+            <p>A lo largo de la clase, realizarás evaluaciones para demostrar tu conocimiento sobre los contenidos abordados. Estos estarán habilitados de acuerdo a la naturaleza de cada curso.</p>
+        </div>
+    </div>
+    <div class="container-tasks2 invert frthcolor">
+        <div class="sidebar">
+            <h3>Espacio para subir en la nube</h3>
+            <p>En esta sección, podrás cargar tus actividades en la nube para que sean evaluadas y revisadas. Estos estarán habilitados de acuerdo a la naturaleza de cada curso.</p>
+        </div>
+        <div class="content">
+            <img src="./img/nu1.png" alt="Contenido de integridad académica" class="content-image">
+        </div>
+    </div>
+    <div class="container-tasks3">
+        <div class="sub-container-tasks3">
+            <div class="sb-ctn-1">Visualización de progreso</div>
+            <div class="sb-ctn-2">En este apartado, podrás ver el progreso de tu aprendizaje, así como calificaciones y puntuaciones.</div>
+            <div class="sb-ctn-3"><img src="./img/pg1.png" alt=""></div>
+        </div>
+    </div>
+</section>
+
+<section class="mobile">
+<div class="mobile-container">
+    <div class="sub-mobile-container">
+        <div class="mobile-title">Acceso mobile</div>
+        <div class="mobile-text">Para acceder desde un dispositivo móvil deberás dercargar la app en la app store o google play store, encontraras la app como NEO LMS </div>
+        <div class="mobile-img"><img src="./img/mobile1.jpeg" alt=""></div>
+        <div class="mobile-text2" style="margin-top: 5rem; margin-bottom: 5rem;">Una vez que abras la app, tendrás que introducir el dominio de la universidad, el cual es https://usbmexicoonline.neolms.com/ Posterior a esto haras click en el botón de continuar</div>
+        <div class="mobile-img"><img src="./img/mobile2.jpg" alt=""></div>
+        <div class="mobile-text">Finalizado este paso, tendrás acceso a la plataforma y a tus clases desde tus distintos dispositivos.</div>
+        <div class="mobile-img" style="margin-bottom: 5rem;"><img src="./img/mobile3.jpeg" alt=""></div>
+    </div>
+</div>
+</section>
+    <script>
+window.addEventListener('scroll', function() {
+    const img = document.querySelector('.img-sct1 img');
+    const imgPosition = img.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+
+    if (imgPosition < screenPosition) {
+        img.style.opacity = '1';
+    }
+
+    const profileSection = document.querySelector('.section-container-profile');
+    const profileSectionPosition = profileSection.getBoundingClientRect().top;
+
+    if (profileSectionPosition < screenPosition) {
+        profileSection.classList.add('visible');
+    }
+
+    const stepsSection = document.querySelector('.section-container-steps');
+    const stepsSectionPosition = stepsSection.getBoundingClientRect().top;
+
+    if (stepsSectionPosition < screenPosition) {
+        stepsSection.classList.add('visible');
+    }
+    const clasesSection = document.querySelector('.section-container-clases');
+    const clasesSectionPosition = clasesSection.getBoundingClientRect().top;
+
+    if (clasesSectionPosition < screenPosition) {
+        clasesSection.classList.add('visible');
+    }
+    const tasksSection = document.querySelector('.tasks-section');
+    const tasksSectionPosition = tasksSection.getBoundingClientRect().top;
+
+    if (tasksSectionPosition < screenPosition) {
+        tasksSection.classList.add('visible');
+    }
+    if (clasesSectionPosition < screenPosition) {
+        clasesSection.classList.add('visible');
+    }
+    const tasks2Section = document.querySelector('.tasks2-section');
+    const tasks2SectionPosition = tasks2Section.getBoundingClientRect().top;
+
+    if (tasks2SectionPosition < screenPosition) {
+        tasks2Section.classList.add('visible');
+    }
+});
+    </script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+</html>
