@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,600,0,0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./normalize.css">
     <!-- <a href="https://lordicon.com/">Icons by Lordicon.com</a> -->
     <style>
@@ -33,7 +34,7 @@
             position: relative;
             display: block;
             width: 100%;
-            max-height: 600px;
+            max-height: 500px;
             margin-left: auto;
             margin-right: auto;
             border-radius: 0 0 16px 16px;
@@ -53,7 +54,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
         }
         .img-text {
             position: absolute;
@@ -77,7 +78,7 @@
         .titles{
             font-size: clamp(30px, calc(3rem + 2vw), 60px);
             text-align: center;
-            margin-top: 20rem;
+            margin-top: 10rem;
             margin-bottom: 10rem;
             transition: ease-in;
         }
@@ -120,7 +121,7 @@
                 width: 100%;
             }
         }
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
             .text-sct1{
                 margin: 5rem !important;
             }
@@ -190,7 +191,7 @@
             max-height: auto;
         }
         .sub-section-container-steps{
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
             display: flex;
             flex-wrap: wrap;
@@ -229,7 +230,7 @@
         .sub-text-container-steps-1{
             max-width: 100%;
             height: auto;
-            width: 30rem;
+            width: 40rem;
         }
         @media (max-width: 768px) {
             .section-container-steps1{
@@ -300,7 +301,7 @@
             max-height: auto;
         }
         .sub-section-container-profile{
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
             display: flex;
             flex-wrap: wrap;
@@ -339,7 +340,7 @@
         .sub-text-container-1{
             max-width: 100%;
             height: auto;
-            width: 30rem;
+            width: 40rem;
         }
         @media (max-width: 768px) {
             .section-container-profile1{
@@ -378,8 +379,8 @@
             flex-direction: column;
             display: flex;
             flex-wrap: wrap;
-            padding: 5rem 5rem 15rem 5rem;
-            margin: 10rem 0 10rem 0;
+            padding: 5rem 5rem 10rem 5rem;
+            margin: 10rem 0 5rem 0;
             opacity: 0; 
             transition: opacity 1s ease-in-out, transform 1s ease-in-out;
             transform: translateY(50px); 
@@ -423,7 +424,7 @@
             max-height: auto;
         }
         .sub-section-container-clases{
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
             display: flex;
             flex-wrap: wrap;
@@ -462,7 +463,7 @@
         .sub-text-container-1{
             max-width: 100%;
             height: auto;
-            width: 30rem;
+            width: 40rem;
         }
         @media (max-width: 768px) {
             .section-container-clases1{
@@ -502,7 +503,7 @@
     margin: 0 auto;
     justify-content: space-around;
     width: 70%;
-    padding: 10rem 0 5rem 0;
+    padding: 5rem 0 5rem 0;
     gap: 20px;
 }
 
@@ -536,7 +537,8 @@
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
     .tasks-section{
-        border-radius: 0;
+        border-radius: 16px;
+        padding: 2rem;
     }
     .tasks-container {
         flex-direction: column;
@@ -596,13 +598,23 @@
 .container-tasks2 {
     display: flex;
     max-width: 100%;
-    margin: 5rem 0 0 0;
-    background-color: #00b389;
+    margin: 3rem 0 0 0;
     justify-content: space-around;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
+}
+.frstcolor {
+    background-color: #00b389;
+}
+.scndcolor {
+    background-color: #009eb3;
+}
+.trdcolor {
+    background-color: #b30048;
+}
+.frthcolor {
+    background-color: #b30074;
 }
 
 .content {
@@ -643,6 +655,7 @@
 @media (max-width: 768px) {
     .container-tasks2 {
         flex-direction: column; 
+        border-radius: 16px;
     }
 
     .content {
@@ -655,7 +668,6 @@
         padding: 10px;
     }
 }
-
 @media (max-width: 576px) {
     .container-tasks2 {
         padding: 2rem;
@@ -676,7 +688,197 @@
         text-align: center;
         padding: 0 2rem 2rem 2rem;
     }
+    .reverse{
+        flex-direction: column-reverse !important;
+    }
 }
+.tasks2-section {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(50px); 
+    margin-top: 5rem;
+}
+
+.tasks2-section.visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+.container-tasks3{
+    display: flex;
+    max-width: 100%;
+    margin: 3rem 0 0 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    background-color: #424242;
+}
+.sb-ctn-1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding: 7rem 5rem 3rem 5rem;
+    text-align: center;
+    color: #ffffffff;
+}
+.sb-ctn-2{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    padding: 5rem;
+    color: #ffffffff;
+}
+.sb-ctn-3{
+    display: flex;
+    border-radius: 30px;
+    justify-content: center;
+    width: 80%;
+    margin: 5rem;
+    margin: 0 auto;
+}
+.sb-ctn-3 img{
+    border-radius: 30px;
+    width: 100%;
+    margin: 0 5rem 5rem 5rem;
+}
+@media (max-width: 768px) {
+    .container-tasks3 {
+        border-radius: 16px;
+    }
+    .sb-ctn-3{
+        padding: 2rem;
+    }
+}
+.logos-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.logo-img, .logo-img2 {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .logos-container {
+        flex-direction: row;
+        justify-content: center;
+        top: 5%;
+    }
+
+    .logo-img, .logo-img2 {
+        max-width: 150px;
+        margin: 1rem 2rem 2rem 2rem !important;
+    }
+}
+.mobile-container{
+    display: flex;
+    max-width: 100%;
+    margin: 3rem 0 0 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    flex-wrap: wrap;
+    background-color: #424242;
+}
+.mobile-img{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 5rem;
+    margin: 0 auto;
+}
+.mobile-img img{
+    border-radius: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.mobile-title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding: 7rem 5rem 3rem 5rem;
+    text-align: center;
+    color: #ffffffff;
+}
+.mobile-text{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5rem;
+    color: #ffffffff;
+}
+.mobile-text2{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 5rem;
+    color: #ffffffff;
+}
+.mobile-text3{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5rem;
+    color: #ffffffff;
+}
+.mobile-text3{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5rem;
+    color: #ffffffff;
+}
+
+.img-container video, .img-sct1 video, .sub-section-steps-img1, video {
+    display: block;
+    width: 100%;
+    max-height: auto;
+}
+.audio-toggle {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.audio-toggle:hover {
+    transition: background-color 0.3s ease;
+    background-color: rgb(0, 0, 0, 0.6);
+    color: black;
+}
+
+
     </style>
 </head>
 <body>
@@ -693,7 +895,7 @@
     
     <div class="section-container-steps">
         <div class="section-container-steps-title">Primeros pasos</div>
-        <div class="section-container-steps-subtitle">¡Genial! Si estás leyendo esto, significa que ya has logrado iniciar sesión correctamente. Ahora, tomémonos un momento para repasar juntos los primeros pasos para que puedas aprovechar al máximo la plataforma.</div>
+        <div class="section-container-steps-subtitle">Ahora, tomémonos un momento para repasar juntos los primeros pasos para que puedas aprovechar al máximo la plataforma.</div>
         <lord-icon
         src="https://cdn.lordicon.com/lomfljuq.json"
         trigger="in"
@@ -703,7 +905,9 @@
         style="width:125px;height:125px">
         </lord-icon>        
         <div class="sub-section-container-steps">
-            <div class="sub-section-steps-img1"><img src="./img/steps-1.jpg" alt=""></div>
+            <div class="sub-section-img1">
+                <div class="img-sct1"><img src="./img/Captura de pantalla 2024-08-27 a la(s) 18.18.28.png" alt=""></div>
+            </div>
             <div class="sub-text-container-steps-1">
                 <div class="sub-section-steps-text-1">Ingreso a la plataforma</div>
                 <div class="sub-section-steps-text-2">Previo al inicio de un curso te será enviado a tu correo electrónico institucional, a través de USBOnline un usuario y contraseña para ingresar a la plataforma.
@@ -718,10 +922,10 @@
                         En caso de tener una contraseña encriptada
                         (*****) deberás copiarla y pegarla desde el correo.</div>
                 </div>
-                <div class="sub-section-img1"><img src="./img/steps-2.jpg" alt=""></div>
+                <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/ACCESO A CLASES F.mp4"autoplay muted loop playsinline></video></div>
 
                 <div class="sub-section-container-steps">
-                    <div class="sub-section-steps-img1"><img src="./img/steps-3.jpg" alt=""></div>
+                    <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/PANTALLA PRINCIPAL F.mp4"autoplay muted loop playsinline></video></div>
                     <div class="sub-text-container-steps-1">
                         <div class="sub-section-steps-text-1">Pantalla principal</div>
                         <div class="sub-section-steps-text-2">Esta es la pantalla principal de la plataforma NEOLMS de la USB, donde tendrás acceso a tus clases.</div>
@@ -730,15 +934,12 @@
                     <div class="sub-section-container-steps invert">
                         <div class="sub-text-container-steps-1">
                             <div class="sub-section-steps-text-1">Cierre de sesión</div>
-                            <div class="sub-section-steps-text-2">Ingresar a la plataforma con el ID de
-                                usuario y contraseña.
-                                En caso de tener una contraseña encriptada
-                                (*****) deberás copiarla y pegarla desde el correo.</div>
+                            <div class="sub-section-steps-text-2">Para cerrar sesión, haz clic en la flecha desplegable y selecciona "Cerrar Sesión" en la ventana emergente.</div>
                         </div>
-                        <div class="sub-section-img1"><img src="./img/steps-4.jpg" alt=""></div>
+                        <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/CERRAR SESION F.mp4" autoplay muted loop playsinline></video></div>
                 </div>
                 <div class="sub-section-container-steps">
-                    <div class="sub-section-steps-img1"><img src="./img/steps-5.jpg" alt=""></div>
+                    <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/ACCESO A PLATAFORMAS FINAL2.mp4" autoplay muted loop playsinline></video></div>
                     <div class="sub-text-container-steps-1">
                         <div class="sub-section-steps-text-1">Acceso a plataformas</div>
                         <div class="sub-section-steps-text-2">A través de los botones del panel derecho podras accesar a las diversas multiplataformas de la universidad, Sayal, Innovat y Elibro</div>
@@ -762,10 +963,10 @@
         </lord-icon>
         <div class="section-container-profile1"><img src="./img/Captura de pantalla 2024-08-27 a la(s) 20.13.27.png" alt=""></div>
         <div class="sub-section-container-profile">
-            <div class="sub-section-img1"><img src="./img/Captura de pantalla 2024-09-03 a la(s) 17.12.22.png" alt=""></div>
+            <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/CLIC EDITAR F.mp4"autoplay muted loop playsinline></video></div>
             <div class="sub-text-container-1">
-                <div class="sub-section-text-1">Click en editar</div>
-                <div class="sub-section-text-2">Haciendo click en el botón de editar se desplegara una ventana emergente de opciones para poder editar tu perfil.</div>
+                <div class="sub-section-text-1">Clic en editar</div>
+                <div class="sub-section-text-2">Haciendo clic en el botón de editar se desplegara una ventana emergente de opciones para poder editar tu perfil.</div>
             </div>
             </div>
             <div class="sub-section-container-profile invert">
@@ -773,7 +974,7 @@
                     <div class="sub-section-text-1">Edición</div>
                     <div class="sub-section-text-2">En esta ventana puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</div>
                 </div>
-                <div class="sub-section-img1"><img src="./img/Captura de pantalla 2024-09-03 a la(s) 17.20.18.png" alt=""></div>
+                <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/EDICIÓN F.mp4"autoplay muted loop playsinline></video></div>
                 </div>
         </div>
     </div>
@@ -782,7 +983,7 @@
 
     <div class="section-container-clases">
         <div class="section-container-clases-title">Acciones y funciones de clases</div>
-        <div class="section-container-clases-subtitle">Puesdes aplicar cambios en tu perfil entrando en la sección con tu nombre</div>
+        <div class="section-container-clases-subtitle">Conoce las principales acciones y funciones dentro de la plataforma</div>
         <lord-icon
         src="https://cdn.lordicon.com/depeqmsz.json"
         trigger="in"
@@ -791,68 +992,77 @@
         colors="primary:#e88c30"
         style="width:125px;height:125px">
         </lord-icon>
+        <div class="sub-section-container-clases">
+            <div class="sub-section-img1"><img src="./img/clases0.png" alt=""></div>
+            <div class="sub-text-container-1">
+                <div class="sub-section-text-1">Matriculación</div>
+                <div class="sub-section-text-2">En este paso, ya estarás matriculado o
+                    inscrito a la (s) clase (s). También te llegará
+                    por correo una notificación.</div>
+            </div>
+        </div>
         <div class="sub-section-container-clases invert">
             <div class="sub-text-container-1">
                 <div class="sub-section-text-1">Acceso a clases</div>
-                <div class="sub-section-text-2">En esta ventana puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</div>
+                <div class="sub-section-text-2">Pasa el cursor sobre el panel izquierdo en "Clases". Luego, haz clic en la ventana emergente para entrar. En este punto ya estarás matriculado en alguna clase.</div>
             </div>
-            <div class="sub-section-img1"><img src="./img/clases1.jpg" alt=""></div>
+            <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/ACCESO A CLASES F.mp4"autoplay muted loop playsinline></video></div>
         </div>
         <div class="sub-section-container-clases">
-            <div class="sub-section-img1"><img src="./img/clases2.jpg" alt=""></div>
+            <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/LECCIONES FINAL.mp4"autoplay muted loop playsinline></video></div>
             <div class="sub-text-container-1">
                 <div class="sub-section-text-1">Lecciones</div>
-                <div class="sub-section-text-2">Haciendo click en el botón de editar se desplegara una ventana emergente de opciones para poder editar tu perfil.</div>
+                <div class="sub-section-text-2">Al ingresar, verás las lecciones de la clase. Da clic desde la lección de bienvenida para iniciar con tu curso.</div>
             </div>
         </div>
         <div class="sub-section-container-clases invert">
             <div class="sub-text-container-1">
                 <div class="sub-section-text-1">Secciones</div>
-                <div class="sub-section-text-2">En esta ventana puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</div>
+                <div class="sub-section-text-2">Accederás a secciones específicas donde podrás avanzar paso a paso en tu estudio y completar el contenido.</div>
             </div>
-            <div class="sub-section-img1"><img src="./img/clases3.jpg" alt=""></div>
+            <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/LECCIONES FINAL.mp4"autoplay muted loop playsinline></video></div>
         </div>
         <div class="sub-section-container-clases">
             <div class="sub-section-img1"><img src="./img/clases4.jpg" alt=""></div>
             <div class="sub-text-container-1">
                 <div class="sub-section-text-1">Tareas</div>
-                <div class="sub-section-text-2">Haciendo click en el botón de editar se desplegara una ventana emergente de opciones para poder editar tu perfil.</div>
+                <div class="sub-section-text-2">Accede a "Tareas" para ver el estado, fechas límite y calificaciones de tus actividades.</div>
             </div>
         </div>
         <div class="sub-section-container-clases invert">
             <div class="sub-text-container-1">
                 <div class="sub-section-text-1">Recursos</div>
-                <div class="sub-section-text-2">En esta ventana puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</div>
+                <div class="sub-section-text-2">Aquí podrás acceder a materiales compartidos que enriquecerán tu aprendizaje y facilitarán tu estudio.</div>
             </div>
-            <div class="sub-section-img1"><img src="./img/clases5.jpg" alt=""></div>
+            <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/RECURSOS F.mp4"autoplay muted loop playsinline></video></div>
         </div>
         <div class="sub-section-container-clases">
-            <div class="sub-section-img1"><img src="./img/clases6.jpg" alt=""></div>
+            <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/PROFESORES F.mp4"autoplay muted loop playsinline></video></div>
             <div class="sub-text-container-1">
                 <div class="sub-section-text-1">Profesores</div>
-                <div class="sub-section-text-2">Haciendo click en el botón de editar se desplegara una ventana emergente de opciones para poder editar tu perfil.</div>
+                <div class="sub-section-text-2">En el área de profesores, podrás contactarlos para resolver dudas, obtener retroalimentación y recibir apoyo en tu proceso de aprendizaje.</div>
             </div>
         </div>
         <div class="sub-section-container-clases invert">
             <div class="sub-text-container-1">
                 <div class="sub-section-text-1">Estudiantes</div>
-                <div class="sub-section-text-2">En esta ventana puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</div>
+                <div class="sub-section-text-2">En el apartado de estudiantes, podrás interactuar con tus compañeros y colaborar en proyectos.</div>
             </div>
-            <div class="sub-section-img1"><img src="./img/clases7.jpg" alt=""></div>
+            <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/PANTALLA PRINCIPAL F.mp4"autoplay muted loop playsinline></video></div>
         </div>
         <div class="sub-section-container-clases">
-            <div class="sub-section-img1"><img src="./img/clases8.jpg" alt=""></div>
+            <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/ASISTENCIA F.mp4"autoplay muted loop playsinline></video></div>
             <div class="sub-text-container-1">
                 <div class="sub-section-text-1">Asistencia</div>
-                <div class="sub-section-text-2">Haciendo click en el botón de editar se desplegara una ventana emergente de opciones para poder editar tu perfil.</div>
+                <div class="sub-section-text-2">Podrás registrar tu asistencia en las sesiones síncronas programas por tu docente.</div>
             </div>
         </div>
         <div class="sub-section-container-clases invert">
             <div class="sub-text-container-1">
                 <div class="sub-section-text-1">Portafolio</div>
-                <div class="sub-section-text-2">En esta ventana puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</div>
+                <div class="sub-section-text-2">En este espacio, podrás recopilar y mostrar tus trabajos y proyectos.</div>
             </div>
-            <div class="sub-section-img1"><img src="./img/clases9.jpg" alt=""></div>
+            <div class="sub-section-img1"><video src="./VIDEOS CON MÚSICA/PORTAFOLIO.mp4"autoplay muted loop playsinline></video></div>
         </div>
     </div>
     </div>
@@ -888,27 +1098,69 @@
         </div>
     </section>
 
-    <div class="container-tasks2">
+    <section class="tasks2-section">
+    <div class="container-tasks2 frstcolor">
         <div class="content">
-            <img src="./img/dc1.png" alt="Contenido de integridad académica" class="content-image">
+            <div class="content-image"><video src="./VIDEOS CON MÚSICA/DESARROLLO DE CONTENIDO F.mp4"autoplay muted loop playsinline></video></div>
         </div>
         <div class="sidebar">
             <h3>Desarrollos de contenido</h3>
-            <p>Haciendo click en el botón de editar puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</p>
+            <p>Aquí podrás explorar la exposición del tema y subtemas de tu clase, además de disfrutar de contenido dinámico diseñado para ayudarte en tu aprendizaje.</p>
         </div>
     </div>
-    <div class="container-tasks2">
+    <div class="container-tasks2 invert scndcolor">
         <div class="sidebar">
             <h3>Foros</h3>
-            <p>Haciendo click en el botón de editar puedes editar tu imagen de perfil, descripción, contraseña, información y redes.</p>
+            <p>En este espacio, podrás presentarte y participar en diversas discusiones sobre temas relevantes con tus compañeros y profesores.</p>
         </div>
         <div class="content">
-            <img src="./img/dc1.png" alt="Contenido de integridad académica" class="content-image">
+            <div class="content-image"><video src="./VIDEOS CON MÚSICA/FOROS F.mp4"autoplay muted loop playsinline></video></div>
         </div>
     </div>
+    <div class="container-tasks2 trdcolor">
+        <div class="content">
+            <div class="content-image"><video src="./VIDEOS CON MÚSICA/CUESTIONARIOS F.mp4"autoplay muted loop playsinline></video></div>
+        </div>
+        <div class="sidebar">
+            <h3>Cuestionarios</h3>
+            <p>A lo largo de la clase, realizarás evaluaciones para demostrar tu conocimiento sobre los contenidos abordados. Estos estarán habilitados de acuerdo a la naturaleza de cada curso.</p>
+        </div>
+    </div>
+    <div class="container-tasks2 invert frthcolor">
+        <div class="sidebar">
+            <h3>Espacio para subir en la nube</h3>
+            <p>En esta sección, podrás cargar tus actividades en la nube para que sean evaluadas y revisadas. Estos estarán habilitados de acuerdo a la naturaleza de cada curso.</p>
+        </div>
+        <div class="content">
+            <img src="./img/nu1.png" alt="Contenido de integridad académica" class="content-image">
+        </div>
+    </div>
+    <div class="container-tasks3">
+        <div class="sub-container-tasks3">
+            <div class="sb-ctn-1">Visualización de progreso</div>
+            <div class="sb-ctn-2">En este apartado, podrás ver el progreso de tu aprendizaje, así como calificaciones y puntuaciones.</div>
+            <div class="sb-ctn-3"><video src="./VIDEOS CON MÚSICA/VISUALIZACION PROGRESO F.mp4"autoplay muted loop playsinline></video></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="mobile">
+<div class="mobile-container">
+    <div class="sub-mobile-container">
+        <div class="mobile-title">Acceso mobile</div>
+        <div class="mobile-text">Para acceder desde un dispositivo móvil deberás dercargar la app en la app store o google play store, encontraras la app como NEO LMS </div>
+        <div class="sb-ctn-3"><video src="./VIDEOS CON MÚSICA/VIDEO APP F.mp4"autoplay muted loop playsinline></video></div>
+        <div class="mobile-text2" style="margin-top: 5rem; margin-bottom: 5rem;">Una vez que abras la app, tendrás que introducir el dominio de la universidad, el cual es https://usbmexicoonline.neolms.com/ Posterior a esto haras clic en el botón de continuar</div>
+        <div class="mobile-img"><img src="./img/mobile2.jpg" alt=""></div>
+        <div class="mobile-text">Finalizado este paso, tendrás acceso a la plataforma y a tus clases desde tus distintos dispositivos.</div>
+        <div class="mobile-img" style="margin-bottom: 5rem;"><img src="./img/mobile3.jpeg" alt=""></div>
+    </div>
+</div>
+</section>
 
     <script>
-window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function() {
     const img = document.querySelector('.img-sct1 img');
     const imgPosition = img.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 1.3;
@@ -942,8 +1194,65 @@ window.addEventListener('scroll', function() {
     if (tasksSectionPosition < screenPosition) {
         tasksSection.classList.add('visible');
     }
+    if (clasesSectionPosition < screenPosition) {
+        clasesSection.classList.add('visible');
+    }
+    const tasks2Section = document.querySelector('.tasks2-section');
+    const tasks2SectionPosition = tasks2Section.getBoundingClientRect().top;
+
+    if (tasks2SectionPosition < screenPosition) {
+        tasks2Section.classList.add('visible');
+    }
 });
-    </script>
+</script>
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        
+        <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach(video => {
+        // Crear botón de audio
+        const button = document.createElement("button");
+        button.classList.add("audio-toggle");
+        button.innerHTML = '<span class="material-icons">volume_off</span>';
+        
+        // Posicionar botón dentro del contenedor del video
+        const container = video.parentElement;
+        container.style.position = "relative";
+        button.style.position = "absolute";
+        button.style.bottom = "10px";
+        button.style.right = "10px";
+        button.style.backgroundColor = "#00000b3";
+        button.style.color = "white";
+        button.style.border = "none";
+        button.style.borderRadius = "50%";
+        button.style.width = "50px";
+        button.style.height = "50px";
+        button.style.fontSize = "1.5rem";
+        button.style.cursor = "pointer";
+        button.style.display = "flex";
+        button.style.justifyContent = "center";
+        button.style.alignItems = "center";
+        button.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.2)";
+        button.style.transition = "transform 0.2s ease";
+
+        button.addEventListener("mouseover", () => button.style.transform = "scale(1.1)");
+        button.addEventListener("mouseleave", () => button.style.transform = "scale(1)");
+        
+        // Funcionalidad para activar/desactivar audio
+        button.addEventListener("click", () => {
+            video.muted = !video.muted;
+            const icon = video.muted ? "volume_off" : "volume_up";
+            button.innerHTML = `<span class="material-icons">${icon}</span>`;
+        });
+
+        // Insertar botón en el contenedor
+        container.appendChild(button);
+    });
+});
+        </script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    
 </body>
 </html>
