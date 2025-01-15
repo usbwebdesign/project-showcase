@@ -1,0 +1,963 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            height: 20vh;
+        }
+        .img-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto; /* Cambiamos la altura a automático */
+    width: 30rem;
+    padding: 3vh 6vw; /* Reducimos el padding en desktop */
+}
+
+.img-header img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (min-width: 992px) {
+    .img-header {
+        padding: 2vh 0vw;
+    }
+}
+.title-sub{
+            font-size: 20px !important;
+        }
+
+        .section1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 3rem 0 0 0;
+            flex-grow: auto;
+        }
+        @media only screen and (min-width: 768px) {
+            .section1{
+            flex-wrap: nowrap;
+        }
+}
+        .main-img {
+            margin-left: 0;
+            height: auto;
+        }
+        .img-1{
+            height: auto;
+            width: 100%;
+            padding: 0 3rem;
+        }
+/* Media Querys  */
+@media only screen and (min-width: 1200px) {
+    body {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .main-img {
+        margin-left: 0;
+        margin-top: 15rem; 
+        padding: 5vw;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .main-img {
+        margin-left: 0;
+        margin-top: 5rem !important; 
+        padding: 5vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .section1-col-r {
+        margin-left: 0;
+        margin-top: 15rem; 
+    }
+}
+@media only screen and (max-width: 476px) {
+    .section1-col-r {
+        margin-left: 0;
+        margin-top: 0; 
+    }
+}
+@media only screen and (max-width: 768px) {
+    .main-img {
+        margin-left: 0;
+        margin-top: 15rem; 
+        padding: 5vw;
+    }
+}
+
+.title-1{
+    font-family: "Sora", sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 15rem;
+            color: rgb(43, 43, 43);
+            
+        }
+        @media only screen and (max-width: 1200px) {
+            .title-1 {
+                font-size: 2.4rem !important;
+            }
+        }
+        @media screen and (max-width: 576px) {
+    .title-1 {
+        font-weight: 700;
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+.title-2{
+            font-family: "Sora", sans-serif;
+            color: #ffffff;
+            background-color: #FA4F47;
+            padding: 7rem 5rem 7rem 5rem; 
+            margin-top: 10rem;
+            border-radius: 16px;
+            text-align: center;
+        }
+        /* mas cambios */
+        .title-2 p{
+            font-family: "Sora", sans-serif;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+        /* Hacer cambios */
+        @media screen and (max-width: 576px) {
+    .title-2 {
+        margin: 2rem 3rem 0 3rem;
+        padding: 4rem 2rem 4rem 2rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    .title-2 p{
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+        .section1-col-l{
+            flex: 1;
+        }
+        .section1-col-r{
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            align-content: center;
+        }
+        /* SECCION 2 */
+        .section2{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 7rem;
+            flex-wrap: wrap;
+        }
+        .container1-1{
+            flex: 1;
+            max-width: 100%;
+
+        }
+         .container1-2{
+            flex: 1;
+            max-width: 100%;
+            margin: 0 0 5rem 0;
+            background-color: #FA4F47;
+        }
+        .title-container1{
+            font-family: "Sora", sans-serif;
+            background-color: #FA4F47;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 0 3.5rem 0;
+            font-weight: 600;
+        }
+        .title-container2{
+            font-family: "Sora", sans-serif;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 2.5rem 0 2.5rem 0;
+            font-weight: 600;
+        }
+        .container-info1{
+            font-size: 16px;
+            padding: 10rem 5rem 15rem 5rem;
+            background-color: #efefef;
+            text-align: justify;
+        }
+        .container-info1 p{
+            font-size: 16px;
+            background-color: #efefef;
+            text-align: justify;
+        }
+        
+        .container-info2{
+            font-size: 16px;
+            padding: 5rem 5rem 15rem 5rem;
+        }
+        .container-info2 p{
+            font-size: 16px;
+            color: #ffffff;
+        }
+        @media only screen and (max-width: 768px) {
+        .container1-1, .container1-2 {
+            max-width: 100%;
+            margin: 0;
+            border-radius: 0%;
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .container-info1 {
+            padding: 10rem 4rem 10rem 4rem;
+        }
+    }
+@media only screen and (min-width: 576px) {
+    .title-container2 {
+        color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 5rem 2.5rem 2.5rem 2.5rem;
+            font-weight: 600;
+    }
+}
+
+.title-container2{
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 5rem 2.5rem 2.5rem 2.5rem;
+            font-weight: 600;
+        }
+
+        /* SECCION3 */
+        .section3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            margin: 8rem 0 8rem 0;
+            flex-wrap: wrap;
+        }
+        @media only screen and (max-width: 576px) {
+            .section3{
+            margin: 0;
+        }
+            }
+        .container3-3{
+            border-radius: 16px;
+            flex: 1;
+            width: 50%;
+            margin: 5rem 5rem 5rem 5rem;
+            padding: 5rem 5rem 5rem 5rem;
+            background-color: #a56865;
+        }
+        @media only screen and (max-width: 576px) {
+            .container3-3{
+            border-radius: 16px;
+            flex: 1;
+            width: 100%;
+            margin: 5rem 0 5rem 0;
+            padding: 5rem 1rem 5rem 1rem;
+            background-color: #a56865;
+
+        }
+            }
+        .container-info3{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            margin: 5rem 5rem 5rem 5rem;
+            background-color: #a56865;
+        }
+        .container-info3 li {
+            font-size: 16px;
+            text-align: left;
+            color: #ffffff;
+        }
+        .container-info3 p {
+            font-size: 16px;
+            text-align: left;
+            padding: 0 0 2rem 0;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .title-container3 p{
+            font-family: "Sora", sans-serif;
+            font-weight: 700;
+            background-color: #a56865;
+            color: #ffffff;
+            font-size: 32px;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 3rem;
+            border-radius: 15px;
+        }
+        /* SECTIONC1 */
+        .sectionC1{
+            display: flex;
+            flex-direction: column;
+            margin-top: 7rem;
+            flex-wrap: wrap;
+        }
+        .resourcesimg1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .resourcesimg1-container {
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 0 5rem;
+        }
+        .resourcesimg1-container img {
+        max-width: 100%; 
+        height: auto; 
+        }
+        .title-containerC1{
+            font-family: "Sora", sans-serif;
+            background-color: #FA4F47;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 0 3.5rem 0;
+            font-weight: 600;
+        }
+        .container-infoC1 {
+        display: flex;
+        justify-content: center;
+        margin: 10rem 5rem 0 5rem;
+        }
+        .container-infoC1 img {
+        max-width: 80%; 
+        height: auto; 
+        }
+
+        /* SECTIONC2 */
+
+        .sectionC2{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 7rem;
+            flex-wrap: wrap;
+        }
+        .containerC2{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 7rem;
+            flex-wrap: wrap;
+        }
+        .title-containerC2{
+            font-family: "Sora", sans-serif;
+            background-color: #FA4F47;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 0 3.5rem 0;
+            font-weight: 600;
+        }
+        .container-infoC2{
+            font-size: 16px;
+            padding: 10rem 5rem 5rem 5rem;
+            text-align: justify;
+        }
+        .container-infoC2 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media only screen and (max-width: 768px) {
+        .container-infoC2 {
+            padding: 10rem 4rem 10rem 4rem;
+        }
+    }
+        .p-square{
+            background-color: #efefef;
+            padding: 5rem 5rem 5rem 5rem;
+            border-radius: 16px;
+        }
+
+@media only screen and (max-width: 768px) {
+    .source1 p, .source2 p {
+        padding: 2rem 2rem 2rem 2rem !important;
+    }
+}
+.source1, .source2 {
+    font-size: 3.6rem;
+    text-align: left;
+    background-color: #cf625d;
+    width: 45%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+.source1 p, .source2 p {
+    padding: 2rem 2rem 2rem 3rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.source-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start; /* Alinea los elementos al principio */
+    width: 80%; /* Puedes ajustar este valor según tus necesidades */
+    padding: 4rem 2rem; /* Ajusta el relleno */
+}
+
+
+@media only screen and (max-width: 768px) {
+    .source1 p, .source2 p {
+        padding: 2rem 2rem 2rem 2rem !important;
+    }
+}
+.source1l{
+    font-size: 10px;
+    color: antiquewhite;
+    padding: 2rem 4rem 1rem 4rem !important;
+    text-align: left;
+}
+@media only screen and (max-width: 768px) {
+    .source1l {
+        font-size: 13px; 
+    }
+}
+@media only screen and (max-width: 768px) {
+    .source1,
+    .source2 {
+        width: 100%; 
+    }
+}
+
+
+button {
+            margin: 0 0 2rem 1rem;
+            font-size: 16px;
+            padding: 2rem 2rem 2rem 2rem;
+            border: none;
+            font-family: "Poppins", sans-serif;
+            transition: all 0.3s ease;
+            cursor: pointer; 
+            background-color: #cf625d; 
+            border-radius: 8px; 
+        }
+    
+        button a{
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+            color: #ffffff; 
+        }
+
+        button:hover {
+            background-color: #bc5853; 
+            transform: translateY(-5px); 
+        }
+
+        button:focus {
+            outline: none; 
+        }
+
+    /* SECTIONC3 */
+
+        .sectionC3{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 7rem;
+            flex-wrap: wrap;
+        }
+        .containerC3{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 7rem;
+            flex-wrap: wrap;
+        }
+        .title-containerC3{
+            font-family: "Sora", sans-serif;
+            background-color: #FA4F47;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 0 3.5rem 0;
+            font-weight: 600;
+        }
+        .container-infoC3{
+            font-size: 16px;
+            padding: 10rem 5rem 5rem 5rem;
+            text-align: justify;
+        }
+        .container-infoC3 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media only screen and (max-width: 768px) {
+        .container-infoC3 {
+            padding: 10rem 4rem 2rem 4rem;
+        }
+    }
+    .container-infoC3 ol{
+        margin: 0 2rem 0 2rem;
+        }
+    .container-infoC3 li{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infoC3 li strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+        /* SECTIONC4 */
+
+        .sectionC4{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .containerC4{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 7rem;
+            flex-wrap: wrap;
+        }
+        .title-containerC4{
+            font-family: "Sora", sans-serif;
+            background-color: #FA4F47;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 0 3.5rem 0;
+            font-weight: 600;
+        }
+        .container-infoC4{
+            font-size: 16px;
+            padding: 10rem 5rem 2rem 5rem;
+            text-align: justify;
+        }
+        .container-infoC4 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infoC4 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media only screen and (max-width: 768px) {
+        .container-infoC4 {
+            padding: 10rem 4rem 2rem 4rem;
+        }
+    }
+    .resourcesimg{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+    .resourcesimg-container {
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 0 5rem;
+        }
+        .resourcesimg-container img {
+        max-width: 100%; 
+        height: auto; 
+        }
+  /* SECTIONC5 */
+
+  .sectionC5{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 7rem;
+            flex-wrap: wrap;
+        }
+        .containerC5{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 7rem;
+            flex-wrap: wrap;
+        }
+        .title-containerC5{
+            font-family: "Sora", sans-serif;
+            background-color: #FA4F47;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 0 3.5rem 0;
+            font-weight: 600;
+        }
+        .container-infoC5{
+            font-size: 16px;
+            padding: 10rem 5rem 5rem 5rem;
+            text-align: justify;
+        }
+        .container-infoC5 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infoC5 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media only screen and (max-width: 768px) {
+        .container-infoC5 {
+            padding: 10rem 4rem 2rem 4rem;
+        }
+    }
+    .container-infoC5 ul{
+        margin: 0 2rem 0 2rem;
+        }
+    .container-infoC5 li{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infoC5 li strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media only screen and (max-width: 768px) {
+    .card-container {
+        padding: 5rem !important;
+    }
+}
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #FA4F47;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* Ajuste importante */
+    justify-content: center;
+    padding: 2rem 20rem 2rem 20rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    width: calc(40% - 2rem); /* Ajuste importante */
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        width: calc(100% - 2rem); /* Ajuste importante */
+        padding: 4rem 2rem 4rem 2rem;
+    }
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem; /* Ajuste la altura máxima según lo necesites */
+    overflow: hidden;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48;
+}
+.invisible {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .fade-in {
+    opacity: 1;
+}
+.genially-container{
+        border-radius: 16px;
+        margin-bottom: 5rem !important; 
+        width: 65%;
+        height: 80%;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: 768px) {
+    .genially-container {
+        width: 100%;
+        border-radius: 8px;
+    }
+    }
+        </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+    <div class="section1">
+        <div class="section1-col-l">
+            <div class="title-1"><p class="title-sub">Especialidad en</p> <br> GESTIÓN EDUCATIVA<br>Y TALENTO HUMANO</div>
+        <div class="title-2"><p>Gestión de la</p><br> <p>Administración Educativa</p><br></div>
+    </div>
+    <div class="section1-col-r">
+        <div class="main-img"><img src="https://usbmexicoonline.neolms.com/files/11461125/PO2-GAE2.jpg" alt="" class="img-1"></div>
+    </div>
+    </div>
+    <div class="section2">
+        <div class="container1-1">
+            <div class="title-container1"><p>Introducción</p></div>
+            <div class="container-info1"><p>La administración es la actividad de planificar, organizar, dirigir y controlar los recursos y procesos con el fin de alcanzar objetivos de manera eficiente y efectiva. En el contexto educativo, este concepto implica la aplicación de estos principios a las dinámicas propias de la enseñanza y el aprendizaje.</p><br>
+                <p>La administración educativa es un componente esencial para el funcionamiento efectivo de las instituciones educativas. Desde la planificación hasta el control, esta disciplina garantiza el logro de los objetivos educativos y el bienestar de toda la comunidad escolar y universitaria.</p><br>
+                <p>Dentro de las instituciones educativas, la administración se dedica a coordinar y gestionar todos los aspectos relacionados con la construcción del conocimiento. Desde la toma de decisiones sobre los currículos hasta la gestión del personal docente, la infraestructura y los recursos financieros, la administración educativa abarca un amplio espectro de responsabilidades.</p><br>
+                <p>En este sentido, la estructura de la administración educativa sigue una lógica y progresión específicas, donde se combinan fundamentos teóricos con su aplicación práctica en el ámbito educativo. Se estudia el proceso administrativo como una secuencia lógica de actividades que los administradores siguen para lograr los objetivos organizacionales. Este proceso incluye la planificación, organización, dirección y control, todos ellos fundamentales para el funcionamiento eficiente de una institución educativa.</p><br>
+                <p>La importancia de la administración educativa radica en los beneficios que aporta a toda la comunidad educativa. Como futuro líder, tendrás la oportunidad de influir en el sistema educativo en su conjunto. Tu capacidad para innovar, resolver problemas y liderar será fundamental para el éxito de las instituciones y para el desarrollo integral de los estudiantes.</p>
+                </p>
+                </div>
+        </div>
+        <div class="container1-2">
+            <div class="title-container2"><p>Objetivos Específicos</p></div>
+            <div class="container-info2">
+            <p>Al término de la unidad, el alumnado será capaz de adquirir los conocimientos y habilidades necesarios para comprender y aplicar los principios fundamentales de la administración educativa, con el fin de desarrollar competencias de liderazgo efectivas y contribuir al mejoramiento de la gestión y calidad en las instituciones educativas.</p></div>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="container3-3">
+            <div class="title-container3"><p>Temas y subtemas</p></div>
+            <div class="container-info3">
+            <ul>
+                <p>2. Administración educativa</p>
+                <li>2.1 Concepto de administración </li>
+                <li>2.2 La administración en las instituciones educativas</li>
+                <li>2.3 El proceso administrativo</li>
+                <li>2.4 Recursos de la institución</li>
+            </ul></div>
+        </div>
+    </div>
+    <div class="sectionC1">
+        <div class="containerC1">
+            <div class="title-containerC1"><p>Administración educativa</p></div>
+            <div class="resourcesimg1">
+                <div class="resourcesimg1-container">
+                    <img src="https://usbmexicoonline.neolms.com/files/11461125/RU2-2.png" alt="">
+                </div>
+            </div>
+        </div>
+    <div class="sectionC2">
+            <div class="containerC2">
+                <div class="title-containerC2"><p>2.1 Concepto</p></div>
+                <div class="container-infoC2">
+                    <p>La administración, es una disciplina en el ámbito de las ciencias sociales que se centra en el análisis de las estructuras organizativas y los recursos que las conforman, con el propósito primordial de mejorar el desempeño de estas entidades para alcanzar sus metas. A continuación, se presenta una breve descripción del concepto de administración:</p><br>
+                    <div class="genially-container"><div style="width: 100%;"><div style="position: relative; padding-bottom: 100%; padding-top: 0; height: 0;"><iframe title="Imagen interactiva esencial" frameborder="0" width="800" height="800" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/667bec7d00cc3600132aa21a" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div></div>
+                    <div class="genially-container"><div style="width: 100%;"><div style="position: relative; padding-bottom: 100%; padding-top: 0; height: 0;"><iframe title="Imagen interactiva esencial" frameborder="0" width="800" height="800" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/667bf10a00cc3600132bb038" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div></div>
+            </div>
+            <div class="resourcesimg">
+                <div class="resourcesimg-container">
+                    <img src="https://usbmexicoonline.neolms.com/files/11461125/GAE-U2-1.png" alt="">
+                </div>
+            </div>
+    <div class="sectionC3">
+            <div class="containerC3">
+                <div class="title-containerC3"><p>2.2 La administración en las instituciones educativas</p></div>
+                <div class="container-infoC3">
+                    <p>La administración en las instituciones educativas es un concepto que se refiere a la aplicación de principios de gestión y organización en el contexto educativo, con el objetivo de garantizar el funcionamiento eficiente y eficaz de las escuelas, colegios, universidades y otros centros de formación.</p><br>
+                    <p>Aquí te presentamos una explicación detallada del tema:</p><br>
+                    <ol>
+                        <li><strong>Definición y alcance: </strong> La administración educativa se refiere a la planificación, organización, dirección y control de los recursos y procesos dentro de una institución educativa. Estos recursos pueden ser humanos (docentes, personal administrativo, estudiantes), financieros (presupuesto de la institución), materiales (libros, equipos), tecnológicos (computadoras, software educativo) o de conocimiento (planes de estudio, programas académicos).</li><br>
+                        <li><strong>Planeación táctica: </strong> La planificación es un componente esencial de la administración educativa. Implica establecer metas y objetivos claros para la institución, desarrollar estrategias para alcanzarlos y crear planes detallados para su implementación. Los administradores deben considerar factores como el currículo, los estándares académicos, las necesidades de los estudiantes y la infraestructura disponible.</li><br>
+                        <li><strong>Organización: </strong> La organización se refiere a la estructuración adecuada del entorno educativo. Esto incluye la asignación de roles y responsabilidades, la coordinación de actividades y la gestión de recursos. Una organización efectiva asegura que todos los elementos de la institución estén alineados para cumplir con los objetivos pedagógicos.</li><br>
+                        <li><strong>Dirección: </strong> La dirección implica liderar al personal educativo hacia el logro de las metas establecidas. Los líderes deben ser capaces de motivar, comunicarse eficazmente e inspirar confianza. También deben ser capaces de adaptarse a los cambios, resolver conflictos y fomentar un ambiente positivo que propicie el aprendizaje.</li><br>
+                        <li><strong>Control: </strong> El control consiste en monitorear el progreso hacia las metas definidas e implementar ajustes cuando sea necesario. Esto implica realizar evaluaciones regulares del desempeño institucional mediante indicadores clave de rendimiento para asegurar la calidad educativa.</li><br>
+                        <li><strong>Políticas públicas: </strong> Las políticas públicas también juegan un papel vital en la administración educativa. Establecen marcos regulatorios que guían las operaciones escolares y garantizan estándares mínimos de calidad e igualdad en el acceso a la educación.</li><br>
+                        <li><strong>Tecnología: </strong> La tecnología ha transformado significativamente la administración educativa. Los sistemas informáticos avanzados facilitan tareas administrativas complejas y promueven métodos innovadores de enseñanza-aprendizaje.</li><br>
+                        <li><strong>Desafíos: </strong> Los desafíos en la administración educativa son constantes. Desde limitaciones presupuestarias hasta cambios en las políticas educativas, los administradores deben estar preparados para adaptarse y responder de manera efectiva.</li><br>
+                    </ol>
+                    <p>La administración educativa es crucial para el éxito de cualquier institución educativa. Una administración efectiva puede mejorar la calidad de la educación, aumentar la satisfacción de los estudiantes y el personal, y garantizar que la institución cumpla con sus objetivos y metas.</p><br>
+                    <p>La administración en las instituciones educativas es un proceso que requiere habilidades de liderazgo, toma de decisiones y resolución de problemas. A través de una administración efectiva, las instituciones educativas pueden proporcionar una educación de alta calidad que prepare a los estudiantes para el futuro.</p>
+                    <div class="resourcesimg">
+                        <div class="resourcesimg-container">
+                            <img src="https://usbmexicoonline.neolms.com/files/11461125/GAE-U2-2.png" alt="">
+                        </div>
+                    </div>
+            </div>
+    </div>
+    <div class="sectionC4">
+        <div class="containerC4">
+            <div class="title-containerC4"><p>2.3 El proceso administrativo</p></div>
+            <div class="container-infoC4">
+                <p>El proceso administrativo en las instituciones educativas es un tema de gran relevancia en el ámbito académico contemporáneo. Este concepto se refiere a la aplicación de principios de gestión y organización en el contexto educativo, enfocado en cinco etapas principales: planificación, organización, dirección, control y retroalimentación.</p><br>
+                <p><strong>La planificación</strong> es la primera etapa del proceso administrativo en la educación. En esta fase, se definen los objetivos educativos a largo, mediano y corto plazo, así como las estrategias para alcanzarlos. Esto implica identificar las necesidades de los estudiantes, los recursos disponibles y los cambios en el entorno educativo, con el fin de establecer planes de acción claros y efectivos.</p><br>
+                <p><strong>La organización</strong> es la segunda etapa. Aquí, se asignan los recursos humanos, financieros y materiales necesarios para llevar a cabo las actividades educativas planificadas. Esto incluye la distribución de tareas y responsabilidades entre el personal docente y administrativo, así como la coordinación de actividades para garantizar el funcionamiento adecuado de la institución educativa.</p><br>
+                <p><strong>La dirección</strong> es la tercera etapa del proceso administrativo en la educación. En esta fase, los directivos educativos ejercen liderazgo y supervisión para motivar, guiar y apoyar al personal docente y administrativo en la consecución de los objetivos educativos. Esto implica comunicar claramente las expectativas y metas, proporcionar orientación y capacitación cuando sea necesario, y resolver conflictos o problemas que puedan surgir en el camino.</p><br>
+                <p><strong>El control</strong> es la cuarta etapa. Aquí, se monitorea el progreso y el desempeño de la institución educativa para asegurar que se estén cumpliendo los objetivos y metas establecidos. Esto puede implicar la evaluación del rendimiento académico de los estudiantes, la revisión de los programas educativos, la supervisión del uso de los recursos y la recopilación de datos para realizar análisis comparativos.</p><br>
+                <p>Finalmente, <strong>la retroalimentación</strong> es la quinta etapa del proceso administrativo en la educación. En esta fase, se revisan los resultados y se proporcionan comentarios constructivos para identificar áreas de mejora y realizar ajustes necesarios en el proceso educativo. Esto puede implicar la implementación de nuevas estrategias o programas, la revisión de políticas y procedimientos, o la asignación de recursos adicionales para abordar necesidades específicas.</p><br>
+                <p>El proceso administrativo en la educación es un ciclo continuo de planificación, organización, dirección, control y retroalimentación que se lleva a cabo para garantizar el funcionamiento efectivo de las instituciones educativas y la consecución de sus objetivos y metas educativas. Cada una de estas etapas es fundamental para el éxito y la sostenibilidad de la institución en un entorno educativo cada vez más complejo y exigente.</p><br>
+        </div>
+        <div class="resourcesimg">
+            <div class="resourcesimg-container">
+                <img src="https://usbmexicoonline.neolms.com/files/11461125/GAE-U2-3(2).png" alt="">
+            </div>
+        </div>
+<div class="sectionC5">
+    <div class="containerC5">
+        <div class="title-containerC5"><p>2.4 Recursos de la institución</p></div>
+        <div class="container-infoC5">
+            <p>Los recursos de la institución educativa son los elementos vitales que permiten su funcionamiento y desarrollo. Estos recursos abarcan desde lo humano hasta lo material, y su aprovechamiento eficiente es fundamental para garantizar una educación de calidad.</p><br>
+            <p><strong>Recursos Humanos: </strong> Estas son las personas que forman parte de la institución educativa. Incluyen a los docentes, directivos, personal administrativo, alumnos y padres de familia. Los docentes son especialmente importantes ya que su labor tiene un impacto directo en el proceso de enseñanza-aprendizaje. Su preparación, dedicación y habilidades pedagógicas son fundamentales para el desarrollo académico de los alumnos.</p><br>
+            <p><strong>Recursos Académicos: </strong> Estos recursos se refieren a los planes de estudio, programas académicos, materiales didácticos y bibliografía que se utilizan en la institución. Es importante que estos recursos se actualicen constantemente para adaptarse a las necesidades educativas actuales y garantizar que los alumnos adquieran los conocimientos y habilidades necesarios.</p><br>
+            <p><strong>Recursos Didácticos: </strong> Son las herramientas que facilitan el proceso de enseñanza-aprendizaje. Estos pueden ser físicos, como pizarras y laboratorios, o digitales, como software educativo. El uso adecuado de estos recursos puede enriquecer la experiencia de aprendizaje al hacer las lecciones más interactivas y atractivas.</p><br>
+            <p><strong>Recursos Tecnológicos:</strong> Estos recursos incluyen las tecnologías de la información y la comunicación que se utilizan en la institución, como computadoras, tabletas, conexión a internet y plataformas virtuales. Estos recursos pueden potenciar la enseñanza y la comunicación dentro de la institución, permitiendo por ejemplo, el aprendizaje a distancia o la colaboración en línea.</p><br>
+            <p><strong>Recursos Financieros:</strong> Se refiere al presupuesto asignado para el funcionamiento de la institución. Una gestión financiera eficiente es crucial para garantizar la viabilidad y sostenibilidad de la institución, permitiendo la adquisición y mantenimiento de otros recursos.</p><br>
+            <p><strong>Recursos Físicos:</strong> Estos son las instalaciones físicas de la institución, como aulas, bibliotecas, patios y espacios deportivos. Es importante mantener estos espacios en buen estado para asegurar un ambiente propicio para el aprendizaje.</p><br>
+            <p><strong>Recursos Comunitarios:</strong> Estos recursos involucran la colaboración con la comunidad local, incluyendo empresas, organizaciones no gubernamentales y padres de familia. La colaboración de estos actores puede enriquecer los proyectos educativos e iniciativas de la institución.</p><br>
+            <p>La gestión adecuada de todos estos recursos es fundamental para lograr una educación de calidad y formar ciudadanos preparados para enfrentar los desafíos del mundo actual.</p><br>
+            <div class="resourcesimg1">
+                <div class="resourcesimg1-container">
+                    <img src="https://usbmexicoonline.neolms.com/files/11461125/GAE-U2-4.png" alt="">
+                </div>
+            </div>
+    </div>
+</div>
+<div class="card-section-container">
+    <p class="card-title-section">Para saber más...</p><br>
+    <div class="card-container">
+        <a href="https://www.youtube.com/watch?v=h_DG2HB7q94&t=412s" target="_blank" class="card">
+            <span class="material-symbols-rounded fade-in invisible">play_circle</span>
+            <p class="title fade-in invisible">Ver Video</p>
+            <p class="text fade-in invisible">Entrevista a Lourdes Münch-Administración educativa</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=mbr4tnoT2vE&t=1s" target="_blank" class="card">
+            <span class="material-symbols-rounded fade-in invisible">play_circle</span>
+            <p class="title fade-in invisible">Ver Video</p>
+            <p class="text fade-in invisible">¿Qué es la gerencia educacional?</p>
+        </a>
+        <a href="https://www.comie.org.mx/congreso/memoriaelectronica/v12/doc/1262.pdf" target="_blank" class="card">
+            <span class="material-symbols-rounded fade-in invisible">library_books</span>
+            <p class="title fade-in invisible">Revisar PDF</p>
+            <p class="text fade-in invisible">¿Administración o gestión educativa?</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=h_DG2HB7q94&t=412s" target="_blank" class="card">
+            <span class="material-symbols-rounded fade-in invisible">language</span>
+            <p class="title fade-in invisible">Revisar Sitio Web</p>
+            <p class="text fade-in invisible">Administración Educativa en México: Una Formación Gerencial para la Eficacia Escolar.</p>
+        </a>
+    </div>
+</div>
+<script>
+    document.querySelectorAll('.genially-embed').forEach(embed => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Ejecutar el código de carga de Genially
+                const script = document.createElement('script');
+                script.src = "https://view.genially.com/static/embed/embed.js";
+                document.body.appendChild(script);
+                observer.unobserve(entry.target);  // Dejar de observar después de cargar
+            }
+        });
+    });
+    observer.observe(embed);
+});
+
+</script>
+</body>
+</html>

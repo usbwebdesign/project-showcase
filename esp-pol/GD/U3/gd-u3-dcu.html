@@ -1,0 +1,983 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 5rem 1rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 20px;
+    }
+    
+    .card button {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 1rem;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .card button:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 1rem 5rem;
+        flex-wrap: wrap;
+    }
+    .img-sources{
+        border-radius: 30px;
+        width: 80%;
+    }
+    .source-container{
+        display: flex;
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+    	.container-img {
+    		margin: 1rem;
+    	}
+        .img-sources{
+        width: 90%;
+    }
+    .source-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    }
+
+    .source{
+        background-color: rgb(67, 67, 67);
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin: 1rem 1rem 1rem 0;
+    }
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 30%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="logo-container">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+        </div>
+        <div class="usb-online">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+        </div>
+        <div class="content-hero">
+            <h1 class="content-hero-1st">Especialidad en</h1><br>
+            <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+            <p class="content-hero-3rd">Thick Data e incidencia pública</p>
+            <button class="unit-button">Unidad 4</button>
+        </div>
+    </div>
+</section>
+    <div class="container">
+        <div class="content">
+            <h1>Introducción</h1>
+            <p class="content-intro">Como ya se mencionó, la gobernanza emerge en un contexto concreto, pero luego de al menos 30 años de exploración, reconocidas sus virtudes, también se aprecian sus limitaciones, por lo que se vuelve el rostro para la recuperación y replanteamiento de modelos de gobierno tradicionales, como la gobernabilidad, o el desempeño público, pero también, hacia adelante, en planteamientos que recuperan las propuestas de autogestión basadas la participación ciudadana o la empatía comunitaria.</p><br>
+            <p class="content-intro">Por supuesto, no se deja a un lado la gobernanza, es el eje de reflexión del que parten propuestas que buscan completarla, mejorarla, pero también, en una lectura radical, deshacerse de ella. Se tienen entonces nuevas alternativas que emergen de críticas a los esquemas de gobernanza propuestos. Ahora se valoran modelos que bien podrían profundizar la gobernanza, de tipo más inclusivos, colaborativos y adaptativos, pero también otros modelos que parcialmente podrían completar la gobernanza, competir con ella e incluso buscar superarla.</p><br>
+            <p class="content-intro">En este módulo se hace un listado sintético de las alternativas que emergen a la gobernanza, en un primer bloque se presentan las propuestas complementarias y en un segundo bloque las propuestas que la desafían. Posteriormente, se detallan otras propuestas alternativas, dos que anteceden al modelo de gobernanza, la gobernabilidad y el desempeño público, una más que busca una mejor complementariedad, como lo es la participación ciudadana, encaminada al empoderamiento de los individuos y grupos, promoviendo un enfoque más inclusivo y democrático y, finalmente, otra que explora un canal diferente a la preeminencia de los mercados y se centra en la capacidad de las sociedades para priorizar otros aspectos más significativos para la vida diaria de las personas, como la comprensión mutua, el bienestar colectivo y la solidaridad, las sociedades empáticas.</p><br>
+            <p class="content-intro">Hablar de alternativas a la gobernanza tradicional tiene una relevancia profunda, ya que nos permite explorar nuevas formas de organización social, política y económica que podrían adaptarse mejor a los desafíos contemporáneos y satisfacer las necesidades de las comunidades de manera más efectiva. Esto se vuelve especialmente significativo en el contexto de problemas globales como la crisis climática, la desigualdad económica y la erosión de la confianza en las instituciones tradicionales. Considerar alternativas que completen y mejoren la gobernanza es esencial, pues muchas veces el sistema actual es insuficiente, limitado o incluso disfuncional en algunos contextos.</p><br>
+            <p class="content-intro">Al mismo tiempo, examinar opciones disruptivas o críticas permite cuestionar las bases mismas de cómo y para quién se ejerce el poder. En este sentido, explorar alternativas que buscan superar la gobernanza podría llevar a formas radicalmente diferentes de autogestión, como los sistemas descentralizados de toma de decisiones o incluso revisar la pertinencia de los movimientos que buscan reemplazar el Estado y el capitalismo como sistema de organización.</p><br>
+            <p class="content-intro">En conjunto, examinar estas alternativas no sólo abre el espacio para imaginar futuros diferentes, sino también para cuestionar las premisas del orden vigente, expandiendo las posibilidades de organización de la vida en sociedad.</p><br>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content2">
+            <h1>Objetivos específicos</h1>
+            <p class="content-intro2">
+                Al concluir esta unidad el alumnado reconocerá algunos de los enfoques alternos a la gobernanza para organizar y gestionar sociedades, como la gobernabilidad, el desempeño público, la participación ciudadana y las sociedades empáticas.
+            </p>
+        </div>
+    </div>
+
+<!-- Botón para minimizar o expandir la navbar -->
+<button id="toggle-btn" class="toggle-btn">–</button> 
+
+<div class="container-temario" id="navbar-temario">
+    <div class="temario">
+        <div class="sub-1">
+            <h1>Temas y Subtemas</h1>
+            <h2 class="temario-1list">4. Propuestas alternativas a la gobernanza</h2><br>
+        </div>
+        <ul class="temario-ulist">
+            <a href="#sec1" class="temario-list">4.1 Gobernabilidad</a><br>
+            <a href="#sec2" class="temario-list">4.2 Desempeño público</a><br>
+            <a href="#sec3" class="temario-list">4.3 Participación ciudadana</a><br>
+            <a href="#sec4" class="temario-list">4.4 Sociedades empáticas</a><br>
+        </ul>
+    </div>
+</div>
+
+    
+
+    <section class="sec-info1" id="sec1">
+        <div class="title">4. Propuestas alternativas a la gobernanza</div>
+        <div class="sec1-content">
+            <div class="container-img">
+                <img class="img-sources" src="./img/TDIP_ANEXO4_UNIDAD2.3.png" alt="">
+                <div class="source-container">
+                <div class="source">Imagen recuperada de Pexels</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sec-info1" id="sec1">
+        <div class="title">4. Propuestas alternativas a la gobernanza</div>
+        <div class="sec1-content">
+            <p class="sec1-text">Las propuestas alternativas a la gobernanza “tradicional” buscan repensar y modificar los sistemas de toma de decisiones y gestión de problemas locales y globales, especialmente en contextos donde la gobernanza convencional ha sido vista como ineficiente o insuficiente para abordar desafíos complejos. Estas alternativas emergen de críticas a los esquemas de gobernanza propuestos que parten de las mismas entidades gubernamentales, siguen un patrón jerárquico y centralizado, por lo que la fórmula se encamina a modelos que bien podrían completar o profundizar la gobernanza, de tipo más inclusivos, colaborativos y adaptativos, pero también encontramos otros modelos que parcialmente podrían completar la gobernanza, competir con ella e incluso buscar superarla.</p><br>
+            <p class="sec1-text">En primer lugar, encontramos la gobernanza policéntrica, basada en la idea de múltiples centros de poder o autoridad que funcionan de manera independiente pero interrelacionada. Cada nivel de autoridad tiene capacidad de decisión en diferentes áreas, desde el local hasta el global. Se caracteriza por la descentralización del poder y soluciones adaptadas a contextos locales, pero coordinadas a nivel global. En el papel, la propuesta presenta como ventajas la mayor flexibilidad en la toma de decisiones y una capacidad de respuesta rápida a desafíos locales que permite la experimentación y aprendizaje en diferentes niveles. Un ejemplo de esta propuesta sería la gestión del cambio climático, donde las ciudades, estados y gobiernos nacionales pueden actuar de manera independiente pero interconectada, como en el caso de la acción climática de ciudades bajo el C40 Cities Climate Leadership Group (https://www.c40.org/)</p><br>
+            <p class="sec1-text">En segundo lugar, de modo semejante a la primera propuesta, encontramos las redes de Gobernanza Transnacional, formas de cooperación global que trascienden los estados nacionales y están formadas por actores no estatales, como ONGs, empresas, científicos y gobiernos locales. Se caracterizan por la participación voluntaria de múltiples actores, establecimiento de normas, intercambio de conocimientos y colaboración a través de fronteras nacionales. También tiene como ventaja una mayor flexibilidad y capacidad para movilizar recursos, inclusión de actores no estatales e innovación a través de la cooperación. Un ejemplo en este sentido sería la red de certificación de comercio justo (https://info.fairtrade.net/es/what/how-fairtrade-works).</p><br>
+            <p class="sec1-text">En tercer lugar, encontramos la propuesta de gobernanza adaptativa o experimental, donde se proponen estructuras menos rígidas, que se ajustan y evolucionan continuamente en respuesta a los cambios en el entorno o los problemas emergentes. Este enfoque implica probar y ajustar diferentes formas de gobernanza en situaciones específicas, permitiendo la experimentación en lugar de adherirse a una sola solución predefinida, tendrían una mayor capacidad de ajuste rápido y continuo, gracias al énfasis en el aprendizaje práctico e innovación en políticas mediante pruebas piloto, experimentación controlada, flexibilidad para ajustar políticas según los resultados observados, con la evidente ventaja para responder a problemas complejos e inciertos, para ajustarse a nuevas circunstancias. Como ejemplo tendríamos los sistemas de gestión de recursos naturales que se ajustan con base en datos científicos continuos, como la adaptación en la gestión de pesquerías sostenibles (https://www.tncmx.org/sobre-tnc-mx/zonas-estrategicas/golfo-de-california/nuestro-trabajo-en-el-golfo-de-california/pesquerias-sostenibles/). O ciudades que prueban diferentes políticas urbanas para reducir la huella de carbono, como los experimentos de movilidad urbana sostenible en Ámsterdam (https://www.ciudadsostenible.eu/8-claves-para-transitar-hacia-la-movilidad-urbana-sostenible/).</p><br>
+            <p class="sec1-text">En un segundo bloque identificamos propuestas de modelos posgobernanza, enfoques más radicales que plantean la superación de las formas convencionales de gobernanza, abogando por sistemas auto-organizados y menos dependientes que rechazan las estructuras de poder jerárquicas, que confía en la autogestión y en la horizontalidad en la toma de decisiones, soportada en el empoderamiento de las comunidades y actores locales, la autonomía y la auto-organización, como cooperativas o colectivos horizontales que operan sin un liderazgo jerárquico.</p><br>
+            <p class="sec1-text">Desde esta perspectiva Querejazu reconoce que asumir la gobernanza global como un modelo neutral tiene implicaciones significativas,</p><br>
+            <p class="sec1-text-quote">“refleja los intereses y valores de una sociedad liberal que concibe un orden global determinado no solo como algo deseable, sino como el único posible […] El proceso se completa en la medida en que se asume que esas ideas y valores son universales. La lectura de la realidad (como global y única) y de los fines y problemas de la comunidad internacional se da según marcos de referencia y formas de dar sentido a lo que se entiende por el progreso de la humanidad. De esa lectura se desprende la idea de un orden político mundial determinado y abarcador que busca englobar silenciando el pluralismo característico de lo global y que termina por crear un orden totalizante bajo la premisa de lo común, relegando o dejando por fuera de ese gran contenedor la diferencia que no se subsume en esas premisas”. (2020: 66)</p><br>
+            <p class="sec1-text">En este bloque estarían las propuestas de autogobierno comunitario, basado en la idea de que las comunidades locales pueden gestionar sus propios recursos de manera sostenible y justa sin intervención externa, a menudo de forma más efectiva que los modelos centralizados. Si se forza, podríamos concebir el modelo como gobernanza local radical, con una toma de decisiones participativa y el control directo sobre los recursos locales, con lo que se promueve la sostenibilidad y la equidad al nivel más cercano a los problemas. La gestión comunitaria de recursos naturales, como el manejo forestal comunitario en México, donde las comunidades locales controlan los recursos naturales y aseguran su sostenibilidad podrían ser ejemplo de esto. (http://comunidadesybosques.ccmss.org.mx/recursos.php)</p><br>
+            <p class="sec1-text">Dos referentes más los encontramos en los modelos de democracia deliberativa y la economía colaborativa y participativa. En el primer caso, se enfatiza la toma de decisiones basada en el diálogo y la deliberación colectiva, involucrando a los ciudadanos en el proceso de manera activa y directa, con énfasis en la discusión y el consenso, la transparencia y la rendición de cuentas. Un ejemplo lo encontramos en el panel de ciudadanos sobre el cambio climático en Francia (https://www.conventioncitoyennepourleclimat.fr/).</p><br>
+            <p class="sec1-text">En el segundo caso, la alternativa aboga por un modelo económico en el que los recursos y el trabajo se gestionen colectivamente, con un enfoque en la equidad y la cooperación, más allá del modelo de mercado tradicional, con énfasis en la sostenibilidad y el beneficio común. Se apunta a la reducción de la desigualdad, la mejora de la cohesión social y fortalecimiento de la resiliencia comunitaria. Como ejemplo, nos sirve la economía de plataformas de cooperativismo digital (https://www.mondragon.edu/es/-/creando-ecosistema-cooperativas-digitales-plataforma), o la creación de redes de intercambio como los bancos de tiempo (https://adbdt.org/unete-a-un-banco-de-tiempo/).</p><br>
+        </div>
+    </section>
+<section class="sec-info1" id="sec2">
+    <div class="title">4.1 Gobernabilidad</div>
+    <div class="sec1-content">
+        <p class="sec1-text">Bayón (2018: 8) nos recuerda el contexto en el que emerge el concepto de gobernabilidad </p><br>
+        <p class="sec1-text-quote">“las crisis económicas asociadas al incremento de los precios del petróleo y los conflictos políticos que se produjeron en esa década, en particular, los derivados de la Guerra de Vietnam y el escándalo Watergate; así como la puja del neoliberalismo contra el keynesianismo y las ideas vinculadas al «Estado del Bienestar». Gracias al respaldo de David Rockefeller, en este momento se funda la Comisión Trilateral, para la cual se elabora el informe acerca de las tendencias que generan disfunciones en el sistema democrático.”</p>
+        <p class="sec1-text">La gobernabilidad es un concepto que le antecede a la gobernanza, refiere a la capacidad de un sistema político para gobernar de manera efectiva, estableciendo y manteniendo el orden, la estabilidad y la legalidad en la gestión de los asuntos públicos. La preeminencia es la preservación del sistema político, lo que sólo adquiere un tono más apegado a los regímenes democráticos ya entrada la década de los noventa, para acompañar la propuesta del modelo de gobernanza.</p><br>
+        <p class="sec1-text">En consideración a esa segunda gobernabilidad, podemos identificar tres dimensiones. En primer lugar, la dimensión Política, la capacidad del gobierno para formular políticas y tomar decisiones, así como la relación entre diferentes poderes políticos (ejecutivo, legislativo, judicial). En segundo lugar, la dimensión administrativa, que refiere a la eficiencia y eficacia de la administración pública en la implementación de políticas y en la prestación de servicios. Finalmente, la dimensión social, esto es, la cohesión social y la capacidad de los ciudadanos para participar activamente en el proceso político y en la toma de decisiones.</p><br>
+        <p class="sec1-text">La gobernabilidad implica que un gobierno tiene la capacidad de formular políticas y hacer que se implementen. Esto incluye la capacidad de mantener el control social y la estabilidad política y en la versión más radical incluso podría prescindir de la legitimidad, teniendo un mayor peso la efectividad en la administración pública, donde las políticas y programas se llevan a cabo. En América Latina, en la década de los 70, los Estados de seguridad nacional podrían ser ejemplo de esa primera generación de gobernabilidad “radical”.</p><br>
+        <p class="sec1-text">Por supuesto, el discurso de este siglo apunta a la complementariedad de la gobernanza y la gobernabilidad, como modelos interrelacionados, pues una gobernanza efectiva contribuiría a una mejor gobernabilidad, ya que promueve la participación ciudadana, la transparencia y la rendición de cuentas. Desde esta perspectiva, la gobernanza se enfoca en los procesos y estructuras que facilitan la toma de decisiones, la gobernabilidad se centra más en los resultados y la efectividad de estas decisiones en el contexto político y social.</p><br>
+    </div>
+</section>
+
+<section class="sec-info1" id="sec2">
+    <div class="title">4.2 Desempeño público</div>
+    <div class="sec1-content">
+        <p class="sec1-text">El desempeño público se refiere a la efectividad y eficiencia con las que las instituciones gubernamentales llevan a cabo sus funciones y cumplen con sus responsabilidades en la provisión de servicios y la implementación de políticas públicas. Como propuesta alternativa a la gobernanza, el enfoque en el desempeño público enfatiza la importancia de los resultados y la calidad en la gestión pública, en lugar de centrarse únicamente en los procesos o estructuras de gobernanza.</p><br>
+        <p class="sec1-text">Próximo a la gobernabilidad, un indicador de medición del desempeño público es la efectividad, la capacidad de un gobierno para alcanzar los objetivos y metas establecidos en sus políticas, pero con menor énfasis en el control y mayor atención al servicio hacia la ciudadanía, lo que implica que las acciones del gobierno producen los resultados esperados en beneficio de la sociedad.</p><br>
+        <p class="sec1-text">Otro segundo indicador, es la eficiencia, la relación entre los recursos utilizados (tiempo, dinero, personal) y los resultados obtenidos. Un desempeño público eficiente implica lograr los resultados deseados utilizando la menor cantidad de recursos posible. Finalmente, el tercer indicador de un buen desempeño público es la transparencia y la rendición de cuentas a los ciudadanos sobre sus resultados y el uso de recursos.</p><br>
+        <p class="sec1-text">A diferencia de la gobernanza, que puede enfocarse en los procesos y estructuras, el desempeño público se centra en los resultados tangibles y en la capacidad de respuesta del gobierno a las necesidades de la población. Pero a semejanza con la gobernanza, la mejora del desempeño público a menudo requiere la colaboración entre distintos niveles de gobierno, así como asociaciones con la sociedad civil y el sector privado, para abordar de manera integral los problemas sociales. Estos ejercicios de evaluación y mejora continua también complementarían los modelos de gobernanza, en tanto permite ajustes y mejoras basadas en la retroalimentación y los resultados obtenidos.</p><br>
+        <p class="sec1-text">Las dimensiones del desempeño público son cuatro, a saber: la calidad del servicio, que refiere a la satisfacción de los ciudadanos con los servicios públicos, la accesibilidad, la atención al cliente y la resolución de problemas; los resultados sociales en áreas como la salud, la educación, la seguridad y el bienestar social; la capacidad administrativa en cuanto a competencias y habilidades del servidor público para implementar políticas y gestionar recursos de manera efectiva y, en cuarto lugar, la innovación y adaptabilidad, es decir la capacidad de las instituciones para adaptarse a cambios en el entorno y para innovar en la entrega de servicios y en la formulación de políticas.</p><br>
+        <p class="sec1-text">Lo anterior descansa en el establecimiento de indicadores de desempeño, la definición de métricas claras que permitan evaluar el progreso hacia los objetivos establecidos y realizar ajustes según sea necesario; la capacitación y desarrollo profesional del servicio público, mediante la inversión en su formación para mejorar la calidad del servicio y la efectividad en la implementación de políticas; el involucramiento ciudadano en la evaluación del desempeño público, permitiendo que sus opiniones y experiencias informen la toma de decisiones y la mejora de servicios y, finalmente la implementación de herramientas tecnológicas y sistemas de gestión de datos para monitorear el desempeño en tiempo real y facilitar la transparencia y la rendición de cuentas.</p><br>
+        <p class="sec1-text">Al final de cuentas, el desempeño público debe ser considerado -independientemente de que en sí mismo se piense como modelo- imprescindible en cualquier esquema de gobernabilidad o gobernanza, pues en cualquiera de ellos la pieza central es la mística en el servicio público que se tenga por parte de todas las personas que se encuentran en la administración gubernamental, donde descansa el desempeño público.</p><br>
+        <p class="sec1-text">Esta fórmula que se dirige a los fundamentos, incluso al sentido común, no deja de enfrentar desafíos propios de la gestión de gobierno y los contextos actuales donde nos encontramos, entre ellos la falta de financiamiento adecuado para lograr un desempeño óptimo e incluso la formación misma del personal; la resistencia al cambio, por el arraigo a los procedimientos administrativos; la corrupción y falta de transparencia, que mina la confianza de los ciudadanos en las instituciones y, por último, las marcadas desigualdades sociales, que se expresan en disparidades en el acceso a servicios y recursos.</p><br>
+    </div>
+</section>
+
+<section class="sec-info1" id="sec3">
+    <div class="title">4.3 Participación ciudadana</div>
+    <div class="sec1-content">
+        <p class="sec1-text">La participación ciudadana es un proceso mediante el cual los ciudadanos se involucran activamente en la toma de decisiones que afectan sus vidas y sus comunidades. Como propuesta alternativa a la gobernanza, la participación ciudadana busca empoderar a los individuos y grupos, promoviendo un enfoque más inclusivo y democrático en la gestión pública y en la formulación de políticas.</p><br>
+        <p class="sec1-text">La participación ciudadana implica que los ciudadanos no son solo receptores pasivos de políticas, sino actores activos en su diseño e implementación. Puede manifestarse de diversas maneras, incluyendo la votación, la consulta pública, los presupuestos participativos, los foros comunitarios, las asambleas deliberativas, entre otros.</p><br>
+        <p class="sec1-text">La participación ciudadana puede fortalecer la gobernanza al aumentar la legitimidad de las decisiones, mejorar la calidad de las políticas y fomentar la rendición de cuentas. Además, un mayor involucramiento ciudadano puede llevar a una mayor transparencia en las decisiones gubernamentales y, por ende, a un aumento de la confianza en las instituciones, lo que también fomenta la colaboración entre gobiernos y comunidades, permitiendo un diálogo más abierto sobre las necesidades y prioridades locales.</p><br>
+        <p class="sec1-text">Una participación ciudadana sustantiva demanda que los ciudadanos tengan acceso a información relevante y comprensible para tomar decisiones informadas sobre cuestiones que les afectan, que se asegure la inclusión de las voces de grupos diversos, principalmente de aquéllos que históricamente han sido marginados, y que se fomente la capacidad de los ciudadanos para influir en las decisiones y procesos que afectan sus vidas, hacerlos sujetos de su propia historia.</p><br>
+        <p class="sec1-text">Para lo anterior se requiere promover programas de educación cívica que informen a los ciudadanos sobre sus derechos, deberes y las formas como pueden participar en el proceso de toma de decisiones; el establecimiento de mecanismos formales para la consulta, el diálogo con los ciudadanos, asegurando que sus opiniones sean tenidas en cuenta en la toma de decisiones y la deliberación, aprovechando plataformas digitales para facilitar la participación, permitiendo que los ciudadanos se involucren en debates y decisiones a través de medios accesibles y eficaces.</p><br>
+        <p class="sec1-text">Como otros mecanismos para el ejercicio de gobierno, la participación ciudadana también enfrenta desafíos, entre otros, las desigualdades en la participación, barreras socioeconómicas, culturales y educativas que limitan la capacidad de ciertos grupos para participar efectivamente; la desconfianza en las instituciones que reduce la motivación de los ciudadanos para participar; la falta de acceso a información clara y relevante en un tiempo de redes inundadas de noticias falsas que dificultan la participación informada y el mismo riesgo de la cooptación de los procesos participativos por intereses particulares o que no se respeten las opiniones y necesidades de los ciudadanos.</p><br>
+        <p class="sec1-text">Desde una perspectiva de análisis y práctica, Montecinos la identifica como “gobernanza de proximidad”, la que</p><br>
+        <p class="sec1-text-quote">“no se plantea como un simple cambio en la dimensión operativa del Estado sino como una transformación que afecta a la relación sustantiva entre el Estado y la sociedad civil y la entienden como ‘un espacio potencial de profundización democrática, a partir de dos vectores clave: la participación y la proximidad, es decir a través del fortalecimiento de redes pluralistas, abiertas e inclusivas y el fortalecimiento de los espacios locales de gobierno y la articulación de redes multinivel.’” (2012: 354)</p>
+    </div>
+
+<section class="sec-info1" id="sec4">
+    <div class="title">4.4 Sociedades empáticas</div>
+    <div class="sec1-content">
+        <p class="sec1-text">La propuesta de sociedades empáticas deriva de la propuesta multidisciplinaria de Rifkin que expresa en su libro La civilización empática (2010). Al respecto Fernández nos dice</p><br>
+        <p class="sec1-text-quote">“… la evolución empática de la humanidad no es poca cosa, la conciencia que somos una civilización empática y que esta empatía […] ha aumentado con la historia, es algo para detenerse a reflexionar, como lo es la creencia de que ‘es lo que nos va a salvar’. (2014: 236)</p><br>
+        <p class="sec1-text">Las sociedades empáticas son aquellas en las que los individuos y comunidades desarrollan un sentido profundo de conexión y comprensión mutua, promoviendo el bienestar colectivo y la solidaridad. Como propuesta alternativa a la gobernanza, el enfoque en sociedades empáticas busca crear entornos donde la empatía y la cooperación sean valores centrales en la toma de decisiones y en la interacción social. Como expresan Ferrer, Fariña y Reyes:</p><br>
+        <p class="sec1-text-quote">“Para recrear la cohesión social y transitar hacia el modelo de economía basada en energías renovables y ciudades sostenibles de bajo en carbono-verdes, se requieren cambios profundos y necesarios en la forma de percibir y gestionar el futuro de un mundo en crisis e, implica asumir que los seres humanos somos esencialmente empáticos ‘homo empathicus’” (2014: 181)</p><br>
+        <p class="sec1-text">En este enfoque dos son los elementos en torno a los cuales se articula la propuesta, en primer lugar, la conexión humana, soportada en la capacidad de los individuos para comprender y compartir los sentimientos y experiencias de los demás, fomentando relaciones interpersonales más profundas y significativas. En segundo lugar, la solidaridad y apoyo mutuo, por los cuales se prioriza el bienestar de los demás, lo que conduce a un mayor sentido de comunidad y a la búsqueda de soluciones conjuntas a los problemas sociales.</p><br>
+        <p class="sec1-text">A diferencia de los modelos de gobernanza que pueden estar funcionando con orientación a mantener las formas dominantes de consumo individual y el crecimiento de los mercados, las sociedades empáticas promueven un enfoque en el bienestar de todos, considerando las necesidades y perspectivas de todos los miembros de la comunidad. En este esquema, también se fomenta la participación ciudadana no solo como un derecho, sino como una responsabilidad compartida, donde cada individuo siente la necesidad de contribuir al bienestar colectivo. La empatía puede ser un mecanismo poderoso para la resolución de conflictos, promoviendo el diálogo y la comprensión entre diferentes grupos y perspectivas.</p><br>
+        <p class="sec1-text">Las sociedades empáticas estarían caracterizadas por una cultura de la empatía, que valore y promueva la introspección basada en “colocarse en los zapatos del otro” desde la educación hasta las interacciones diarias, para cultivar un sentido de pertenencia y responsabilidad compartida, mediante redes sociales y comunitarias que ofrezcan apoyo emocional, social y práctico, fortaleciendo el tejido social y la cohesión comunitaria, para promover la equidad y la inclusión, asegurando que todos los miembros de la sociedad tengan voz y acceso a recursos y oportunidades.</p><br>
+        <p class="sec1-text">Esto último exige la educación en empatía, la enseñanza en habilidades de comunicación y resolución de conflictos, desde la infancia hasta la edad adulta; la realización de proyectos comunitarios, iniciativas que fomenten la colaboración y la interacción entre diferentes grupos de la comunidad, promoviendo un sentido de pertenencia y apoyo mutuo; la promoción de prácticas de escucha activa en espacios públicos y comunitarios, donde se valoren y respeten las opiniones y sentimientos de todos y campañas para sensibilizar sobre la importancia de la empatía y la solidaridad, desafiando narrativas de división y competencia.</p><br>
+        <p class="sec1-text">Cerremos con los desafíos a las sociedades empáticas, quizá la primera que salta a la vista es la relacionada al fuerte individualismo que promueven los distintos mercados, principalmente globales, lo que hace prevalecer culturas que valoran la competencia sobre la colaboración y dificultan el desarrollo de relaciones empáticas; de la mano de ésta camina la desconfianza social, la falta de confianza entre los miembros de la comunidad que limita el desarrollo de conexiones empáticas; la desigualdad y exclusión, junto con las estructuras sociales y económicas que las producen, que dificultan la creación de sociedades empáticas, ya que algunos grupos pueden sentirse marginados o ignorados y, por último, las crisis globales, lo vimos con la pandemia de COVID – 19, que mostró formas perversas de desinterés ante el prójimo, dentro de los países, pero también entre países, la misma migración internacional pone a prueba la empatía y la solidaridad en y entre las sociedades.</p><br>
+    </div>
+</section>
+
+
+    <div class="card-section-container">
+        <p class="card-title-section">Para saber más...</p><br>
+        <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+            info
+            </span>
+        <div class="card-container">
+            <a href="https://www.redalyc.org/articulo.oa?id=515661223011" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Participación ciudadana</p>
+            </a>
+            <a href="http://www.redalyc.org/articulo.oa?id=16429061006" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">La participación ciudadana en las políticas públicas de lucha contra la corrupción</p>
+            </a>
+            <a href="http://www.redalyc.org/articulo.oa?id=26711160002" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Gobernanza y participación ciudadana en las políticas públicas frente al reto del desarrollo</p>
+            </a>
+            <a href="https://doi.org/10.18046/recs.i23.2281" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">El papel de la participación ciudadana en las políticas públicas, bajo el actual escenario de la gobernanza</p>
+            </a>
+            <a href="https://www.c40.org/" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">C40 Cities Climate Leadership Group</p>
+            </a>
+            <a href="https://www.mondragon.edu/es/-/creando-ecosistema-cooperativas-digitales-plataforma" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Economía de plataformas de cooperativismo digital </p>
+            </a>
+            <a href="http://comunidadesybosques.ccmss.org.mx/recursos.php" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Gestión comunitaria de recursos naturales, manejo forestal comunitario en México</p>
+            </a>
+            <a href="https://www.tncmx.org/sobre-tnc-mx/zonas-estrategicas/golfo-de-california/nuestro-trabajo-en-el-golfo-de-california/pesquerias-sostenibles/" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Gestión de pesquerías sostenibles</p>
+            </a>
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/Gonzalvez_Desarrollo_humano_y_redes_sociales(7).pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Desarrollo humano y redes sociales. Hacia un ethos democrático e intercultural en sociedades mediáticas</p>
+            </a>
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/Hueso_sociedad_del_conocimiento.pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Interpretando la sociedad del conocimiento desde una perspectiva histórica de las sociedades humanas</p>
+            </a>
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/Jara_Sistematizacion.pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Sistematización de experiencias, investigación y evaluación: aproximaciones desde tres ángulos</p>
+            </a>
+            <a href="https://www.redalyc.org/articulo.oa?id=441642779007" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Gobernanza Pública y Gobernabilidad: Accountability y Disclosure posibilitadas por la Contabilidad Aplicada al Sector Público como Instrumento de Sostenibilidad del Estado</p>
+            </a>
+            <a href="https://www.ciudadsostenible.eu/8-claves-para-transitar-hacia-la-movilidad-urbana-sostenible/" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Movilidad urbana sostenible en Ámsterdam </p>
+            </a>
+            <a href="https://www.conventioncitoyennepourleclimat.fr/" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Panel de ciudadanos sobre el cambio climático en Francia s</p>
+            </a>
+            <a href="https://info.fairtrade.net/es/what/how-fairtrade-works" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Red de certificación de comercio justo </p>
+            </a>
+            <a href="https://adbdt.org/unete-a-un-banco-de-tiempo/" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Redes de intercambio como los bancos de tiempo </p>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    </script>
+</body>
+</html>

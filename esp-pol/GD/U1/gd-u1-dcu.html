@@ -1,0 +1,967 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 5rem 1rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 20px;
+    }
+    
+    .card button {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 1rem;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .card button:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 1rem 5rem;
+        flex-wrap: wrap;
+    }
+    .img-sources{
+        border-radius: 30px;
+        width: 80%;
+    }
+    .source-container{
+        display: flex;
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+    	.container-img {
+    		margin: 1rem;
+    	}
+        .img-sources{
+        width: 90%;
+    }
+    .source-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    }
+
+    .source{
+        background-color: rgb(67, 67, 67);
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin: 1rem 1rem 1rem 0;
+    }
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 40%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="logo-container">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+        </div>
+        <div class="usb-online">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+        </div>
+        <div class="content-hero">
+            <h1 class="content-hero-1st">Especialidad en</h1><br>
+            <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+            <p class="content-hero-3rd">Gobernanza y Desarrollo</p>
+            <button class="unit-button">Unidad 1</button>
+        </div>
+    </div>
+</section>
+    <div class="container">
+        <div class="content">
+            <h1>Introducción</h1>
+            <p class="content-intro">El concepto de gobernanza surge en el contexto de los cambios en las formas de gobierno y la gestión pública, las primeras referencias a nivel mundial las encontramos en la década de 1980, pero en el caso concreto de América Latina y de México en particular, en la década de 1990. Su aparición está vinculada con las transformaciones en el papel del Estado en la administración pública y la interacción con otros actores sociales, como las organizaciones civiles y el sector privado, claramente, en un periodo de agotamiento del ejercicio de gobierno estado céntrico que sede paulatinamente a la fuerza de los mercados, pero también a la complejización de las sociedades en contextos mayoritariamente urbanos.</p><br>
+            <p class="content-intro">La gobernanza se vincula estrechamente con el desarrollo local y la cooperación debido a varios factores que reflejan la necesidad de gestionar los problemas públicos de manera más participativa, descentralizada y adaptada a las particularidades de cada comunidad. Lo que también se extrapola en el escenario internacional, donde además de la participación de los Estados, intervienen agentes globales no gubernamentales y corporativos empresariales y financieros.</p> 
+            <p class="content-intro">En esta primera unidad, reconocerás los conceptos base de esta asignatura, empezando por las definiciones de gobernanza, desarrollo local, cooperación internacional y legalidad. Los subtemas que abordarás están relacionados con un primer binomio sobre el desarrollo local y la cooperación en términos generales. En un segundo momento, reflexionarás sobre los contextos que se generan como desafíos de la cooperación internacional, concluirás este módulo considerando el alcance de la propuesta de gobernanza, en términos del marco jurídico que habilita la concurrencia de distintos actores en la toma de decisión internacional.</p><br>
+            <p class="content-intro">n un contexto donde los Estados son actores significativos, pero no exclusivos, el enfoque de la gobernanza te permitirá pensar propuestas de solución más sólidas, en la medida que reconocerás los múltiples actores que participan en la implementación final de la acción pública. En una situación de ejercicio local concreto donde estés involucrado, este conocimiento te dará insumos para generar propuestas sólidas donde consideres las necesidades específicas de cada territorio que te expresan los propios actores que viven las problemáticas en su día a día. A su vez, en un escenario internacional, este enfoque te permitirá comprender cómo se toman decisiones y se gestionan problemas que afectan a toda la humanidad, trascendiendo las fronteras nacionales. Reconocerás que a medida que los desafíos globales, como el desarrollo sostenible o el cambio climático, se hacen más complejos e interconectados, el estudio de la gobernanza global se vuelve crucial para abordar estos problemas de manera efectiva y justa.</p><br>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content2">
+            <h1>Objetivos específicos</h1>
+            <p class="content-intro2">
+                Al término de la unidad el alumnado identificará los fundamentos de la gobernanza, reconociendo los elementos que caracterizan la gobernanza local, la gobernanza global, los desafíos de la cooperación internacional, así como los alcances de la gobernanza. 
+            </p>
+        </div>
+    </div>
+
+<!-- Botón para minimizar o expandir la navbar -->
+<button id="toggle-btn" class="toggle-btn">–</button> 
+
+<div class="container-temario" id="navbar-temario">
+    <div class="temario">
+        <div class="sub-1">
+            <h1>Temas y Subtemas</h1>
+            <h2 class="temario-1list">1. Gobernanza local y global</h2><br>
+        </div>
+        <ul class="temario-ulist">
+            <a href="#sec1" class="temario-list">1.1 Desarrollo local y cooperación</a><br>
+            <a href="#sec2" class="temario-list">1.2 Desafíos de la cooperación internacional</a><br>
+            <a href="#sec3" class="temario-list">1.3 Alcances de la gobernanza: legalidad</a><br>
+        </ul>
+    </div>
+</div>
+
+    
+
+    <section class="sec-info1" id="sec1">
+        <div class="title">1. Gobernanza local y global</div>
+        <div class="sec1-content">
+            <div class="container-img">
+                <img class="img-sources" src="https://images.pexels.com/photos/13461021/pexels-photo-13461021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="source-container">
+                <div class="source">Organizador gráfico. Por: Juan Estrella</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sec-info1" id="sec1">
+        <div class="title">1. Gobernanza local y global</div>
+        <div class="sec1-content">
+            <p class="sec1-text">Para una mejor precisión del concepto gobernanza, se hace necesario establecer la diferencia entre ésta y gobierno. La gobernanza se refiere a la institución formal encargada de la administración y toma de decisiones dentro de un Estado o territorio. Está compuesto por autoridades elegidas o designadas que tienen el poder y la legitimidad para crear leyes, ejecutar políticas y garantizar el orden público.</p><br>
+            <p class="sec1-text">En el gobierno, los principales actores son las instituciones estatales (ejecutivo, legislativo, judicial), y las decisiones suelen estar centralizadas en estas entidades. El gobierno funciona dentro de una estructura jerárquica y formal, basada en el poder del Estado y en la autoridad legal. El enfoque del gobierno es más unilateral, con decisiones y políticas ejecutadas desde el nivel estatal hacia los ciudadanos.</p><br>
+            <p class="sec1-text">La segunda, la gobernanza, por su parte, es un concepto más amplio que incluye los procesos y mecanismos de toma de decisiones, donde no sólo el gobierno juega un rol, sino también otros actores como el sector privado, las organizaciones no gubernamentales (ONGs), los centros de conocimiento (think tanks) y la sociedad civil. Además de los actores estatales, la gobernanza involucra a múltiples partes interesadas, como empresas, organizaciones internacionales, comunidades locales y grupos de interés. Estos actores interactúan para influir en las políticas y la toma de decisiones.</p><br>
+            <p class="sec1-text">La gobernanza es más horizontal y colaborativa, implicando la participación y cooperación de actores diversos en múltiples niveles, desde lo local hasta lo global. La gobernanza tiene un enfoque multilateral, buscando soluciones colectivas que respondan a los intereses de distintos actores y contextos, con especial énfasis en la participación y el consenso.</p><br>
+            <div class="sec1-text">Ejemplo de Diferencias:</div><br>
+            <p class="sec1-text">En el gobierno, una decisión sobre política ambiental podría ser tomada exclusivamente por alguno de los poderes (ejecutivo, judicial), sin consulta al conjunto de actores que concurren en el área o ámbito que afectará la decisión pública.</p>
+            <p class="sec1-text">En la gobernanza, esa misma decisión implicaría la consulta y colaboración con organizaciones ambientales, empresas del sector, científicos y comunidades afectadas por la política, integrando a todos estos actores en el proceso de toma de decisiones.</p><br>
+            <p class="sec1-text">Específicamente, los principios básicos de la gobernanza son la transparencia, la rendición de cuentas, la participación ciudadana, la eficacia y la equidad, mientras que los binomios entre los que se encuentra su práctica corresponden a modelos de centralización vs. descentralización; federalismo, confederaciones, y gobernanza multinivel.</p><br>
+            <p class="sec1-text">Por supuesto, estos son los elementos que generan consenso en la definición, pero no debe perderse de vista que esa definición no ha sido estática, como bien apunta Aguilar:</p><br>
+            <p class="sec1-text-quote">“La gobernanza ha cambiado a lo largo de la historia social y ha asumido diversas formas de conducción y coordinación, por lo que son varios los tipos de gobernanza, los cuales dependen en última instancia de las relaciones establecidas y aceptadas entre los actores gubernamentales y los actores sociales y, más específicamente, depende del rol y peso que el gobierno o que la sociedad (empresas, organizaciones civiles, religiones, centros de conocimiento) tienen al definir y decidir la intencionalidad y causalidad del proceso de gobernar…”. (2020: 92)</p><br>
+        </div>
+    </section>
+
+
+
+<section class="sec-info1" id="sec2">
+    <div class="title">1.1 Desarrollo local y cooperación</div>
+    <div class="sec1-content">
+        <div class="sec1-text">El desarrollo local es el proceso de mejora en las distintas dimensiones (económica, social, cultural y ambiental) que tiene lugar dentro de una comunidad o región específica, impulsado de manera endógena por las propias personas, instituciones y recursos locales para promover un crecimiento sostenible y equitativo, que se traduciría en la satisfacción de necesidades y prioridades de una comunidad concreta, que aprovecha sus particularidades y potencia sus capacidades.</div><br>
+        <p class="sec1-text">Las características claves del desarrollo local son:</p>
+        <ol>
+            <li class="sec1-text">Participación comunitaria.</li>
+            <li class="sec1-text">Sostenibilidad.</li>
+            <li class="sec1-text">Aprovechamiento de recursos locales.</li>
+            <li class="sec1-text">Cooperación público-privada</li>
+            <li class="sec1-text">Adaptabilidad y diversidad.</li>
+            <li class="sec1-text">Reducción de la desigualdad.</li>
+        </ol>
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/GYD_ESQUEMA_UNIDAD1.1.(5).png" alt="">
+            <div class="source-container">
+                <div class="source">Organizador gráfico. Por: Juan Estrella.</div>
+            </div>
+        </div>
+        <p class="sec1-text">Ahora bien, si pensamos el estudio del desarrollo local desde una perspectiva de gobernanza se debe partir de reconocer las estructuras político-administrativas, como pueden ser los municipios, alcaldías, condados, comunidades autónomas, junto con sus competencias y funciones en materia de servicios públicos, infraestructura, desarrollo urbano, seguridad y salud.
+            Al mismo tiempo, debe tenerse un diagnóstico del conjunto de actores y agentes que concurren en este ámbito, así como de los mecanismos e instrumentos de participación ciudadana mediante los cuales esos actores y agentes se involucran en la toma de decisiones, como presupuestos participativos, referendos, consultas públicas, silla ciudadana, entre otros.
+        </p><br>
+        <p class="sec1-text">No obstante, enmarcado en un contexto internacional, el desarrollo local debe tomar en cuenta los elementos constituyentes de la cooperación para el desarrollo, como son las instancias que forman parte de la arquitectura internacional (Naciones Unidas, OMC, FMI, Banco Mundial, UE, Mercosur, entre otros), al igual que los instrumentos de mayor consenso que orientan la actividad del mayor número de gobiernos del mundo, como la Agenda 2030 y los Objetivos de Desarrollo Sostenible (ODS).</p><br>
+        <p class="sec1-text">Una de las modalidades en las que aterriza la cooperación internacional, en los contextos locales, son las innovaciones en gobernanza local, mediante la transferencia de conocimiento en la gestión de proyectos a resolver problemáticas que se comparten como lo son las smart cities, tecnología en la administración pública y/o gobiernos abiertos.</p><br>
+        <p class="sec1-text">Lo anterior, porque hay innegablemente un impacto de las decisiones globales en las políticas locales, como son la adaptación de regulaciones internacionales en los gobiernos locales; aunque también la oportunidad de desarrollar estrategias de diplomacia de las ciudades, que les permita participar en redes y foros internacionales, así como estrategias de gobernanza multinivel, es decir, de cooperación entre diferentes niveles de gobierno para enfrentar desafíos que se expresan de manera aguda en el contexto local, como es el caso del cambio climático.</p><br>
+
+        <section class="sec-video">
+            <h1 class="vid-title">Video: Gobernanza</h1>
+            <span class="material-symbols-outlined">south</span>
+    <div class="video">
+        <iframe width="660" height="415" src="https://www.youtube.com/embed/W_e7C5L3n98?si=Zns9_-KpzwrqT9hK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+        </section>
+    </div>
+</section>
+
+<section class="sec-info1" id="sec2">
+    <div class="title">1.2 Desafíos de la cooperación internacional</div>
+    <div class="sec1-content">
+        <div class="sec1-text">La cooperación internacional se entiende como un conjunto de actividades y mecanismos mediante los cuales países, organizaciones internacionales y otros actores (como ONGs o el sector privado) colaboran para enfrentar problemas comunes, promover el desarrollo y mejorar el bienestar global. Se basa en la idea de que muchos de los desafíos que enfrentan las naciones son de carácter global (pobreza, cambio climático, salud pública, etc.), y, por lo tanto, requieren soluciones coordinadas y colaborativas que trascienden las fronteras nacionales.</div><br>
+        <p class="sec1-text">Las principales características de la cooperación internacional las podemos identificar en 6 puntos:</p>
+        <ol>
+            <li class="sec1-text">Interdependencia global, que refleja el hecho de que los países están interconectados y dependen entre sí en muchas áreas, como la economía, el medio ambiente y la seguridad. Los problemas de un país pueden tener repercusiones a nivel global, por lo que la cooperación busca abordar estos problemas de manera conjunta.</li><br>
+            <li class="sec1-text">Transferencia de recursos de tipo financieros, tecnológicos, humanos, de los países más desarrollados o de organizaciones internacionales hacia los países en vías de desarrollo para ayudarlos a superar sus desafíos de desarrollo. Esto puede manifestarse en la forma de ayuda al desarrollo, préstamos, donaciones, o proyectos conjuntos. Por supuesto, no es menor la transferencia inversa de recursos, que no necesariamente se registran, como las ganancias de grandes empresas, bancos, entre otros, de los países centrales localizados en los territorios de los países periféricos. </li><br>
+            <li class="sec1-text">Fortalecimiento de las capacidades institucionales, uno de los objetivos principales de la cooperación internacional para los países menos desarrollados, para que puedan diseñar e implementar políticas efectivas en áreas clave como la educación, salud, medio ambiente y gobernanza.</li><br>
+            <li class="sec1-text">Solidaridad y responsabilidad compartida entre naciones ante los problemas globales. Los países reconocen que tienen la responsabilidad de colaborar en la solución de problemas que afectan al mundo entero, como la pobreza, el cambio climático, las pandemias y la seguridad global.</li><br>
+            <li class="sec1-text">Diplomacia y multilateralismo, pues la cooperación internacional se lleva a cabo principalmente a través de mecanismos diplomáticos y foros multilaterales, como las Naciones Unidas, la Unión Europea, la Organización Mundial de la Salud (OMS), entre otros. Estos foros permiten que los países negocien y acuerden acciones conjuntas en áreas de interés común.</li><br>
+            <li class="sec1-text">Sostenibilidad y objetivos de desarrollo, que ha sido el punto de atención en el cual, en las últimas décadas, la cooperación internacional se ha centrado (Objetivos de Desarrollo Sostenible (ODS), que abordan áreas clave como la erradicación de la pobreza, la igualdad de género, la acción climática y la paz. Los ODS proporcionan un marco global para las acciones cooperativas y el seguimiento de los avances en el desarrollo sostenible.</li><br>
+        </ol>
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/GYD_ESQUEMA_UNIDAD1.2.png" alt="">
+            <div class="source-container">
+                <div class="source">Organizador gráfico. Por: Juan Estrella.</div>
+            </div>
+        </div>
+        <p class="sec1-text">La cooperación internacional enfrenta una serie de desafíos complejos que limitan su eficacia y alcance, entre ellos las desigualdades entre países donantes y receptores, pues los países en desarrollo suelen ser más dependientes de la cooperación internacional, pero esto a menudo crea una relación asimétrica en la que los países donantes imponen condiciones o agendas.</p><br>
+        <p class="sec1-text">Esta asimetría de poder puede traducirse en exigencias políticas o económicas de los países donantes hacia los destinatarios, como reformas estructurales, privatización o adopción de políticas de mercado, que no siempre están alineadas con las necesidades locales o los intereses del país receptor</p><br>
+        <p class="sec1-text"> Como bien lo señalan Ripoll y Ghotme (2015: 57)</p><br>
+            <p class="sec1-text-quote">“… la cooperación internacional ha estado marcada por la desigualdad y el individualismo, a pesar de la creciente interdependencia mundial, porque aún los intereses opuestos y la competencia por el poder son una constante en las relaciones dentro del sistema internacional.”</p><br>
+        <p class="sec1-text">Con un carácter más técnico también se presenta la falta de coordinación, pues con frecuencia, múltiples actores internacionales (gobiernos, ONGs, organizaciones multilaterales) intervienen en un país receptor sin una coordinación adecuada. Esto puede generar duplicación de esfuerzos, programas que se superponen, o incluso conflictos entre los actores que dificultan alcanzar resultados efectivos.</p><br>
+        <p class="sec1-text">De la misma manera, muchos proyectos de cooperación internacional se enfocan en resultados a corto plazo, pero no siempre logran desarrollar capacidades locales suficientes para mantener esos logros una vez que se retira el apoyo externo. Esto genera problemas de sostenibilidad, ya que las soluciones implementadas dependen de la continuidad de la financiación externa.</p><br>
+        <p class="sec1-text">No deben quedar de lado los desafíos sistémicos que acompañan al mismo desarrollo económico, como son la corrupción y mala gobernanza, pues desafortunadamente se tienen casos documentados, en algunos países receptores, donde la corrupción y la falta de transparencia son barreras importantes para la efectiva implementación de programas de cooperación. La “mala gobernanza” puede desviar recursos destinados a proyectos esenciales, reduciendo su impacto positivo en las comunidades locales.</p><br>
+        <p class="sec1-text">Otros desafíos globales son el cambio climático, las pandemias, y los conflictos armados, que han complicado aún más la cooperación internacional, ya que estas crisis aumentan la presión sobre los recursos financieros y humanos. Además, las emergencias globales suelen desplazar los esfuerzos de cooperación hacia soluciones inmediatas, desviando recursos de los proyectos de desarrollo a largo plazo.</p><br>
+        <p class="sec1-text">En los últimos años, también ha habido un resurgimiento del nacionalismo y políticas proteccionistas en algunos países desarrollados, lo que ha reducido su compromiso con la cooperación internacional. La disminución de la voluntad política para destinar recursos a la cooperación ha afectado los niveles de financiación para proyectos de desarrollo y ayuda humanitaria. En paralelo, recurrentemente, los esfuerzos de cooperación están influenciados por intereses geopolíticos. Países donantes pueden utilizar la ayuda como una herramienta para aumentar su influencia en regiones estratégicas, lo que puede crear tensiones entre potencias rivales y distorsionar las prioridades de la cooperación internacional.</p><br>
+        <p class="sec1-text">En algunos casos, la cooperación internacional puede generar efectos secundarios negativos, como el aumento de la dependencia externa o la creación de mercados paralelos en los que los recursos donados terminan en manos de actores no legítimos. Además, los proyectos de cooperación mal diseñados pueden exacerbar las desigualdades internas o dañar ecosistemas locales.</p><br>
+        <p class="sec1-text">Finalmente, los países receptores de ayuda suelen tener necesidades específicas basadas en sus contextos locales, mientras que las políticas y programas diseñados por los donantes pueden no estar alineados con esas necesidades. Esta desconexión entre lo que se ofrece y lo que se requiere a menudo limita la efectividad de los programas.</p><br>
+</section>
+
+<section class="sec-info1" id="sec3">
+    <div class="title">1.3 Alcances de la gobernanza: legalidad</div>
+    <div class="sec1-content">
+        <p class="sec1-text">El concepto de gobernanza se estructura en torno a la legalidad porque la gobernanza implica un sistema de toma de decisiones y coordinación entre actores (gobiernos, sociedad civil, sector privado) que debe operar dentro de un marco legal. Este marco legal establece los límites, define las responsabilidades, y garantiza que las acciones se realicen de manera justa y transparente.</p><br>
+        <p class="sec1-text">La legalidad es fundamental para garantizar que los procesos de gobernanza se lleven a cabo conforme al estado de derecho. Esto significa que tanto las autoridades como los ciudadanos deben actuar bajo el cumplimiento de las leyes vigentes, lo que asegura la rendición de cuentas y limita el abuso de poder. La gobernanza se basa en la imparcialidad de las leyes para regular las interacciones entre actores y garantizar que las decisiones sean legítimas.</p><br>
+        <p class="sec1-text">La gobernanza necesita de la legalidad para obtener legitimidad. La legalidad proporciona la base normativa sobre la cual se toman decisiones colectivas y se aplican políticas públicas. Sin un marco legal claro, los procesos de gobernanza pueden carecer de transparencia y ser percibidos como arbitrarios, lo que debilita la confianza en las instituciones.</p><br>
+        <p class="sec1-text">La gobernanza implica no sólo la participación y coordinación de actores, sino también la creación de mecanismos de control que aseguren que las decisiones sean evaluadas y corregidas si es necesario. Estos mecanismos son parte del marco legal, donde leyes y regulaciones exigen transparencia y responsabilidad en la gestión de los recursos y la toma de decisiones. Los sistemas judiciales y las agencias reguladoras actúan como garantes de que la gobernanza funcione dentro de los límites legales.</p><br>
+        <p class="sec1-text">Uno de los objetivos de la gobernanza es la protección de los derechos individuales y colectivos. El respeto a la legalidad asegura que las políticas de gobernanza no vulneren los derechos humanos ni las libertades fundamentales. En este sentido, la legalidad impone un marco donde se garantiza la igualdad ante la ley y se protege a los grupos vulnerables.</p>
+        <p class="sec1-text">La gobernanza involucra la cooperación entre múltiples actores: gobierno, sector privado, ONGs y ciudadanos. La legalidad regula estas interacciones mediante leyes que delimitan las funciones de cada actor, establecen reglas claras para la cooperación y resuelven conflictos de intereses. Además, la creación de regulaciones es clave para que estos actores colaboren en armonía y dentro de un marco justo.</p>
+        <p class="sec1-text">Por último, cabe señalar que, en un contexto de gobernanza, el marco legal no es estático; debe evolucionar para responder a los cambios sociales, económicos y tecnológicos. La gobernanza efectiva reconoce que la legalidad no solo establece los límites, sino que también puede adaptarse para mejorar la coordinación entre actores y garantizar el bienestar común.</p>
+        <p class="sec1-text">Por supuesto, esto es complejo, principalmente para la actividad gubernamental, como nos recuerdan Peters y Pierre (2005: 134), pues: </p>
+        <p class="sec1-text-quote">“Si mantenemos que el sector público tiene un alto grado de especificidad, esto debería llevarnos a reconocer que el servicio público necesita ser evaluado por unos patrones diferentes a los del sector empresarial. Valorar procesos guiados principalmente por la legalidad, la igualdad y la seguridad jurídica en términos de su eficacia organizacional es, en cierta medida, menospreciar las consecuencias de la especificidad política y social del servicio público.”</p><br>
+</section>
+
+
+    <div class="card-section-container">
+        <p class="card-title-section">Para saber más...</p><br>
+        <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+            info
+            </span>
+        <div class="card-container">
+            <!-- fuentes pendientes -->
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/Aguilar_Gobernanza_y_gestion_Publica.pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Gobernanza y Gestión Pública. Fondo de Cultura Económica.</p>
+            </a>
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/Arenas_gobernanza_mundial.pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">La gobernanza mundial</p>
+            </a>
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/Avalle_Gobernabilidad_y_gobernanza(2).pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Gobernabilidad y gobernanza</p>
+            </a>
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/Avalle_Gobernabilidad_y_gobernanza(2).pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Derechos sociales, normas de acceso y democracia</p>
+            </a>
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/Calabuig_Cooperacion_internacional_para_desarrollo.pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">La cooperación internacional para el desarrollo</p>
+            </a>
+            <a href="https://www.un.org/spanish/esa/sustdev/agenda21/agenda21spchapter2.htm" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Cooperación internacional para acelerar el desarrollo sostenible de los países en desarrollo y políticas internas conexas</p>
+            </a>
+            <a href="https://youtu.be/9KZ_iWZhNmU?si=zp9MW1db13iNff-Z" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">play_circle</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Gobernanza y desarrollo económico local en ciudades pequeñas</p>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    </script>
+</body>
+</html>

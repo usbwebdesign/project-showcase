@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 5rem 1rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 20px;
+    }
+    
+    .card button {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 1rem;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .card button:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 1rem 5rem;
+        flex-wrap: wrap;
+    }
+    .img-sources{
+        border-radius: 30px;
+        width: 80%;
+    }
+    .source-container{
+        display: flex;
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+    	.container-img {
+    		margin: 1rem;
+    	}
+        .img-sources{
+        width: 90%;
+    }
+    .source-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    }
+
+    .source{
+        background-color: rgb(67, 67, 67);
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin: 1rem 1rem 1rem 0;
+    }
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 30%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="logo-container">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+        </div>
+        <div class="usb-online">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+        </div>
+        <div class="content-hero">
+            <h1 class="content-hero-1st">Especialidad en</h1><br>
+            <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+            <p class="content-hero-3rd">Thick Data e incidencia pública</p>
+            <button class="unit-button">Unidad 1</button>
+        </div>
+    </div>
+</section>
+    <div class="container">
+        <div class="content">
+            <h1>Introducción</h1>
+            <p class="content-intro">En esta primera unidad, te adentrarás en el concepto de Thick Data y su aplicación como herramienta clave para abordar problemas públicos. Estudiarás qué es el Thick Data, cómo se diferencia del Big Data y por qué es crucial en la toma de decisiones informadas. El Thick Data se refiere a datos cualitativos que aportan profundidad y contexto a fenómenos sociales, capturando experiencias humanas y narrativas ricas que permiten una comprensión más matizada de los problemas.</p><br>
+            <p class="content-intro">La unidad se organiza en tres secciones clave. En primer lugar, comprenderás qué es el Thick Data y cómo se construye a partir de métodos cualitativos como la observación etnográfica y las entrevistas. A continuación, explorarás casos de éxito en los que el Thick Data ha sido fundamental para mejorar políticas y programas en diferentes contextos. Finalmente, identificarás áreas de oportunidad en las que el Thick Data puede ser una herramienta valiosa para diseñar soluciones más empáticas y efectivas en políticas públicas.</p><br>
+            <p class="content-intro">Este contenido es relevante porque el Thick Data permite trascender las cifras del Big Data y ofrecer una perspectiva más humana y contextualizada. En un mundo donde las decisiones de política pública a menudo se basan únicamente en números, el Thick Data aporta una visión que refleja las realidades complejas de las comunidades y personas afectadas. Al aprender a utilizar esta herramienta, estarás mejor preparado para diseñar intervenciones que no solo respondan a los datos, sino también a las voces y experiencias de las personas involucradas.</p><br>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content2">
+            <h1>Objetivos específicos</h1>
+            <p class="content-intro2">
+                Al término de la unidad, el alumnado será capaz de identificar aspectos clave del Thick Data mediante el análisis de casos de éxito para proponer su uso en la solución de problemas públicos, demostrando la comprensión de sus áreas de oportunidad durante la formación de políticas públicas.
+            </p>
+        </div>
+    </div>
+
+<!-- Botón para minimizar o expandir la navbar -->
+<button id="toggle-btn" class="toggle-btn">–</button> 
+
+<div class="container-temario" id="navbar-temario">
+    <div class="temario">
+        <div class="sub-1">
+            <h1>Temas y Subtemas</h1>
+            <h2 class="temario-1list">1. El Thick Data como herramienta para la solución de problemas públicos</h2><br>
+        </div>
+        <ul class="temario-ulist">
+            <a href="#sec1" class="temario-list">1.1 ¿Qué es el Thick Data?</a><br>
+            <a href="#sec2" class="temario-list">1.2 Thick Data: revisión de casos de éxito</a><br>
+            <a href="#sec3" class="temario-list">1.3 Áreas de oportunidad y Thick Data</a><br>
+        </ul>
+    </div>
+</div>
+
+    
+
+    <section class="sec-info1" id="sec1">
+        <div class="title">1. El Thick Data como herramienta para la solución de problemas públicos</div>
+        <div class="sec1-content">
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIO_ANEXO3_unidad1.png" alt="">
+                <div class="source-container">
+                <div class="source">Organizador gráfico. Por: Abraham Lira</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sec-info1" id="sec1">
+        <div class="title">1.1 ¿Qué es el Thick Data?</div>
+        <div class="sec1-content">
+            <p class="sec1-text">Se entiende por Thick Data (datos densos) a la información cualitativa que proporciona contexto profundo sobre fenómenos sociales, complementando datos cuantitativos y capturando experiencias humanas a través de métodos como observación y entrevista.</p><br>
+            <p class="sec1-text-quote">El Thick Data proporciona una comprensión profunda y matizada de las experiencias humanas y los contextos culturales. Se caracteriza por ricas narrativas e insights cualitativos, a diferencia de los insights numéricos y de nivel superficial que ofrece el Big Data. Los “datos densos” a menudo se derivan de métodos etnográficos, que se centran en los significados y la importancia detrás del conteo de datos (Ardévol, 2017).</p><br>
+            <p class="sec1-text">A diferencia del Big Data, que se enfoca en grandes volúmenes de datos numéricos, el Thick Data se centra en las experiencias, narrativas y significados que las personas atribuyen a su entorno. Este tipo de datos se recopila mediante métodos cualitativos, con el objetivo de captar la complejidad y diversidad de las realidades humanas.</p><br>
+            <p class="sec1-text">Una de las características más relevantes del Thick Data es su contextualidad, ya que permite comprender el entorno social y cultural en el que se generan los datos, revelando matices que son esenciales para una interpretación adecuada. Además, captura las historias y experiencias individuales, ayudando a ilustrar realidades complejas y a entender las motivaciones detrás de ciertos comportamientos. El Thick Data también es participativo, involucrando a las comunidades en el proceso de recopilación y análisis, asegurando que sus voces y perspectivas sean parte integral de la investigación.</p><br>
+            <p class="sec1-text">Las utilidades del Thick Data son variadas y significativas. En primer lugar, permite a investigadores y formadores de políticas identificar y comprender mejor problemas públicos complejos. A través de la recopilación de experiencias y perspectivas, se pueden revelar desafíos que no son evidentes mediante datos cuantitativos. En segundo lugar, facilita la creación de soluciones más efectivas y adaptadas a las necesidades locales. Al comprender el contexto y las dinámicas sociales, los profesionales pueden diseñar intervenciones que respondan de manera más precisa a las realidades de las comunidades. Por último, ayuda en la evaluación del impacto de programas y políticas públicas al ofrecer insights cualitativos que complementan los datos cuantitativos, permitiendo así una valoración más completa de los resultados y el impacto social.</p><br>
+            <p class="sec1-text">El Thick Data es una herramienta poderosa para abordar problemas sociales y mejorar la toma de decisiones en el ámbito de la incidencia pública. Su enfoque cualitativo y contextualizado permite comprender mejor las complejidades de las realidades humanas y diseñar soluciones efectivas que respondan a las necesidades de la sociedad.</p><br>
+        </div>
+    </section>
+    <section class="sec-video">
+        <h1 class="vid-title">Video: The human insights missing from big data</h1>
+        <span class="material-symbols-outlined">south</span>
+<div class="video">
+    <iframe width="660" height="415" src="https://www.youtube.com/embed/pk35J2u8KqY?si=lGKz9PkUEa5srTcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+    </section>
+<section class="sec-info1" id="sec2">
+    <div class="title">1.2 Thick Data: revisión de casos de éxito</div>
+    <div class="sec1-content">
+        <p class="sec1-text">El uso de Thick Data (datos densos) se ha convertido en una estrategia clave para la toma de decisiones en diversas organizaciones. A continuación, se presentan casos de éxito en los que la integración de ambos tipos de datos ha demostrado ser efectiva para mejorar la entrega de servicios y abordar las necesidades de la sociedad. Cada caso ilustra cómo la recolección de información rica y contextualizada ha llevado a resultados más satisfactorios y alineados con las expectativas de las comunidades.</p><br>
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO3_UNIDAD1.2.png" alt="">
+            <div class="source-container">
+                <div class="source">Casos de éxito de Thick Data. Por: Abraham Lira, a partir de Ang (2019), Jemielniak (2020) y UNHCR (2024).</div>
+            </div>
+        </div>
+        <p class="sec1-text">La integración de Thick Data y Big Data ha demostrado ser una estrategia poderosa para abordar desafíos complejos en la toma de decisiones públicas. A través de la comprensión profunda y contextual de las necesidades de los usuarios, las organizaciones pueden diseñar soluciones más efectivas y alineadas con las expectativas de las comunidades a las que sirven. Estos casos de éxito resaltan la importancia de no solo confiar en cifras, sino también en las historias y experiencias humanas que informan esas cifras, conduciendo a resultados más relevantes y satisfactorios.</p><br>
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO3_UNIDAD1.2.jpg" alt="">
+            <div class="source-container">
+                <div class="source">Recuperado de https://blog.antropologia2-0.com/que-es-thick-data/</div>
+            </div>
+        </div>
+        <section class="sec-video">
+            <h1 class="vid-title">Video: Thick Data: El secreto de las recomendaciones de Netflix</h1>
+            <span class="material-symbols-outlined">south</span>
+    <div class="video">
+        <iframe width="660" height="415" src="https://www.youtube.com/embed/fO7G6gRFLLM?si=Nsv3bmOm7FEezMDq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+        </section>
+    </div>
+</section>
+
+<section class="sec-info1" id="sec2">
+    <div class="title">1.3 Áreas de oportunidad y Thick Data</div>
+    <div class="sec1-content">
+        <p class="sec1-text">En un contexto cada vez más complejo, la formulación de políticas públicas enfrenta retos significativos que demandan enfoques innovadores. La combinación de Big Data y Thick Data emerge como una estrategia efectiva, ya que el primero maneja grandes volúmenes de información que revelan patrones y tendencias, mientras que el segundo aporta profundidad y contexto a esos datos a través de narrativas ricas en experiencias.</p><br>
+        <p class="sec1-text">Esta integración permite a los responsables de políticas no solo basarse en cifras, sino también comprender las historias y experiencias humanas que las subyacen. Así, el uso de Thick Data se vuelve crucial para diseñar soluciones más empáticas y efectivas, alineadas con las necesidades reales de las comunidades, lo que también actúa como un puente que conecta a las comunidades con los procesos de toma de decisiones.</p><br>
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO3_UNIDAD1.3.png" alt="">
+            <div class="source-container">
+                <div class="source">Recuperado de openpolicy.blog.gov.uk</div>
+            </div>
+        </div>
+        <div class="sec1-text">El Thick Data, representado en métodos como la etnografía, le añade una capa de comprensión que humaniza los datos y permite diseñar políticas enraizadas en las vivencias reales de las personas afectadas. Es en este proceso donde se puede facilitar la participación ciudadana, ya que las comunidades no solo son consultadas (como ocurre en los niveles más bajos de la escalera), sino que se convierten en cocreadores activos de las políticas que los afectan. A partir de ello, algunas de las áreas de oportunidad para la implementación de Thick Data en las políticas públicas son:</div>
+        <div class="sec1-text">a) Enriquecimiento del Proceso Decisional</div>
+        <div class="sec1-text">La integración de Thick Data permite a los formuladores de políticas obtener una comprensión más rica de los problemas públicos. A través de entrevistas y grupos focales, se pueden capturar historias y experiencias que complementen los datos cuantitativos, lo que resulta en decisiones más informadas y empáticas.</div>
+        <div class="sec1-text-quote">Ardévol (2017) indica que el uso de datos densos puede informar los datos cuantitativos, creando así una visión más holística de los problemas en cuestión. Esto permite comprender las dimensiones culturales y emocionales de los datos.</div>
+        <div class="sec1-text">b) Triangulación de Datos para Mayor Confiabilidad</div>
+        <div class="sec1-text">La combinación de Thick Data y Big Data permite la triangulación, lo que aumenta la confiabilidad de los análisis y conclusiones. Esta estrategia es crucial para abordar fenómenos sociales complejos que no pueden ser explicados únicamente a través de números.</div>
+        <div class="sec1-text-quote">Latzko-Toth et. al. (2022) destaca que el uso de Thick Data en la toma de decisiones puede enriquecer la comprensión de fenómenos sociales al permitir la triangulación de datos, lo que refuerza la validez de las conclusiones.</div>
+        <div class="sec1-text">c) Identificación de Necesidades Reales de la Ciudadanía</div>
+        <div class="sec1-text">El enfoque en Thick Data permite a los responsables de políticas identificar las necesidades reales de los ciudadanos al explorar no solo los datos de uso, sino también las experiencias subjetivas que dan contexto a esos datos. Esto es esencial para diseñar programas que realmente respondan a las expectativas y requerimientos de las comunidades.</div>
+        <div class="sec1-text-quote">Mortati (2023) señala que los datos densos son esenciales para construir empatía y comprensión de las necesidades de los usuarios. Esta comprensión profunda ayuda a las organizaciones a diseñar soluciones más efectivas y alineadas con las expectativas de las comunidades a las que sirven</div>
+        <div class="sec1-text">La implementación de Thick Data en las políticas públicas ofrece una serie de oportunidades significativas. Al enriquecer el proceso decisional, permitir la triangulación de datos y facilitar la identificación de necesidades reales, los responsables de políticas pueden diseñar intervenciones más efectivas y alineadas con la realidad de las comunidades. Estas áreas de oportunidad resaltan la importancia de adoptar enfoques integrados que vayan más allá de los datos cuantitativos para abordar los complejos desafíos sociales actuales.</div>
+    </div>
+</section>
+
+
+    <div class="card-section-container">
+        <p class="card-title-section">Para saber más...</p><br>
+        <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+            info
+            </span>
+        <div class="card-container">
+            <a href="https://www.youtube.com/watch?v=nU9X840I2Ao" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">play_circle</span>
+                <p class="title1 fade-in invisible">Ver Video</p>
+                <p class="text fade-in invisible">¿Dónde está el Bug?</p>
+                <p class="text fade-in invisible">"¿Qué es BIG DATA y THICK DATA?"</p>
+            </a>
+            <a href="https://blog.antropologia2-0.com/que-es-thick-data/" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">¿Qué es Thick Data?</p>
+                <p class="text fade-in invisible">Antropología 2.0</p>
+            </a>
+            <a href="https://medium.com/@triciawang/por-qu%C3%A9-big-data-necesita-thick-data-fbbe11dfb088" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Por qué Big Data necesita Thick Data</p>
+                <p class="text fade-in invisible">Medium</p>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    </script>
+</body>
+</html>

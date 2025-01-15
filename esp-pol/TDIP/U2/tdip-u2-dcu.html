@@ -1,0 +1,1079 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 5rem 1rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 20px;
+    }
+    
+    .card button {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 1rem;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .card button:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 1rem 5rem;
+        flex-wrap: wrap;
+    }
+    .img-sources{
+        border-radius: 30px;
+        width: 80%;
+    }
+    .source-container{
+        display: flex;
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+    	.container-img {
+    		margin: 1rem;
+    	}
+        .img-sources{
+        width: 90%;
+    }
+    .source-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    }
+
+    .source{
+        background-color: rgb(67, 67, 67);
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin: 1rem 1rem 1rem 0;
+    }
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 40%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="logo-container">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+        </div>
+        <div class="usb-online">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+        </div>
+        <div class="content-hero">
+            <h1 class="content-hero-1st">Especialidad en</h1><br>
+            <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+            <p class="content-hero-3rd">Thick Data e incidencia pública</p>
+            <button class="unit-button">Unidad 2</button>
+        </div>
+    </div>
+</section>
+    <div class="container">
+        <div class="content">
+            <h1>Introducción</h1>
+            <p class="content-intro">En esta unidad te adentrarás en el uso del Thick Data como herramienta clave
+                para la incidencia pública. Aprenderás a recopilar, analizar y utilizar datos
+                cualitativos para comprender a fondo los problemas sociales y políticos, con
+                el fin de diseñar estrategias de intervención efectivas. Se estudiarán los
+                métodos cualitativos que permiten obtener información contextualizada,
+                como la observación participante y las entrevistas en profundidad, aplicados a
+                casos de estudio en el ámbito digital.</p><br>
+            <p class="content-intro">La unidad está organizada en tres subtemas. Primero, explorarás qué es la
+                incidencia pública y cómo puede influir en las políticas públicas a través de la
+                participación de la ciudadanía. En el segundo subtema, aprenderás a convertir
+                los datos cualitativos en un planning de acción, siguiendo los pasos necesarios
+                para transformar la información en estrategias accionables. Finalmente, se
+                abordará el pilotaje de experimentación social, donde aplicarás estas técnicas
+                en un entorno controlado, utilizando las redes sociales como fuente de datos
+                para comprender un problema público.</p><br>
+            <p class="content-intro">El contenido de esta unidad es relevante porque te proporciona las
+                herramientas para comprender matices y experiencias cualitativas que no se
+                ven reflejados en las estadísticas. En un contexto donde los problemas
+                públicos son cada vez más complejos y multidimensionales, el Thick Data
+                permite una aproximación más empática y profunda, ayudando a diseñar
+                soluciones que realmente atiendan las necesidades de las comunidades. Al finalizar, estarás preparado para aplicar estas técnicas en el análisis y
+                resolución de problemas de política pública, contribuyendo a generar cambios
+                significativos desde la incidencia pública.</p><br>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content2">
+            <h1>Objetivos específicos</h1>
+            <p class="content-intro2">
+                Al finalizar la unidad, el alumnado será capaz de seleccionar un caso de
+                estudio relevante para la incidencia pública y llevar a cabo un pilotaje de
+                experimentación social mediante técnicas de Thick Data. Este proceso les
+                permitirá contextualizar, describir y dar significado al problema público, con el
+                propósito de identificar áreas clave que orienten el desarrollo de soluciones
+                más empáticas y ajustadas a las necesidades de la comunidad.
+            </p>
+        </div>
+    </div>
+
+<!-- Botón para minimizar o expandir la navbar -->
+<button id="toggle-btn" class="toggle-btn">–</button> 
+
+<div class="container-temario" id="navbar-temario">
+    <div class="temario">
+        <div class="sub-1">
+            <h1>Temas y Subtemas</h1>
+            <h2 class="temario-1list">2. Qué es la incidencia pública</h2><br>
+        </div>
+        <ul class="temario-ulist">
+            <a href="#sec1" class="temario-list">2.1 Qué es la incidencia pública</a><br>
+            <a href="#sec2" class="temario-list">2.2 Convirtiendo datos en planning de acción</a><br>
+            <a href="#sec3" class="temario-list">2.3 Pilotaje de experimentación social</a><br>
+        </ul>
+    </div>
+</div>
+
+    
+
+    <section class="sec-info1" id="sec1">
+        <div class="title">2. Qué es la incidencia pública</div>
+        <div class="sec1-content">
+            <div class="container-img">
+                <img class="img-sources" src="https://images.pexels.com/photos/13461021/pexels-photo-13461021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <div class="source-container">
+                <div class="source">Organizador gráfico. Por: Abraham Lira</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sec-info1" id="sec1">
+        <div class="title">2.1 Qué es la incidencia pública</div>
+        <div class="sec1-content">
+            <p class="sec1-text">La incidencia pública es el conjunto de acciones organizadas y estratégicas que busca influir en las decisiones
+                de políticas públicas con el objetivo de solucionar problemas que afectan a una comunidad o grupo social. A
+                través de la incidencia, los actores involucrados, como organizaciones de la sociedad civil (OSC), ciudadanos
+                y otras entidades, tratan de influir en las autoridades gubernamentales y en la opinión pública para que se
+                tomen decisiones que respondan a las necesidades de la sociedad.</p><br>
+            <p class="sec1-text-quote">La participación de la ciudadanía en los asuntos públicos es un componente integral de una democracia
+                consolidada, donde los funcionarios de gobierno informen, consulten, debatan, expliquen, colaboren,
+                respondan, representen y rindan cuentas a la sociedad. Además, sabemos que algunos cambios en
+                políticas públicas ocurren solamente cuando los ciudadanos afectados presionan y promueven soluciones
+                (Tapia Álvarez et. al., 2010).</p><br>
+            <p class="sec1-text">A diferencia de los procesos puramente operativos de los gobiernos, la incidencia pública implica una
+                participación de la ciudadanía en la definición de la agenda pública, la creación de políticas y su
+                implementación. La incidencia puede abarcar desde acciones cooperativas, como colaborar con las
+                autoridades para formular propuestas, hasta acciones más confrontativas, como ejercer presión a través de
+                manifestaciones, campañas o movilización social.</p>
+            <p class="sec1-text">El objetivo de la incidencia no es sustituir a las autoridades en la toma de decisiones, sino influir en los
+                procesos para que estas decisiones reflejen las demandas ciudadanas y promuevan el bienestar colectivo.
+                Las OSC y otros actores no tienen el poder formal para implementar políticas públicas, pero pueden
+                desempeñar un papel clave al proporcionar información, documentar problemáticas y presentar soluciones,
+                además de movilizar a la sociedad para ejercer presión sobre las instituciones gubernamentales.</p>
+            <p class="sec1-text">El objetivo de la incidencia no es sustituir a las autoridades en la toma de decisiones, sino influir en los
+                procesos para que estas decisiones reflejen las demandas ciudadanas y promuevan el bienestar colectivo.
+                Las OSC y otros actores no tienen el poder formal para implementar políticas públicas, pero pueden
+                desempeñar un papel clave al proporcionar información, documentar problemáticas y presentar soluciones,
+                además de movilizar a la sociedad para ejercer presión sobre las instituciones gubernamentales.</p>
+                <div class="container-img">
+                    <img class="img-sources" src="https://images.pexels.com/photos/13461021/pexels-photo-13461021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <div class="source-container">
+                        <div class="source">Fuente: Tapia Álvarez et. al. (2010: 17)</div>
+                    </div>
+                </div>
+            <div class="sec1-text">De tal manera que la incidencia pública es fundamental en cualquier democracia porque promueve la
+                participación ciudadana en la toma de decisiones que afectan la vida de las personas. A través de la
+                incidencia, se busca reducir la brecha entre los gobernantes y los gobernados, garantizando que las políticas
+                públicas reflejen los intereses y necesidades de la sociedad. Cabe señalar que no es un proceso aislado ni
+                improvisado. Para que sea efectiva, requiere de una estrategia clara y bien estructurada. Generalmente, se
+                desarrolla a través de los siguientes pasos:</div>
+            <ol>
+                <li class="sec1-text">Identificación del problema público: Detectar un problema de interés general que afecta negativamente
+                    a la sociedad y requiere intervención pública.</li>
+                <li class="sec1-text">Análisis del contexto y actores: Comprender el entorno político, social y económico, e identificar los
+                    actores clave que influyen en la política relacionada.</li>
+                <li class="sec1-text">Elaboración de propuestas: Desarrollar propuestas realistas y viables basadas en análisis cuantitativos y
+                    cualitativos, como el Thick Data, para solucionar el problema.</li>
+                <li class="sec1-text">Estrategia de comunicación y movilización: Diseñar una estrategia para visibilizar el problema y
+                    movilizar a la sociedad, usando medios como campañas y redes sociales.</li>
+                <li class="sec1-text">Seguimiento y evaluación: Monitorear la implementación de la política y evaluar los resultados para
+                    mejorar futuras estrategias.</li>
+            </ol>
+        </div>
+    </section>
+    <section class="sec-video">
+        <h1 class="vid-title">Video: Casos exitosos de incidencia
+            en políticas públicas desde las ONG</h1>
+        <span class="material-symbols-outlined">south</span>
+<div class="video">
+    <iframe width="660" height="415" src="https://www.youtube.com/embed/vDwH4ufjzGc?si=l2fut_4aalDmHVdd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+    </section>
+
+
+
+<section class="sec-info1" id="sec2">
+    <div class="title">2.2 Convirtiendo datos en planning de acción</div>
+    <div class="sec1-content">
+        <p class="sec1-text">El Thick Data es una herramienta clave para la incidencia pública, ya que permite obtener una comprensión
+            profunda y contextual de los problemas públicos. Su valor radica en la capacidad de convertir esos datos
+            cualitativos en un planning de acción que oriente las decisiones políticas y las intervenciones.</p><br>
+        <p class="sec1-text-quote">El Thick Data facilita que los proyectos de incidencia logren influir en las políticas públicas a través de la movilización de datos y narrativas contextuales (Latzko-Toth et. al., 2022).</p>
+        <div class="sec1-text">Para este proceso, Ardévol (2017) plantea que la conversión de datos en un planning de acción sigue tres
+            pasos principales:</div>
+            <ol>
+                <li class="sec1-text">Recopilación de datos cualitativos: En esta primera fase, se recopilan datos densos y cualitativos
+                    utilizando métodos etnográficos como la observación y las entrevistas. Estos métodos permiten captar
+                    experiencias, narrativas y contextos que no se reflejan en los datos cuantitativos tradicionales.</li>
+                <li class="sec1-text">Análisis de los datos: Una vez obtenidos los datos, el siguiente paso es identificar los temas clave y las
+                    narrativas que emergen de las experiencias de las comunidades estudiadas. Este análisis permite
+                    detectar patrones, preocupaciones y dinámicas que ayudarán a contextualizar los problemas públicos.</li>
+                <li class="sec1-text">Desarrollo de estrategias accionables: Finalmente, los hallazgos cualitativos se convierten en estrategias
+                    accionables. Estas estrategias deben ser coherentes con las necesidades identificadas en la fase de
+                    análisis y deben estar orientadas a la solución de problemas públicos concretos.</li>
+            </ol>
+        <div class="sec1-text">Por su parte, Latzko-Toth et. al. (2022) aportan un modelo más específico, aplicable en la fase de análisis de
+            los datos mediante un modelo de tres capas o niveles.</div>
+        <div class="container-img">
+            <img class="img-sources" src="https://images.pexels.com/photos/13461021/pexels-photo-13461021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="source-container">
+                <div class="source">Casos de éxito de Thick Data. Por: Abraham Lira, a partir de Ang (2019), Jemielniak (2020) y UNHCR (2024).</div>
+            </div>
+        </div>
+        <p class="sec1-text">La integración de Thick Data y Big Data ha demostrado ser una estrategia poderosa para abordar desafíos complejos en la toma de decisiones públicas. A través de la comprensión profunda y contextual de las necesidades de los usuarios, las organizaciones pueden diseñar soluciones más efectivas y alineadas con las expectativas de las comunidades a las que sirven. Estos casos de éxito resaltan la importancia de no solo confiar en cifras, sino también en las historias y experiencias humanas que informan esas cifras, conduciendo a resultados más relevantes y satisfactorios.</p><br>
+        <div class="container-img">
+            <img class="img-sources" src="https://images.pexels.com/photos/13461021/pexels-photo-13461021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="source-container">
+                <div class="source">Fuente: Latzko-Toth et. al. (2022: 160)</div>
+            </div>
+        </div>
+        <div class="sec1-text">Este proceso de &quot;thickening&quot; incluye tres elementos principales: la información contextual (el entorno y los
+            factores que rodean el problema), las descripciones densas de las prácticas (las acciones y comportamientos
+            de los actores sociales) y las experiencias y significados que los usuarios atribuyen a sus acciones. Este
+            modelo permite que los datos no solo se interpreten, sino que se integren en un planning de acción que
+            pueda guiar decisiones políticas informadas y realistas.</div>
+            
+        <div class="sec1-text">Muestra de ello fue el proceso de thickening realizado durante las protestas estudiantiles en Quebec,
+            Canadá, en 2012. En este caso, el Thick Data se utilizó para capturar las experiencias, significados y prácticas
+            de los estudiantes involucrados en las manifestaciones contra el aumento de las tasas universitarias. El
+            proceso de investigación siguió las tres capas propuestas:</div>
+        
+        <ol type="a">
+            <li class="sec1-text">Contextualización: Se recopiló información sobre el contexto sociopolítico en el que surgieron las
+                protestas, identificando factores como el descontento general con el sistema educativo y el creciente
+                malestar con las políticas gubernamentales que afectaban la accesibilidad a la educación superior.</li>
+            <li class="sec1-text">Descripción: Se documentaron las prácticas de los estudiantes durante las manifestaciones, incluyendo
+                sus métodos de protesta, las narrativas que compartían a través de redes sociales y sus interacciones
+                con la policía y los medios de comunicación.</li>
+            <li class="sec1-text">Significación: Se analizaron los significados que los estudiantes atribuían a sus acciones, destacando
+                cómo las manifestaciones no solo eran una respuesta a las políticas gubernamentales, sino también un
+                vehículo para expresar su identidad colectiva y su sentido de justicia social.</li>
+        </ol>
+        <div class="sec1-text">
+            Este modelo de tres etapas permitió a los organizadores y aliados de las protestas convertir estos datos
+            densos en una estrategia de incidencia pública más efectiva. La información recopilada ayudó a dar
+            visibilidad a las demandas de los estudiantes y a influir en el debate público sobre la accesibilidad a la
+            educación, contribuyendo eventualmente a la congelación de las tasas universitarias.
+        </div>
+        <div class="sec1-text">El proceso de convertir datos en un planning de acción para la incidencia pública implica una combinación
+            de los tres pasos generales propuestos por Ardévol (2017) y el análisis en capas de Latzko-Toth et. al. (2022).
+            De esta manera se garantiza que los datos cualitativos recopilados a través del Thick Data se traduzcan en
+            estrategias coherentes, bien fundamentadas y ajustadas a las realidades de las comunidades implicadas.
+        </div>
+
+        <section class="sec-video">
+            <h1 class="vid-title">Video: Thick Data: Rebelión estudiante en Quebec</h1>
+            <span class="material-symbols-outlined">south</span>
+    <div class="video">
+        <iframe width="660" height="415" src="https://www.youtube.com/embed/nP0idgMBEYM?si=OicqcX7w0UT6v2dh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+        </section>
+    </div>
+</section>
+
+<section class="sec-info1" id="sec2">
+    <div class="title">2.3 Pilotaje de experimentación social</div>
+    <div class="sec1-content">
+        <div class="sec1-text">El pilotaje de experimentación social es una herramienta metodológica que permite realizar una primera
+            aproximación a un problema público para obtener datos iniciales que, a través de la aplicación de técnicas
+            cualitativas, ayudarán a contextualizar, describir y significar dicho problema. Este proceso no busca una
+            intervención definitiva, sino más bien realizar una exploración controlada que permita comprender mejor
+            las dinámicas que rodean el problema en cuestión, antes de formular propuestas de solución más
+            estructuradas.</div>
+
+        <div class="sec1-text">El objetivo principal de un pilotaje es identificar cómo se manifiestan las dinámicas sociales en torno a un
+            problema público, recogiendo datos cualitativos que brinden una comprensión más profunda de las
+            experiencias, percepciones y comportamientos de los actores involucrados. En el contexto del Thick Data, el
+            pilotaje tiene como fin recolectar información rica en matices, que permita captar las complejidades de un
+            fenómeno social. A través de este proceso, los investigadores logran conocer cómo se experimenta el
+            problema desde diferentes perspectivas, lo que les proporciona una base sólida para elaborar estrategias de
+            intervención o propuestas de incidencia pública.</div>
+        <div class="sec1-text">Un pilotaje tiene varias características clave que lo diferencian de otras metodologías más robustas de
+            recolección de datos:</div>
+        <ul>
+            <li class="sec1-text">Exploratorio: El pilotaje busca generar una comprensión inicial del problema, sin pretender llegar a
+                conclusiones definitivas. Se utiliza para identificar patrones, generar hipótesis y explorar áreas que
+                luego pueden ser investigadas en profundidad.</li>
+            <li class="sec1-text">Controlado y delimitado: Aunque es exploratorio, un pilotaje sigue un plan estructurado que permite
+                delimitar el campo de observación o intervención.</li>
+            <li class="sec1-text">Flexible y adaptativo: La naturaleza del pilotaje permite realizar ajustes conforme se avanza en la
+                investigación. Esto significa que los métodos pueden ser modificados en función de los datos que se
+                vayan obteniendo.</li>
+            <li class="sec1-text">Métodos de recolección: Generalmente se utilizan técnicas como la observación participante y
+                entrevistas en profundidad para captar información sobre las percepciones, experiencias y
+                comportamientos de los actores.</li>
+            <li class="sec1-text">Contextualización: Al aplicar técnicas de Thick Data, el pilotaje no solo busca datos observables, sino
+                que también pone énfasis en los significados atribuidos por los actores involucrados a las acciones y
+                fenómenos que experimentan.</li>
+        </ul>
+        <div class="sec1-text">En el mundo digital, el pilotaje de experimentación social adopta una forma ligeramente distinta, aunque
+            sigue manteniendo su esencia exploratoria y cualitativa. En lugar de realizar observaciones en el campo
+            físico o entrevistas cara a cara, los investigadores pueden aprovechar el entorno digital para seguir los flujos
+            de información, las interacciones y los debates que se generan en plataformas como X (anteriormente
+            Twitter) o TikTok.</div>
+        <div class="container-img">
+            <img class="img-sources" src="https://images.pexels.com/photos/13461021/pexels-photo-13461021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="source-container">
+                <div class="source">Organizador gráfico. Por: Abraham Lira.</div>
+            </div>
+        </div>
+
+        <div class="sec1-text">El pilotaje digital puede llevarse a cabo utilizando hashtags y siguiendo comunidades específicas en redes
+            sociales que discuten sobre un tema relevante para la agenda pública. A través de la observación de las
+            interacciones en estas plataformas, se pueden recolectar datos valiosos sobre cómo se articulan las
+            narrativas, qué actores son influyentes en las conversaciones, y cómo la opinión pública se moviliza o toma
+            posición frente a un problema público. Algunas de las técnicas aplicables en el ámbito digital incluyen:</div>
+        <ul>
+            <li class="sec1-text">Observación participante: El investigador sigue el desarrollo de discusiones en línea y analiza cómo los
+                actores interactúan, qué tipo de contenido comparten y cómo las narrativas van cambiando con el
+                tiempo.</li>
+            <li class="sec1-text">Entrevistas en profundidad: Mediante mensajes directos o entrevistas virtuales, es posible acceder a
+                actores clave en las redes sociales (influencers, activistas, etc.), quienes pueden ofrecer perspectivas
+                valiosas sobre su participación en la conversación pública.</li>
+        </ul>
+        <div class="sec1-text">El pilotaje de experimentación social permite realizar una exploración controlada y adaptativa de un
+            problema público, obteniendo datos cualitativos que ayudan a contextualizar y comprender la complejidad
+            del fenómeno estudiado. En el contexto digital, estas técnicas se adaptan a las dinámicas de las redes
+            sociales, donde las interacciones y las narrativas son clave para analizar la opinión pública y su impacto en la
+            agenda política. A través del uso de hashtags, la observación y el análisis de las conversaciones en
+            plataformas como X, Instagram y TikTok, es posible obtener datos ricos en contexto que sirvan como base
+            para futuras propuestas de incidencia pública.</div>
+    </div>
+</section>
+
+
+    <div class="card-section-container">
+        <p class="card-title-section">Para saber más...</p><br>
+        <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+            info
+            </span>
+        <div class="card-container">
+            <a href="https://egap.org/resource/10-things-to-know-about-pilot-studies/" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">10 things to know about pilot studies.</p>
+            </a>
+            <a href="https://atlasti.com/es/research-/hub/prueba-piloto" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Cómo realizar pruebas piloto eficaces</p>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    </script>
+</body>
+</html>

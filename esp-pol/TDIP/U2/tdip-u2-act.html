@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=target" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=list_alt" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu_book" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=flag" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=auto_stories" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=assignment" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .img-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            width: 30rem;
+        }
+
+        .img-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        @media only screen and (min-width: 767px) {
+            .img-header {
+                padding: 3rem 3rem 0 3rem;
+            }
+        }
+        @media only screen and (min-width: 1300px) {
+            .header{
+                justify-content: space-around;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .img-header{
+                width: 15rem;
+            }
+        }
+
+        .sectionf1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .containerf1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .f-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%; 
+            margin: 3rem auto;
+            height: auto;
+            flex-wrap: nowrap; 
+            gap: 10px;
+        }
+
+        .title-containerf1 {
+            font-family: "Sora", sans-serif;
+            background-color: #54021d;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            flex-basis: 95%; 
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 15%; 
+            background-color: #54021d;
+            border-radius: 30px;
+            flex-grow: 0;
+            min-width: 0;
+        }
+                @keyframes iconInSimple {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icon-container .material-symbols-outlined {
+            animation: iconInSimple 0.3s ease-out forwards;
+        }
+
+        .container-infof1{
+            background-color: #e6e6e6;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3rem 5rem 2rem 5rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .container-infof1 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infof1 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .foro{
+            background-color: #e6e6e6;
+            padding: 2rem 2rem;
+            border-radius: 16px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .f-container {
+                flex-wrap: wrap;
+                width: 90%;
+                gap: 10px;
+            }
+
+            .title-containerf1, .icon-container {
+                flex-basis: calc(70% - 10px);
+                max-width: 70%;
+                font-size: 3rem;
+            }
+            .icon-container {
+                flex-basis: calc(30% - 10px);
+                max-width: 30%;
+            }
+            .material-symbols-outlined {
+                font-size: 50px;
+                color: #ffffff;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 500,
+                'GRAD' 0,
+                'opsz' 40
+            }
+        }
+            .material-symbols-outlined {
+            font-size: 75px;
+            color: #ffffff;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 40
+            }
+            .contenedor {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            padding: 5rem;
+            gap: 20px;
+        }
+
+        .contenido {
+            background-color: #e0e0e0;
+            font-family: "Sora", sans-serif;
+            padding: 10rem;
+            width: 75%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contenido h2 {
+            margin: 0;
+            font-size: 24px;
+            padding: 3rem 0 2rem 0;
+            color: #000;
+        }
+
+        .contenido ul {
+            list-style-type: none;
+            margin-top: 10px;
+            color: #333;
+            font-size: 24px;
+            padding: 0 0 2rem 0;
+        }
+
+        .contenido ul li {
+            margin-bottom: 5px;
+        }
+
+                /* Responsive design */
+                @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column-reverse;
+                padding: 5rem 0;
+                width: 90%;
+                height: auto;
+            }
+
+            .unidad {
+                width: 100%;
+                height: 100px;
+            }
+
+            .contenido {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .contenido ul {
+                font-size: 14px;
+            }
+            .contenido ul li{
+                font-size: 12px;
+            }
+
+            .unidad .texto {
+                font-size: 18px;
+            }
+
+            .unidad .numero {
+                font-size: 48px;
+            }
+        }
+        .actividad{
+            width: 80%;
+            margin-top: 1rem;
+        }
+        .actividad p{
+           font-size: 16px;
+           padding: 1rem 1rem;
+           text-align: justify;
+        }
+        .objetivo p{
+           font-size: 16px;
+           padding: 3rem;
+           text-align: justify;
+           background-color: #e6e6e6;
+           border-radius: 16px;
+           margin-bottom: 2rem;
+        }
+        .objetivo p strong{
+           font-size: 16px;
+        }
+        .instrucciones{
+           font-size: 16px;
+           font-weight: 700;
+        }
+        .objetivo-ol{
+           font-size: 16px;
+           padding: 3rem 5rem;
+           text-align: justify;
+           background-color: #e6e6e6;
+           border-radius: 16px;
+           margin-bottom: 2rem;
+        }
+        .objetivo-li{
+           font-size: 16px;
+           padding: 1rem 1rem;
+        }
+        @media (max-width: 768px) {
+            .fuentes {
+                width: 80%;
+                margin-top: 1rem;
+            }
+            .fuentes li{
+                font-size: 18px;
+            }
+        }
+        .entregable{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: left;
+            margin-top: 2rem;
+            border-radius: 16px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .button{
+            border-radius: 30px;
+            padding: 1.5rem;
+            width: 20%;
+            font-size: 16px;
+            border: none;
+            background-color: #83062f;
+            color: #ffffff;
+            font-family: "Sora", sans-serif;
+            font-weight: 600;
+            margin: 2rem 0;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover{
+            background-color: #54021D
+        }
+        @media (max-width: 768px) {
+            .button {
+                width: 100%;
+            }
+        }
+        .title{
+            font-size: 2.5rem;
+            text-align: left;
+            padding: 3rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+    <div class="sectionf1">
+        <div class="containerf1">
+            <div class="f-container">
+            <div class="title-containerf1"><p>Actividad 1 Unidad 2</p></div>
+            <div class="icon-container">
+                <span class="material-symbols-outlined">
+                    assignment
+                    </span>
+            </div>
+        </div>
+        <div class="actividad">
+            <h1 class="title">Reporte de caso</h1>
+            <div class="objetivo">
+                <p><strong>Objetivo:</strong>El objetivo de esta actividad es aplicar las técnicas de Thick Data,
+                    específicamente la observación participante, para explorar un tema de
+                    incidencia pública en redes sociales. Deberás realizar un pilotaje de
+                    experimentación social, siguiendo y analizando las prácticas de los
+                    participantes en el entorno digital. Este ejercicio te permitirá recolectar datos
+                    cualitativos y contextualizar el problema público, identificando dinámicas
+                    sociales clave.</p>
+            </div>
+            <p class="instrucciones">Instrucciones</p>
+            <p>Realiza un reporte de caso basado en el pilotaje de experimentación social.
+                Deberás elegir un caso de estudio específico en redes sociales, como una
+                comunidad en línea, un grupo social concreto o un #Hashtag de incidencia
+                pública, relacionado con algún problema público que te interese.</p>
+            <p>El reporte debe incluir cuatro apartados:</p>
+            <ul class="objetivo-ol">
+                <p class="instrucciones">1. Introducción:</p>
+                <li class="objetivo-li">Define el tema de incidencia pública seleccionado y justifica su relevancia.</li>
+                <li class="objetivo-li">Presenta el caso de estudio que analizarás (por ejemplo, un hashtag en X o una cuenta de TikTok) y explica por qué lo elegiste para tu pilotaje.</li>
+                <p class="instrucciones">2. Contextualización:</p>
+                <li class="objetivo-li">Describe el contexto social y cultural del problema público.</li>
+                <li class="objetivo-li">Explica cómo la comunidad seleccionada en redes sociales refleja o está vinculada con este problema.</li>
+                <p class="instrucciones">3. Análisis:</p>
+                <li class="objetivo-li">Utiliza la observación participante como técnica de recolección de datos. Explica cómo seguiste el desarrollo de las discusiones, identificaste los actores clave, y observaste las interacciones en la plataforma digital.</li>
+                <li class="objetivo-li">Explica cómo la comunidad seleccionada en redes sociales refleja o está vinculada con este problema.</li>
+                <li class="objetivo-li">Analiza las prácticas de los participantes, describiendo cómo interactúan, qué tipo de contenido comparten, y cómo evolucionan sus narrativas. </li>
+                <p>Ejemplo de pasos del pilotaje:</p>
+                <p>Elección del hashtag: Selecciona un hashtag o comunidad en redes
+                    sociales vinculada al problema público (ej., #CambioClimático).</p>
+                <p>Seguimiento diario: Observa las publicaciones y debates durante un
+                    período de tres días, anotando las principales narrativas, las
+                    interacciones y comentarios más frecuentes.</p>
+                <p>Identificación de actores clave: Detecta a los usuarios más
+                    influyentes en la conversación (ej., líderes de opinión, principales
+                    afectados) y analiza su participación.</p>
+                <p>Análisis de interacciones: Describe cómo otros usuarios responden a
+                    publicaciones y contenidos relacionados con el problema.</p>
+                <p class="instrucciones">4. Resultados:</p>
+                <p>Presenta los hallazgos obtenidos a través del análisis cualitativo. Describe
+                    las narrativas predominantes en las interacciones y los patrones de
+                    comportamiento observados.</p>
+            </ul>
+                <div class="entregable">
+            <p class="instrucciones">Formato de entrega</p>
+            <p>Documento escrito en formato PDF, de 3 a 5 cuartillas.</p>
+            <p>Letra Arial 12, interlineado 1.5.</p>
+            <p>Incluir referencias en formato APA séptima edición.</p>
+                <p>Entrega tu archivo en formato PDF nombrado del siguiente modo:</p> <p>Apellido_Nombre_TDIP_2</p>
+                <a href="" download="Documento_Matriz.pdf" class="button">Documento Matriz</a>
+                </div>
+            </div>
+</body>
+</html>
