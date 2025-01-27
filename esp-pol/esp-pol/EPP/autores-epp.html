@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .img-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            width: 30rem;
+        }
+
+        .img-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        @media only screen and (min-width: 767px) {
+            .img-header {
+                padding: 3rem 3rem 0 3rem;
+            }
+        }
+        @media only screen and (min-width: 1300px) {
+            .header{
+                justify-content: space-around;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .img-header{
+                width: 15rem;
+            }
+        }
+
+/* Media Querys  */
+@media only screen and (min-width: 1200px) {
+    body {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+        .sectionf1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .containerf1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .f-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%; 
+            margin: 3rem auto;
+            height: auto;
+            flex-wrap: nowrap; 
+            gap: 10px;
+        }
+
+        .title-containerf1 {
+            font-family: "Sora", sans-serif;
+            background-color: #54021d;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            flex-basis: 95%; 
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 15%; 
+            background-color: #54021d;
+            border-radius: 30px;
+            flex-grow: 0;
+            min-width: 0;
+        }
+                @keyframes iconInSimple {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icon-container .material-symbols-outlined {
+            animation: iconInSimple 0.3s ease-out forwards;
+        }
+
+        .container-infof1{
+            background-color: #e6e6e6;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3rem 5rem 2rem 5rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .container-infof1 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infof1 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .f-container {
+                flex-wrap: wrap;
+                width: 90%;
+                gap: 10px;
+            }
+
+            .title-containerf1, .icon-container {
+                flex-basis: calc(70% - 10px);
+                max-width: 70%;
+                font-size: 3rem;
+            }
+            .icon-container {
+                flex-basis: calc(30% - 10px);
+                max-width: 30%;
+            }
+            .material-symbols-outlined {
+                font-size: 50px;
+                color: #ffffff;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 500,
+                'GRAD' 0,
+                'opsz' 40
+            }
+        }
+            .material-symbols-outlined {
+            font-size: 75px;
+            color: #ffffff;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 40
+            }
+        /* SECTIONC4 */
+
+        .sectionC4{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .containerC4{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 7rem;
+            flex-wrap: wrap;
+        }
+        .container-infoC4{
+            font-size: 16px;
+            padding: 5rem 5rem 2rem 5rem;
+            text-align: justify;
+        }
+        .container-infoC4 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infoC4 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media only screen and (max-width: 768px) {
+        .container-infoC4 {
+            padding: 5rem 0 2rem 0;
+        }
+    }
+    .resources {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    padding: 0 4rem 0 4rem;
+}
+@media only screen and (max-width: 768px) {
+        .resources {
+            width: 100vw;
+            display: block;
+        }
+    }
+    .resourcesimg{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+    .resourcesimg-container {
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 0 5rem;
+        }
+        .resourcesimg-container img {
+        width: 30vw; 
+        border-radius: 50px;
+        height: auto; 
+        }
+        @media only screen and (max-width: 1024px) {
+            .resourcesimg-container img{
+            width: 50vw;
+        }
+    }
+        @media only screen and (max-width: 1024px) {
+            .resourcesimg-container img{
+            width: 100%;
+        }
+    }
+        @media only screen and (max-width: 576px) {
+            .resourcesimg-container {
+        margin: 0;
+        }
+    }
+
+        .autores{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #c8c8c8;
+            border-radius: 16px;
+            flex-wrap: wrap;
+        }
+        .autores-info{
+            padding: 4rem 4rem;
+            background-color: #393939;
+            color: #ffffff;
+            border-radius: 0 0 16px 16px;
+        }
+        .autores-info p em{
+            font-size: 16px;
+        }
+        .name-container{
+            background-color: #83062f;
+            width: 100%;
+            border-radius: 16px 16px 0 0;
+        }
+        .name{
+            font-family: "Sora", sans-serif;
+            font-weight: 600;
+            margin: 5rem 3rem 5rem 3rem;
+            font-size: 32px !important;
+            color: #f4f4f4;
+            text-align: center !important;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .name{
+            text-align: center !important;
+        }
+    }
+        </style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+
+    <div class="sectionf1">
+        <div class="containerf1">
+            <div class="f-container">
+            <div class="title-containerf1"><p>Autor</p></div>
+            <div class="icon-container">
+                <lord-icon
+                src="https://cdn.lordicon.com/hrjifpbq.json"
+                trigger="in"
+                colors= "primary:#ffffff"
+                state="in-account"
+                style="width:85px;height:85px;">
+            </lord-icon>
+            </div>
+        </div>
+            <div class="container-infoC4">
+                <div class="autores">
+                    <div class="name-container">
+                        <p class="name">Viridiana Gabriela Yañez Rivas</p>
+                    </div>
+                    <div class="autores-info1">
+                    <div class="resources">
+                        <div class="resourcesimg">
+                        <div class="resourcesimg-container">
+                            <img src="https://usbmexicoonline.neolms.com/files/11461125/_DSC5659.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="autores-info">
+                        <p>Formación Académica</p><br>
+                        <p>Es Doctora en Políticas Públicas por el Centro de Investigación y Docencia Económicas,
+                            Maestra en Gobierno y Asuntos Públicos por la Facultad Latinoamericana de Ciencias
+                            Sociales y Socióloga por la Universidad Autónoma Metropolitana</p><br>
+                        <p>Líneas de investigación</p><br>
+                        <p>Casi una década de experiencia en administración pública federal, políticas públicas de
+                            ciencia y tecnología, evaluación de políticas, programas y proyectos en temas de
+                            educación, ciencia y tecnología.</p><br>
+                        <p>Experiencia profesional y académica (asignaturas impartidas)</p><br>
+                        <p>Más de diez años de experiencia docente y formando talento en instituciones como la
+                            Universidad Autónoma del Estado de México, la Universidad Michoacana de San Nicolás
+                            de Hidalgo, la Facultad Latinoamericana de Ciencias Sociales, el Colegio de Defensa
+                            Nacional, la Universidad Abierta y a Distancia de México, entre otras. Ha colaborado
+                            como investigadora y como responsable en diferentes proyectos de investigación
+                            liderados por organismos internacionales, gobiernos estatales y asociaciones de la
+                            sociedad civil en temas de evaluación de política pública.</p><br>
+                        <p>En 2015 se integró al Consejo Nacional de Humanidades, Ciencias y Tecnologías
+                            (Conahcyt) en donde desempeñó funciones en diferentes áreas: desarrollo regional,
+                            centros públicos y cooperación internacional. Actualmente es la Directora de Planeación y
+                            Evaluación del Conahcyt en donde se encarga de la integración de información de toda la
+                            institución, coordina los procesos de evaluación de todos los programas a cargo del
+                            Conahcyt y es el enlace con dependencias y organismos nacionales e internacionales
+                            para el intercambio de información en materia de ciencia y tecnología. Es responsable de
+                            la operación del Sistema Nacional de Evaluación Humanística, Científica, Tecnológica y
+                            de Innovación y es presidenta del Comité Directivo del</p><br>
+                        <p>Otros logros (reconocimientos, certificaciones, ponencias)</p><br>
+                        <p>Candidata al Sistema Nacional de Investigadoras e Investigadores.</p>
+                    </div>
+                </div>
+            </div>
+</div>
+<script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+</html>

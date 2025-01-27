@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=target" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=list_alt" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu_book" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .img-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            width: 30rem;
+        }
+
+        .img-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        @media only screen and (min-width: 767px) {
+            .img-header {
+                padding: 3rem 3rem 0 3rem;
+            }
+        }
+        @media only screen and (min-width: 1300px) {
+            .header{
+                justify-content: space-around;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .img-header{
+                width: 15rem;
+            }
+        }
+
+        .sectionf1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .containerf1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .f-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%; 
+            margin: 3rem auto;
+            height: auto;
+            flex-wrap: nowrap; 
+            gap: 10px;
+        }
+
+        .title-containerf1 {
+            font-family: "Sora", sans-serif;
+            background-color: #54021d;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            flex-basis: 95%; 
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 15%; 
+            background-color: #54021d;
+            border-radius: 30px;
+            flex-grow: 0;
+            min-width: 0;
+        }
+                @keyframes iconInSimple {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icon-container .material-symbols-outlined {
+            animation: iconInSimple 0.3s ease-out forwards;
+        }
+
+        .container-infof1{
+            background-color: #e6e6e6;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3rem 5rem 2rem 5rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .container-infof1 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infof1 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .foro{
+            background-color: #e6e6e6;
+            padding: 2rem 2rem;
+            border-radius: 16px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .f-container {
+                flex-wrap: wrap;
+                width: 90%;
+                gap: 10px;
+            }
+
+            .title-containerf1, .icon-container {
+                flex-basis: calc(70% - 10px);
+                max-width: 70%;
+                font-size: 3rem;
+            }
+            .icon-container {
+                flex-basis: calc(30% - 10px);
+                max-width: 30%;
+            }
+            .material-symbols-outlined {
+                font-size: 50px;
+                color: #ffffff;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 500,
+                'GRAD' 0,
+                'opsz' 40
+            }
+        }
+            .material-symbols-outlined {
+            font-size: 75px;
+            color: #ffffff;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 40
+            }
+            .contenedor {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            padding: 5rem;
+            gap: 20px;
+        }
+
+        .contenido {
+            background-color: #e0e0e0;
+            font-family: "Sora", sans-serif;
+            padding: 10rem;
+            width: 75%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contenido h2 {
+            margin: 0;
+            font-size: 24px;
+            padding: 3rem 0 2rem 0;
+            color: #000;
+        }
+
+        .contenido ul {
+            list-style-type: none;
+            margin-top: 10px;
+            color: #333;
+            font-size: 24px;
+            padding: 0 0 2rem 0;
+        }
+
+        .contenido ul li {
+            margin-bottom: 5px;
+        }
+
+        .unidad {
+            background-color: #3a0a16;
+            color: white;
+            width: 25%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            font-family: "Sora", sans-serif;
+        }
+
+        .unidad .texto {
+            font-size: 35px;
+            margin: 0;
+        }
+        .glosario{
+            width: 80%;
+            margin-top: 5rem;
+            text-align: justify;
+        }
+
+        .glosa{
+            font-size: 16px;
+        }
+        .glosa strong{
+            font-size: 16px;
+        }
+        .glosa strong em{
+            font-size: 16px;
+        }
+        .unidad .numero {
+            font-size: 72px; /* Aquí se ajusta el tamaño del número */
+            line-height: 1;
+        }
+                /* Responsive design */
+                @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column-reverse;
+                padding: 5rem 0;
+                width: 90%;
+                height: auto;
+            }
+
+            .unidad {
+                width: 100%;
+                height: 100px;
+            }
+
+            .contenido {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .contenido ul {
+                font-size: 14px;
+            }
+            .contenido ul li{
+                font-size: 12px;
+            }
+
+            .unidad .texto {
+                font-size: 18px;
+            }
+
+            .unidad .numero {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+    <div class="sectionf1">
+        <div class="containerf1">
+            <div class="f-container">
+            <div class="title-containerf1"><p>Glosario</p></div>
+            <div class="icon-container">
+                <span class="material-symbols-outlined">
+                    menu_book
+                    </span>
+            </div>
+        </div>
+        <div class="glosario">
+            <p class="glosa"><strong>Análisis de los datos:</strong> Proceso de examinar, transformar y modelar datos con el objetivo de extraer información útil, identificar patrones, hacer inferencias y apoyar la toma de decisiones.</p><br>      
+            <p class="glosa"><strong>Árbol de objetivos:</strong> Herramienta utilizada para transformar los problemas identificados en metas claras y alcanzables. Surge como continuación del árbol de problemas dentro de la Metodología de Marco Lógico (MML), permitiendo visualizar las soluciones de manera estructurada. El objetivo central, ubicado en el tronco del árbol, representa el estado deseado al resolver el problema identificado, proporcionando una base sólida para el diseño de estrategias de intervención.</p><br>      
+            <p class="glosa"><strong>Árbol de problemas:</strong> Herramienta de análisis utilizada en la planificación de proyectos para identificar y visualizar las causas y efectos de un problema central de manera estructurada. En su representación gráfica, el problema principal ocupa el tronco, las raíces simbolizan las causas que lo originan, y las ramas corresponden a los efectos o consecuencias que se derivan de él. </p><br>      
+            <p class="glosa"><strong><em>Big Data:</em></strong> Conjuntos de datos masivos generados por la interacción con dispositivos interconectados, como teléfonos móviles y sensores.</p><br>      
+            <p class="glosa"><strong>Codificación:</strong> Proceso que implica asignar categorías o códigos a los datos para facilitar su análisis.</p><br>
+            <p class="glosa"><strong>Construcción de un objeto de estudio:</strong> Proceso fundamental que implica la identificación y definición de un problema específico que se desea estudiar.</p><br>
+            <p class="glosa"><strong>Desarrollo del proyecto:</strong> Es la fase en la que se lleva a cabo la ejecución de las actividades planificadas para responder a la pregunta de investigación o resolver el problema planteado. Implica la recolección, análisis e interpretación de la información y está basado en un enfoque y diseño metodológico.</p><br>
+            <p class="glosa"><strong>Diseños de investigación:</strong> Planes estructurados que guían el proceso de recolección y análisis de datos. Se pueden clasificar en varias categorías, cada una con sus características y propósitos específicos.</p><br>
+            <p class="glosa"><strong>Enfoque metodológico:</strong> Conjunto de estrategias, técnicas y procedimientos que se seleccionan y organizan para guiar una investigación hacia el logro de sus objetivos. Este enfoque depende del tipo de estudio (cuantitativo, cualitativo o mixto) y de su propósito, como describir, explicar, interpretar o proponer soluciones a un problema específico. Incluye la elección del diseño de investigación (exploratorio, descriptivo, experimental, etc.), los métodos de recolección de datos (encuestas, entrevistas, observaciones, etc.) y el análisis de los mismos.</p><br>
+            <p class="glosa"><strong>Enfoque cualitativo:</strong> Enfoque centrado en la comprensión profunda de fenómenos sociales y humanos desde la perspectiva de los participantes, por ello no busca generalizar los resultados sino profundizar, captar la complejidad y subjetividad de los fenómenos estudiados.</p><br>
+            <p class="glosa"><strong>Enfoque cuantitativo:</strong> Enfoque basado en la medición numérica de variables y el análisis estadístico de los datos para identificar relaciones, patrones y tendencias en los fenómenos estudiados. Emplea diseños estructurados, como encuestas, experimentos y estudios correlacionales, que permiten la recolección de datos estandarizados. Su objetivo es generalizar los resultados a poblaciones más amplias, probando hipótesis y obteniendo conclusiones objetivas.</p><br>
+            <p class="glosa"><strong>Enfoque mixto:</strong> Enfoque que combina elementos del enfoque cualitativo y cuantitativo para aprovechar las fortalezas de ambos y superar sus limitaciones. Integra recolección y análisis de datos tanto numéricos como narrativos, lo que permite obtener una comprensión más completa de los fenómenos investigados.</p><br>
+            <p class="glosa"><strong>Entrevista:</strong> Intercambio verbal, privado y cordial, que busca recopilar datos sobre el objeto de estudio mediante preguntas que permitan construir dicho objeto desde la voz de los sujetos implicados. A través de esta interacción, se recoge un conjunto de saberes individuales o grupales que, al ser analizados, contribuyen a construir el sentido social de las conductas y fenómenos observados.</p><br>
+            <p class="glosa"><strong>Estudio de caso:</strong> "Estudio de la particularidad y de la complejidad de un caso singular, para llegar a comprender su actividad en circunstancias importantes” (Stake, 2005, 11).</p><br>
+            <p class="glosa"><strong>Ética en la investigación:</strong> Conjunto de principios y normas que guían la conducta de los investigadores para garantizar que el proceso de generación de conocimiento sea responsable, respetuoso y justo. Estos principios incluyen el respeto por la dignidad, los derechos y el bienestar de los participantes, asegurando su consentimiento informado y la confidencialidad de sus datos. También implica actuar con integridad, evitando el plagio, la manipulación de resultados o el conflicto de intereses, y promoviendo la transparencia y la honestidad en la comunicación de los hallazgos.</p><br>
+            <p class="glosa"><strong>Fuente documental:</strong> Recurso que contiene información registrada en algún formato físico o digital, utilizado para obtener datos relevantes sobre un tema de estudio. Estas fuentes pueden incluir libros, artículos académicos, informes, tesis, actas, registros históricos, leyes, bases de datos, entre otros.</p><br>
+            <p class="glosa"><strong>Fuente secundaria:</strong> Tipo de fuente que interpreta, analiza o sintetiza información proveniente de fuentes primarias. A diferencia de las primarias, que son originales y directas (como entrevistas, encuestas o documentos históricos), las secundarias son derivadas y reflejan una perspectiva elaborada por un tercero. Ejemplos de fuentes secundarias incluyen artículos de revisión, análisis críticos, libros de texto o informes que integran.</p><br>
+            <p class="glosa"><strong>Grupo de discusión:</strong> “Proyecto de conversación socializada en el que la producción de una situación de comunicación grupal sirve para la captación y análisis de los discursos ideológicos y las representaciones simbólicas que se asocian a cualquier fenómeno social […] el grupo de discusión es fundamentalmente un dispositivo que se establece sobre la base de la identidad social y sus representaciones, siendo estas representaciones sociales las formas de conocimiento colectivamente elaboradas y compartidas” (Alonso, Luis, 1996, Pp.6.).</p><br>
+            <p class="glosa"><strong>Informe final de investigación:</strong> Documento que presenta de manera estructurada y detallada los resultados obtenidos a lo largo de un proyecto de investigación, así como el análisis, las conclusiones y las recomendaciones derivadas de los hallazgos. Su propósito es comunicar de forma clara y precisa el proceso de investigación y sus resultados a una audiencia, que puede incluir expertos, académicos, tomadores de decisiones o el público general.</p><br>
+            <p class="glosa"><strong>Interpretación:</strong> La interpretación es el proceso de dar sentido a los datos. Se debe considerar el contexto en que se recolectaron los datos y las limitaciones del estudio.</p><br>
+            <p class="glosa"><strong>Matriz de Indicadores y Resultados (MIR):</strong> Herramienta de planificación y seguimiento utilizada en la gestión de proyectos para vincular objetivos, actividades, y resultados con indicadores específicos. Sirve como una representación estructurada que asegura la alineación entre lo que se quiere lograr (resultados) y cómo se medirá el progreso hacia esas metas (indicadores).</p><br>
+            <p class="glosa"><strong>Método IMRAD:</strong> Estructura utilizada en la redacción de artículos científicos y académicos, que organiza el contenido en cuatro secciones principales: Introducción, donde se plantea el problema y los objetivos del estudio; Métodos, que describe los procedimientos y técnicas utilizados en la investigación; Resultados, que presenta los hallazgos de manera objetiva; y Discusión, donde se interpretan los resultados y se comparan con investigaciones previas. Esta estructura facilita una presentación clara y lógica de la investigación, permitiendo una comprensión coherente de su desarrollo y conclusiones.</p><br>
+            <p class="glosa"><strong>Metodología de Marco Lógico (MML):</strong> Herramienta estructurada utilizada para la planificación, ejecución y evaluación de proyectos. Busca mejorar la claridad y efectividad en la gestión de proyectos, facilitando la comunicación entre los involucrados y asegurando que los objetivos sean comprensibles y alcanzables.</p><br>
+            <p class="glosa"><strong>Observación participante:</strong> Técnica de investigación cualitativa que implica que el investigador se integre en el grupo o comunidad que está estudiando, participando activamente en sus actividades cotidianas. Este enfoque permite al investigador experimentar de primera mano las dinámicas sociales y culturales del grupo.</p><br>
+            <p class="glosa"><strong>Observación no participante:</strong> Técnica de investigación cualitativa que implica que el investigador observe a los sujetos sin involucrarse en sus actividades. Mantiene una distancia física y emocional, lo que permite un enfoque más objetivo.</p><br>
+            <p class="glosa"><strong>Problema de investigación:</strong> Es la interrogante o situación específica que requiere ser estudiada y resuelta mediante un proceso sistemático de indagación. Surge a partir de una observación, necesidad, discrepancia teórica o práctica, o una brecha de conocimiento identificada en un área determinada. Incluye además de la pregunta y su construcción, los objetivos y la justificación del estudio.</p><br>    
+        </div>
+    </div>
+</body>
+</html>

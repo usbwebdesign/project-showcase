@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-list em{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.title em{
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text strong{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text em{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+@media (max-width: 768px) {
+.sec1-text strong {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 3rem 3rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 30px;
+    }
+    
+    .btn-card {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 2rem !important;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+        text-decoration: none !important;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .btn-card:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 1rem 5rem;
+        flex-wrap: wrap;
+    }
+    .img-sources{
+        border-radius: 30px;
+        width: 80%;
+    }
+    .source-container{
+        display: flex;
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+    	.container-img {
+    		margin: 1rem;
+    	}
+        .img-sources{
+        width: 90%;
+    }
+    .source-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    }
+
+    .source{
+        background-color: rgb(67, 67, 67);
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin: 1rem 1rem 1rem 0;
+    }
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 40%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+/* FLASHCARD */
+.container-flashcard {
+        display: flex;
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
+        margin: 5rem 0 5rem 0;
+    }
+
+    .flashcard {
+        perspective: 1000px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        align-content: center;
+        flex: 0 0 30%; 
+        box-sizing: border-box;
+    }
+
+    .flashcard-inner {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flashcard-front, .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 48px;
+        color: #5c5c5c;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .flashcard-front {
+        background-color: #dbdbdb;
+        text-align: center;
+    }
+
+    .flashcard-back {
+        background-color: #dbdbdb;
+        transform: rotateY(180deg);
+    }
+
+    .flashcard.flipped .flashcard-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard-front p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .flashcard-back li {
+        font-size: 10px;
+    }
+
+    .button {
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 20px 102px;
+        font-size: 20px;
+        background-color: #83062F;
+        cursor: pointer;
+        color: white;
+        border: none;
+        border-radius: 16px;
+        font-weight: 600;
+        margin-top: 6px;
+    }
+
+    .container-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%; 
+    }
+
+    .button:hover {
+        background-color: #83062f;
+        transition: ease-in 200ms;
+    }
+    .button:active {
+        background-color: #390a1b;
+        transition: ease-in 200ms;
+    }
+
+        .flashcard1 {
+        perspective: 1000px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        align-content: center;
+        flex: 0 0 30%;
+        box-sizing: border-box;
+    }
+
+    .flashcard1-inner {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flashcard1-front, .flashcard1-back {
+        font-family: "Sora", sans-serif;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 48px;
+        color: #5c5c5c;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .flashcard1-front {
+        background-color: #dbdbdb;
+        text-align: center;
+    }
+
+    .flashcard1-back {
+        background-color: #dbdbdb;
+        transform: rotateY(180deg);
+    }
+
+    .flashcard1.flipped .flashcard1-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard1-front p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .flashcard1-back p {
+        font-size: 12px;
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+    }
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="logo-container">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+        </div>
+        <div class="usb-online">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+        </div>
+        <div class="content-hero">
+            <h1 class="content-hero-1st">Especialidad en</h1><br>
+            <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+            <p class="content-hero-3rd">Big data para la Construcción de Agenda Pública</p>
+            <button class="unit-button">Unidad 1</button>
+        </div>
+    </div>
+</section>
+    <div class="container">
+        <div class="content">
+            <h1>Introducción</h1>
+            <p class="content-intro">En esta primera unidad del curso Big Data para la Construcción de Agenda Pública, se estudiará el impacto que la tecnología, y particularmente el flujo de información en la era digital, tiene sobre los contextos sociales, abordando la transformación de las relaciones de poder en la sociedad contemporánea.</p><br>
+            <p class="content-intro">Basándonos en los estudios de Manuel Castells, uno de los teóricos más influyentes en el análisis de la sociedad red, exploraremos cómo la información y los datos no solo se convierten en recursos valiosos, sino en herramientas fundamentales para la configuración del poder simbólico, cultural y social. Esta comprensión permitirá a los estudiantes situarse en el debate actual sobre el papel del Big Data en la construcción de agendas públicas y las dinámicas de poder asociadas a ello.</p><br>
+            <p class="content-intro">La organización de la unidad sigue un enfoque escalonado, comenzando con la discusión sobre Tecnología y contextos sociales, donde se estudiará el vínculo entre los avances tecnológicos y la reconfiguración del poder según Castells. Esto incluirá la noción de "sociedad red", un tipo de sociedad caracterizada por su estructura descentralizada, en la cual los datos y la información fluyen de manera global, transformando la interacción social y política.</p><br>
+            <p class="content-intro">En el segundo apartado, Diversas aproximaciones al estudio de lo digital, se examinará la transición hacia las culturas digitales, introduciendo conceptos como el paradigma transmedia, siguiendo la teoría de Scolari. Esta sección permite reflexionar sobre cómo los medios digitales, en lugar de ser meramente informativos, generan narrativas que influyen en las percepciones públicas. El tercer apartado, Un mundo atravesado por culturas glocales, basado en el trabajo de Ingrid Volkmer, profundiza en las interacciones entre lo local y lo global, explorando cómo las culturas digitales permiten tanto la globalización de las ideas como la creación de diásporas y nuevas formas de identidades transnacionales.</p><br>
+            <p class="content-intro">Este contenido es de gran relevancia porque provee una base teórica y crítica para entender el papel central que juegan los datos en la actualidad, no solo como insumos para la toma de decisiones, sino como fuerzas que moldean activamente la agenda pública. Al entender cómo operan las narrativas transmedia en este ecosistema digital, los estudiantes podrán identificar las formas en que se construye la opinión pública y cómo la información puede ser utilizada estratégicamente para influir en decisiones políticas clave.</p><br>
+            <p class="content-intro">Esta comprensión crítica será fundamental para abordar las siguientes unidades del curso, que profundizan en cómo el Big Data puede ser aplicado para el análisis, la formulación y la intervención en la agenda pública​.</p><br>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content2">
+            <h1>Objetivos específicos</h1>
+            <p class="content-intro2">
+                Al término de la unidad los estudiantes serán capaces de    
+            </p>
+            <p class="content-intro2">1. Comprender la relación entre tecnología y poder en la sociedad red, identificando cómo los flujos de información y los datos adquieren valor simbólico y cultural.</p><br>
+            <p class="content-intro2">2. Analizar las transformaciones de las sociedades informacionales hacia culturas transmedia para entender cómo los medios digitales generan narrativas que inciden en la construcción de la opinión pública y, eventualmente, en la configuración de la agenda pública.</p><br>
+            <p class="content-intro2">3. Reconocer las dinámicas de interacciones entre lo global y lo local, potenciadas por las redes digitales, y cómo estos procesos afectan tanto las identidades colectivas como la agenda mediática.</p><br>
+            <p class="content-intro2">4. Desarrollar una visión crítica sobre el papel de la información en los procesos sociales y políticos, identificando cómo las narrativas transmedia pueden ser utilizadas estratégicamente para incidir en la opinión pública y configurar la agenda política.</p><br>
+        </div>
+    </div>
+
+<!-- Botón para minimizar o expandir la navbar -->
+<button id="toggle-btn" class="toggle-btn">–</button> 
+
+<div class="container-temario" id="navbar-temario">
+    <div class="temario">
+        <div class="sub-1">
+            <h1>Temas y Subtemas</h1>
+            <h2 class="temario-1list">1. El paradigma tecnológico en el contexto actual</h2><br>
+        </div>
+        <ul class="temario-ulist">
+            <a href="#sec1" class="temario-list">1.1 Tecnología y contextos sociales</a><br>
+            <a href="#sec2" class="temario-list">1.2 Diversas aproximaciones al estudio de lo digital: de sociedades informacionales a culturas digitales</a><br>
+            <a href="#sec2" class="temario-list">1.2.1 El poder en la sociedad red: Castells y la comunicación</a><br>
+        </ul>
+        <ul class="temario-ulist">
+            <a href="#sec3" class="temario-list">1.2.2 Culturas digitales y narrativas transmedia</a><br>
+            <a href="#sec4" class="temario-list">1.3 Un mundo atravesado por culturas glocales: de lo transaccional a las diásporas digitales</a><br>
+            <a href="#sec4" class="temario-list">1.3.1 El enfoque de Volkmer</a><br>
+        </ul>
+    </div>
+</div>
+    
+    <section class="sec-info1">
+        <div class="title">1.1 Tecnología y Contextos Sociales</div>
+        <div class="sec1-content">
+
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TECNOLOGIA_Y_SOCIEDAD.png" alt="">
+                <div class="source-container">
+                    <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sec-info1" id="sec1">
+        <div class="title">1.1 Tecnología y Contextos Sociales</div>
+        <div class="sec1-content">
+
+            <p class="sec1-text">Toda tecnología está anclada a un <strong>contexto social</strong>. Al fin y al cabo, se trata de herramientas que reflejan nuestras prácticas sociales. Es decir, lo que somos como sociedad se manifiesta en los usos que hacemos de las redes digitales. En este aspecto, las plataformas y herramientas tecnológicas actúan como espejos que revelan nuestros comportamientos, creencias y valores.</p>
+            <p class="sec1-text">Sin embargo, para evitar caer en el <strong>tecno-determinismo</strong>, que atribuye un poder absoluto a la tecnología sobre la sociedad, es importante reconocer que las <strong>tecnologías de la información y la comunicación (TIC)</strong> están ligadas a su contexto temporal y espacial. Estas tecnologías no funcionan de manera aislada, sino que están moldeadas por las condiciones sociales y culturales del momento.</p>
+            <p class="sec1-text">Es en este marco que nos encontramos inmersos en lo que autoras como Delia Crovi (2002) y organismos como la <strong>UNESCO</strong> definen como <strong>sociedades de la información y el conocimiento</strong>, donde las TIC desempeñan un papel clave en la creación, difusión y utilización de la información para fomentar el desarrollo y la toma de decisiones fundamentadas. Estas sociedades permiten una mayor interconexión global, al tiempo que generan nuevos retos sobre el acceso, el uso ético y el impacto de la información en la vida social y política.</p>
+            <p class="sec1-text">Dentro de este entorno digital, surgen las <strong>culturas digitales</strong>, espacios donde se comparten significados, símbolos y prácticas a través de plataformas tecnológicas. Autores como <strong>Javier Echeverría (1999)</strong> afirman que la cultura digital es una extensión de la cultura tradicional que se transforma por la mediación tecnológica, donde las interacciones se desarrollan en un "tercer entorno", el entorno digital​. Ejemplos de estas prácticas culturales son los usos extendidos de los <strong>hashtags</strong>, la tendencia a grabar conciertos con smartphones, la toma de selfies o el uso de memes y otras formas de expresión digital. Estas actividades revelan cómo los individuos y las comunidades participan activamente en la creación de contenido y en la configuración de la cultura digital.</p>
+
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TECNOLOGIA_Y_SOCIEDAD.png" alt="">
+                <div class="source-container">
+                    <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<section class="sec-info1" id="sec2">
+    <div class="title">1.2 Diversas aproximaciones al estudio de lo digital: de sociedades informacionales a culturas digitales</div>
+    <div class="sec1-content">
+        <p class="sec1-text"><strong>1.2.1 El poder en la sociedad red: Castells y la comunicación</strong></p>
+        <p class="sec1-text">En el contexto de estas sociedades informacionales, según Manuel Castells (2006) se gesta una “sociedad red”, en la cual se gestan dinámicas de poder, asociadas a la posibilidad de controlar los flujos de información que circulan en redes globales, que él denomina "poder de la red" (<strong>network power</strong>)​. Este poder se manifiesta en la habilidad de actores sociales, ya sean gobiernos, empresas o individuos, para configurar y programar redes de comunicación. La información y los datos ya no solo sirven para tomar decisiones económicas, sino que también son herramientas para modelar significados e incidir en las decisiones de otros actores.</p>
+        <p class="sec1-text">El poder, en este sentido, se construye de manera asimétrica: algunos actores son capaces de influir de manera más efectiva debido a su control sobre las infraestructuras de comunicación. Este poder se ve amplificado en la era digital, donde la capacidad de transmitir mensajes globales y construir narrativas en múltiples plataformas le da un nuevo significado a la relación entre comunicación y poder​. Sin embargo, también las propias personas tienen la capacidad de apelar a una “autocomunicación de masas” y generar mensajes desde sus dispositivos, que puedan impactar a públicos masivos.</p>
+        <p class="sec1-text">En este aspecto, Castells también introduce el concepto de <strong>contrapoder</strong>, que se refiere a los esfuerzos de diversos actores para cambiar las relaciones de poder mediante la reprogramación de redes o la creación de nuevas conexiones que desafíen las estructuras existentes. Ejemplos contemporáneos de esto son los movimientos sociales que utilizan redes sociales para movilizarse y organizar protestas, desafiando los significados que los medios tradicionales intentan imponer​​ (por ejemplo #MeToo, Occupy Wall Street, Black Lives Matter, #YoSoy132, etc).</p>
+
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/1.2.1_El_poder_en_la_sociedad_red_Castells_y_la_comunicacion_(1).png" alt="">
+            <div class="source-container">
+                <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="sec-info1" id="sec3">
+    <div class="title">1.2.2 Culturas digitales y narrativas transmedia</div>
+    <div class="sec1-content">
+        <p class="sec1-text">Es así que, en esta “sociedad red”, el avance de las tecnologías digitales ha dado paso a lo que Carlos Scolari (2013) denomina <strong>narrativas transmedia</strong>, en las cuales las historias se expanden y se fragmentan a través de diferentes medios, permitiendo a las audiencias participar activamente en la construcción del significado de los contenidos. En lugar de ser meros consumidores de información, las personas ahora son <strong>prosumidores</strong>, un concepto que describe a los individuos que consumen y producen simultáneamente contenido digital​ (aunque no toda lógica de interacción lleva siempre al consumo, toda vez que en ocasiones las personas diversifican sus formas de participación online, y lo que generan son contenidos críticos, que no siempre se ligan al marketing).</p>
+        <p class="sec1-text">Ergo, las narrativas transmedia son esenciales para entender cómo los mensajes políticos, culturales y sociales son transmitidos y amplificados en la era digital. Ya no basta con transmitir un mensaje en un solo medio; las narrativas deben ser lo suficientemente amplias y flexibles para adaptarse a múltiples plataformas (televisión, radio, redes sociales, videojuegos, inteligencia artificial, etc.), lo que permite una mayor interacción con las audiencias y un alcance global​.</p>
+        <p class="sec1-text">Un ejemplo emblemático de cómo se utilizan las narrativas transmedia en la política global es la campaña presidencial de <strong>Barack Obama</strong> en 2008 y 2012. La campaña de Obama es considerada un hito en la historia de la comunicación política porque logró integrar de manera efectiva diversas plataformas de medios para transmitir mensajes coherentes y dirigidos a diferentes segmentos de la población.</p>
+        <p class="sec1-text">En lugar de depender exclusivamente de los medios tradicionales, como la televisión o la prensa escrita, la campaña utilizó múltiples plataformas: redes sociales como Facebook y Twitter, videos en YouTube, correos electrónicos, blogs y aplicaciones móviles. Cada uno de estos canales de comunicación ofrecía una narrativa única, adaptada a su público específico, pero que a su vez formaba parte de una estrategia transmedia más amplia. Este enfoque permitió a la campaña generar una <strong>experiencia inmersiva y participativa</strong> para los votantes, donde los seguidores de Obama no solo consumían contenido, sino que también se involucraban activamente en su creación y difusión, convirtiéndose en <strong>prosumidores</strong>​.</p>
+        <p class="sec1-text">La campaña de Obama aprovechó para construir una comunidad digital que no solo apoyaba al candidato, sino que también compartía sus propios mensajes a través de estas plataformas. Los votantes creaban contenido, difundían ideas y se organizaban en torno a la narrativa central de cambio y esperanza promovida por el equipo de Obama. De esta manera, la campaña logró movilizar a millones de personas, especialmente a los votantes jóvenes, utilizando las herramientas de la cultura digital para amplificar su mensaje.</p>
+        <p class="sec1-text">Este uso de <strong>narrativas transmedia</strong> no solo fue efectivo para ganar elecciones, sino que también cambió la forma en que las campañas políticas se estructuran y se comunican con el electorado. El enfoque transmedia permitió una mayor interacción entre el candidato y los votantes, al tiempo que proporcionó una experiencia personalizada que resonaba con diferentes segmentos de la población. En lugar de ser simplemente espectadores pasivos, los votantes se convirtieron en actores dentro de la narrativa política, contribuyendo activamente a la creación de contenido y a la difusión del mensaje​.</p>
+        <p class="sec1-text">Además, las narrativas transmedia permiten crear experiencias inmersivas que atraen a las audiencias, generando un impacto más profundo en la construcción de la opinión pública y la agenda política. Por ejemplo, campañas políticas o activismos que usan diferentes plataformas para contar una historia pueden involucrar al público de maneras más complejas y emocionalmente conectadas​.</p>
+
+
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/1.2.2_Culturas_digitales_y_narrativas_transmedia_(1).png" alt="">
+            <div class="source-container">
+                <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+            </div>
+        </div>
+
+    </div>
+
+<section class="sec-info1" id="sec4">
+    <div class="title">1.3 Un mundo atravesado por culturas glocales: de lo transaccional a las diásporas digitales</div>
+    <div class="sec1-content">
+        <p class="sec1-text"><strong>1.3.1 El enfoque de Volkmer</strong></p>
+        <p class="sec1-text">Ahora bien, estas campañas transmedia impactan a nivel global. Es por esto que, Ingrid Volkmer (2014) ofrece una perspectiva crítica sobre cómo las <strong>tecnologías digitales</strong> han reconfigurado las relaciones entre lo local y lo global. Este fenómeno, sociológicamente conocido como <strong>glocalización</strong>, se refiere a la interacción simultánea de las culturas locales dentro de un marco global, facilitada por la conectividad digital. En este sentido, las redes digitales no sólo permiten que las personas se comuniquen más allá de las fronteras geográficas, sino que también crean <strong>esferas públicas transnacionales</strong> en las que los actores pueden participar y generar impactos en múltiples contextos sociopolíticos​.</p>
+        <p class="sec1-text">Uno de los conceptos clave en el análisis de Volkmer es la idea de <strong>interdependencia globalizada</strong>. En la era digital, los flujos de información ya no están separados por las fronteras tradicionales; al contrario, se encuentran "aquí mismo", en nuestras interacciones cotidianas, transformando las dinámicas de poder y participación. Según Volkmer, esta interdependencia global exige una nueva forma de reflexividad por parte de los ciudadanos, ya que cada acción digital tiene potencialmente repercusiones globales​. Este cambio se refleja en la <strong>esfera pública</strong>, en la que los actores no solo son receptores pasivos de información, sino <strong>participantes activos</strong> que crean, reproducen y comparten significados que pueden impactar la esfera política y social.</p>
+        <p class="sec1-text">Además, Volkmer señala que las <strong>esferas cívicas digitales</strong> han ganado protagonismo, donde el <strong>activismo digital</strong> y el uso social de las tecnologías permiten a los individuos convertirse en actores políticos relevantes. Este activismo digital es disruptivo, ya que rompe con los modelos tradicionales de participación política y crea nuevas oportunidades para la incidencia y el cambio social​. A través de las redes digitales, grupos de personas que antes estaban marginados o desconectados ahora tienen la capacidad de movilizarse y organizarse en torno a causas compartidas, utilizando herramientas tecnológicas para amplificar su voz y generar un impacto en las políticas públicas (siempre y cuando hayan atravesado brechas digitales).</p>
+        <p class="sec1-text">Volkmer destaca cómo los individuos y colectivos construyen identidades y significados a través de su participación en estas redes. La creación de contenido, desde los <strong>hashtags</strong> hasta las campañas de activismo, actúan como un reflejo de la identidad global, donde el "yo local" se transforma en un "nosotros global". Este proceso de construcción de identidad a través de la interacción digital permite que los actores participen en una comunidad global, aunque sigan arraigados en sus contextos locales​.</p>
+        
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/1.3-Un-mundo-atravesado-por-culturas-glocales_-de-lo-transaccional-a-las-diasporas-digitales_(1).png" alt="">
+            <div class="source-container">
+                <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="sec-info1" id="sec5">
+    <div class="title">Para finalizar…</div>
+    <div class="sec1-content">
+        <p class="sec1-text">En suma, la <strong>unidad 1</strong> nos muestra cómo las tecnologías de la información y la comunicación (TIC) no operan en un vacío, sino que están ligadas a las condiciones sociales, culturales y políticas de cada contexto. Lejos de ser meros instrumentos, las tecnologías reflejan y amplifican nuestras prácticas sociales, configurando una <strong>sociedad red</strong>, donde el control de los flujos de información y la capacidad de influir en las narrativas globales se convierten en nuevas formas de poder.</p>
+        <p class="sec1-text">Manuel Castells nos enseña que en la sociedad digital actual, las redes de comunicación son el campo de batalla para ejercer poder y contrapoder. Marco en el que, las narrativas transmedia nos permiten visualizar cómo las audiencias pueden pasar de ser receptores pasivos a <strong>prosumidores</strong> que generan y distribuyen contenido. Ejemplos como la campaña de Barack Obama o movimientos globales como <strong>#MeToo</strong> demuestran cómo el uso estratégico de las plataformas digitales puede movilizar a millones y generar un cambio social.</p>
+        <p class="sec1-text">Por su parte, Ingrid Volkmer resalta el impacto de las esferas transaccionales, donde lo local y lo global se entrelazan en esferas públicas transnacionales que transforman la participación cívica y política. El activismo digital y la construcción de identidades colectivas en estas redes revelan una nueva interdependencia global, con la comunicación en el centro.</p>
+        <p class="sec1-text">En este marco, la <strong>cultura digital</strong> ha redefinido las formas en que participamos en la política, compartimos significados y nos organizamos como sociedad. Entender estos fenómenos es esencial para reflexionar sobre el rol de la tecnología en la configuración de la agenda pública y en el futuro de la participación ciudadana en la era digital.</p>
+    </div>
+</section>
+
+
+<div class="card-section-container">
+    <p class="card-title-section">Para saber más...</p><br>
+    <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+        info
+        </span>
+    <div class="card-container">
+        <!-- fuentes pendientes -->
+        <a href="https://www.felsemiotica.com/descargas/Castells-Manuel-Comunicaci%C3%B3n-y-poder.pdf" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">library_books</span>
+            <p class="title1 fade-in invisible">Ver Libro</p>
+            <p class="text fade-in invisible">Manuel Castells - "Comunicación y Poder". Este libro explora a fondo cómo la comunicación en la era digital ha reconfigurado las estructuras de poder.</p>
+        </a>
+        <a href="https://www.fadu.edu.uy/estetica-diseno-ii/files/2013/05/119756745-1r-Capitulo-Narrativas-Transmedia.pdf" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">library_books</span>
+            <p class="title1 fade-in invisible">Ver Libro</p>
+            <p class="text fade-in invisible">Carlos Scolari - "Narrativas Transmedia". Un análisis de cómo las historias y mensajes se adaptan y expanden en múltiples plataformas digitales.</p>
+        </a>
+        <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781118255278" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">library_books</span>
+            <p class="title1 fade-in invisible">Ver Artículo</p>
+            <p class="text fade-in invisible">Ingrid Volkmer - "The Handbook of Global Media Research". Un estudio sobre cómo las diásporas son influyentes dentro de la comunicación digital.</p>
+        </a>
+        <a href="https://www.netflix.com/mx/title/81456528" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">play_circle</span>
+            <p class="title1 fade-in invisible">Ver Documental</p>
+            <p class="text fade-in invisible">La red antisocial: De los memes al caos</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=Qg_tTryjccY" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">play_circle</span>
+            <p class="title1 fade-in invisible">Ver Video</p>
+            <p class="text fade-in invisible">Transmedia En Serie: Si quieres profundizar en el concepto de narrativas transmedia puedes ver el primer capítulo, donde varios expertos del ámbito audiovisual y tecnológico explican cómo las historias se expanden a través de múltiples plataformas.</p>
+        </a>
+        <a href="https://www.perplexity.ai/" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">build_circle</span>
+            <p class="title1 fade-in invisible">Ver Herramienta</p>
+            <p class="text fade-in invisible">Si tienes dudas sobre los conceptos clave discutidos en la unidad, puedes utilizar Perplexity, una herramienta de inteligencia artificial en su versión académica, que te proporciona información de fuentes verificadas y confiables. Esta IA te ayudará a obtener respuestas precisas y con fundamento académico sobre temas como sociedad red, narrativas transmedia, glocalización y activismo digital.</p>
+        </a>
+    </div>
+</div>
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.flipButton');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const flashcard = this.closest('.flashcard');
+            if (flashcard) {
+                flashcard.classList.toggle('flipped');
+            }
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.flipButton');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.parentElement.previousElementSibling.classList.toggle('flipped');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=target" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=list_alt" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu_book" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=flag" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .img-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            width: 30rem;
+        }
+
+        .img-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        @media only screen and (min-width: 767px) {
+            .img-header {
+                padding: 3rem 3rem 0 3rem;
+            }
+        }
+        @media only screen and (min-width: 1300px) {
+            .header{
+                justify-content: space-around;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .img-header{
+                width: 15rem;
+            }
+        }
+
+        .sectionf1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .containerf1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .f-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%; 
+            margin: 3rem auto;
+            height: auto;
+            flex-wrap: nowrap; 
+            gap: 10px;
+        }
+
+        .title-containerf1 {
+            font-family: "Sora", sans-serif;
+            background-color: #54021d;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            flex-basis: 95%; 
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 15%; 
+            background-color: #54021d;
+            border-radius: 30px;
+            flex-grow: 0;
+            min-width: 0;
+        }
+                @keyframes iconInSimple {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icon-container .material-symbols-outlined {
+            animation: iconInSimple 0.3s ease-out forwards;
+        }
+
+        .container-infof1{
+            background-color: #e6e6e6;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3rem 5rem 2rem 5rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .container-infof1 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infof1 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .foro{
+            background-color: #e6e6e6;
+            padding: 2rem 2rem;
+            border-radius: 16px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .f-container {
+                flex-wrap: wrap;
+                width: 90%;
+                gap: 10px;
+            }
+
+            .title-containerf1, .icon-container {
+                flex-basis: calc(70% - 10px);
+                max-width: 70%;
+                font-size: 3rem;
+            }
+            .icon-container {
+                flex-basis: calc(30% - 10px);
+                max-width: 30%;
+            }
+            .material-symbols-outlined {
+                font-size: 50px;
+                color: #ffffff;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 500,
+                'GRAD' 0,
+                'opsz' 40
+            }
+        }
+            .material-symbols-outlined {
+            font-size: 75px;
+            color: #ffffff;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 40
+            }
+            .contenedor {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            padding: 5rem;
+            gap: 20px;
+        }
+
+        .contenido {
+            background-color: #e0e0e0;
+            font-family: "Sora", sans-serif;
+            padding: 10rem;
+            width: 75%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contenido h2 {
+            margin: 0;
+            font-size: 24px;
+            padding: 3rem 0 2rem 0;
+            color: #000;
+        }
+
+        .contenido ul {
+            list-style-type: none;
+            margin-top: 10px;
+            color: #333;
+            font-size: 24px;
+            padding: 0 0 2rem 0;
+        }
+
+        .contenido ul li {
+            margin-bottom: 5px;
+        }
+
+                /* Responsive design */
+                @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column-reverse;
+                padding: 5rem 0;
+                width: 90%;
+                height: auto;
+            }
+
+            .unidad {
+                width: 100%;
+                height: 100px;
+            }
+
+            .contenido {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .contenido ul {
+                font-size: 14px;
+            }
+            .contenido ul li{
+                font-size: 12px;
+            }
+
+            .unidad .texto {
+                font-size: 18px;
+            }
+
+            .unidad .numero {
+                font-size: 48px;
+            }
+        }
+        .conclusion{
+            width: 80%;
+            margin-top: 3rem;
+        }
+        .conclusion p{
+           font-size: 16px;
+           padding: 1rem;
+           text-align: justify;
+        }
+        .conclusion p strong{
+           font-size: 16px;
+           text-align: justify;
+        }
+        .conclusion strong{
+           font-size: 16px;
+           text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .conclusion {
+                width: 90%;
+                margin-top: 1rem;
+            }
+            .conclusion p{
+                font-size: 18px;
+            }
+            .conclusion strong{
+                font-size: 18px;
+            }
+            .conclusion p strong{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+    <div class="sectionf1">
+        <div class="containerf1">
+            <div class="f-container">
+            <div class="title-containerf1"><p>Conclusión</p></div>
+            <div class="icon-container">
+                <span class="material-symbols-outlined">
+                    flag
+                    </span>
+            </div>
+        </div>
+        <div class="conclusion">
+            <p>La Unidad 4 abordó el impacto del Big Data en la formación de la agenda pública, destacando la interacción entre los diversos niveles de agenda: pública, política y gubernamental​​. En una sociedad improntada por los flujos de información digital, la configuración de la agenda pública se ve repercutida por plataformas digitales y herramientas de análisis masivo de datos. Este proceso permite que temas previamente ignorados por los medios tradicionales emerjan, a menudo impulsados por movimientos sociales y la participación ciudadana​​.</p>
+            <p>Pensemos en el ejemplo puesto en el desarrollo de esta unidad, es decir,  las mañaneras que hizo AMLO en el sexenio anterior. Él fijaba temas de agenda, pero también retomaba algunos otros puestos por los propios ciudadanos. A veces por estrategia, pero también por la presión social. Recordemos cuando tuvo que posicionarse por la muerte de migrantes, quienes murieron quemados en marzo del 2023. En Youtube se reportó como: “Tras muerte de 39 migrantes por incendio en INM de Cd. Juárez, AMLO dijo que estos quemaron colchonetas y eso causó la 'terrible desgracia'. Por supuesto, las redes potencian la visibilidad, pero el gran reto es que se tomen acciones que solucionen los problemas.</p>
+            <p>Y es que, las redes sociales pueden ser puentes para la visibilidad de las demandas ciudadanas, actuando como catalizadores de agendas inversas (Sampayo, 2020). Ejemplos como los movimientos #MeToo, 15-M y Yo Soy 132 evidencian cómo las narrativas impulsadas desde plataformas digitales pueden reconfigurar prioridades políticas y forzar a los gobiernos a responder​​.</p>
+            <p>Pensemos en temas de género, como por ejemplo, el feminicidio de Ingrid, en el cual con la presión de la sociedad y el manejo de redes digitales, el gobierno tuvo que dar la cara. “La nota estuvo en la conversación pública toda la semana pasada: una joven de 25 años fue asesinada por su pareja y no sólo eso, sino que además fue desollada. Además de lo atroz del crimen, el feminicidio de Ingrid Escamilla ocupó buena parte de la conversación en redes sociales por diferentes factores como los dichos del presidente Andrés Manuel López Obrador sobre que no quería que los feminicidios "opacaran" la rifa del avión presidencial” (Velasco, 2020, s.p.)</p>
+            <p>Sin embargo, este fenómeno también trae riesgos, como la propagación de discursos de odio y la explotación de datos personales, resaltando la necesidad de alfabetización mediática para fomentar una participación informada​.</p>
+            <p>En este contexto, el papel de las metodologías de análisis de datos masivos (Lycarião y Sampayo, 2020) es fundamental para entender la configuración de las narrativas públicas. Herramientas como Google Trends o el análisis de redes sociales permiten monitorear tendencias y evaluar qué factores influyen en la visibilidad de ciertos temas. La combinación de enfoques cuantitativos y cualitativos ofrece una comprensión integral del impacto de las plataformas digitales en el debate público y en la formulación de políticas​​.</p>
+            <p>A su vez, la convergencia entre los intereses de los actores sociales y los tecnológicos plantea desafíos éticos y políticos. Si bien las plataformas digitales amplían las oportunidades de participación ciudadana, también consolidan dinámicas de poder que pueden excluir voces minoritarias o manipular deliberadamente las narrativas.</p>
+            <p>Recordemos el  caso de Cambridge Analytica y la potente extracción de datos de la que formamos parte, en donde por cierto, se reflexionó lo siguiente: “La historia de Cambridge Analytica se extiende hasta el chantaje, la corrupción y la venta indiscriminada de datos personales a través de una red social que, actualmente, usamos todos. ¿Qué significa esto para el futuro de Facebook y la confianza de sus casi 2.13 billones de usuarios?  Lo cierto es que Cambridge Analytica no se equivoca en una premisa: la data dice mucho de quiénes somos, de cómo nos comportamos y de lo que podríamos elegir en el futuro”.</p>
+            <p>En suma, la construcción de la agenda pública en la era del Big Data es un proceso dinámico donde la tecnología, la participación ciudadana y la lucha por la narrativa convergen (Candón, 2023). Las agendas periféricas, impulsadas por grupos marginados, ejemplifican cómo las herramientas digitales permiten desafiar las narrativas hegemónicas, abriendo paso a una deliberación más plural y democrática​​.</p>
+        </div>
+    </div>
+</body>
+</html>

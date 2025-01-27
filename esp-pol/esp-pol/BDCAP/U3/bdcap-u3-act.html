@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=target" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=list_alt" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu_book" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=flag" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=auto_stories" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=assignment" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .img-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            width: 30rem;
+        }
+
+        .img-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        @media only screen and (min-width: 767px) {
+            .img-header {
+                padding: 3rem 3rem 0 3rem;
+            }
+        }
+        @media only screen and (min-width: 1300px) {
+            .header{
+                justify-content: space-around;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .img-header{
+                width: 15rem;
+            }
+        }
+
+        .sectionf1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .containerf1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .f-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%; 
+            margin: 3rem auto;
+            height: auto;
+            flex-wrap: nowrap; 
+            gap: 10px;
+        }
+
+        .title-containerf1 {
+            font-family: "Sora", sans-serif;
+            background-color: #54021d;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            flex-basis: 95%; 
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 15%; 
+            background-color: #54021d;
+            border-radius: 30px;
+            flex-grow: 0;
+            min-width: 0;
+        }
+                @keyframes iconInSimple {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icon-container .material-symbols-outlined {
+            animation: iconInSimple 0.3s ease-out forwards;
+        }
+
+        .container-infof1{
+            background-color: #e6e6e6;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3rem 5rem 2rem 5rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .container-infof1 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infof1 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .foro{
+            background-color: #e6e6e6;
+            padding: 2rem 2rem;
+            border-radius: 16px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .f-container {
+                flex-wrap: wrap;
+                width: 90%;
+                gap: 10px;
+            }
+
+            .title-containerf1, .icon-container {
+                flex-basis: calc(70% - 10px);
+                max-width: 70%;
+                font-size: 3rem;
+            }
+            .icon-container {
+                flex-basis: calc(30% - 10px);
+                max-width: 30%;
+            }
+            .material-symbols-outlined {
+                font-size: 50px;
+                color: #ffffff;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 500,
+                'GRAD' 0,
+                'opsz' 40
+            }
+        }
+            .material-symbols-outlined {
+            font-size: 75px;
+            color: #ffffff;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 40
+            }
+            .contenedor {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            padding: 5rem;
+            gap: 20px;
+        }
+
+        .contenido {
+            background-color: #e0e0e0;
+            font-family: "Sora", sans-serif;
+            padding: 10rem;
+            width: 75%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contenido h2 {
+            margin: 0;
+            font-size: 24px;
+            padding: 3rem 0 2rem 0;
+            color: #000;
+        }
+
+        .contenido ul {
+            list-style-type: none;
+            margin-top: 10px;
+            color: #333;
+            font-size: 24px;
+            padding: 0 0 2rem 0;
+        }
+
+        .contenido ul li {
+            margin-bottom: 5px;
+        }
+
+                /* Responsive design */
+                @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column-reverse;
+                padding: 5rem 0;
+                width: 90%;
+                height: auto;
+            }
+
+            .unidad {
+                width: 100%;
+                height: 100px;
+            }
+
+            .contenido {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .contenido ul {
+                font-size: 14px;
+            }
+            .contenido ul li{
+                font-size: 12px;
+            }
+
+            .unidad .texto {
+                font-size: 18px;
+            }
+
+            .unidad .numero {
+                font-size: 48px;
+            }
+        }
+        .actividad{
+            width: 80%;
+            margin-top: 1rem;
+        }
+        .actividad p{
+           font-size: 16px;
+           padding: 1rem 1rem;
+           text-align: justify;
+        }
+        .objetivo p{
+           font-size: 16px;
+           padding: 3rem;
+           text-align: justify;
+           background-color: #e6e6e6;
+           border-radius: 16px;
+           margin-bottom: 2rem;
+        }
+        .objetivo p strong{
+           font-size: 16px;
+        }
+        p strong{
+           font-size: 16px;
+        }
+        a{
+           font-size: 16px;
+           text-decoration: none;
+        }
+        .instrucciones{
+           font-size: 16px;
+           font-weight: 700;
+        }
+        .objetivo-ul{
+           font-size: 16px;
+           padding: 3rem 5rem;
+           text-align: justify;
+           background-color: #e6e6e6;
+           border-radius: 16px;
+           margin-bottom: 2rem;
+        }
+        .objetivo-li{
+           font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .fuentes {
+                width: 80%;
+                margin-top: 1rem;
+            }
+            .fuentes li{
+                font-size: 18px;
+            }
+        }
+        .entregable{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: left;
+            margin-top: 2rem;
+            border-radius: 16px;
+            padding: 1rem;
+        }
+        .button{
+            border-radius: 30px;
+            padding: 1.5rem;
+            width: 20%;
+            font-size: 16px;
+            border: none;
+            background-color: #83062f;
+            color: #ffffff;
+            font-family: "Sora", sans-serif;
+            font-weight: 600;
+            margin: 2rem 0;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover{
+            background-color: #54021D
+        }
+        @media (max-width: 768px) {
+            .button {
+                width: 100%;
+            }
+        }
+        .title{
+            font-size: 2.5rem;
+            text-align: left;
+            padding: 3rem 0;
+        }
+        .objetivo-ol{
+            font-size: 16px;
+            padding: 3rem 5rem;
+            text-align: justify;
+            background-color: #e6e6e6;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+    <div class="sectionf1">
+        <div class="containerf1">
+            <div class="f-container">
+            <div class="title-containerf1"><p>Actividad 1 Unidad 3</p></div>
+            <div class="icon-container">
+                <span class="material-symbols-outlined">
+                    assignment
+                    </span>
+            </div>
+        </div>
+        <div class="actividad">
+            <h1 class="title">Análisis de la Opinión Pública a través de Google Trends y ChatGPT</h1>
+            <div class="objetivo">
+                <p><strong>Objetivo:</strong> Utilizar herramientas digitales como Google Trends y ChatGPT para analizar las tendencias de opinión pública sobre un tema de interés público, con el fin de aplicar los conceptos teóricos vistos en la unidad, como agenda setting, microsegmentación y burbujas informativas.</p>
+            </div>
+            <p class="instrucciones">Descripción y pautas de elaboración</p>
+            <ul class="objetivo-ol">
+                <p class="instrucciones">En esta actividad, realizarás un análisis sobre un tema de relevancia pública (por ejemplo, elecciones, cambio climático, o salud pública) utilizando Google Trends y ChatGPT. La idea es que explores cómo las tendencias de búsqueda y las respuestas generadas por IA reflejan la percepción pública sobre el tema seleccionado y cómo estas herramientas pueden ayudar a entender las dinámicas de opinión pública en la era digital. Además, considera que forma parte del 10% de tú evaluación, correspondiente a la Entrega de actividades de aprendizaje.</p>
+            </ul>
+            
+            
+            <div class="entregable">
+                <ol class="objetivo-ol">
+                <h1 class="title">Pasos para la elaboración:</h1>
+            <li class="instrucciones">Elección del tema:</li>
+            <p>Selecciona un tema de interés público (política, medio ambiente, economía, etc.) que esté actualmente en debate o discusión pública.</p>
+            <li class="instrucciones">Análisis con Google Trends:</li>
+            <p>Ingresa a Google Trends (https://trends.google.com/) y realiza una búsqueda de tu tema elegido. Explora cómo ha evolucionado el interés del público en relación con el tema en un periodo de tiempo específico (últimos 12 meses, 5 años, etc.).</p>
+            <p>Realiza capturas de pantalla de las tendencias de búsqueda, identificando las regiones donde el interés es más fuerte y qué términos o preguntas relacionadas han sido más frecuentes.</p>
+            <p>Reflexiona sobre cómo estas tendencias reflejan la agenda pública y posibles burbujas informativas.</p>
+            <li class="instrucciones">Interacción con ChatGPT:</li>
+            <p>Utiliza ChatGPT para generar una descripción general sobre el tema que has seleccionado. Pregunta a la IA sobre las opiniones más comunes o narrativas predominantes sobre el tema.</p>
+            <p>Reflexiona sobre cómo las respuestas generadas por IA podrían influir en la opinión pública, y si contribuyen a diversificar las perspectivas o refuerzan ciertas narrativas ya existentes.</p>
+            <li class="instrucciones">Elaboración del reporte:</li>
+            <p><strong>Parte 1:</strong> Inicia tu reporte con una breve introducción sobre el tema seleccionado y su relevancia en la opinión pública.</p>
+            <p><strong>Parte 2:</strong> Presenta y analiza los datos obtenidos de Google Trends. Reflexiona sobre cómo las tendencias de búsqueda pueden influir en la agenda pública y si identificas algún tipo de polarización o burbuja informativa en los resultados.</p>
+            <p><strong>Parte 3:</strong> Describe la interacción que tuviste con ChatGPT sobre el tema y reflexiona sobre cómo las respuestas automatizadas pueden influir en la percepción pública. Considera si las respuestas de la IA refuerzan o desafían los conceptos vistos en clase como la microsegmentación.</p>
+            <p><strong>Conclusión:</strong> Cierra tu reporte con una reflexión general sobre el uso de herramientas digitales para el análisis de la opinión pública y cómo pueden complementar el trabajo de los medios tradicionales en la configuración de la agenda política.</p>
+            </ol>
+            <p class="instrucciones">Formato de entrega</p>
+            <p>Documento escrito en procesador de textos.</p>
+            <p>Letra Arial 12, interlineado 1.5.</p>
+            <p>Extensión de 2 a 3 cuartillas.</p>
+            <p>Cuida la redacción y ortografía.</p>
+            <p>Aparato crítico en Sistema APA séptima edición.</p><br>
+
+
+
+
+
+                <p>Entrega tu archivo en formato PDF nombrado del siguiente modo:</p> <p>Apellido_Nombre_BDCAP_3</p>
+                <a href="" download="Documento_Matriz.pdf" class="button">Documento Matriz</a>
+                </div>
+            </div>
+</body>
+</html>

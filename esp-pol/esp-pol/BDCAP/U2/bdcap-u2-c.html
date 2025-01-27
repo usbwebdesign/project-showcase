@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=target" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=list_alt" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu_book" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=flag" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .img-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            width: 30rem;
+        }
+
+        .img-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        @media only screen and (min-width: 767px) {
+            .img-header {
+                padding: 3rem 3rem 0 3rem;
+            }
+        }
+        @media only screen and (min-width: 1300px) {
+            .header{
+                justify-content: space-around;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .img-header{
+                width: 15rem;
+            }
+        }
+
+        .sectionf1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .containerf1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .f-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%; 
+            margin: 3rem auto;
+            height: auto;
+            flex-wrap: nowrap; 
+            gap: 10px;
+        }
+
+        .title-containerf1 {
+            font-family: "Sora", sans-serif;
+            background-color: #54021d;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            flex-basis: 95%; 
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 15%; 
+            background-color: #54021d;
+            border-radius: 30px;
+            flex-grow: 0;
+            min-width: 0;
+        }
+                @keyframes iconInSimple {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icon-container .material-symbols-outlined {
+            animation: iconInSimple 0.3s ease-out forwards;
+        }
+
+        .container-infof1{
+            background-color: #e6e6e6;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3rem 5rem 2rem 5rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .container-infof1 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infof1 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .foro{
+            background-color: #e6e6e6;
+            padding: 2rem 2rem;
+            border-radius: 16px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .f-container {
+                flex-wrap: wrap;
+                width: 90%;
+                gap: 10px;
+            }
+
+            .title-containerf1, .icon-container {
+                flex-basis: calc(70% - 10px);
+                max-width: 70%;
+                font-size: 3rem;
+            }
+            .icon-container {
+                flex-basis: calc(30% - 10px);
+                max-width: 30%;
+            }
+            .material-symbols-outlined {
+                font-size: 50px;
+                color: #ffffff;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 500,
+                'GRAD' 0,
+                'opsz' 40
+            }
+        }
+            .material-symbols-outlined {
+            font-size: 75px;
+            color: #ffffff;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 40
+            }
+            .contenedor {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            padding: 5rem;
+            gap: 20px;
+        }
+
+        .contenido {
+            background-color: #e0e0e0;
+            font-family: "Sora", sans-serif;
+            padding: 10rem;
+            width: 75%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contenido h2 {
+            margin: 0;
+            font-size: 24px;
+            padding: 3rem 0 2rem 0;
+            color: #000;
+        }
+
+        .contenido ul {
+            list-style-type: none;
+            margin-top: 10px;
+            color: #333;
+            font-size: 24px;
+            padding: 0 0 2rem 0;
+        }
+
+        .contenido ul li {
+            margin-bottom: 5px;
+        }
+
+                /* Responsive design */
+                @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column-reverse;
+                padding: 5rem 0;
+                width: 90%;
+                height: auto;
+            }
+
+            .unidad {
+                width: 100%;
+                height: 100px;
+            }
+
+            .contenido {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .contenido ul {
+                font-size: 14px;
+            }
+            .contenido ul li{
+                font-size: 12px;
+            }
+
+            .unidad .texto {
+                font-size: 18px;
+            }
+
+            .unidad .numero {
+                font-size: 48px;
+            }
+        }
+        .conclusion{
+            width: 80%;
+            margin-top: 3rem;
+        }
+        .conclusion p{
+           font-size: 16px;
+           padding: 1rem;
+           text-align: justify;
+        }
+        .conclusion p strong{
+           font-size: 16px;
+           text-align: justify;
+        }
+        .conclusion strong{
+           font-size: 16px;
+           text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .conclusion {
+                width: 90%;
+                margin-top: 1rem;
+            }
+            .conclusion p{
+                font-size: 18px;
+            }
+            .conclusion strong{
+                font-size: 18px;
+            }
+            .conclusion p strong{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+    <div class="sectionf1">
+        <div class="containerf1">
+            <div class="f-container">
+            <div class="title-containerf1"><p>Conclusión</p></div>
+            <div class="icon-container">
+                <span class="material-symbols-outlined">
+                    flag
+                    </span>
+            </div>
+        </div>
+        <div class="conclusion">
+            <p>En esta unidad se abordó el papel fundamental que juegan los diferentes tipos de datos (big data, small data y thick data) en la construcción de discursos públicos y su repercusión en la configuración de agendas sociales y gubernamentales. En tanto, Pérez-Seijo y Vizoso (2024) aseguran: “La inteligencia artificial abre la puerta a una mejora de los procesos propios de la comunicación política y de la construcción pública, así como a un aumento de su alcance. No obstante, de forma similar a lo que sucede con cualquier otra tecnología, es importante entender y controlar aquellos riesgos que le son  intrínsecos,  pues  puede servir para la amplificación de mensajes nocivos, o el sustento de campañas basadas en la desinformación (Arce-García  et  al.,  2023),  entrañando  así  un  riesgo para el propio desarrollo de la democracia” (p. 69).</p>
+            <p>En tiempos actuales, donde los algoritmos parecen gobernar tanto los imaginarios como las situaciones concretas de nuestra realidad, se vuelve imprescindible pasar del simple uso de datos a un entendimiento integral de su impacto. La influencia de los algoritmos se manifiesta en campos diversos, desde los estereotipos de belleza impuestos en redes sociales hasta políticas públicas automatizadas que operan sin una adecuada verificación humana.</p>
+            <p>Para abordar estas complejidades, resulta esencial complementar el estudio de datos en distintas escalas. La perspectiva del Big Data nos permite analizar patrones y tendencias en un nivel macro, ofreciendo insights sobre grandes volúmenes de información que pueden traducirse en predicciones de comportamiento. Sin embargo, cuando estas herramientas se utilizan de manera aislada, se corre el riesgo de perder la profundidad contextual que aportan enfoques como el Thick Data, el cual se centra en entender las narrativas y significados subyacentes en contextos específicos.</p>
+            <p>Es precisamente esta integración de lo macro y lo micro lo que ofrece una comprensión holística y nos dota de herramientas para formular estrategias situadas y culturalmente efectivas. El caso de compañías como Spotify y Netflix ilustra cómo esta combinación de análisis cuantitativo y cualitativo ha sido crucial para personalizar la experiencia de los usuarios, adaptarse a sus preferencias y generar engagement. En el ámbito político, como se exploró en la unidad anterior, las campañas de Barack Obama también marcaron un hito en la utilización estratégica de datos, combinando patrones de Big Data con un enfoque humano para conectar con electores de manera significativa.</p>
+            <p>En definitiva, la complementariedad entre Big Data, Small Data y Thick Data no solo amplía nuestras capacidades analíticas, sino que permite que el uso de los datos se convierta en un instrumento de transformación social. Así, los consultores pueden ser capaces de generar propuestas situadas, que no sólo respondan a las dinámicas actuales, sino que también anticipen y modelen futuros posibles con un enfoque ético y consciente.</p>
+            <p>Por tal motivo, en esta unidad se destacó cómo el big data, con su capacidad de procesar grandes volúmenes de información, es valioso para identificar tendencias y patrones a gran escala, pero también presenta desafíos en términos de interpretación y sesgo. Su uso adecuado permite comprender dinámicas complejas y anticipar comportamientos, pero, si se maneja incorrectamente, puede generar resultados engañosos.</p>
+            <p>Por otro lado, el small data se presenta como una alternativa complementaria, enfocada en el análisis detallado de muestras reducidas, lo que permite obtener una comprensión más contextual y específica de fenómenos sociales. A diferencia del big data, el small data permite explorar el "porqué" detrás de ciertos comportamientos, facilitando la personalización de políticas públicas y estrategias comunicativas.</p>
+            <p>Finalmente, se discutió el thick data, una metodología cualitativa que añade profundidad y significado a los datos cuantitativos al considerar factores culturales y sociales. Su integración con el big data es crucial para diseñar políticas inclusivas y con mayor resonancia cultural, dado que logra captar la realidad social de manera más holística. Esto si se considera lo que afirma Sestino et al. (2020): “De hecho, el thich data puede inspirar nuevas preguntas y percepciones que nutren la visión de escenarios potenciales y futuros significativos (como se cita en Mortati et al., 2023).</p>
+            <p>Por ejemplo, Wang (2016) menciona cómo combinar big data y thick data pueden brindar soluciones a diferentes problemas. Por un lado, a los servicios de salud con mayor escala de datos anónimos, como el proyecto The Asthma Files (TAF): que era un “proyecto colaborativo de investigación etnográfica diseñado para avanzar en la comprensión y los esfuerzos para abordar los desafíos ambientales de salud pública en todo el mundo” (s.a., 2018). Por el otro, empresas como Xerox PARC que, acorde con Wang, han ayudado a los problemas de gestión documental en el gobierno con el uso de sus tecnologías; así como en la gestión de sistemas de estacionamiento dinámico en Los Ángeles para los problemas de congestión (Kerschberg, 2012).</p>
+            <p>En conclusión, el uso estratégico de estos tres tipos de datos proporciona una visión más completa de la realidad y es esencial para la construcción de una agenda pública que considere no solo la cantidad, sino también la calidad y el contexto de la información. La clave está en encontrar un balance entre las diferentes metodologías para crear discursos que no sólo informen, sino que también promuevan la equidad y la representación en la sociedad digital contemporánea.</p>
+            </div>
+    </div>
+</body>
+</html>

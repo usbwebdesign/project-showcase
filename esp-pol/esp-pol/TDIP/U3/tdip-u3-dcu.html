@@ -1,0 +1,1204 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 5rem 1rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 20px;
+    }
+    
+    .card button {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 1rem;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .card button:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 1rem 5rem;
+        flex-wrap: wrap;
+    }
+    .img-sources{
+        border-radius: 30px;
+        width: 80%;
+    }
+    .source-container{
+        display: flex;
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+    	.container-img {
+    		margin: 1rem;
+    	}
+        .img-sources{
+        width: 90%;
+    }
+    .source-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    }
+
+    .source{
+        background-color: rgb(67, 67, 67);
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin: 1rem 1rem 1rem 0;
+    }
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 30%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="logo-container">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+        </div>
+        <div class="usb-online">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+        </div>
+        <div class="content-hero">
+            <h1 class="content-hero-1st">Especialidad en</h1><br>
+            <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+            <p class="content-hero-3rd">Thick Data e incidencia pública</p>
+            <button class="unit-button">Unidad 3</button>
+        </div>
+    </div>
+</section>
+    <div class="container">
+        <div class="content">
+            <h1>Introducción</h1>
+            <p class="content-intro">En esta unidad, estudiarás cómo aplicar métodos cualitativos para el análisis y
+                la evaluación de resultados obtenidos a partir del Thick Data. Nos
+                enfocaremos en el uso de datos cualitativos recopilados mediante la
+                observación etnográfica en redes sociales, explorando cómo estos datos
+                pueden ser organizados, analizados y presentados de manera clara y efectiva.
+                Aprenderás a utilizar programas accesibles para extraer datos de plataformas
+                como X, TikTok o Instagram, y a interpretar los patrones y narrativas que
+                emergen de estas interacciones. El objetivo final es que puedas transformar
+                los datos en informes cualitativos aplicables a la incidencia pública.</p><br>
+
+            <p class="content-intro">La unidad se organiza en cuatro subtemas principales. Primero, abordarás la
+                recopilación de datos y la importancia de contextualizar y describir las
+                interacciones observadas en plataformas digitales. Luego, para el análisis de
+                datos, profundizarás en la interpretación de la información, utilizando
+                técnicas de codificación abierta y axial para identificar patrones clave.
+                Posteriormente, aprenderás a estructurar un informe cualitativo que sea
+                claro, coherente y que permita visualizar los hallazgos de manera
+                comprensible. Finalmente, se te presentarán diversas herramientas de
+                paquetería accesible, como Export Comments y Voc.ai, que te ayudarán a
+                organizar y visualizar los datos de manera efectiva.</p><br>
+
+            <p class="content-intro">Este contenido es relevante porque, en un mundo cada vez más digital, las
+                interacciones en línea reflejan las tensiones sociales y políticas de la sociedad.
+                Ser capaz de analizar y contextualizar estas interacciones a través del Thick
+                Data te proporcionará una herramienta valiosa para entender los fenómenos
+                sociales en profundidad y para incidir en problemas públicos de manera
+                informada. Esta unidad te permitirá desarrollar habilidades que van más allá
+                del análisis de datos, aplicándolas a situaciones reales donde la comprensión
+                cualitativa es fundamental para la toma de decisiones.</p><br>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content2">
+            <h1>Objetivos específicos</h1>
+            <p class="content-intro2">
+                Al término de la unidad, el alumnado será capaz de evaluar los resultados
+                obtenidos mediante la aplicación de métodos de análisis cualitativo sobre
+                Thick Data, y presentar informes claros y estructurados, utilizando programas
+                informáticos especializados para mejorar la precisión de los hallazgos.
+            </p>
+        </div>
+    </div>
+
+<!-- Botón para minimizar o expandir la navbar -->
+<button id="toggle-btn" class="toggle-btn">–</button> 
+
+<div class="container-temario" id="navbar-temario">
+    <div class="temario">
+        <div class="sub-1">
+            <h1>Temas y Subtemas</h1>
+            <h2 class="temario-1list">3. Análisis y evaluación de resultados</h2><br>
+        </div>
+        <ul class="temario-ulist">
+            <a href="#sec1" class="temario-list">3.1 Recopilación de datos</a><br>
+            <a href="#sec2" class="temario-list">3.2 Análisis de datos</a><br>
+            <a href="#sec3" class="temario-list">3.3 Presentación de informe</a><br>
+            <a href="#sec4" class="temario-list">3.4 Paquetería para la incidencia mediante Thick Data</a><br>
+        </ul>
+    </div>
+</div>
+
+    
+
+    <section class="sec-info1" id="sec1">
+        <div class="title">3. Análisis y evaluación de resultados</div>
+        <div class="sec1-content">
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO5_UNIDAD3_(1).png" alt="">
+                <div class="source-container">
+                <div class="source">Organizador gráfico. Por: Abraham Lira</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sec-info1" id="sec1">
+        <div class="title">3.1 Recopilación de datos</div>
+        <div class="sec1-content">
+            <p class="sec1-text">La observación etnográfica es una de las técnicas más utilizadas para recopilar datos cualitativos en
+                investigaciones de incidencia pública. Esta técnica permite captar las experiencias, comportamientos y
+                significados que las personas atribuyen a sus acciones en su entorno cotidiano. En el contexto digital, la
+                etnografía se adapta al estudio de interacciones en línea, proporcionando una herramienta eficaz para
+                seguir las dinámicas sociales en plataformas como X o TikTok, donde se desarrollan debates y se articulan
+                narrativas sobre problemas públicos.</p><br>
+            <p class="sec1-text-quote">La observación etnográfica es un proceso flexible y creativo que implica la recolección, análisis e
+                interpretación de datos heterogéneos. En este enfoque, los investigadores deben sumergirse en el
+                contexto social que estudian, recopilando diversos tipos de datos, como observaciones directas,
+                comentarios y anotaciones sobre lo que las personas dicen y hacen (Ardévol, 2017).</p><br>
+            <p class="sec1-text">La etnografía en entornos digitales, a diferencia de la etnografía en entornos físicos, se enfoca en analizar los
+                comportamientos y discursos que se generan en los espacios virtuales. Es una técnica accesible, que no
+                requiere una gran inversión de tiempo ni recursos, lo que la convierte en una opción viable para recopilar
+                datos en un breve lapso. Si bien se pueden utilizar métodos adicionales como entrevistas o grupos focales, la
+                observación etnográfica digital permite obtener una visión amplia y directa de cómo se desarrollan las
+                interacciones en torno a un tema público en un corto período de tiempo.</p>
+            <p class="sec1-text">La observación en el mundo digital implica seguir discusiones en plataformas como X y TikTok, enfocándose
+                en hashtags, actores clave y narrativas dominantes. En X, los hashtags permiten identificar temas de interés
+                público, como derechos humanos o cambio climático, y reconocer a los actores influyentes que moldean la
+                conversación. En TikTok, la creación de contenido visual y los retos virales brindan la oportunidad de
+                estudiar cómo se movilizan las audiencias en torno a causas sociales, analizando los comentarios,
+                interacciones y patrones de difusión para identificar los temas más relevantes y cómo son interpretados por
+                los usuarios.</p>
+                <div class="container-img">
+                    <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO5_UNIDAD3.1.png" alt="">
+                    <div class="source-container">
+                        <div class="source">https://ar.pinterest.com/pin/565131453233196781/</div>
+                    </div>
+                </div>
+                
+            <p class="sec1-text">El análisis de estas interacciones requiere una organización meticulosa de los datos. Para ello, es necesario
+                aplicar un enfoque de muestreo teórico, seleccionando cuidadosamente a los actores y discusiones que
+                representen mejor el fenómeno que se desea estudiar. A lo largo del proceso de observación, se deben
+                documentar las interacciones más relevantes, los cambios en las narrativas y las emociones expresadas por
+                los participantes. De esta manera, se podrá captar el sentido que los usuarios dan a sus acciones y cómo
+                estas se conectan con las dinámicas más amplias de la opinión pública. Para elaborar una guía de
+                observación etnográfica digital, se recomienda:</p>
+            <div class="sec1-text">Definir el contexto y el hashtag: Seleccionar un tema de interés público y un hashtag relevante que esté
+                siendo utilizado en plataformas digitales. Esto proporciona el punto de entrada para observar las dinámicas
+                de la conversación pública.</div>
+            <div class="sec1-text">Establecer categorías de observación, tales como:</div>
+            <ol>
+                <li class="sec1-text">Actores principales: Identificar las personas o grupos más influyentes en la conversación, como
+                    activistas, organizaciones o líderes de opinión.</li>
+                <li class="sec1-text">Narrativa dominante: Analizar el discurso principal que circula en torno al hashtag, es decir, el tema
+                    recurrente o mensaje central.</li>
+                <li class="sec1-text">Emociones expresadas: Documentar los sentimientos predominantes en las interacciones, ya sea apoyo,
+                    indignación, frustración, etc.</li>
+                <li class="sec1-text">Interacciones destacadas: Registrar eventos relevantes como retweets masivos, debates o respuestas
+                    virales que evidencien la resonancia de la conversación.</li>
+            </ol>
+            <div class="sec1-text">Documentar el proceso: Utilizar una hoja de cálculo como la presentada en el ejemplo para registrar la
+                información de manera organizada, con columnas que reflejen las fechas de observación, el hashtag
+                observado y los detalles de la interacción social. Este enfoque sistemático facilita el análisis posterior y
+                ayuda a interpretar las dinámicas sociales digitales.</div>
+                <div class="container-img">
+                    <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_TABLA_UNIDAD3.1.png" alt="">
+                    <div class="source-container">
+                        <div class="source">Organizador gráfico. Por: Abraham Lira.</div>
+                    </div>
+                </div>
+        <div class="sec1-text">La ética es un aspecto crucial en la observación etnográfica digital. Aunque las interacciones en plataformas
+            como X y TikTok son públicas, es importante que los estudiantes manejen los datos de manera responsable,
+            respetando la privacidad de los usuarios. Esto incluye evitar la revelación de información sensible y
+            asegurarse de que los informes de resultados mantengan la confidencialidad de los participantes,
+            especialmente cuando se trabaja con temas delicados o controversiales.</div>
+        <div class="sec1-text-quote">Aunque las interacciones en plataformas digitales son públicas, el investigador debe ser consciente de los
+            retos éticos que plantea la recopilación y análisis de datos personales. Estos retos incluyen la necesidad
+            de proteger la privacidad y la intimidad de los participantes, así como obtener el consentimiento
+            informado. (Ardévol, 2017).</div>
+        </div>
+    </section>
+    <section class="sec-video">
+        <h1 class="vid-title">Video: Etnografía Digital</h1>
+        <span class="material-symbols-outlined">south</span>
+<div class="video">
+    <iframe width="660" height="415" src="https://www.youtube.com/embed/E99V2z4k0L4?si=I89qxk333gtz2OLC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</section>
+
+
+
+<section class="sec-info1" id="sec2">
+    <div class="title">3.2 Análisis de datos</div>
+    <div class="sec1-content">
+        <p class="sec1-text">El análisis de los datos cualitativos obtenidos mediante la observación etnográfica en plataformas digitales
+            implica un proceso detallado y sistemático para identificar patrones, temas recurrentes y narrativas que
+            permitan una comprensión más profunda de las dinámicas sociales estudiadas. En este proceso, la
+            codificación cualitativa es una técnica fundamental. A través de la codificación, los investigadores
+            categorizan y organizan la información recopilada en segmentos más manejables, asignando etiquetas o
+            códigos a las diferentes partes del texto, comentarios o interacciones observadas en línea. Este
+            procedimiento no solo ayuda a ordenar el volumen de datos, sino que también facilita la identificación de
+            temas clave que emergen a lo largo de las interacciones en línea.</p><br>
+            <div class="sec1-text">El proceso de codificación puede realizarse en varias etapas, comenzando con una codificación abierta
+                donde los datos se exploran de manera amplia, permitiendo que los temas y patrones surjan de manera
+                natural. Posteriormente, se puede proceder con una codificación axial, donde se profundiza en las
+                relaciones entre las categorías previamente identificadas. De esta manera, los estudiantes pueden comenzar
+                a construir una narrativa coherente a partir de los datos observados, conectando las interacciones digitales
+                con los temas más amplios de la agenda pública.</div>
+                <div class="container-img">
+                    <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO5_UNIDAD3.2_(1).png" alt="">
+                    <div class="source-container">
+                        <div class="source">https://es.scribd.com/document/459710399/Codificacion-Abierta-Axial-Selectiva</div>
+                    </div>
+            </div>
+            
+            <div class="sec1-text">Además de la codificación, el análisis temático permite que los investigadores identifiquen los principales
+                temas que dominan las conversaciones sobre problemas públicos en plataformas como X y TikTok. Por
+                ejemplo, los debates sobre el cambio climático o la justicia social en redes no solo expresan posturas
+                individuales, sino que también reflejan las dinámicas políticas y culturales de cada contexto. A través del
+                análisis temático, los investigadores pueden explorar cómo los individuos expresan sus experiencias y cómo
+                estas experiencias están vinculadas a los temas sociales más amplios que se discuten en las plataformas
+                digitales.</div>
+                <div class="sec1-text-quote">Para Jemielniak (2020) el análisis temático se centra en cómo las personas estructuran y presentan sus
+                    historias, identificando patrones en la construcción de la identidad y las percepciones del mundo. Latzko-
+                    Toth et. al. (2022) añade que el análisis temático permite interpretar los resultados al identificar patrones
+                    y significados en los datos recopilados. Estos temas, una vez identificados, deben ser contextualizados
+                    dentro del fenómeno social que se está estudiando, ya que muchas veces las interacciones en línea
+                    reflejan tensiones, debates y preocupaciones más amplias en la sociedad.</div>
+                    <div class="sec1-text">A continuación, se presenta un ejemplo de guía de observación etnográfica construida con el objetivo de
+                        analizar interacciones en plataformas digitales a partir de métodos cualitativos. Esta guía sigue dos fases de
+                        análisis: codificación abierta, donde se describen los datos observados, y codificación axial, donde se
+                        profundiza en los significados y patrones emergentes.</div>
+                        <div class="sec1-text">Es importante tener en cuenta que esta guía se presenta como una referencia. Todo trabajo cualitativo debe
+                            partir de la naturaleza específica del problema y del objeto de estudio. Por tanto, cada investigador debe
+                            construir sus propias categorías que sean útiles para sus necesidades de investigación. Cada guía será
+                            diferente, ya que debe reflejar los objetivos particulares de cada proyecto.</div>
+                            
+                            <div class="container-img">
+                                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ESQUEMA1_ANEXO5_UNIDAD3.2(2).png" alt="">
+                                <div class="source-container">
+                                    <div class="source">Organizador gráfico. Por: Abraham Lira.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="container-img">
+                                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ESQUEMA2_ANEXO5_UNIDAD3.2(4).png" alt="">
+                                <div class="source-container">
+                                    <div class="source">Organizador gráfico. Por: Abraham Lira.</div>
+                                </div>
+                            </div>
+                            
+                            <p class="sec1-text">En esta fase de trabajo es esencial que los investigadores puedan interpretar no solo las palabras y los
+                                textos, sino también los significados implícitos y las emociones detrás de las interacciones en línea. El
+                                análisis cualitativo no se limita a contar la frecuencia de ciertos temas o palabras, sino que se enfoca en
+                                comprender cómo los usuarios en línea construyen significado a través de sus interacciones, y cómo estos
+                                significados están vinculados con los contextos sociales y políticos más amplios.</p><br>
+                                <section class="sec-video">
+                                    <h1 class="vid-title">Video: Códigos y Codificación.</h1>
+                                    <span class="material-symbols-outlined">south</span>
+                                <div class="video">
+                                <iframe width="660" height="415" src="https://www.youtube.com/embed/Pxy_OLsevYU?si=PAetMEuY96RRXzmC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                </section>
+      
+
+<section class="sec-info1" id="sec3">
+    <div class="title">3.3 Presentación de informe</div>
+    <div class="sec1-content">
+        <div class="sec1-text">La presentación de informe es la culminación del proceso de análisis de datos en una investigación basada
+            en Thick Data. Su objetivo es presentar de manera clara y estructurada los hallazgos obtenidos durante la
+            observación etnográfica digital, utilizando una narrativa coherente que conecte los resultados con el
+            problema público estudiado. En esta fase, hay que ser capaces de transformar los datos codificados en
+            narrativas que expliquen los patrones observados, y la relación de estos patrones con las dinámicas sociales
+            o políticas más amplias.</div>
+
+        <div class="sec1-text">Para guiar la presentación de informes de resultados, se recomienda seguir una estructura que incluya las
+            siguientes secciones, conforme a las sugerencias de autores y expertos en investigación etnográfica:</div>
+
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_TABLA_ANEXO5_UNIDAD3.3_(1).png" alt="">
+                <div class="source-container">
+                    <div class="source">Organizador gráfico. Por: Abraham Lira.</div>
+                </div>
+            </div>
+
+        <div class="sec1-text">De manera adicional, se sugiere el uso de visualizaciones con software especializado. El uso de gráficos y
+                                tablas para ilustrar los datos cualitativos es una práctica recomendada para hacer el informe más accesible.
+                                Esto ayuda a presentar datos de manera clara y concisa, facilitando la comprensión de los hallazgos clave.</div>
+        <div class="sec1-text">Otro aspecto clave es que, a lo largo del informe, el investigador desarrolle una narrativa coherente que
+            conecte los hallazgos con las dinámicas sociales o políticas más amplias. El objetivo no es solo describir los
+            datos, sino también interpretar sus significados y contextualizarlos dentro del problema público (ver modelo
+            de &quot;thickening&quot; de Latzko-Toth et. al., 2022).</div>
+
+        <div class="sec1-text">Por último, una de las metas principales del investigador es reflexionar sobre la aplicabilidad de los
+            hallazgos, es decir, mostrar cómo los resultados de la investigación pueden contribuir a la solución del
+            problema público estudiado, o cómo pueden influir en la formulación de políticas públicas.</div>
+
+        <div class="sec1-text">La presentación de un informe basado en Thick Data implica transformar los datos codificados en narrativas
+            claras y estructuradas, destacando los patrones observados y sus implicaciones. El investigador debe ser
+            capaz de presentar resultados accionables y relevantes para la incidencia pública, asegurándose de que el
+            informe sea accesible y comprensible para una audiencia más amplia, incluyendo tomadores de decisiones.</div>
+
+            <section class="sec-video">
+                <h1 class="vid-title">Video: ETNOGRAFÍA DIGITAL</h1>
+                <span class="material-symbols-outlined">south</span>
+            <div class="video">
+            <iframe width="660" height="415" src="https://www.youtube.com/embed/HjtuKVsJdg8?si=8I2FPhj2M_B0f9BS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            </section>
+</section>
+
+<section class="sec-info1" id="sec4">
+    <div class="title">3.4 Paquetería para la incidencia mediante Thick Data</div>
+    <div class="sec1-content">
+        <div class="sec1-text">El uso de paquetería especializada es fundamental para el análisis cualitativo y la visualización de datos
+            cuando se trabaja con Thick Data en el contexto de la incidencia pública. Estas herramientas facilitan tanto
+            la extracción como el análisis de datos provenientes de plataformas digitales, y permiten al investigador
+            gestionar la información de manera eficiente. Aunque algunas de estas herramientas requieren un nivel
+            avanzado de apropiación tecnológica, también existen opciones más accesibles que no demandan una
+            experiencia técnica considerable.</div>
+        <div class="sec1-text">El uso de paquetería especializada es fundamental para el análisis cualitativo y la visualización de datos
+            cuando se trabaja con Thick Data en el contexto de la incidencia pública. Estas herramientas facilitan tanto
+            la extracción como el análisis de datos provenientes de plataformas digitales, y permiten al investigador
+            gestionar la información de manera eficiente. Aunque algunas de estas herramientas requieren un nivel
+            avanzado de apropiación tecnológica, también existen opciones más accesibles que no demandan una
+            experiencia técnica considerable.</div>
+        <div class="sec1-text">Aunque estos programas son muy útiles, no todos los investigadores necesitan ser expertos en paquetería
+            informática para realizar un análisis efectivo de Thick Data. El enfoque de esta asignatura es que los
+            investigadores dominen herramientas accesibles que requieran habilidades técnicas mínimas. Esto permite
+            realizar análisis cualitativos a partir de la extracción de comentarios de publicaciones en redes sociales, la
+            creación de nubes de palabras o el seguimiento de hashtags. Para ello, recomendamos los siguientes
+            programas:</div>
+
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO4_UNIDAD3..5(3).png" alt="">
+                <div class="source-container">
+                    <div class="source">Enlace: https://exportcomments.com/</div>
+                </div>
+            </div>
+            
+            <div class="sec1-text">Extracción de comentarios (Export Comments): Esta herramienta permite extraer hasta 100 comentarios de
+                publicaciones en múltiples redes sociales en formato CSV (Excel). En el contexto de la observación
+                etnográfica digital, esta función es clave para capturar las interacciones y discusiones de los usuarios en
+                torno a un tema de incidencia pública. Los comentarios extraídos pueden ser codificados y analizados,
+                facilitando la identificación de patrones en la narrativa pública y las emociones expresadas.</div>
+                
+                <div class="container-img">
+                    <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO4_UNIDAD3.6.png" alt="">
+                    <div class="source-container">
+                        <div class="source">Enlace: https://awario.com/es/wordcloud/</div>
+                    </div>
+                </div>
+
+                <div class="sec1-text">Nube de palabras (Awario y Voc.ai): Las nubes de palabras son visualizaciones que destacan las palabras y
+                    frases más importantes de un texto o conjunto de datos. El tamaño de las palabras en la nube representa su
+                    frecuencia o relevancia en el análisis. Este tipo de visualización es útil para identificar los temas
+                    predominantes en las conversaciones observadas en redes sociales. Para generar nubes de palabras, los
+                    investigadores pueden usar herramientas como Awario o Voc.ai, que permiten generar estas visualizaciones
+                    a partir de texto o archivos CSV.</div>
+
+                <div class="container-img">
+                    <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO4_UNIDAD3.7.png" alt="">
+                    <div class="source-container">
+                        <div class="source">Enlace: https://www.voc.ai/es/tools/wordcloud</div>
+                    </div>
+                </div>
+                
+                <div class="sec1-text">Seguimiento de Etiquetas (TrackMyHashtag): Esta plataforma se especializa en la recolección de datos
+                    basados en hashtags de X (antes Twitter). Con esta herramienta, los investigadores pueden analizar cómo se
+                    desarrollan las narrativas públicas en torno a un tema de incidencia. TrackMyHashtag permite realizar un
+                    seguimiento de las tendencias, actores clave y narrativas que emergen en torno a una etiqueta específica,
+                    facilitando un análisis cualitativo de las interacciones digitales. En este caso, el programa tiene costo, pero
+                    ofrece cinco días de prueba gratuita.</div>
+
+                    <div class="container-img">
+                        <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO4_UNIDAD3.8.png" alt="">
+                        <div class="source-container">
+                            <div class="source">Enlace: https://www.trackmyhashtag.com/</div>
+                        </div>
+                    </div>
+
+                    <div class="sec1-text">Iniciativa de Métodos Digitales (Digital Methods Initiative): Para aquellos investigadores con mayor
+                    alfabetización tecnológica, esta iniciativa desarrollada por grupos europeos de investigación sobre estudios
+                    de Internet ofrece una serie de herramientas avanzadas para el análisis de datos en redes sociales como
+                    Facebook y X. Estas herramientas permiten estudiar problemas públicos a través de la interacción social en
+                    plataformas digitales, proporcionando un enfoque más profundo y técnico del análisis de datos.
+                    </div>
+
+                    <div class="container-img">
+                        <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/TDIP_ANEXO4_UNIDAD3.9.png" alt="">
+                        <div class="source-container">
+                            <div class="source">Enlace: https://wiki.digitalmethods.net/Dmi/ToolDatabase</div>
+                        </div>
+                    </div>
+                    <div class="sec1-text">
+                        De manera adicional, es importante que los investigadores comprendan que el uso de estos programas debe
+                        estar alineado con el propósito de su investigación. No es necesario dominar todas las plataformas para
+                        obtener resultados útiles; lo fundamental es seleccionar la herramienta que mejor se ajuste a los objetivos
+                        del análisis. Al trabajar con estas plataformas, es recomendable que el investigador:
+                    </div>
+                    <ul>
+                        <li class="sec1-text">Mantenga un enfoque claro: Definir qué datos son necesarios para el análisis y qué herramientas son
+                            más adecuadas para extraerlos y visualizarlos.</li>
+                        <li class="sec1-text">Refuerce su análisis con visualizaciones: Las herramientas como las nubes de palabras y otros gráficos
+                            pueden ayudar a visualizar patrones de manera accesible y comprensible para audiencias más amplias.</li>
+                        <li class="sec1-text">Respete la ética de los datos: Al extraer y analizar datos de redes sociales, es crucial mantener la
+                            confidencialidad y proteger la identidad de los usuarios observados, especialmente en temas sensibles.</li>
+                    </ul>
+                    <div class="sec1-text">
+                        El uso de la paquetería especializada en Thick Data permite a los investigadores transformar información
+                        cualitativa en análisis accionables y aplicables a la incidencia pública. Ya sea utilizando herramientas
+                        avanzadas como NVivo o ATLAS.ti, o recurriendo a plataformas más accesibles como Export Comments o
+                        TrackMyHashtag, lo importante es seleccionar el programa que mejor se ajuste al problema público que se
+                        está investigando y a las habilidades técnicas del investigador.
+                    </div>
+
+            <section class="sec-video">
+                <h1 class="vid-title">Video: Herramienta para descargar comentarios de una publicación en redes sociales.</h1>
+                <span class="material-symbols-outlined">south</span>
+            <div class="video">
+            <iframe width="660" height="415" src="https://www.youtube.com/embed/qH_0qk2nuo0?si=JNa3sgU3FtcPGMZ6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            </section>
+</section>
+
+
+    <div class="card-section-container">
+        <p class="card-title-section">Para saber más...</p><br>
+        <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+            info
+            </span>
+        <div class="card-container">
+            <a href="https://creately.com/diagram-community/popular-es" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">folder_open</span>
+                <p class="title1 fade-in invisible">Ver Recurso</p>
+                <p class="text fade-in invisible">Plantillas de diagrama populares</p>
+            </a>
+            <a href="https://www.bloglenovo.es/nubes-de-palabras/" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">¿Qué son las nubes de palabras y cómo puedes hacerlas?</p>
+            </a>
+            <a href="https://isdfundacion.org/2022/01/18/fases-de-la-investigacion-etnografica-virtual/" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Fases de la investigación etnográfica virtual</p>
+            </a>
+            <a href="https://atlasti.com/es/research-hub/codificacion-axial" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">¿Qué es la codificación axial en la investigación?</p>
+            </a>
+            <a href="https://www.ugr.es/~rescate/practicum/categorizaci_n.htm" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Elaborar una hoja de registro de observación</p>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    </script>
+</body>
+</html>

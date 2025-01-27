@@ -1,0 +1,943 @@
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 5rem 1rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 20px;
+    }
+    
+    .card button {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 1rem;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .card button:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 1rem 5rem;
+        flex-wrap: wrap;
+    }
+    .img-sources{
+        border-radius: 30px;
+        width: 80%;
+    }
+    .source-container{
+        display: flex;
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+    	.container-img {
+    		margin: 1rem;
+    	}
+        .img-sources{
+        width: 90%;
+    }
+    .source-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    }
+
+    .source{
+        background-color: rgb(67, 67, 67);
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin: 1rem 1rem 1rem 0;
+    }
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 40%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="logo-container">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+        </div>
+        <div class="usb-online">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+        </div>
+        <div class="content-hero">
+            <h1 class="content-hero-1st">Especialidad en</h1><br>
+            <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+            <p class="content-hero-3rd">Gobernanza y Desarrollo</p>
+            <button class="unit-button">Unidad 2</button>
+        </div>
+    </div>
+</section>
+    <div class="container">
+        <div class="content">
+            <h1>Introducción</h1>
+            <p class="content-intro">El tema central de este módulo es el vínculo entre gobernanza y desarrollo local. Buscamos que se reconozca la importancia de que una y otra caminen de la mano, pues la calidad y estructura de la gobernanza influyen directamente en el éxito del desarrollo a nivel comunitario, al menos porque la primera debería facilitar el desarrollo local, en tanto que la gobernanza local establece las bases para la planificación, implementación y evaluación de políticas públicas que impulsan el desarrollo. 
+                Un buen sistema de gobernanza local se reflejaría en una distribución de recursos (infraestructura, servicios públicos y fondos), de la mano del fomento a la participación ciudadana para involucrarse en la toma de decisiones y favorecer políticas públicas reflejen las necesidades reales de la comunidad. Lo anterior soportado en una gobernanza local transparente y comprometida con la rendición de cuentas, que más temprano que tarde deberá reflejarse en el crecimiento local sostenible y la mejora en la calidad de vida de las personas.</p><br>
+            <p class="content-intro">En este segundo módulo, desarrollaremos los conceptos de gobernanza local y gobernanza territorial, a efecto de precisar sus matices y la manera como ambos coinciden en el contexto local; aprovecharemos para identificar el uso y las funciones de la evaluación de las políticas públicas en un contexto local. Para un mejor reconocimiento del uso y las funciones de la evaluación, expondremos un ejercicio comparativo para saber las coincidencias, diferencias y complementariedades entre ésta y el control, la auditoría, la inspección, el monitoreo y la investigación</p><br>
+            <p class="content-intro">Los conceptos que recuperamos en este módulo nos permiten una mejor comprensión de las dinámicas locales, estudiar la relación entre gobernanza y desarrollo local te ayuda a entender cómo se toman decisiones que afectan el día a día de las comunidades. De la misma manera, ampliarás el abanico de opciones para mejorar políticas públicas, pues en tanto se mira cómo funciona la gobernanza local se vislumbran escenarios para diseñar y ejecutar políticas que realmente funcionen. Finalmente, si participas activamente en tu comunidad, o tienes interés en proyectos de desarrollo, el estudio de la gobernanza local te permitirá influir en procesos que promuevan un desarrollo más inclusivo y equitativo.</p><br>
+            <p class="content-intro">En resumen, entender la gobernanza local y su relación con el desarrollo es esencial para cualquier persona interesada en mejorar la vida de las comunidades desde una perspectiva económica, social y política.</p>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content2">
+            <h1>Objetivos específicos</h1>
+            <p class="content-intro2">
+                Al concluir esta unidad el alumnado reconocerá las principales estructuras de un gobierno local, así como las características de una gobernanza multinivel y territorial, y la importancia de las metodologías de evaluación para la planificación y mejora de las políticas públicas locales.
+            </p>
+        </div>
+    </div>
+
+<!-- Botón para minimizar o expandir la navbar -->
+<button id="toggle-btn" class="toggle-btn">–</button> 
+
+<div class="container-temario" id="navbar-temario">
+    <div class="temario">
+        <div class="sub-1">
+            <h1>Temas y Subtemas</h1>
+            <h2 class="temario-1list">2. Gobernanza local y global</h2><br>
+        </div>
+        <ul class="temario-ulist">
+            <a href="#sec1" class="temario-list">2.1 Gobernanza local</a><br>
+            <a href="#sec2" class="temario-list">2.2 Gobernanza territorial</a><br>
+            <a href="#sec3" class="temario-list">2.3 Usos y funciones de la evaluación en las políticas públicas</a><br>
+            <a href="#sec4" class="temario-list">2.3 Evaluación, control, auditoría, inspección, monitoreo e investigación</a><br>
+        </ul>
+    </div>
+</div>
+    
+    <section class="sec-info1" id="sec1">
+        <div class="title">2.1 Gobernanza local</div>
+        <div class="sec1-content">
+            <p class="sec1-text">La gobernanza local se refiere a la manera como se organiza, gestiona y toman decisiones en los ámbitos más cercanos a la ciudadanía, como los municipios, alcaldías, distritos o regiones. Es el proceso mediante el cual los actores locales, que pueden incluir autoridades gubernamentales, empresas, organizaciones de la sociedad civil y ciudadanos, interactúan para crear y ejecutar políticas que afectan directamente a la comunidad. La gobernanza local implica la toma de decisiones sobre la distribución de recursos, la prestación de servicios y el diseño de estrategias de desarrollo que responden a las necesidades específicas de una población local.</p><br>
+            <p class="sec1-text">A decir de Santos (2014:142), sus principales características son la: “Focalización de problemas, fragmentación en la gestión pública, menos jerarquía, mayor interacción con la sociedad, apertura de espacios de participación ciudadana, continuidad, agenda ampliada y objetivos múltiples…”. De esta manera, a diferencia de la gobernanza a nivel nacional, la gobernanza local es más inmediata y está directamente relacionada con los problemas cotidianos, como la infraestructura, la seguridad, la educación y el transporte. Su práctica podría adaptarse mejor a los contextos y necesidades particulares de cada localidad. En este proceso, la participación ciudadana es fundamental, ya que permite que las comunidades influyan en las decisiones que impactan sus vidas.</p><br>
+            <p class="sec1-text">Por su parte, el desarrollo local se refiere al proceso mediante el cual una comunidad o territorio específico mejora sus condiciones económicas, sociales, culturales y ambientales, a través de la participación de actores locales, como el gobierno, empresas, organizaciones de la sociedad civil y los propios ciudadanos. Es un enfoque de desarrollo descentralizado y participativo que se adapta a las características y necesidades específicas de un lugar, promoviendo la autosuficiencia, la cohesión social y la sostenibilidad.</p>
+            <p class="sec1-text">Las características clave del desarrollo local las encontramos en:</p>
+            <ol>
+            <li class="sec1-text">Enfoque territorial: El desarrollo local se concentra en áreas geográficas específicas, como municipios, alcaldías, ciudades o regiones, reconociendo que cada territorio tiene particularidades únicas en términos de recursos, cultura, capacidades y desafíos.</li>
+            <li class="sec1-text">Participación activa de la comunidad: El desarrollo local involucra a los actores locales en la toma de decisiones, asegurando que las políticas y proyectos respondan a las necesidades y aspiraciones de la comunidad. La participación ciudadana y de los sectores productivos es fundamental para la co-creación de soluciones. Aquí debe precisarse que también debe formarse a la ciudadanía que se involucrará en estos procesos y al mismo tiempo, tenerse una administración pública lo bastante sensible para atender la demanda de la ciudadanía.</li>
+            <li class="sec1-text">Enfoque multidimensional: Porque regularmente suele pensarse el desarrollo local como sinónimo de crecimiento económico, que ciertamente se espera como resultado de pensar espacialmente, pero al que precede la promoción de empleos locales, apoyo a pequeñas y medianas empresas, y fomento del emprendimiento, en la esfera económica, pero también la valorización de las tradiciones locales, el patrimonio cultural y el fortalecimiento de la identidad comunitaria, componentes de la esfera cultural, que redundarán en la esfera social y puntualmente en la reducción de la pobreza, la mejora de la educación, salud, vivienda y cohesión social, tanto como en la esfera ambiental, es decir, en la sostenibilidad ecológica, la gestión de recursos naturales y la mitigación del impacto ambiental.</li>
+            <li class="sec1-text">Fortalecimiento de las capacidades locales: El desarrollo local busca empoderar a la población y a las instituciones locales, fomentando la capacitación, la innovación y el fortalecimiento de las capacidades para gestionar y aprovechar los recursos de la comunidad. Aquí la innovación no sólo debemos entenderla como incorporación de tecnologías, sino principalmente como recuperación de aprendizajes, apertura para diálogos más horizontales en comunidades de práctica donde participan actores cuya valía es la experiencia y conocimiento tácito que poseen.</li>
+            <li class="sec1-text">Sostenibilidad y resiliencia: El desarrollo local promueve estrategias que no sólo generen crecimiento inmediato, sino que también sean sostenibles a largo plazo y capaces de enfrentar crisis económicas, sociales o ambientales. Busca crear comunidades resilientes, capaces de adaptarse a cambios y desafíos externos.</li>
+            <li class="sec1-text">Coordinación y cooperación entre actores locales: Implica la colaboración entre diferentes sectores (gobierno, sector privado, sociedad civil) para alinear esfuerzos y maximizar los impactos. La gobernanza local es clave para coordinar y gestionar estos procesos de desarrollo.
+                Un desarrollo local bajo un esquema de gobernanza deberá permitir que las comunidades tengan un mayor control sobre su propio desarrollo, reduciendo la dependencia de decisiones tomadas a nivel central o externo. Construyendo políticas y proyectos de manera endógena, el desarrollo que se produzca deberá ajustarse mejor a las condiciones y realidades del territorio, en lugar de aplicar enfoques generales que no siempre son efectivos en todos los contextos. Al enfocarse en las necesidades locales y en el bienestar de la población, el desarrollo local puede contribuir a reducir desigualdades y fortalecer la cohesión social.</li>
+            </ol>
+            <section class="sec-video">
+                <h1 class="vid-title">Video: Desarrollo Local</h1>
+                <span class="material-symbols-outlined">south</span>
+        <div class="video">
+            <iframe width="660" height="415" src="https://www.youtube.com/embed/4A_uqMryif4?si=XdLbEuUmsKtvE1BD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+            </section>
+        </div>
+    </section>
+
+
+
+<section class="sec-info1" id="sec2">
+    <div class="title">2.2 Gobernanza territorial</div>
+    <div class="sec1-content">
+        <p class="sec1-text">La gobernanza territorial se refiere al conjunto de procesos, instituciones y actores que intervienen en la toma de decisiones y la gestión de recursos dentro de un territorio específico, como una región, un estado o un conjunto de municipios. Es decir, la variable central es el espacio, por lo que se ven involucrados diferentes niveles de gobierno (nacional, regional, local) y la participación activa de actores públicos, privados y de la sociedad civil en la planificación y ejecución de políticas públicas que afectan a ese territorio.</p>
+        <p class="sec1-text">Recuperando a Pokolenko (2023: 214), </p>
+        <p class="sec1-text-quote">“… el paradigma de la gobernanza territorial surge a finales del siglo XX como resultado de la crítica al modelo de gestión pública centralizada. Su base teórica se vincula con las concepciones de gobernanza y desarrollo territorial de la década de 1990, con el objetivo de fomentar la participación y colaboración entre diversos actores para lograr un desarrollo equilibrado y sostenible en los territorios, adoptando una visión holística y colaborativa de la gestión territorial.” </p>
+        <p class="sec1-text">Las características clave de la gobernanza territorial tienen que ver con el enfoque integral y multisectorial, en tanto se abarcan diversos sectores (económico, social, ambiental) y áreas de gestión (infraestructura, transporte, salud, educación) dentro de un territorio, asegurando que las políticas sean coherentes y coordinadas en todo el espacio territorial.</p>
+        <p class="sec1-text">En segundo lugar, se tiene la descentralización de decisiones y la autonomía de los gobiernos locales y regionales, para que puedan gestionar mejor los recursos y las políticas, adaptándolas a las necesidades y particularidades de su territorio. Como en cualquier otro esquema de gobernanza, intervienen diversos actores como gobiernos locales, organizaciones comunitarias, empresas, universidades y la ciudadanía. La colaboración y el consenso entre estos actores es fundamental para diseñar políticas que respondan a las características y prioridades del territorio.</p>
+        <p class="sec1-text">Desde este enfoque de gobernanza territorial se debe procurar un uso eficiente y sostenible de los recursos naturales, económicos y sociales del territorio, promoviendo un desarrollo que equilibre las necesidades presentes con las futuras, considerando el impacto ambiental, económico y social. La gobernanza territorial trabaja para reducir desigualdades entre diferentes zonas del territorio, promoviendo un desarrollo equitativo que favorezca áreas urbanas y rurales, e incluso al interior de ellas, con el propósito de reducir disparidades sociales y económicas.</p>
+        <p class="sec1-text">No resulta menos importante la coordinación entre niveles de gobierno, esto es, promover la articulación entre los diferentes niveles de gobierno (nacional, regional y local) para asegurar que las políticas nacionales se adapten al contexto territorial y que las iniciativas locales puedan integrarse en los planes de desarrollo más amplios.</p>
+        <p class="sec1-text">La gobernanza territorial mejora la calidad de las políticas públicas, pues al adaptarse a las necesidades específicas del territorio, las políticas son más eficaces y tienen mayor impacto. Inexorablemente, fomenta la participación ciudadana para que los ciudadanos y otros actores locales influyan en las decisiones que afectan su entorno, aumentando la legitimidad de las políticas.</p>
+        <p class="sec1-text">Este enfoque promueve la cohesión social y territorial, además de contribuir a un desarrollo más equitativo, evitando que ciertas regiones se queden atrás y reduciendo las brechas socioeconómicas entre territorios.</p>
+        <p class="sec1-text">Finalmente, debe señalarse que existen iniciativas en Sudamérica que reivindican la gobernanza territorial como un ejercicio de los pueblos indígenas y comunidades locales, que se ejerce sin presupuesto o apoyo estatal alguno.  Lo anterior a raíz del reconocimiento de estos pueblos y comunidades como propietarios de amplios territorios que encontraron en este esquema una propuesta para organizarse, preservar y cuidar sus territorios. Al respecto puede visitarse la siguiente página web: https://mecanismodegobernanzaterritorial.org/</p>
+    </div>
+</section>
+
+<section class="sec-info1" id="sec2">
+    <div class="title">2.3 Usos y funciones de la evaluación en las políticas públicas</div>
+    <div class="sec1-content">
+        <p class="sec1-text">La evaluación de políticas públicas es un proceso sistemático que busca medir la efectividad, eficiencia y pertinencia de las políticas implementadas. Sus usos y funciones son variados y desempeñan un papel crucial en la mejora de la gobernanza y la gestión pública.</p>
+        <p class="sec1-text">Los principales usos y funciones de la evaluación en las políticas públicas tienen que ver con la medición de resultados, para determinar si una política o programa ha alcanzado sus objetivos y resultados esperados, facilitando la identificación de logros y áreas de mejora. La evaluación también genera información a los ciudadanos, responsables políticos y otros interesados sobre cómo se han utilizado los recursos públicos y cuáles han sido los resultados, promoviendo la transparencia y la responsabilidad en la gestión pública. Por supuesto, al tomador de decisiones le facilita el proceso de toma de decisiones, al proporcionar datos y evidencia sobre la efectividad de las políticas, lo que ayuda a los responsables a elegir las mejores opciones y enfoques.</p>
+        <p class="sec1-text">La evaluación permite identificar buenas prácticas y lecciones aprendidas, lo que contribuye a mejorar la implementación de políticas futuras y a diseñar intervenciones más efectivas. Finalmente, ayuda a identificar qué políticas o programas generan un mayor impacto, permitiendo una asignación más eficiente de recursos públicos a las iniciativas que realmente benefician a la población.</p>
+        <p class="sec1-text">¿Cuáles son las funciones de la evaluación?</p>
+        <ol>
+            <li class="sec1-text">Genera información detallada del contexto en el que se implementa una política, identificando necesidades, problemas y factores que influyen en el éxito o fracaso de la intervención.</li>
+            <li class="sec1-text">Evalúa los efectos directos e indirectos de las políticas en la población y el entorno, analizando resultados positivos y negativos.</li>
+            <li class="sec1-text">Ofrece información valiosa a los diseñadores y ejecutores de políticas sobre lo que está funcionando y lo que no, permitiendo ajustes y mejoras en tiempo real.</li>
+            <li class="sec1-text">Proporciona evidencia sobre la eficacia de las políticas, ayudando a legitimar las decisiones y acciones del gobierno ante la sociedad.</li>
+            <li class="sec1-text">Promoción de la participación: Involucra a diversas partes interesadas en el proceso de evaluación, lo que puede fomentar la colaboración y la participación ciudadana en la formulación y ejecución de políticas.</li>
+            <li class="sec1-text">Basándose en los resultados de las evaluaciones, se pueden realizar prospectiva, esto es, formular nuevas políticas o programas que sean más relevantes y efectivos para abordar las necesidades de la sociedad.</li>
+        </ol>
+        <p class="sec1-text">Ahora bien, con todas estas virtudes que se le reconocen a la evaluación debe tomarse en cuenta sus límites y el proceso efectivo de la política, incluyendo la acción posterior a la operación de ésta, pues</p>
+        <p class="sec1-text-quote">“… no basta con disponer de buenas evaluaciones, se necesita que éstas sean tomadas en cuenta por las instancias evaluadas y por los órganos responsables de realizar la asignación de presupuestos, cuestión que diversas metaevaluaciones realizadas en contextos nacionales distintos del nuestro han mostrado que presenta fuertes limitaciones.  (CARDOZO: 2013;124)</p>
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/GYD_ESQUEMA_UNIDAD2.3.png" alt="">
+            <div class="source-container">
+            <div class="source">Organizador gráfico. Por: Juan Estrella</div>
+            </div>
+        </div>
+</section>
+
+<section class="sec-info1" id="sec3">
+    <div class="title">2.4 Evaluación, control, auditoría, inspección, monitoreo e investigación</div>
+    <div class="sec1-content">
+        <p class="sec1-text">Existen distintas metodologías que se asemejan o alimentan a la evaluación, entre ellas el control, la auditoría, la inspección, el monitoreo y la investigación, cada una de ellas son procesos que se utilizan en la gestión pública y en la administración de programas, pero cada uno tiene enfoques y propósitos diferentes. A continuación, se presentan sus similitudes, diferencias y formas de complementariedad:</p>
+        <p class="sec1-text">Similitudes:</p>
+        <ol>
+            <li class="sec1-text">Objetivo de mejora: Todos estos procesos buscan mejorar la efectividad, eficiencia y transparencia de las políticas y programas implementados.</li>
+            <li class="sec1-text">Uso de datos e información: Utilizan información y evidencia para emitir juicios, recomendaciones o informes sobre el desempeño de las políticas y programas.</li>
+            <li class="sec1-text">Participación de actores: Involucran a diferentes actores que proporcionan información y eventualmente contribuyen en el mismo análisis, como funcionarios públicos, organizaciones de la sociedad civil y ciudadanos, aunque su nivel de participación varía.</li>
+        </ol>
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/GYD_ETABLA_UNIDAD2.4.png" alt="">
+            <div class="source-container">
+            <div class="source">Organizador gráfico. Por: Juan Estrella</div>
+            </div>
+        </div>
+        <p class="sec1-text">Complementariedad.</p>
+        <p class="sec1-text">Como ya se había adelantado, las metodologías también podrían ser complementarias. En primer lugar, por la interacción, pues la evaluación puede beneficiarse de los hallazgos del monitoreo y la auditoría, ya que estos procesos pueden proporcionar información sobre el desempeño y el cumplimiento normativo. Asimismo, los resultados de la evaluación pueden llevar a ajustes en los procesos de control y auditoría, asegurando que sean más efectivos y alineados con los objetivos de las políticas. A su vez, el monitoreo proporciona datos en tiempo real que son útiles para la evaluación, permitiendo ajustes durante la implementación de un programa. Finalmente, los resultados de evaluaciones previas y auditorías pueden servir como base para investigaciones más profundas sobre temas específicos, contribuyendo a un mejor entendimiento de los fenómenos analizados.</p>
+        <p class="sec1-text">Existen distintas instancias cuyas funciones les exige recurrir permanente a este conjunto de metodologías de seguimiento y generación de conocimiento, como en el caso de los institutos de planeación (al respecto véase Leal, Lugo y Mina, 2023).</p>
+        <p class="sec1-text">Realiza un cuadro analítico considerando el conjunto de temas abordados en este módulo.</p>
+</section>
+
+
+    <div class="card-section-container">
+        <p class="card-title-section">Para saber más...</p><br>
+        <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+            info
+            </span>
+        <div class="card-container">
+            <!-- fuentes pendientes -->
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/Bueno_Reflexiones_epistemologicas_evaluacion.pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Reflexiones epistemológicas y metodológicas para la evaluación de políticas públicas.</p>
+            </a>
+            <a href="https://youtu.be/UOHixuF46tE?si=T0zogL0ecbWeHtS_" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">play_circle</span>
+                <p class="title1 fade-in invisible">Ver Video</p>
+                <p class="text fade-in invisible">Evaluación y monitoreo de las políticas públicas</p>
+            </a>
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/GutierrezLa_construccion_de_indicadores_como_problema_epistemologico.pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">La Construcción de Indicadores como Problema Epistemológico</p>
+            </a>
+            <a href="https://www.redalyc.org/articulo.oa?id=51052064004" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Gobernabilidad democrática y desarrollo local sustentable</p>
+            </a>
+            <a href="https://usbmexicoonline.neolms.com/files/11461125/Martinez_Ingobernanza.pdf" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                <p class="title1 fade-in invisible">Ver Artículo</p>
+                <p class="text fade-in invisible">Dimensiones de la (in)gobernanza territorial en conflictos socioambientales</p>
+            </a>
+            <a href="https://youtu.be/n-g1YNu4Bbg?si=VC-0OrJBGjQwU58z" target="_blank" class="card-s">
+                <span class="material-symbols-rounded fade-in invisible">play_circle</span>
+                <p class="title1 fade-in invisible">Ver Video</p>
+                <p class="text fade-in invisible">¿Qué es el Mecanismo de Gobernanza Territorial?</p>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    </script>
+</body>
+</html>

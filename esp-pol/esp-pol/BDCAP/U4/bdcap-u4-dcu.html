@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-list em{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.title em{
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text a{
+    font-size: 19px;
+    text-decoration: none;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text strong{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text em{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+@media (max-width: 768px) {
+.sec1-text strong {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 3rem 3rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 30px;
+    }
+    
+    .btn-card {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 2rem !important;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+        text-decoration: none !important;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .btn-card:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 1rem 5rem;
+        flex-wrap: wrap;
+    }
+    .img-sources{
+        border-radius: 30px;
+        width: 80%;
+    }
+    .source-container{
+        display: flex;
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+    	.container-img {
+    		margin: 1rem;
+    	}
+        .img-sources{
+        width: 90%;
+    }
+    .source-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    }
+
+    .source{
+        background-color: rgb(67, 67, 67);
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin: 1rem 1rem 1rem 0;
+    }
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 40%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+/* FLASHCARD */
+.container-flashcard {
+        display: flex;
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
+        margin: 5rem 0 5rem 0;
+    }
+
+    .flashcard {
+        perspective: 1000px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        align-content: center;
+        flex: 0 0 30%; 
+        box-sizing: border-box;
+    }
+
+    .flashcard-inner {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flashcard-front, .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 48px;
+        color: #5c5c5c;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .flashcard-front {
+        background-color: #dbdbdb;
+        text-align: center;
+    }
+
+    .flashcard-back {
+        background-color: #dbdbdb;
+        transform: rotateY(180deg);
+    }
+
+    .flashcard.flipped .flashcard-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard-front p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .flashcard-back li {
+        font-size: 10px;
+    }
+
+    .button {
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 20px 102px;
+        font-size: 20px;
+        background-color: #83062F;
+        cursor: pointer;
+        color: white;
+        border: none;
+        border-radius: 16px;
+        font-weight: 600;
+        margin-top: 6px;
+    }
+
+    .container-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%; 
+    }
+
+    .button:hover {
+        background-color: #83062f;
+        transition: ease-in 200ms;
+    }
+    .button:active {
+        background-color: #390a1b;
+        transition: ease-in 200ms;
+    }
+
+        .flashcard1 {
+        perspective: 1000px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        align-content: center;
+        flex: 0 0 30%;
+        box-sizing: border-box;
+    }
+
+    .flashcard1-inner {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flashcard1-front, .flashcard1-back {
+        font-family: "Sora", sans-serif;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 48px;
+        color: #5c5c5c;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .flashcard1-front {
+        background-color: #dbdbdb;
+        text-align: center;
+    }
+
+    .flashcard1-back {
+        background-color: #dbdbdb;
+        transform: rotateY(180deg);
+    }
+
+    .flashcard1.flipped .flashcard1-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard1-front p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .flashcard1-back p {
+        font-size: 12px;
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+    }
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="logo-container">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+        </div>
+        <div class="usb-online">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+        </div>
+        <div class="content-hero">
+            <h1 class="content-hero-1st">Especialidad en</h1><br>
+            <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+            <p class="content-hero-3rd">Big data para la Construcción de Agenda Pública</p>
+            <button class="unit-button">Unidad 4</button>
+        </div>
+    </div>
+</section>
+    <div class="container">
+        <div class="content">
+            <h1>Introducción</h1>
+            <p class="content-intro">En un gran contexto dominado por el Small Data y Big Data y en sociedades red, en las cuales se crean narrativas transmedia, tenemos claro que hay una relación entre medios, redes sociales y opinión pública. Pero, ¿cómo llegan los mensajes de la opinión a la agenda pública?</p><br>
+            <p class="content-intro">Tal como menciona el Centro de Educación Virtual PUCE (2021), la formación de la agenda implica una negociación entre los gobiernos y los actores sociales respecto a qué temas se consideran prioritarios para atender. Este proceso es clave porque involucra tres niveles de agenda: la pública, la política y la gubernamental. Entender cómo un tema llega a la agenda política es una de las principales interrogantes para cualquier grupo o tomador de decisiones que desee incidir en las políticas públicas o en decisiones que afectan el interés común.</p><br>
+            <p class="content-intro">Según el texto de Lycarião y Sampaio (2016), la irrupción de la comunicación digital ha incorporado nuevas dinámicas a la relación tradicional entre medios y agenda pública. Previamente, ya se había investigado la relación entre medios de comunicación y la agenda; sin embargo, la aparición de las redes sociales en esta nueva ecología de medios introduce retos metodológicos.</p><br>
+            <p class="content-intro">Por lo que, es necesario realizar estudios empíricos que tomen en cuenta las relaciones asimétricas de poder y la influencia de actores no tradicionales. En este aspecto, un concepto relevante es el de la "agenda inversa", donde los flujos de comunicación digital pueden influir en la discusión pública. Ejemplos como Anonymous, el movimiento 15M en España, Yo Soy 132 en México o el movimiento #MeToo son pruebas de cómo se generan agendas específicas que inciden en el debate público a corto, mediano y largo plazo.</p><br>
+            <p class="content-intro">A lo largo de esta unidad también analizaremos cómo las redes sociales digitales han ampliado la discusión pública, permitiendo una mayor participación ciudadana en la configuración de la agenda.</p><br>
+            <p class="content-intro">Como hemos visto en unidades anteriores, esta nueva ecología de medios no sólo permite una mayor interacción y compartición de contenido, sino que también “democratiza” la opinión pública al facilitar el acceso a voces que antes no tenían la posibilidad de ser escuchadas. Sin embargo, este fenómeno también plantea riesgos, toda vez de escenarios de brechas de diversa índole y variadas injusticias epistémicas. Según Ipsos y la Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (UNESCO, 2023), reporta que el 65% de la población mexicana percibió con regularidad publicaciones de odio en las plataformas digitales; en tanto, a nivel internacional, son principalmente dirigidos a la comunidad LGBTTTIQ+ y por su origen etnico (en tercer lugar son las mujeres las más afectadas).</p><br>
+            <p class="content-intro">Finalmente, en el marco de la negociación de grupos o movimientos sociales con la agenda, el sociólogo José Candón explora cómo los medios tradicionales seleccionan, jerarquizan y presentan temas al público, un proceso conocido como agenda setting. Este mecanismo determina no sólo qué temas se discuten, sino también el enfoque con el que se abordan, lo que plantea desafíos para los actores políticos que desean posicionarse en el espacio público.</p><br>
+            <p class="content-intro">A través de este análisis, veremos cómo los medios actúan como intermediarios en la construcción de la opinión pública y cómo, en un entorno mediático cargado de intereses políticos y económicos, la agenda mediática es cualquier cosa menos neutra. Aunque, con las estrategias de comunicación política adecuadas, es probable que movimientos y grupos sociales formen parte de la opinión y agenda pública.</p><br>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content2">
+            <h1>Objetivos específicos</h1>
+            <p class="content-intro2">
+                Al término de la unidad los estudiantes serán capaces de    
+            </p>
+            <p class="content-intro2">Identificar y explicar las etapas del ciclo de políticas públicas, con especial énfasis en el proceso de formación de la agenda política y su relevancia en la toma de decisiones gubernamentales.</p><br>
+            <p class="content-intro2">Analizar el impacto de las redes sociales y la comunicación digital en la configuración de la agenda pública, política y gubernamental, destacando cómo estos medios transforman la participación ciudadana y la discusión pública.</p><br>
+            <p class="content-intro2">Evaluar la relación entre poder, medios de comunicación y la formación de la agenda pública, identificando cómo las relaciones asimétricas influyen en la selección y priorización de temas relevantes para la sociedad.</p><br>
+        </div>
+    </div>
+
+<!-- Botón para minimizar o expandir la navbar -->
+<button id="toggle-btn" class="toggle-btn">–</button> 
+
+<div class="container-temario" id="navbar-temario">
+    <div class="temario">
+        <div class="sub-1">
+            <h1>Temas y Subtemas</h1>
+            <h2 class="temario-1list">4. El Big Data</h2><br>
+        </div>
+        <ul class="temario-ulist">
+            <a href="#sec2" class="temario-list">4.1 Del Big Data a la construcción de agenda pública</a><br>
+            <a href="#sec3" class="temario-list">4.2 Agenda pública y su importancia para los entornos digitales</a><br>
+            <a href="#sec4" class="temario-list">4.3 Aproximaciones de la agenda gubernamental</a><br>
+            <a href="#sec5" class="temario-list">4.4 Arribar a la agenda de medios</a><br>
+            <a href="#sec6" class="temario-list">4.5 Construcción de agenda periférica</a><br>
+            <a href="#sec7" class="temario-list">4.6 Enfoques neoinstitucionales para el entendimiento de la interacción entre agendas</a><br>
+        </ul>
+    </div>
+</div>
+    
+    <section class="sec-info1" id="sec1">
+        <div class="title">4. El Big Data</div>
+        <div class="sec1-content">
+
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/La_relevancia_de_los_datos_en_la_construccion_de_Discursos_(1).jpeg" alt="">
+                <div class="source-container">
+                    <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="sec-info1" id="sec2">
+        <div class="title">4.1 Del Big Data a la construcción de agenda pública</div>
+        <div class="sec1-content">
+
+            <p class="sec1-text">La formación de la agenda pública, como concepto central en el estudio de la comunicación política, ha evolucionado con la irrupción de las redes sociales y el análisis de grandes volúmenes de datos. Por ello, en esta unidad, nos adentraremos en cómo la agenda pública, la agenda política y la agenda gubernamental interactúan en una sociedad informacional cada vez más compleja.</p>
+            <p class="sec1-text">Recordemos el caso de Cambridge Analytics, cuyo eje fue el uso indebido de datos de personas que usaban Facebook, para ofrecerles votar por un candidato o propuesta política, incentivando climas de división y odio. Tema que fue escalando, a tal grado que impactó en medios, así como en agendas globales de gobierno.</p>
+            <p class="sec1-text">Como señala Castillo (2021), la adopción de estas nuevas tecnologías disruptivas en la administración pública es inevitable. No es recomendable que gobernantes y funcionarios, ya sea por falta de conocimiento, intereses personales o incluso por nostalgia, intenten implementar un nuevo ludismo. El Big Data permitirá mejorar el diseño de políticas que respondan de manera efectiva a las necesidades de la sociedad y facilitará la toma de decisiones mediante el análisis de comportamientos predictivos. Esta realidad ya se está experimentando en muchos países. Sin embargo, es indudable que un uso inadecuado de estas herramientas puede resultar en la violación de derechos individuales o favorecer intereses particulares de los gobernantes actuales.</p>
+
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/OPINION_PUBLICA_E_IA.jpg" alt="">
+                <div class="source-container">
+                    <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<section class="sec-info1" id="sec3">
+    <div class="title">4.2 Agenda pública y su importancia para los entornos digitales</div>
+    <div class="sec1-content">
+
+        <p class="sec1-text">Como lo describe el Centro de Educación Virtual PUCE (2023), el ciclo de políticas públicas comienza con la formación de la agenda, un proceso que determina cuáles problemas sociales adquieren prioridad y se transforman en políticas concretas.</p>
+        <p class="sec1-text">Este proceso es clave para que las preocupaciones ciudadanas, inicialmente parte de la agenda pública, se trasladen al espacio gubernamental, donde la asignación de recursos y la creación de programas se convierten en respuestas tangibles. La relevancia de este estudio en la era digital es clara: la capacidad de ciertos grupos o problemas de alcanzar visibilidad depende de una estructura mediática en constante transformación, donde las plataformas digitales y el Big Data han desplazado el rol tradicional de los medios en la construcción de narrativas públicas.</p>
+        <p class="sec1-text">Al respecto, pensemos que la agenda observa qué sucede a su alrededor para fijar decisiones y políticas. Vayamos a ejemplos concretos:</p>
+        <p class="sec1-text">En el ámbito de la salud pública, el análisis de grandes volúmenes de datos se emplea para anticipar brotes de enfermedades, identificar zonas de riesgo y mejorar la distribución de recursos (por supuesto, en una constante correlación con la agenda). En el sector educativo, el Big Data se utiliza para monitorear el rendimiento de los estudiantes, detectar áreas que requieren mejora y adaptar la educación a las necesidades específicas de cada alumno. En el campo de la seguridad, el análisis de datos se aplica para identificar patrones delictivos, prevenir crímenes y optimizar la respuesta de las fuerzas del orden (Lucema, s.a).</p>
+        <p class="sec1-text">Particularmente, es relevante señalar que la campaña de Trump utilizó análisis de datos para enviar mensajes personalizados a 100,000 votantes cada día. Emplearon herramientas analíticas para identificar preocupaciones específicas, como la inmigración, y ajustaron sus mensajes según el perfil de cada elector, logrando así un impacto notable en su intención de voto (Mollineti, 2019).</p>
+
+    </div>
+</section>
+
+<section class="sec-info1" id="sec4">
+    <div class="title">4.3 Aproximaciones de la agenda gubernamental</div>
+    <div class="sec1-content">
+
+        <p class="sec1-text">De acuerdo con Amparo Casar (2008), la agenda gubernamental está formada por las prioridades que un gobierno establecido se propone como parte de su proyecto y que intenta llevar a cabo durante su mandato. En los sistemas democráticos, debería existir una conexión cercana entre la agenda pública, la agenda política y la agenda gubernamental, lo cual sería el resultado de una representación efectiva de los intereses dentro del sistema político.</p>
+        <p class="sec1-text">Uno de los aspectos más complejos en la construcción de la agenda es la relación entre visibilidad mediática y la capacidad de los actores políticos para imponer su narrativa. En el caso de México, el ejercicio comunicacional diario de “La Mañanera” del presidente Andrés Manuel López Obrador ejemplifica cómo un gobierno puede utilizar su presencia mediática para establecer una narrativa y dirigir el debate público.</p>
+        <p class="sec1-text">Esta estrategia responde a la necesidad de los gobiernos de asegurar sus propios marcos de conversación. A través de este giro discursivo, el gobierno establece una centralidad temática, manteniendo el foco en sus propios intereses. Sin embargo, como también han demostrado estudios sobre comunicación digital, las plataformas digitales pueden actuar como espacios de contranarrativa, donde grupos marginados encuentran visibilidad y amplificación de sus demandas, generando una “agenda inversa” (Sampayo, 2020) que presiona desde lo social hacia lo político.</p>
+
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/Designer_(7).jpeg" alt="">
+            <div class="source-container">
+                <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="sec-info1" id="sec5">
+    <div class="title">4.4 Arribar a la agenda de medios</div>
+    <div class="sec1-content">
+
+        <p class="sec1-text">Las plataformas digitales, por tanto, se han convertido en arenas de disputa por la visibilidad pública. Por ello, es sustantivo entender cómo la deliberación en redes sociales puede alterar el equilibrio de poder en la construcción de la agenda pública. Movimientos sociales como "Yo Soy 132" en México o el 15-M en España ilustran cómo las redes sociales permiten a los grupos sociales fuera del sistema mediático tradicional ejercer presión sobre la agenda política, obligando a los gobiernos a considerar temas que inicialmente no estaban en su radar.</p>
+        <p class="sec1-text">Refiriéndonos al #YoSoy132, como señala Peñalosa (2016), surgió en el entorno digital, donde un video de estudiantes de la Universidad Iberoamericana desmintió las acusaciones de que las protestas contra Enrique Peña Nieto eran manipuladas. Esta acción fue crucial para contrarrestar la narrativa de los medios tradicionales, que intentaron minimizar y desacreditar las manifestaciones. El uso del hashtag #YoSoy132 en Twitter permitió que el tema se convirtiera en un trending topic a nivel mundial, lo que obligó a los medios a prestar atención. El movimiento organizó marchas masivas que captaron la atención de la prensa. La primera marcha, realizada el 18 de mayo de 2012, reunió a miles de estudiantes que exigían una cobertura informativa más equitativa. Además, se llevaron a cabo protestas frente a las sedes de medios como Televisa y TV Azteca, demandando la democratización de la información.</p>
+        <p class="sec1-text">Estos movimientos son ejemplos de cómo los espacios digitales han democratizado, al menos parcialmente, la creación de la agenda, permitiendo a los ciudadanos desafiar las narrativas impuestas por los medios tradicionales y el gobierno. En este sentido, Candón (2023) menciona que las redes permiten una “deliberación celérica”; es decir, una diseminación rápida y masiva de ideas que puede romper con las dinámicas tradicionales de los medios de comunicación.</p>
+        <p class="sec1-text">No obstante, esta democratización de la visibilidad también conlleva riesgos. Tales como la extracción de datos y el robo de privacidad. Recordemos casos como el de Pegasus. Ante este panorama, es urgente plantear una alfabetización mediática que permita a los ciudadanos navegar de manera crítica por el complejo ecosistema mediático digital. Solo así se podrá fomentar una participación ciudadana más informada y plural, que contribuya a una agenda pública inclusiva.</p>
+
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/Futurista_tecnologica_sistema_recopilacion_datos_redes_sociales_servidores_cables_pantallas_complejidad_recopilacion_analisis_datos_interfaz_usuario_graficos_diagramas_informacion_recopilada_propuesta_politica_pub.jpeg" alt="">
+            <div class="source-container">
+                <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="sec-info1" id="sec6">
+    <div class="title">4.5 Construcción de agenda periférica</div>
+    <div class="sec1-content">
+
+        <p class="sec1-text">Para concluir, es importante destacar el papel que juegan las agendas periféricas (Candón, 2023) en el contexto de la formación de la agenda pública, sobre todo en una sociedad donde los flujos de información son cada vez más descentralizados.</p>
+        <p class="sec1-text">Las agendas periféricas, formadas por grupos subalternos, marginados o minoritarios, emergen como alternativas al discurso hegemónico predominante en los medios tradicionales, y ofrecen una visión más amplia y diversa de los problemas sociales. Estas agendas periféricas son las que muchas veces provienen de movimientos sociales o comunitarios, que no suelen tener representación en los canales convencionales de comunicación, pero que adquieren relevancia gracias a la interacción digital y el Big Data.</p>
+        <p class="sec1-text">Esto ocurre porque los ciudadanos pueden utilizar estas plataformas para amplificar sus voces y generar presión sobre los actores políticos y mediáticos tradicionales. El ejemplo de movimientos como la movilización por la justicia de género en América Latina (pensemos en #MeToo), demuestra que la combinación de esfuerzos colectivos en redes sociales y el uso de herramientas digitales, puede crear una agenda inversa, donde las preocupaciones que surgen desde la base logran alcanzar el espacio público y transformarse en demandas concretas que los gobiernos deben atender.</p>
+        <p class="sec1-text">Para aterrizar el tema, pensemos en las madres buscadoras, tales como Las Rastreadoras del Fuerte, un grupo de familiares que buscan a sus desaparecidos en fosas clandestinas en Sinaloa, México. Como aduce Franco (2019) ellas están desafiando la agenda mediática utilizando tecnologías de comunicación de manera estratégica para contrarrestar la narrativa oficial que niega la existencia de este crimen. En lugar de depender de los medios tradicionales, que frecuentemente minimizan o distorsionan sus historias, Las Rastreadoras han tomado el control de su propia narrativa mediante herramientas digitales.</p>
+        <ul>
+            <li class="sec1-text">Uso de Facebook: Crean perfiles de búsqueda y comparten información sobre sus desaparecidos.</li>
+            <li class="sec1-text">Comunicación por WhatsApp: Se organizan internamente y coordinan búsquedas de campo.</li>
+            <li class="sec1-text">Herramientas de Google: Utilizan Google Maps y Google Earth para interpretar coordenadas anónimas y mejorar sus búsquedas.</li>
+            <li class="sec1-text">Transmisiones en Vivo: Realizan transmisiones en vivo de sus búsquedas a través de Facebook, lo que les permite alcanzar a una audiencia más amplia, crear testigos virtuales y documentar la inacción de las autoridades.</li>
+        </ul>
+        <p class="sec1-text">Al compartir en vivo sus descubrimientos, Las Rastreadoras obligan a los medios y al público a confrontar la dura realidad de las desapariciones y la ineficacia del Estado para abordar este problema. Esto genera presión sobre las autoridades para que actúen y rindan cuentas.</p>
+
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/opinion_publica_e_ia(2).jpg" alt="">
+            <div class="source-container">
+                <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="sec-info1" id="sec7">
+    <div class="title">4.6 Enfoques neoinstitucionales para el entendimiento de la interacción entre agendas</div>
+    <div class="sec1-content">
+        <p class="sec1-text">La importancia de integrar herramientas de análisis de Big Data y redes sociales en el estudio de la agenda pública es evidente en este contexto. Así, Lycarião y Sampayo (2020) proponen la adopción de nuevas metodologías para analizar cómo las plataformas digitales moldean las narrativas públicas y las relaciones de poder que subyacen en ellas. También resulta preciso buscar en nuevas epistemologías.</p>
+        <p class="sec1-text">Una de ellas es el neoinstitucionalismo, recordemos que representa un nuevo paradigma en las ciencias sociales que se enfoca en la función de las instituciones en la configuración de los resultados sociales y políticos. Este enfoque surge como una versión actualizada del institucionalismo clásico, integrando elementos del conductismo y la teoría de la elección racional. A diferencia del antiguo institucionalismo, que se centraba principalmente en la descripción normativa de las instituciones, el neoinstitucionalismo se propone explicar cómo funcionan realmente las instituciones y cómo influyen en el comportamiento individual y en los procesos políticos (Altavilla, 2005).</p>
+        <p class="sec1-text">Gambacorta (2020) sugiere desde el enfoque del neo-institucionalismo, que es fundamental implementar estrategias que salvaguarden a los trabajadores y a los ciudadanos de las consecuencias adversas del Big Data. Esto implica establecer marcos regulatorios que no solo se ocupen del uso ético de los datos, sino que también consideren su efecto en las relaciones laborales y en la democracia.</p>
+        <p class="sec1-text">Es preciso trazar puentes entre marcos neo institicionalistas y regulaciones que aborden temas digitales, protección de datos, seguridad y toma de decisiones desde las diversas agendas exploradas.</p>
+        <p class="sec1-text">En tanto, estas metodologías y epístemes, basadas en el análisis de grandes volúmenes de datos, permiten una comprensión más profunda de las dinámicas de la opinión pública en la era digital. Por ejemplo, y como vimos en la anterior unidad, el uso de herramientas como Google Trends y el análisis de redes sociales puede proporcionar datos valiosos sobre cómo se propagan ciertos temas y qué factores influyen en su visibilidad. Probablemente, con dichas herramientas se tracen cabildeos y negociaciones posibles.</p>
+        <p class="sec1-text">Al tiempo que es crucial seguir reflexionando sobre el papel de los medios y las plataformas digitales en la configuración de la agenda pública. La interacción entre las agendas mediática, política y gubernamental sigue siendo un terreno de disputa, donde actores diversos compiten por arribar al debate público. Es necesario hallar marcos de conciliación.</p>
+        <p class="sec1-text">En conclusión, las agendas periféricas y su interacción con los medios digitales ofrecen una ventana para la democratización del debate público. La posibilidad de que las narrativas alternativas alcancen visibilidad depende, en gran medida, de la capacidad de los ciudadanos y actores sociales para utilizar estratégicamente las herramientas digitales a su disposición. Es en este cruce entre tecnología, participación ciudadana y la lucha por el control del discurso público donde se define el futuro de la agenda pública, la cual debe estar más abierta a las demandas diversas y las múltiples voces que conforman nuestras sociedades.</p>
+
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/Designer.jpeg" alt="">
+            <div class="source-container">
+                <div class="source">Organizador gráfico elaborado en Dalle y Copilot Microsoft</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="card-section-container">
+    <p class="card-title-section">Para saber más...</p><br>
+    <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+        info
+        </span>
+    <div class="card-container">
+        <!-- fuentes pendientes -->
+        <a href="https://doi.org/10.4185/RLCS-2023-1891" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">library_books</span>
+            <p class="title1 fade-in invisible">Ver Lectura</p>
+            <p class="text fade-in invisible">Candón-Mena, J. y Montero-Sánchez, D. (2023). Lógicas y orientaciones del activismo digital. Del uso y la apropiación al desarrollo de herramientas autónomas . Revista Latina De Comunicación Social, (81), 297–313.</p>
+        </a>
+        <a href="https://www.cesuma.mx/blog/el-uso-del-big-data-en-el-sector-publico.html" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">library_books</span>
+            <p class="title1 fade-in invisible">Ver Artículo</p>
+            <p class="text fade-in invisible">El uso del big data en el sector público. Universidad CESUMA.</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=WgiWhVsm6SM&ab_channel=axelmerida" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">play_circle</span>
+            <p class="title1 fade-in invisible">Ver Video</p>
+            <p class="text fade-in invisible">La formación de la agenda</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=ENWVRcMGDoU&ab_channel=TED-Ed" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">play_circle</span>
+            <p class="title1 fade-in invisible">Ver Video</p>
+            <p class="text fade-in invisible">How algorithms shape our world - Kevin Slavin</p>
+        </a>
+
+    </div>
+</div>
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.flipButton');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const flashcard = this.closest('.flashcard');
+            if (flashcard) {
+                flashcard.classList.toggle('flipped');
+            }
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.flipButton');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.parentElement.previousElementSibling.classList.toggle('flipped');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=target" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=list_alt" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu_book" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=flag" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=auto_stories" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .img-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            width: 30rem;
+        }
+
+        .img-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        @media only screen and (min-width: 767px) {
+            .img-header {
+                padding: 3rem 3rem 0 3rem;
+            }
+        }
+        @media only screen and (min-width: 1300px) {
+            .header{
+                justify-content: space-around;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .img-header{
+                width: 15rem;
+            }
+        }
+
+        .sectionf1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .containerf1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .f-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%; 
+            margin: 3rem auto;
+            height: auto;
+            flex-wrap: nowrap; 
+            gap: 10px;
+        }
+
+        .title-containerf1 {
+            font-family: "Sora", sans-serif;
+            background-color: #54021d;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            flex-basis: 95%; 
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 15%; 
+            background-color: #54021d;
+            border-radius: 30px;
+            flex-grow: 0;
+            min-width: 0;
+        }
+                @keyframes iconInSimple {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icon-container .material-symbols-outlined {
+            animation: iconInSimple 0.3s ease-out forwards;
+        }
+
+        .container-infof1{
+            background-color: #e6e6e6;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3rem 5rem 2rem 5rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .container-infof1 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infof1 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .foro{
+            background-color: #e6e6e6;
+            padding: 2rem 2rem;
+            border-radius: 16px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .f-container {
+                flex-wrap: wrap;
+                width: 90%;
+                gap: 10px;
+            }
+
+            .title-containerf1, .icon-container {
+                flex-basis: calc(70% - 10px);
+                max-width: 70%;
+                font-size: 3rem;
+            }
+            .icon-container {
+                flex-basis: calc(30% - 10px);
+                max-width: 30%;
+            }
+            .material-symbols-outlined {
+                font-size: 50px;
+                color: #ffffff;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 500,
+                'GRAD' 0,
+                'opsz' 40
+            }
+        }
+            .material-symbols-outlined {
+            font-size: 75px;
+            color: #ffffff;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 40
+            }
+            .contenedor {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            padding: 5rem;
+            gap: 20px;
+        }
+
+        .contenido {
+            background-color: #e0e0e0;
+            font-family: "Sora", sans-serif;
+            padding: 10rem;
+            width: 75%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contenido h2 {
+            margin: 0;
+            font-size: 24px;
+            padding: 3rem 0 2rem 0;
+            color: #000;
+        }
+
+        .contenido ul {
+            list-style-type: none;
+            margin-top: 10px;
+            color: #333;
+            font-size: 24px;
+            padding: 0 0 2rem 0;
+        }
+
+        .contenido ul li {
+            margin-bottom: 5px;
+        }
+
+                /* Responsive design */
+                @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column-reverse;
+                padding: 5rem 0;
+                width: 90%;
+                height: auto;
+            }
+
+            .unidad {
+                width: 100%;
+                height: 100px;
+            }
+
+            .contenido {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .contenido ul {
+                font-size: 14px;
+            }
+            .contenido ul li{
+                font-size: 12px;
+            }
+
+            .unidad .texto {
+                font-size: 18px;
+            }
+
+            .unidad .numero {
+                font-size: 48px;
+            }
+        }
+        .fuentes{
+            width: 80%;
+            margin-top: 3rem;
+        }
+        .fuentes li {
+    font-size: 16px; 
+    padding: 1rem;
+    text-align: justify;
+}
+        .fuentes p {
+    font-size: 16px; 
+    padding: 1rem;
+    text-align: justify;
+}
+        .fuentes p strong {
+    font-size: 16px; 
+    padding: 1rem;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .fuentes {
+        width: 90%;
+        margin-top: 1rem;
+    }
+    .fuentes li {
+        font-size: 14px;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .fuentes li {
+        font-size: 12px; 
+        padding: 0.6rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+    <div class="sectionf1">
+        <div class="containerf1">
+            <div class="f-container">
+            <div class="title-containerf1"><p>Fuentes de consulta</p></div>
+            <div class="icon-container">
+                <span class="material-symbols-outlined">
+                    auto_stories
+                    </span>
+            </div>
+        </div>
+        <ul class="fuentes">
+            <li>Bajic, B., Suzic, N., Moraca, S., Stefanovic, M., Jovicic, M. y Rikalovic, A. (2023). Edge Computing Data Optimization for Smart Quality Management: Industry 5.0 Perspective. Sustainability, 15(7), 1-19. https://doi.org/10.3390/su15076032</li>
+            <li>DW Documental (2019). Ideales de belleza en las redes sociales | DW Documental [Video}. YouTube. https://www.youtube.com/watch?v=HfsMnKVfspY</li>
+            <li>Nazeer, I., Yousaf, S. y Anwar, N. (2023). Analyzing Linguistic Shifts in Political Discourse: A Corpus-Based Study of Political Rhetoric in the Digital Age. Pakistan Journal of humanities and social sciences (PJHSS), 11(4), 3924-3933. http://dx.doi.org/10.52131/pjhss.2023.1104.0661</li>
+            <li>Orlowski, J. (Director). (2020). El dilema de las redes sociales [Documental]. Netflix. https://www.netflix.com/title/81254224</li>
+            <li>TED Talks [TED] (2017). The human insights missing from big data | Tricia Wang [video]. YouTube. https://youtu.be/pk35J2u8KqY?si=EdgneKuJPxy9C0_m</li>
+            <li>Amballoor, R. y Naik, S. (2020). Widening Social Science - Artificial Intelligence Research Gap: Who Should Bell the Cat? International Conference on Innovative Computing and Communication (ICICC-2020). https://doi.org/10.2139/ssrn.3562972</li>
+            <li>Clare, M., Boracas, S., Plasek, A. y Ferryman, K. (2016). The Social and Economic Implications of Artificial Intelligence Technologies in the Near-Term. The AI Now Report. https://www.semanticscholar.org/paper/The-Social-and-Economic-Implications-of-Artificial-Plasek/c2f30733a3825fdac70d697ddaf3711dd9c8c7d7#cited-papers</li>
+            <li>Chen, Z. (2023). Ethics and discrimination in artificial intelligence-enabled recruitment practices. Humanit Soc Sci Commun, 10(567), 1-12.  https://doi.org/10.1057/s41599-023-02079-x</li>
+            <li>De la Garza, D. y Gómez, C. (2024). Inteligencia artificial y big data: nuevos paradigmas de la Comunicación Política y la Gobernanza Digital. Revista Más Poder Local, 56, 9-26. https://doi.org/10.56151/maspoderlocal.214</li>
+            <li>Kerschberg, B. (2012). How Xerox Uses Analytics, Big Data and Ethnography To Help Government Solve "Big Problems". FORBES. https://www.forbes.com/sites/benkerschberg/2012/10/22/how-xerox-uses-analytics-big-data-and-ethnography-to-help-government-solve-big-problems/</li>
+            <li>Mortari, M., Magistretti, S., Cautela, C. y Dell’Era, C. (2023). Data in design: How big data and thick data inform design thinking projects. Technovation, 122, 1-14. https://doi.org/10.1016/j.technovation.2022.102688</li>
+            <li>Pérez-Seijo, S. y Vizoso, A. (2024). Digitalización, política e inteligencia artificial: revisión sistematizada de la producción científica. Revista Más Poder Local, 56, 64-82. https://doi.org/10.56151/maspoderlocal.219</li>
+            <li>Torres-Toukoumidis, A., León-Alberca, T. y De la Garza, D. (2024). Inteligencia Artificial y comunicación política. En A. Torres-Toukoumidis y T. León-Al-berca (coords.), ComunicAI. La revolución de la Inteligencia Artificial en la Comunicación (pp. 83-100). Salamanca: Comunicación Social y Ediciones. https://doi.org/10.52495/c4.emcs.23.ti12</li>
+            <li>Wang, T. (2016). Why Big Data Needs Thick Data. Medium. https://medium.com/ethnography-matters/why-big-data-needs-thick-data-b4b3e75e3d7</li>
+            <li>(2018). "The Asthma Files", contribución de James Adams. STS Infrastructures, Platform for Experimental Collaborative Ethnography. https://stsinfrastructures.org/content/asthma-files</li>
+        </ul>
+    </div>
+</body>
+</html>
