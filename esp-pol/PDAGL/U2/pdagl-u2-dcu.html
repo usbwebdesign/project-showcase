@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-list em{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.title em{
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text strong{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text em{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+@media (max-width: 768px) {
+.sec1-text strong {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 3rem 3rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 30px;
+    }
+    
+    .btn-card {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 2rem !important;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+        text-decoration: none !important;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .btn-card:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 1rem 5rem;
+        flex-wrap: wrap;
+    }
+    .img-sources{
+        border-radius: 30px;
+        width: 80%;
+    }
+    .source-container{
+        display: flex;
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+    	.container-img {
+    		margin: 1rem;
+    	}
+        .img-sources{
+        width: 90%;
+    }
+    .source-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    }
+
+    .source{
+        background-color: rgb(67, 67, 67);
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin: 1rem 1rem 1rem 0;
+    }
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 40%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+/* FLASHCARD */
+.container-flashcard {
+        display: flex;
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
+        margin: 5rem 0 5rem 0;
+    }
+
+    .flashcard {
+        perspective: 1000px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        align-content: center;
+        flex: 0 0 30%; 
+        box-sizing: border-box;
+    }
+
+    .flashcard-inner {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flashcard-front, .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 48px;
+        color: #5c5c5c;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .flashcard-front {
+        background-color: #dbdbdb;
+        text-align: center;
+    }
+
+    .flashcard-back {
+        background-color: #dbdbdb;
+        transform: rotateY(180deg);
+    }
+
+    .flashcard.flipped .flashcard-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard-front p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .flashcard-back li {
+        font-size: 10px;
+    }
+
+    .button {
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 20px 102px;
+        font-size: 20px;
+        background-color: #83062F;
+        cursor: pointer;
+        color: white;
+        border: none;
+        border-radius: 16px;
+        font-weight: 600;
+        margin-top: 6px;
+    }
+
+    .container-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%; 
+    }
+
+    .button:hover {
+        background-color: #83062f;
+        transition: ease-in 200ms;
+    }
+    .button:active {
+        background-color: #390a1b;
+        transition: ease-in 200ms;
+    }
+
+        .flashcard1 {
+        perspective: 1000px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        align-content: center;
+        flex: 0 0 30%;
+        box-sizing: border-box;
+    }
+
+    .flashcard1-inner {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flashcard1-front, .flashcard1-back {
+        font-family: "Sora", sans-serif;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 48px;
+        color: #5c5c5c;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .flashcard1-front {
+        background-color: #dbdbdb;
+        text-align: center;
+    }
+
+    .flashcard1-back {
+        background-color: #dbdbdb;
+        transform: rotateY(180deg);
+    }
+
+    .flashcard1.flipped .flashcard1-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard1-front p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .flashcard1-back p {
+        font-size: 12px;
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+    }
+
+
+    </style>
+</head>
+<body>
+    <section>
+
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+            <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+            <title>Componente de Política Pública</title>
+            <style>
+        
+        /* ESTILOS GLOBALES */
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-size: 62.5%;
+            }
+        
+            @media only screen and (min-width: 1200px) {
+                body {
+                    width: 1200px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        
+            html{
+                    font-size: 62.5%;
+                    font-family: "Poppins", sans-serif;
+                }
+        
+            /* Hero Layout */
+        
+                .hero {
+                    position: relative;
+                    background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); 
+                    background-position: center;
+                    border-radius: 0 0 16px 16px;
+                    height: 450px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                .overlay {
+                    border-radius: 0 0 16px 16px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+                }
+        
+                .content-hero {
+                    position: relative;
+                    color: white;
+                    text-align: center;
+                }
+        
+                .content-hero h1 {
+                    margin: 0;
+                    font-size: 36px;
+                }
+        
+                .content-hero p {
+                    font-size: 18px;
+                    font-family: "Sora", sans-serif;
+                }
+        
+                .content-hero .unit-button {
+                    background-color: #7f1734;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    margin-top: 2rem;
+                    font-size: 18px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    border-radius: 30px;
+                    font-family: "Sora", sans-serif;
+                }
+        
+                .logo-container {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    display: flex;
+                    align-items: center;
+                }
+        
+                .logo-container img {
+                    height: 40px;
+                    margin-left: 10px;
+                }
+        
+                .usb-online {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                }
+        
+                .usb-online img {
+                    height: 40px;
+                    margin-right: 10px;
+                }
+                .content-hero-1st{
+                    font-size: 24px !important;
+                    font-family: "Sora", sans-serif;
+                    font-weight: 200;
+                }
+                .content-hero-2nd{
+                    margin: 0;
+                    font-family: "Catamaran", sans-serif;
+                    font-size: 32px !important;
+                    font-weight: 700;
+                }
+                .content-hero-3rd{
+                    margin: 0;
+                    font-family: "Sora", sans-serif;
+                    font-size: 18px !important;
+                    font-weight: 700;
+                    margin: 1rem 0;
+                }
+                @media only screen and (max-width: 767px) {
+                    .content-hero-2nd {
+                        font-size: 20px !important;
+        
+                }
+            }
+        
+            .container {
+                    width: 80%;
+                    background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 20px;
+                    padding: 5rem; 
+                    color: white;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: 10rem !important;
+                }
+        
+                .container::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(20, 0, 0, 0.8); 
+                    border-radius: 20px;
+                }
+        
+                .content {
+                    position: relative;
+                    z-index: 1;
+                    padding: 5rem;
+                }
+        
+                h1 {
+                    font-size: 32px; 
+                    margin-bottom: 2%;
+                    font-family: "Sora", sans-serif;
+                }
+        
+                .content-intro {
+                    line-height: 1.6;
+                    font-size: 16px; 
+                    text-align: justify;
+                }
+        
+                /* Responsividad */
+                @media (max-width: 768px) {
+                    .container {
+                        width: 90%;
+                        height: 60%; 
+                        padding: 3rem;
+                    }
+                    .content{
+                        padding: 1rem;
+                    }
+                    h1{
+                        font-size: 20px;
+                        margin-bottom: 3rem;
+                    }
+                    .content-intro {
+                    line-height: 1.6;
+                    font-size: 14px;
+                    text-align: justify;
+                }
+                }
+                .container2 {
+                    width: 80%;
+                    background-color: #7f1734;
+                    height: 50%; 
+                    border-radius: 20px;
+                    padding: 5rem; 
+                    color: white;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 0 auto;
+                    margin-top: 2rem !important;
+                    padding: 3rem;
+                }
+                .content2 {
+                    padding: 5rem; 
+                    font-family: "Sora", sans-serif;
+                }
+        
+                .content-intro2 {
+                    line-height: 1.6;
+                    font-size: 16px;
+                    text-align: justify;
+                }
+                @media (max-width: 768px) {
+                    .container2 {
+                        width: 90%;
+                        height: 60%; 
+                    }
+                    .content2{
+                        padding: 1rem;
+                    }
+                    h1{
+                        font-size: 20px;
+                        margin-bottom: 3rem;
+                    }
+                    .content-intro2 {
+                    line-height: 1.6;
+                    font-size: 14px; 
+                    text-align: justify;
+                }
+                }
+        
+        
+        /* TEMARIO NAVBAR*/
+                
+        .container-temario {
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            flex-wrap: wrap;
+            top: 0;
+            width: 100%;
+            padding: 5rem;
+            transition: all 0.2s ease ease-in;
+            z-index: 1000;
+        }
+        
+        
+        .container-temario.temario-navbar {
+            padding: 3rem;
+            background-color: #3f0015;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            justify-content: space-between;
+            border-radius: 0 0 16px 16px;
+            flex-direction: column;
+        }
+        
+        .temario.temario-navbar {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            width: auto;
+            padding: 0;
+            color: #ffffff; 
+            transition: all 0.3s ease;
+        }
+        
+        .temario-navbar h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .temario-navbar ul {
+            display: flex;
+            gap: 1rem; 
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .temario-navbar a {
+            font-size: 1.4rem; 
+            padding: 1rem 1rem;
+        }
+        .temario-navbar a:hover{
+            font-size: 1.4rem; 
+            padding: 1rem 1rem;
+            background-color: #83062f; 
+            border-radius: 16px;
+        }
+        
+        .sub-1{
+            width: 100%;
+            line-height: 2;
+        }
+        .temario{
+            flex-basis: 50%;
+            padding: 5rem;
+            border-radius: 30px;
+            background-color: #3f0015;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .temario-list{
+            font-size: 1.6rem;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .temario-ulist a {
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+        
+        .temario-1list{
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+        
+        .temario-ulist{
+            margin-top: 3rem;
+            list-style: none;
+        }
+        
+        @media (max-width: 768px) {
+        .temario {
+            flex-basis: 90%; 
+            padding: 5rem 3rem 5rem 3rem;
+        }
+        }
+        
+        @media (max-width: 768px) {
+            .container-temario {
+                position: static; 
+                z-index: auto; 
+                width: 100%; 
+                padding: 1rem; 
+                box-shadow: none;
+        }
+        }
+        /* Estilos del botón de minimizar/expandir */
+        .toggle-btn {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background-color: #83062f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 2000;
+            transition: background-color 0.3s ease;
+        }
+        
+        .toggle-btn:hover {
+            background-color: #54021D;
+        }
+        .hidden {
+            display: none;
+        }
+        /* Oculta el botón en pantallas pequeñas */
+        @media (max-width: 768px) {
+            .toggle-btn {
+                display: none; 
+            }
+        }
+        
+        /* Estilos Generales */
+        
+        .title{
+            margin: 0 auto;
+            background-color: #7f1734;
+            color: #ffffff;
+            border-radius: 30px;
+            width: 90%;
+            font-size: 3.2rem;
+            text-align: center;
+            font-weight: 600;
+            font-family: "Sora", sans-serif;
+            padding: 5rem;
+        }
+        
+        @media (max-width: 768px) {
+        .title {
+            font-size: 2.5rem;
+        }
+        }
+        .sec-info1{
+            margin-top: 5rem;
+        }
+        .sec1-content{
+            margin-top: 5rem !important;
+            width: 85%;
+            margin: 0 auto;
+        }
+        .sec1-text{
+            font-size: 19px;
+            text-align: justify;
+            padding: 1.7rem 0;
+        }
+        .sec1-text strong{
+            font-size: 19px;
+            text-align: justify;
+            padding: 1.7rem 0;
+        }
+        @media (max-width: 768px) {
+        .sec1-text {
+            line-height: 30px;
+            font-size: 18px;
+            padding: 1.7rem 0;
+        }
+        .sec1-text strong {
+            line-height: 30px;
+            font-size: 18px;
+            padding: 1.7rem 0;
+        }
+        }
+        .sec1-text-quote{
+            background-color: #eaeaea;
+            font-size: 16px;
+            text-align: justify;
+            padding: 1.7rem 2rem;
+            border-radius: 16px;
+        }
+        @media (max-width: 768px) {
+        .sec1-text-quote {
+            line-height: 30px;
+            font-size: 18px;
+            padding: 1.7rem 0;
+        }
+        }
+        .sec-video{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10rem;
+        }
+        .video{
+            display: flex;
+            justify-content: center;
+        }
+        iframe{
+            border-radius: 16px;
+        }
+        .vid-title{
+            font-size: 32px;
+            width: 80%;
+            text-align: center;
+            padding: 0 20px;
+        }
+        @media (max-width: 768px) {
+            .vid-title{
+                font-size: 20px;
+            }
+        }
+        
+        @keyframes bounce {
+          0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+          }
+          40% {
+            transform: translateY(10px);
+          }
+          60% {
+            transform: translateY(5px);
+          }
+        }
+        
+        .material-symbols-outlined {
+          width: 80%;
+          text-align: center;
+          padding: 20px;
+          font-size: 60px;
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          animation: bounce 1.5s infinite;
+        }
+        
+        @media (max-width: 768px) {
+            .video{
+                position: relative;
+                    width: 80%;
+                    max-width: 660px;
+                    padding-top: 56.25%;
+                    overflow: hidden;
+            }
+            .video iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 16px;
+                }
+            
+        }
+        .card {
+                background-color: #54021D;
+                padding: 5rem 4rem;
+                border-radius: 16px;
+                width: 400px;
+                text-align: left;
+                color: white;
+                margin: 5rem 1rem;
+            }
+            
+            .card h2 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+            
+            .card p {
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+            }
+            
+            .card button {
+                font-family: "Poppins", sans-serif;
+                background-color: #83062F;
+                margin-top: 1rem;
+                color: white;
+                padding: 1rem 3rem;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                font-size: 1.6rem;
+                transition: background-color 0.3s ease;
+            }
+            
+            .card button:hover {
+                background-color: #3e0115;
+            }
+            
+            .card-section2 {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 5rem;
+            }
+            
+            .card-section1 {
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 5rem;
+            }
+            
+            @media (max-width: 768px) {
+                .card {
+                    margin: 1rem 2rem;
+                    width: 350px;
+                }
+            }
+        
+            .container-img{
+                display: flex;
+                justify-content: center;
+                margin: 5rem 5rem 1rem 5rem;
+                flex-wrap: wrap;
+            }
+            .img-sources{
+                border-radius: 30px;
+                width: 80%;
+            }
+            .source-container{
+                display: flex;
+                width: 80%;
+            }
+            @media (max-width: 768px) {
+                .container-img {
+                    margin: 1rem;
+                }
+                .img-sources{
+                width: 90%;
+            }
+            .source-container{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+            }
+            }
+        
+            .source{
+                background-color: rgb(67, 67, 67);
+                color: #ffffff;
+                font-size: 12px;
+                padding: 1rem 2rem;
+                border-radius: 16px;
+                margin: 1rem 1rem 1rem 0;
+            }
+        /* PARA SABER MAS SECTION */
+        
+        .card-section-container {
+            border-radius: 16px 16px 0 0;
+            background-color: #3F0015;
+            margin-top: 10rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .card-title-section {
+            padding: 6rem 0 0 0;
+            font-size: 2.4rem !important;
+            text-align: center;
+            color: #ffffff;
+            font-weight: 700;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .card-title-section {
+                font-size: 1.6rem !important; 
+                padding: 6rem 2rem 0 2rem;
+            }
+        }
+        
+        @media only screen and (max-width: 576px) {
+            .card-title-section {
+                font-size: 1.6rem;
+            }
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: center;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 4rem;
+        }
+        
+        .card-s {
+            background-color: rgb(246, 246, 246);
+            margin: 1rem;
+            padding: 4rem 4rem 6rem 4rem;
+            border-radius: 16px;
+            text-decoration: none;
+            width: 30%;
+        }
+        
+        .text {
+            font-size: 13px;
+            color: #504544;
+            text-align: center;
+            max-height: 6rem;
+            overflow: hidden;
+        }
+        
+        .title1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #504544;
+            text-align: center !important;
+            padding-bottom: 2rem;
+        }
+        
+        .material-symbols-rounded {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: #504544;
+            padding: 1rem 0 2rem 0;
+        }
+        
+        .invisible {
+            opacity: 0;
+        }
+        .fade-in {
+            opacity: 0.6;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .card-s:hover .fade-in {
+            opacity: 1;
+        }
+        @media only screen and (max-width: 768px) {
+            .card-s {
+                width: calc(100% - 2rem); 
+                margin: 1rem 0; 
+            }
+        }
+        
+        
+        
+            </style>
+        </head>
+        <body>
+            <section>
+            <div class="hero">
+                <div class="overlay"></div>
+                <div class="logo-container">
+                    <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+                </div>
+                <div class="usb-online">
+                    <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+                </div>
+                <div class="content-hero">
+                    <h1 class="content-hero-1st">Especialidad en</h1><br>
+                    <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+                    <p class="content-hero-3rd" style="padding: 20px;">Perspectivas de Desarrollo para Agendas Locales y Globales</p>
+                    <button class="unit-button">Unidad 2</button>
+                </div>
+            </div>
+        </section>
+            <div class="container">
+                <div class="content">
+                    <h1>Introducción</h1>
+                    <p class="content-intro">La concepción sobre el desarrollo se caracteriza por la heterogeneidad y no unicidad alrededor de un conjunto de planteamientos diversos. Al respecto han existido a lo largo de la evolución de la economía del desarrollo diferentes teorías enmarcadas igualmente en diferentes formas de pensamiento y opciones ideológicas. Estas distintas posiciones han estado marcadas de manera significativa por los contextos históricos en los que se desarrollaron cada una de las teorías. Estas teorías plantean respuestas diferentes a preguntas básicas: ¿en qué consiste el desarrollo y cuáles son las metas que conseguir?, ¿qué variables son las estratégicas para alcanzar los objetivos de desarrollo?, ¿qué obstáculos de la realidad socioeconómica hay que afrontar y qué políticas son las más adecuadas para superarlos?.</p>
+                    <p class="content-intro">El propósito de esta unidad será realizar un breve repaso sobre estas distintas concepciones construidas en la economía sobre el desarrollo y analizar algunos de los principales postulados y enseñanzas de las mismas para países como los de América Latina.</p>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="content2">
+                    <h1>Objetivos específicos</h1>
+                    <p class="content-intro2">Al término de la unidad, el alumnado será capaz de analizar de manera crítica, las distintas teorías que explican la pertinencia del concepto de desarrollo en análisis y la investigación social. Asimismo, valorará el papel que el concepto de desarrollo tiene en el estudio interdisciplinario de procesos sociales.</p>
+                </div>
+            </div>
+        
+        <!-- Botón para minimizar o expandir la navbar -->
+        <button id="toggle-btn" class="toggle-btn">–</button> 
+        
+        <div class="container-temario" id="navbar-temario">
+            <div class="temario">
+                <div class="sub-1">
+                    <h1>Temas y Subtemas</h1>
+                    <h2 class="temario-1list">2. Teorías sobre el desarrollo</h2><br>
+                </div>
+                <ul class="temario-ulist">
+                    <a href="#sec2" class="temario-list">2.1.1 Teorías clásicas del desarrollo</a><br>
+                    <a href="#sec3" class="temario-list">2.1.2 Cambios estructurales</a><br>
+                    <a href="#sec4" class="temario-list">2.1.3 Dependencia internacional.</a><br>
+                    <a href="#sec5" class="temario-list">2.2 Teorías actuales del desarrollo y subdesarrollo</a><br>
+                    <a href="#sec6" class="temario-list">2.2.1. Instituciones económicas, políticas y sociales</a><br>
+                </ul>
+            </div>
+        </div>
+        
+            
+        
+            <section class="sec-info1" id="sec1">
+                <div class="title">2. Teorías sobre el desarrollo</div>
+                <div class="sec1-content">
+                </div>
+            </section>
+            
+            <section class="sec-info1" id="sec2">
+                <div class="title">2.1.1 Teorías clásicas del desarrollo</div>
+                <div class="sec1-content">
+        
+                    <p class="sec1-text">El concepto de desarrollo es un concepto más amplio que el de crecimiento, aunque no es del todo aceptable un concepto puramente economicista, sino que involucra el desarrollo humano y social, así como una adecuada acción política. El desarrollo humano y social son el resultado de variables determinadas por las instituciones que condicionan las interacciones sociales. Se considera que el desarrollo es un proceso que enriquece la libertad de los individuos en la búsqueda de sus propios valores.</p>
+                    <p class="sec1-text">El desarrollo es un proceso multidimensional que implica cambios en las conductas y actitudes individuales que impactan las estructuras institucionales de los sistemas económicos, sociales y políticos cuya finalidad es la persecución del crecimiento económico y el desarrollo social mediante la reducción de la desigualdad y la pobreza.</p>
+                    <p class="sec1-text">Por lo tanto, se puede decir que el concepto de desarrollo es multidimensional porque implica todos los componentes del bienestar humano, tales como los económicos, sociales, políticos, culturales y del medio ambiente. El desarrollo se realiza mediante mecanismos institucionales, económicos, sociales y políticos, públicos y privados que promueven mejoras en gran escala en los niveles de vida de los individuos mediante el logro de objetivos de crecimiento económico, equidad, democracia y estabilidad.</p>
+                    <p class="sec1-text">Existen cuatro grandes teorías del desarrollo: modernización, dependencia, sistemas mundiales y globalización. Éstas son las principales explicaciones teóricas que permiten interpretar esfuerzos para el desarrollo realizado por países y grupos sociales, especialmente por aquellas naciones que presentan mayores niveles de pobreza. Estas perspectivas teóricas nos permiten no sólo aclarar conceptos y ponerlos en perspectivas, sino también identificar recomendaciones relacionadas con políticas sociales. A continuación, te presentamos una breve explicación de las principales teorías del desarrollo.</p>
+                    <div class="container-img">
+                        <img class="img-sources" src="https://images.pexels.com/photos/13461021/pexels-photo-13461021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        <div class="source-container">
+                            <div class="source">Fuente: Elaboración propia con base en Reyes G. (2001). Principales teorías sobre el desarrollo económico y social, Universidad Complutense de Madrid, Madrid, España.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        
+        
+        <section class="sec-info1" id="sec3">
+            <div class="title">2.1.1. Crecimiento como vehículo de desarrollo</div>
+            <div class="sec1-content">
+                <p class="sec1-text">El desarrollo económico es un proceso de transformación estructural que busca mejorar el sistema económico a largo plazo, de modo que todos los sectores productivos crezcan de manera equitativa y sostenible en el tiempo. Esto debe verse reflejado en la tasa de crecimiento del Producto Interno Bruto (PIB) de un país y en el surgimiento de más oportunidades y mayor bienestar para las personas.</p>
+                <p class="sec1-text">Para medir el desarrollo económico de forma adecuada, deben tomarse en cuenta tanto los parámetros cuantitativos como cualitativos y considerar la eficiencia de procesos productivos, las necesidades de las personas y los efectos del medio ambiente. Algunos signos que indican la presencia de desarrollo económico son: distribución de la renta cada vez más igualitaria, sin importar el sector o la región; inclusión de las personas, disminución de los niveles de pobreza, solo por mencionar algunos.</p>
+                <p class="sec1-text">En la actualidad los conceptos de crecimiento económico y desarrollo económico son objeto de frecuentes discusiones cuando se usan para caracterizar y calificar los cambios que se producen en la economía de un país o una región determinada. El desarrollo se refiere a la transformación de las estrategias económicas, para con ello, convertir la realidad y lograr la satisfacción de las necesidades de la población, para el disfrute de la vida. Y el crecimiento se evidencia con el aumento de la renta y el valor de los bienes y servicios, así como el incremento de productos y servicios.</p>
+                <p class="sec1-text">El crecimiento económico se refiere al aumento del valor de los bienes y servicios, la productividad e ingresos promedios que se generan por parte de la población. Se debe considerar que la medición del PIB es un factor muy utilizado para evaluar la forma en que crece o disminuye la economía de un país. El desarrollo económico, por otro lado, pone mayor énfasis en el desarrollo sostenible y democrático. Parte de reformar las estructuras económicas para el bienestar de las personas y sus necesidades futuras.</p>
+            </div>
+        </section>
+        
+        <section class="sec-info1" id="sec4">
+            <div class="title">2.1.2. Cambios estructurales</div>
+            <div class="sec1-content">
+                <p class="sec1-text">Los cambios estructurales son transformaciones fundamentales en la base económica de un país, que pueden abarcar la tecnología, la producción, el mercado laboral y las finanzas. Son un factor clave para el crecimiento económico a largo plazo y pueden generar nuevos desafíos y oportunidades para empresas y ciudadanos.</p>
+                <p class="sec1-text">Algunos aspectos de los cambios estructurales que debes conocer son:</p>
+                <ul>
+                    <li class="sec1-text"><strong>Innovación.</strong> La capacidad de crear conocimiento y explotarlo económicamente.</li>
+                    <li class="sec1-text"><strong>Diversificación.</strong> La diversificación de la matriz productiva, con una distribución más homogénea de las actividades de media y alta productividad.</li>
+                    <li class="sec1-text"><strong>Dinámica del empleo.</strong> La creación de nuevos sectores y actividades que absorben la reserva de los trabajadores en empleos más productivos.</li>
+                    <li class="sec1-text"><strong>Impacto macroeconómico.</strong> Los cambios estructurales tienen efectos macroeconómicos importantes, impactando sobre la inversión, el empleo y el comercio.</li>
+                </ul>
+                <p class="sec1-text">La existencia de una brecha tecnológica entre países líderes, seguidores y rezagados afecta fuertemente la forma en que los mismos se insertan en el comercio internacional. La brecha tecnológica se refleja en asimetrías de productividad, con impacto decisivo sobre la competitividad, sobre todo en bienes más intensivos en conocimientos. Esto genera en las economías rezagadas un patrón de especialización con una baja representación de bienes más intensivos de conocimientos.</p>
+            </div>
+        </section>
+        
+        <section class="sec-info1" id="sec4">
+            <div class="title">2.1.3. Dependencia internacional</div>
+            <div class="sec1-content">
+                <p class="sec1-text">La dependencia internacional es un modelo de análisis de la política internacional que explica cómo algunos países se vuelven dependientes de otros. En esta situación, la economía de un grupo de países está condicionada por el desarrollo de otra economía, a la que están sometidos. La relación de interdependencia entre dos o más economías, y entre éstas y el comercio mundial, asume la forma de dependencia cuando algunos países (los dominantes) pueden expandirse y autoimpulsarse, en tanto que otros países (los dependientes) sólo lo pueden hacer como reflejo de esa expansión, que pueda actuar positiva o negativamente sobre su desarrollo inmediato. De cualquier forma, la condición básica de dependencia conduce a una situación global de los países dependientes que los sitúa en retraso y bajo la explotación de los países dominantes.</p>
+                <p class="sec1-text">Los países dominantes disponen así de un predominio tecnológico, comercial, de capital y sociopolítico sobre los países dependientes (con predominio de algunos de esos aspectos en los varios momentos históricos), que les permite imponerles condición de explotación y extraerles parte de los excedentes producidos internamente. La dependencia está fundada en una división internacional del trabajo que permite el desarrollo industrial de algunos países y limita este mismo desarrollo en otros, sometiéndose a las condiciones de crecimiento inducido por los centros de dominación mundial.</p>
+                <p class="sec1-text">La dependencia internacional se puede manifestar de varias formas, por ejemplo: la dependencia comercial cuando empresas de otros países, especialmente transnacionales, controlan la oferta de bienes y servicios en un país dependiente; la dependencia de productos básicos, cuando un país depende de productos básicos, lo que suele estar relacionado con el subdesarrollo.</p>
+                <p class="sec1-text">La teoría de la dependencia señala que los países más ricos del sistema capitalista explotan a los países más pobres, lo que genera una concentración de capital en los países centrales.</p>
+            </div>
+        </section>
+        
+        <section class="sec-info1" id="sec4">
+            <div class="title">2.1.4. Teoría Neoclásica del desarrollo</div>
+            <div class="sec1-content">
+                <p class="sec1-text">En el último tercio del siglo XIX y principios del XX, apareció la llamada Escuela neoclásica de economía que cambió el enfoque del concepto de riqueza económica. Aunque en esencia se seguían aceptando las ideas del liberalismo económico de los autores clásicos ingleses – sobre todo John Stuart  Mill – con la teoría objetiva del valor, que definía como fuente de riqueza al trabajo, con la Teoría objetiva del valor, que encuentra el sustento de esa misma riqueza en las preferencias de los individuos y en el comportamiento de los agentes económicos. Los especialistas transitan de explicaciones de la riqueza económica apoyadas en el valor del trabajo a otras que tienen como referencia la escasez de los recursos y sobre todo las conductas de los individuos y los empresarios: gustos, preferencias y expectativas.</p>
+                <p class="sec1-text">La economía se llamó así desde la antigüedad clásica griega y hasta el siglo XVI cuando surge el mercantilismo y modifica su nombre a economía política hasta principios del siglo XX. Sin embargo, esto cambia con los neoclásicos, pues esta disciplina científica se llama a partir de esta corriente, simplemente Economía (Economics). ¿Y por qué este cambio? se ha dicho que ocurrió con el fin de profundizar en el objeto propio de este saber, es decir, el conocimiento de la conducta propiamente económica y de las elecciones ante el problema de la escasez, en otras palabras, para avanzar en una teoría más autónoma de lo económico y de esta forma aislar los factores “no propiamente económicos” por ejemplo, los filosóficos, políticos, jurídicos, morales e históricos.</p>
+                <p class="sec1-text">Con la Escuela Neoclásica, se fusionan economía y matemáticas en un binomio inseparable, apareciendo los modelos y las teorías del equilibrio económico.</p>
+                <p class="sec1-text">La Economía Neoclásica enfatiza el papel del mercado libre del desarrollo económico. Según esta línea de pensamiento, la libre transacción en el mercado entre los agentes privados lleva a la mejor división del trabajo. Si cada región o país se especializa en la producción de las mercancías que se pueden producir a menor costo e intercambian las mercancías con otras regiones o países, los beneficios serán optimizados para todos.</p>
+                <p class="sec1-text">Esta teoría Neoclásica supone que las condiciones de inversión son más o menos iguales en el mundo. Sólo hay diferencias en cuanto a la distribución de factores de producción entre las regiones y países. Algunas regiones o países abundan en recursos naturales; otras en recursos financieros y otras en manos de obra.</p>
+            </div>
+        </section>
+        
+        <section class="sec-info1" id="sec4">
+            <div class="title">2.2. Teorías actuales del desarrollo y subdesarrollo</div>
+            <div class="sec1-content">
+                <p class="sec1-text">El desarrollo y el subdesarrollo son parcialmente “las dos caras de una misma moneda” o lo que es lo mismo que ambos fenómenos tienen causas comunes. Se trata de dos fenómenos simétricos y opuestos, es decir, que tienen causas opuestas. Asimismo, ambos fenómenos son el resultado de un proceso histórico que arranca con la conformación de los imperios coloniales en el siglo XVI, transita por la etapa de la formación de Estados-nación y llega hasta nuestros días con la conformación del sistema económico mundial.</p>
+                <p class="sec1-text">Así pues, vamos a dividir nuestro análisis en tres períodos, el colonial, el nacional y el mundial, y vamos a estudiar cómo ciertos territorios, en los que en la actualidad existen sistemas económicos nacionales desarrollados y subdesarrollados, se han ido conformando como tales, como consecuencia de la actuación de diferentes agentes con diferentes intereses a lo largo del tiempo (con lo que adoptamos una visión de interdependencia compleja.</p>
+                <p class="sec1-text">Por lo tanto, los sistemas económicos nacionales, desarrollados y subdesarrollados, que existen en la actualidad dentro del sistema económico mundial, se configuraron como tales antes de la existencia de este. Y, aunque, hoy en día, el subdesarrollo es un problema endógeno del sistema económico mundial, dicho fenómeno surgió como un problema exógeno para los sistemas económicos desarrollados y como un problema endógeno para los subdesarrollados.</p>
+                <p class="sec1-text">Cabría distinguir tres momentos en la génesis y la evolución del desarrollo y el subdesarrollo: <strong>a) El período colonial</strong>, que comenzó con la expansión territorial de los sistemas económicos nacionales europeos y en el que los sistemas económicos subdesarrollados, convertidos en colonias, y los sistemas económicos desarrollados, convertidos en metrópolis, formaban parte de los sistemas económicos imperiales autónomos (los imperios coloniales). <strong>b) El período nacional</strong>, que comenzó con la independencia de las colonias y en el que los sistemas económicos nacionales subdesarrollados, convertidos en periferias, y los sistemas económicos nacionales desarrollados, convertidos en centros, se conforman como sistemas económicos nacionales autónomos con abundantes relaciones internacionales. <strong>c) El período mundial</strong>, que comenzó con la globalización y en el que los sistemas económicos nacionales desarrollados, convertidos en ciudadelas, y los sistemas económicos nacionales subdesarrollados, convertidos en guetos, se integran dentro del sistema económico mundial autónomo y el subdesarrollo pasa a ser un problema endógeno de éste.</p>
+                <p class="sec1-text">Antes de continuar, creemos conveniente aclarar cómo entendemos los fenómenos del desarrollo y el subdesarrollo, para lo cual recurrimos a la concepción de Amartya Sen (1983, 1985) del «desarrollo como capacidad» y del PNUD (1990) del «desarrollo humano»; así el desarrollo sería para nosotros un proceso que conduce al aumento a largo plazo de las oportunidades de la mayoría de los agentes residentes en un sistema económico; mientras que el subdesarrollo, por el contrario, sería un proceso que conduce a la contracción, el estancamiento o el muy lento incremento a largo plazo de las oportunidades de la mayoría de los agentes residentes en un sistema económico.</p>
+                <p class="sec1-text">En otras palabras, el desarrollo y subdesarrollo se muestran como procesos dinámicos e interdependientes; desarrollo y subdesarrollo son dos manifestaciones de un mismo proceso: la expansión mundial del capitalismo, que poseen un carácter acumulativo en el tiempo y afecta de manera diferente a cada territorio. Considerada a escala de países, la expansión mundial del capitalismo produjo un desarrollo desigual; el crecimiento generado en una región alcanza cierto nivel y dinamismo; la acumulación de las plusvalías y de ventajas competitivas favorecen la progresiva concentración en detrimento del entorno, cualquiera sea la escala que se considere.</p>
+            </div>
+        </section>
+        
+        <section class="sec-info1" id="sec4">
+            <div class="title">2.2.1. Instituciones económicas, políticas y sociales</div>
+            <div class="sec1-content">
+                <p class="sec1-text">El tema de las instituciones ha estado en la mira del debate sobre el desarrollo durante varias décadas. Con la transformación del Estado y el reconocimiento de la existencia de “fallas de mercado” se ha hecho hincapié en las instituciones como el ámbito en el cual los agentes económicos y sociales tienen acceso a los recursos y pueden reforzar su potencial de ingresos. Así, “adecuar las instituciones” llega a ser el paradigma dominante en la formulación de políticas en la agenda del desarrollo internacional. Como consecuencia del ajuste estructural y de reformas económicas, las políticas intervencionistas dan paso a políticas enfocadas a la capacitación y devolución de poder a la población para hacer de ella socios activos en los esfuerzos de desarrollo.</p>
+                <p class="sec1-text">En este enfoque de “abajo hacia arriba”, a las instituciones locales se les ha asignado un papel central en la tarea de apoyar a las personas frente al impacto de cambios macroeconómicos y de encontrar nuevas maneras de mejorar sus modos de vida a través del acceso a recursos y empleos. A nivel local, las instituciones se constituyen en instancias mediadoras que vinculan las políticas macro con los agentes económicos y sociales a nivel de la comunidad, así como en un marco en el cual, dadas las reformas estructurales, las personas se encuentran con “reglas del juego cambiantes”, ya sea como individuo o colectivamente.</p>
+                <p class="sec1-text">La construcción de instituciones inclusivas es esencial para asegurar un crecimiento económico sostenido y equitativo. Esto no solo significa proteger los derechos de propiedad y fomentar la competencia, sino también garantizar que los ciudadanos tengan voz en las decisiones políticas que afectan sus vidas. Para ello es importante no solo contar con un Estado fuerte, sino también con una sociedad civil que pueda ejercer de contrapeso ante cualquier deriva autoritaria.</p>
+                <p class="sec1-text">En muchos países en desarrollo, los gobiernos han intentado replicar el éxito económico de otras naciones adoptando políticas de apertura comercial o inversión extranjera. Sin embargo, el trabajo de especialistas nos recuerda que ninguna de estas políticas será suficiente a menos que vayan acompañadas de reformas institucionales profundas. Sin instituciones inclusivas, las medidas superficiales no cambiarán las estructuras subyacentes de poder y desigualdad.</p>
+            </div>
+        </section>
+        
+        
+        <div class="card-section-container">
+            <p class="card-title-section">Para saber más...</p><br>
+            <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+                info
+                </span>
+            <div class="card-container">
+                <!-- fuentes pendientes -->
+                <a href="https://www.redalyc.org/pdf/105/10504711.pdf" target="_blank" class="card-s">
+                    <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                    <p class="title1 fade-in invisible">Ver Artículo</p>
+                    <p class="text fade-in invisible">Alcañiz Morcadó, M. (2008). El desarrollo local en el contexto de la globalización, Convergencia, Revista de Ciencias Sociales, Universidad Autónoma del Estado de México, Núm. 47, mayo-agosto 2008, pp. 285-315.</p>
+                </a>
+                <a href="https://www.scielo.org.mx/pdf/ete/v88n349/2448-718X-ete-88-349-249.pdf" target="_blank" class="card-s">
+                    <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                    <p class="title1 fade-in invisible">Ver Artículo</p>
+                    <p class="text fade-in invisible">Dos Santos, Theotonio (2021). Capitalismo, subdesarrollo y dependencia, El Trimestre Económico, Vol. LXXXVIII (1), núm. 349, enero-marzo de 2021, pp.249-274.</p>
+                </a>
+                <a href="https://usbmexicoonline.neolms.com/files/11461125/Dialnet-EconomiaPoliticaDelDesarrolloYElSubdesarrolloRevis-4159424.pdf" target="_blank" class="card-s">
+                    <span class="material-symbols-rounded fade-in invisible">library_books</span>
+                    <p class="title1 fade-in invisible">Ver Artículo</p>
+                    <p class="text fade-in invisible">Hidalgo-Capitán. Antonio Luis (2012). Economía Política del Desarrollo y Subdesarrollo. Revisitando la Teoría de la Dependencia, Revista Iberoamericana de Estudios de Desarrollo/Iberoamerican Journal of Development Studies, Volumen 1, pp. 5-27.</p>
+                </a>
+            </div>
+        </div>
+        
+            <script>
+                
+        window.addEventListener("scroll", function () {
+            const containerTemario = document.querySelector(".container-temario");
+            const triggerPosition = containerTemario.offsetTop - 60;
+        
+            // Verifica si el ancho de la ventana es mayor a 768px
+            if (window.innerWidth > 768) {
+                if (window.scrollY > triggerPosition) {
+                    containerTemario.classList.add("temario-navbar");
+                    containerTemario.querySelector(".temario").classList.add("temario-navbar");
+                } else {
+                    containerTemario.classList.remove("temario-navbar");
+                    containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+                }
+            } else {
+                // Si el ancho es menor o igual a 768px, remueve la clase
+                containerTemario.classList.remove("temario-navbar");
+                containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+            }
+        });
+        
+        document.getElementById("toggle-btn").addEventListener("click", function () {
+            const containerTemario = document.getElementById("navbar-temario");
+            
+            // Alternar la clase 'hidden' para mostrar/ocultar
+            containerTemario.classList.toggle("hidden");
+            
+            // Cambiar el icono del botón entre "–" y "+"
+            if (containerTemario.classList.contains("hidden")) {
+                this.textContent = "+"; // Botón de expandir
+            } else {
+                this.textContent = "–"; // Botón de minimizar
+            }
+        });
+        document.querySelectorAll('.temario-list').forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        
+            </script>
+        </body>
+        </html>
+        
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.flipButton');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const flashcard = this.closest('.flashcard');
+            if (flashcard) {
+                flashcard.classList.toggle('flipped');
+            }
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.flipButton');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.parentElement.previousElementSibling.classList.toggle('flipped');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
