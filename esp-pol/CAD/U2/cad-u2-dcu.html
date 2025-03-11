@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://usbmexicoonline.neolms.com/files/11461125/2248.jpg'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-list em{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.title em{
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text strong{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text em{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+@media (max-width: 768px) {
+.sec1-text strong {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote strong{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote strong {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 3rem 3rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 30px;
+    }
+    
+    .btn-card {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 2rem !important;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+        text-decoration: none !important;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .btn-card:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    .container-img{
+        display: flex;
+        justify-content: center;
+        margin: 5rem 5rem 1rem 5rem;
+        flex-wrap: wrap;
+    }
+    .img-sources{
+        border-radius: 30px;
+        width: 80%;
+    }
+    .source-container{
+        display: flex;
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+    	.container-img {
+    		margin: 1rem;
+    	}
+        .img-sources{
+        width: 90%;
+    }
+    .source-container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    }
+
+    .source{
+        background-color: rgb(67, 67, 67);
+        color: #ffffff;
+        font-size: 12px;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        margin: 1rem 1rem 1rem 0;
+    }
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 40%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+/* FLASHCARD */
+.container-flashcard {
+        display: flex;
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
+        margin: 5rem 0 5rem 0;
+    }
+
+    .flashcard {
+        perspective: 1000px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        align-content: center;
+        flex: 0 0 30%; 
+        box-sizing: border-box;
+    }
+
+    .flashcard-inner {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flashcard-front, .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 48px;
+        color: #5c5c5c;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .flashcard-front {
+        background-color: #dbdbdb;
+        text-align: center;
+    }
+
+    .flashcard-back {
+        background-color: #dbdbdb;
+        transform: rotateY(180deg);
+    }
+
+    .flashcard.flipped .flashcard-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard-front p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .flashcard-back li {
+        font-size: 10px;
+    }
+
+    .button {
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 20px 102px;
+        font-size: 20px;
+        background-color: #83062F;
+        cursor: pointer;
+        color: white;
+        border: none;
+        border-radius: 16px;
+        font-weight: 600;
+        margin-top: 6px;
+    }
+
+    .container-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%; 
+    }
+
+    .button:hover {
+        background-color: #83062f;
+        transition: ease-in 200ms;
+    }
+    .button:active {
+        background-color: #390a1b;
+        transition: ease-in 200ms;
+    }
+
+        .flashcard1 {
+        perspective: 1000px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        align-content: center;
+        flex: 0 0 30%;
+        box-sizing: border-box;
+    }
+
+    .flashcard1-inner {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flashcard1-front, .flashcard1-back {
+        font-family: "Sora", sans-serif;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 48px;
+        color: #5c5c5c;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .flashcard1-front {
+        background-color: #dbdbdb;
+        text-align: center;
+    }
+
+    .flashcard1-back {
+        background-color: #dbdbdb;
+        transform: rotateY(180deg);
+    }
+
+    .flashcard1.flipped .flashcard1-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard1-front p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .flashcard1-back p {
+        font-size: 12px;
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+    }
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="logo-container">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+        </div>
+        <div class="usb-online">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+        </div>
+        <div class="content-hero">
+            <h1 class="content-hero-1st">Especialidad en</h1><br>
+            <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+            <p class="content-hero-3rd">Consensos y Alianzas para el Desarrollo</p>
+            <button class="unit-button">Unidad 2</button>
+        </div>
+    </div>
+</section>
+    <div class="container">
+        <div class="content">
+            <h1>Introducción</h1>
+            <p class="content-intro">La construcción de consensos es un proceso fundamental en contextos de desarrollo sostenible, resolución de conflictos y gobernanza. Requiere enfoques y estrategias que permitan integrar diferentes perspectivas, intereses y valores para alcanzar soluciones colectivas y sostenibles. Esta unidad aborda las principales herramientas y técnicas para facilitar consensos, con un enfoque en la negociación, la Gobernanzaen redes y la participación ciudadana inclusiva.</p><br>
+            <p class="content-intro">En primer lugar, se estudian las técnicas de negociación y resolución de conflictos, con énfasis en la negociación colaborativa, basada en el Método Harvard, mismo que promueve acuerdos mutuamente beneficiosos a través de la identificación de intereses compartidos. Además, se analizan la mediación y la facilitación de diálogos, técnicas esenciales para gestionar tensiones y crear espacios de entendimiento.</p>
+            <p class="content-intro">La unidad también explora la Gobernanza en Redes, introduciendo conceptos clave y los procesos dinámicos que caracterizan la formación y operación de redes colaborativas. Estas redes son esenciales para abordar problemas complejos que requieren la coordinación entre múltiples actores.</p>
+            <p class="content-intro">Finalmente, se destacan los principios de la participación ciudadana y la Gobernanza inclusiva, elementos fundamentales para garantizar que los procesos de toma de decisiones reflejen las necesidades de toda la sociedad, incluidos los actores tradicionalmente marginados. Los modelos de toma de decisiones participativas promueven la equidad y la legitimidad, fortaleciendo así la cohesión social y la sostenibilidad de los acuerdos alcanzados.</p>
+            <p class="content-intro">Esta unidad no sólo brinda herramientas prácticas, sino que también fomenta una comprensión profunda de los procesos necesarios para construir consensos efectivos y duraderos en diversos contextos.</p>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content2">
+            <h1>Objetivos específicos</h1>
+            <p class="content-intro2">Al término de la unidad, el alumnado será capaz de aplicar el enfoque de negociación colaborativa basado en el Método Harvard para alcanzar acuerdos mutuamente beneficiosos. Además, los alumnos identificarán los conceptos básicos de la Gobernanza en redes, incluyendo su estructura, objetivos y roles de los participantes. Así como diseñar estrategias para incluir a grupos marginados en iniciativas de desarrollo sostenible, a fin de fomentar su participación activa y equitativa.</p>
+        </div>
+    </div>
+
+<!-- Botón para minimizar o expandir la navbar -->
+<button id="toggle-btn" class="toggle-btn">–</button> 
+
+<div class="container-temario" id="navbar-temario">
+    <div class="temario">
+        <div class="sub-1">
+            <h1>Temas y Subtemas</h1>
+            <h2 class="temario-1list">2. Herramientas y Técnicas para la Construcción de Consensos</h2><br>
+        </div>
+        <ul class="temario-ulist">
+            <a href="#sec2" class="temario-list">2.1 Técnicas de negociación y resolución de conflictos</a><br>
+            <a href="#sec3" class="temario-list">2.2 Gobernanza en Redes</a><br>
+            <a href="#sec4" class="temario-list">2.3 Participación ciudadana y Gobernanzainclusiva</a><br>
+        </ul>
+    </div>
+</div>
+
+    
+
+    <section class="sec-info1" id="sec1">
+        <div class="title">2. Herramientas y Técnicas para la Construcción de Consensos</div>
+        <div class="sec1-content">
+            <p class="sec1-text">La construcción de consensos es una habilidad esencial para el desarrollo de sociedades inclusivas, democráticas y sostenibles (Fisher, 1991). En esta unidad, explotarás herramientas y técnicas clave para alcanzar acuerdos efectivos, organizadas en tres áreas principales: técnicas de negociación y resolución de conflictos, Gobernanza en redes y participación ciudadana y Gobernanza inclusiva. Estas herramientas además de facilitar el diálogo entre distintos actores, también fortalecen la confianza mutua, promueven la cooperación y garantizan la sostenibilidad en los procesos de desarrollo.</p>
+            <p class="sec1-text">En la siguiente figura podrás identificar las herramientas y técnicas esenciales para la construcción de consensos. Se divide en tres áreas clave: Técnicas de Negociación y Resolución de Conflictos, que incluyen la negociación colaborativa (método Harvard) y la mediación/facilitación de diálogos. Luego, explora la Gobernanza en redes, destacando la inclusión de actores marginados, conceptos básicos de interacción y la formación de alianzas estratégicas. Finalmente, aborda la participación ciudadana y Gobernanza Inclusiva, con modelos de toma de decisiones participativas, presupuestos participativos y espacios de co-creación de políticas públicas. La imagen proporciona una visión general de las estrategias para fomentar acuerdos efectivos y sociedades más inclusivas.</p>
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/Herramientas--y--Tecnicas--para--la-Construccion--de--Consensos.png" alt="">
+                <div class="source-container">
+                    <div class="source">Fuente: Elaboración propia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sec-info1" id="sec2">
+        <div class="title">2.1 Técnicas de negociación y resolución de conflictos</div>
+        <div class="sec1-content">
+            <p class="sec1-text">En contextos donde existen intereses diversos y a menudo contrapuestos, las técnicas de negociación y resolución de conflictos son esenciales para construir consensos duraderos. Dentro de esta categoría, destacan la negociación colaborativa y las herramientas de mediación y facilitación de diálogos. A continuación te presentamos uno de los métodos que, a diferencia de las estrategias tradicionales, prioriza la colaboración entre todas las partes para alcanzar una solución. Éste también conocido como Método Harvard, busca una solución mutuamente beneficiosa explorando los intereses subyacentes de cada parte en lugar de aferrarse rígidamente a posiciones predefinidas. Al enfocarse en las necesidades y motivaciones reales, se facilita la creación de acuerdos más creativos y sostenibles.</p>
+            <p class="sec1-text"><strong>Negociación colaborativa (Método Harvard):</strong></p>
+            <p class="sec1-text">La <strong>negociación colaborativa</strong> se basa en el método desarrollado por el Programa de Negociación de Harvard, el cual enfatiza la búsqueda de soluciones que beneficien a todas las partes. La importancia de este método permite transformar situaciones de confrontación en oportunidades para la colaboración y el entendimiento.</p>
+            <p class="sec1-text">Este enfoque, esencial para consensos y alianzas en el desarrollo, busca soluciones que beneficien a todas las partes involucradas, fomentando relaciones duraderas y el éxito colectivo(Susskind, 1987),  ya que permite a las partes trabajar juntas en la búsqueda de soluciones sostenibles a problemas sociales, económicos y políticos, promoviendo relaciones de largo plazo y evitando conflictos innecesarios.</p>
+            <p class="sec1-text"><strong>Principios de la Negociación Harvard</strong></p>
+            <p class="sec1-text">El Método Harvard establece <strong>cuatro principios fundamentales</strong> que guían el proceso de negociación colaborativa:</p>
+            <p class="sec1-text"><strong>Principios del Método Harvard de Negociación </strong></p>
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/Herramientas--y--Tecnicas--para--la-Construccion--de--Consensos.png" alt="">
+                <div class="source-container">
+                    <div class="source">Fuente: Elaboración propia</div>
+                </div>
+            <ol type="I">
+                <li class="sec1-text"><strong>Separar a las personas del problema</strong></li>
+                <p class="sec1-text">Las negociaciones suelen verse afectadas por emociones, percepciones y malentendidos. Este principio establece que se debe diferenciar el problema en sí mismo de las personas involucradas. Para lograrlo:</p>
+                <ul>
+                <li class="sec1-text">Se debe fomentar una comunicación efectiva y el entendimiento mutuo.</li>
+                <li class="sec1-text">Es importante no tomar los desacuerdos como ataques personales.</li>
+                <li class="sec1-text">Se recomienda centrarse en los intereses comunes en lugar de enfocarse en diferencias individuales (Austin, 2012).</li>
+                </ul>
+                <p class="sec1-text">En el contexto del desarrollo, esto significa que, en negociaciones entre comunidades, gobiernos y organismos internacionales, se debe evitar que diferencias personales o históricas obstaculicen la construcción de acuerdos beneficiosos para todos.</p>
+                <li class="sec1-text"><strong>Enfocarse en los intereses, no en las posiciones</strong></li>
+                <p class="sec1-text">Muchas veces, los negociadores llegan con posiciones rígidas que limitan el avance de la conversación. En lugar de enfocarse en lo que cada parte "exige" (posición), se debe analizar qué motiva esas exigencias (intereses).</p>
+                <p class="sec1-text">Ejemplo:</p>
+                <ul>
+                    <li class="sec1-text"><strong>Posición:</strong> Queremos más financiamiento para impulsar la infraestructura en nuestra comunidad (Rondinelli,2003).</li>
+                    <li class="sec1-text"><strong>Interés subyacente:</strong> Necesitamos mejores carreteras para facilitar el acceso a los mercados y mejorar la calidad de vida.</li>
+                    <p class="sec1-text">Al centrarse en intereses comunes, se pueden encontrar soluciones creativas y satisfactorias para ambas partes.</p>
+                </ul>
+                <li class="sec1-text">Generar opciones de mutuo beneficio</li>
+                <p class="sec1-text">Una negociación colaborativa busca expandir el valor para ambas partes en lugar de pelear por un recurso limitado. Para ello, se deben explorar múltiples alternativas y evaluar distintas soluciones antes de tomar decisiones definitivas.</p>
+                <p class="sec1-text">En las alianzas para el desarrollo, esto significa que gobiernos, ONGs y empresas pueden buscar mecanismos innovadores como:</p>
+                <ul>
+                    <li class="sec1-text">Asociaciones público-privadas.</li>
+                    <li class="sec1-text">Fondos compartidos.</li>
+                    <li class="sec1-text">Programas de inversión social con retorno económico (Fisher, 2011).</li>
+                </ul>
+                <li class="sec1-text">Utilizar criterios objetivos</li>
+                <p class="sec1-text">Para evitar negociaciones basadas en el poder o en la presión, se recomienda que las decisiones se fundamenten en criterios objetivos y verificables. Estos pueden incluir:</p>
+                <ul>
+                    <li class="sec1-text">Estudios técnicos.</li>
+                    <li class="sec1-text">Normativas legales.</li>
+                    <li class="sec1-text">Prácticas aceptadas por la industria.</li>
+                    <li class="sec1-text">Indicadores de impacto social o económico (Lax, 1986)</li>
+                </ul>
+                <p class="sec1-text">Cuando todas las partes acuerdan basarse en información objetiva, la negociación se vuelve más justa y transparente.</p>
+            </ol>
+            <p class="sec1-text"><strong>Proceso de Negociación Colaborativa</strong></p>
+            <p class="sec1-text">El método Harvard sigue un proceso estructurado para lograr acuerdos efectivos:</p>
+            <ol>
+                <li class="sec1-text"><strong>Preparación</strong></li>
+                <ul>
+                    <li class="sec1-text">Identificar intereses propios y de la otra parte.</li>
+                    <li class="sec1-text">Recolectar información relevante.</li>
+                    <li class="sec1-text">Definir una estrategia basada en principios.</li>
+                </ul>
+                <li class="sec1-text"><strong>Intercambio de información</strong></li>
+                <ul>
+                    <li class="sec1-text">Crear un ambiente de confianza y transparencia.</li>
+                    <li class="sec1-text">Exponer necesidades y expectativas.</li>
+                    <li class="sec1-text">Escuchar activamente y hacer preguntas abiertas.</li>
+                </ul>
+                <li class="sec1-text"><strong>Exploración de opciones</strong></li>
+                <ul>
+                    <li class="sec1-text">Generar múltiples alternativas sin comprometerse de inmediato.</li>
+                    <li class="sec1-text">Evaluar la viabilidad de cada propuesta.</li>
+                    <li class="sec1-text">Buscar soluciones innovadoras y creativas (Mnookin, 2000)</li>
+                </ul>
+                <li class="sec1-text"><strong>Cierre y acuerdo</strong></li>
+                <ul>
+                    <li class="sec1-text">Seleccionar la opción que mejor satisface los intereses mutuos.</li>
+                    <li class="sec1-text">Redactar un acuerdo claro y detallado.</li>
+                    <li class="sec1-text">Asegurar compromisos realistas y mecanismos de seguimiento (Shell, 2006)</li>
+                </ul>
+            </ol>
+            <p class="sec1-text"><strong>Ejemplo de Aplicación en Consensos y Alianzas para el Desarrollo</strong></p>
+            <p class="sec1-text">Imaginemos que una comunidad indígena necesita acceso a agua potable, pero el gobierno local y una empresa minera tienen intereses en la misma fuente de agua.</p>
+            <ol>
+                <li class="sec1-text"><strong>Separar a las personas del problema</strong> En lugar de culpar a la empresa o al gobierno, se reconocen las necesidades de cada parte.</li>
+                <li class="sec1-text"><strong>Identificar intereses</strong> La comunidad quiere agua para consumo y agricultura; la empresa necesita agua para su operación.</li>
+                <li class="sec1-text"><strong>Generar opciones de beneficio mutuo</strong> Se propone una planta de tratamiento financiada conjuntamente que garantice agua limpia para la comunidad y un uso sostenible para la empresa.</li>
+                <li class="sec1-text"><strong>Aplicar criterios objetivos</strong> Se analizan estudios de impacto ambiental y se establecen regulaciones claras para el uso del agua (Ury, 1991)</li>
+            </ol>
+            <p class="sec1-text">A través de la negociación colaborativa, se logra una solución que satisface a todos y permite el desarrollo sostenible de la comunidad.</p>
+            <p class="sec1-text">En resumen, la negociación colaborativa según el Método Harvard es una herramienta poderosa para la construcción de consensos y alianzas en el desarrollo. Su enfoque en la cooperación, la comunicación efectiva y la búsqueda de soluciones basadas en intereses comunes permite alcanzar acuerdos justos y sostenibles. Este método es esencial en escenarios donde actores con diferentes objetivos deben trabajar juntos para lograr impacto social, económico y ambiental positivo a largo plazo.</p>
+            <p class="sec1-text"><strong>Mediación y facilitación de diálogos:</strong></p>
+            <p class="sec1-text">La mediación es una técnica en la que un “tercero imparcial ayuda a las partes en conflicto a encontrar una solución mutuamente aceptable” (Susskind, 1987) Por su parte, la facilitación de diálogos se centra en crear un entorno propicio para la comunicación abierta y constructiva. Ambas herramientas son especialmente útiles en contextos de alta complejidad o polarización, ya que promueven la empatía, el entendimiento mutuo y la generación de acuerdos inclusivos.</p>
+            <p class="sec1-text">En el contexto del desarrollo social, económico y político, los conflictos entre actores con diferentes intereses son inevitables. Para alcanzar acuerdos sostenibles y fortalecer alianzas, es fundamental contar con mecanismos que permitan el entendimiento y la cooperación.</p>
+            
+            <div class="flashcard1" style="margin-top: 7rem;">
+                <div class="flashcard1-inner">
+                    <div class="flashcard1-front">
+                        <p>Importancia de la Mediación</p>
+                    </div>
+                    <div class="flashcard1-back" style="display: flex; flex-wrap: wrap;">
+                        <p style="font-size: 16px;">La mediación y la facilitación de diálogos son herramientas clave en la gestión de conflictos y la construcción de consensos, ya que permiten transformar posturas enfrentadas en soluciones colaborativas (Bush, 2005).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-button">
+                <button class="flipButton button">CONOCER</button>
+                </div><br>
+    
+            <p class="sec1-text">Ambos enfoques comparten el objetivo de generar un espacio de comunicación efectiva, pero tienen diferencias en su aplicación:</p>
+            <ul>
+                <li class="sec1-text"><strong>La mediación</strong> se centra en resolver conflictos con la ayuda de un tercero neutral que guía a las partes hacia un acuerdo.</li>
+                <li class="sec1-text"><strong>La facilitación de diálogos</strong> busca estructurar conversaciones en torno a temas de interés común, sin necesidad de que haya un conflicto explícito (Saunders, 1999)</li>
+            </ul>
+            <p class="sec1-text">Estos procesos son fundamentales en la construcción de <strong>alianzas para el desarrollo</strong>, donde intervienen gobiernos, organizaciones de la sociedad civil, empresas y comunidades.</p>
+            <p class="sec1-text"><strong>¿Qué es la Mediación?</strong></p>
+            <p class="sec1-text">La mediación es un proceso estructurado en el que un tercero neutral, llamado mediador, asiste a las partes en conflicto para que encuentren una solución mutuamente aceptable. La mediación es voluntaria, confidencial y se basa en la cooperación.</p>
+            <p class="sec1-text"><strong>Principios de la Mediación</strong></p>
+            <ol>
+                <li class="sec1-text"><strong>Imparcialidad del mediador</strong> El mediador no toma partido ni impone soluciones.</li>
+                <li class="sec1-text"><strong>Confidencialidad</strong> Las discusiones dentro del proceso no pueden usarse en otros ámbitos.</li>
+                <li class="sec1-text"><strong>Voluntariedad</strong> Las partes participan de manera libre y pueden retirarse en cualquier momento.</li>
+                <li class="sec1-text"><strong>Autodeterminación de las partes</strong> Son las partes quienes toman las decisiones finales, no el mediador (Deutsch, 2011)</li>
+            </ol>
+            <p class="sec1-text"><strong>Proceso de la Mediación</strong></p>
+            <p class="sec1-text">El proceso de mediación generalmente sigue estas fases:</p>
+
+            <p class="sec1-text"><strong>Preparación</strong></p>
+            <ul>
+                <li class="sec1-text">Identificación del problema y de las partes involucradas.</li>
+                <li class="sec1-text">Establecimiento de reglas básicas y objetivos de la mediación.</li>
+                <li class="sec1-text">Creación de un ambiente de confianza.</li>
+            </ul>
+            <p class="sec1-text"><strong>Escucha activa y recolección de información</strong></p>
+            <ul>
+                <li class="sec1-text">Cada parte expone su perspectiva sin interrupciones.</li>
+                <li class="sec1-text">El mediador ayuda a clarificar los intereses reales detrás de las posiciones.</li>
+            </ul>
+            <p class="sec1-text"><strong>Generación de opciones</strong></p>
+            <ul>
+                <li class="sec1-text">Se buscan soluciones creativas que satisfagan los intereses de ambas partes.</li>
+                <li class="sec1-text">Se fomenta la colaboración en vez de la confrontación.</li>
+            </ul>
+            <p class="sec1-text"><strong>Negociación y acuerdo</strong></p>
+            <ul>
+                <li class="sec1-text">Se selecciona la mejor solución y se redacta un acuerdo.</li>
+                <li class="sec1-text">Se establecen mecanismos de seguimiento para garantizar su cumplimiento. (Moore, 2003)</li>
+            </ul>
+
+            <p class="sec1-text"><strong>Ejemplo de Mediación en Alianzas para el Desarrollo</strong></p>
+            <p class="sec1-text">Imaginemos que una comunidad campesina y una empresa hidroeléctrica tienen un conflicto por el uso del agua. En este caso, un mediador puede:</p>
+            <ul>
+                <li class="sec1-text">Crear un espacio de diálogo seguro.</li>
+                <li class="sec1-text">Ayudar a ambas partes a expresar sus preocupaciones.</li>
+                <li class="sec1-text">Proponer alternativas como programas de reforestación y distribución equitativa del recurso.</li>
+                <li class="sec1-text">Facilitar la firma de un acuerdo que beneficie tanto a la comunidad como a la empresa. (Fisher R. , 1981)</li>
+            </ul>
+            <p class="sec1-text"><strong>¿Qué es la Facilitación de Diálogos?</strong></p>
+            <p class="sec1-text">La facilitación de diálogos es un proceso en el que un tercero neutral, llamado facilitador, estructura y guía una conversación entre múltiples actores para mejorar la comprensión mutua y fomentar la toma de decisiones informadas. A diferencia de la mediación, no se centra en resolver un conflicto específico, sino en <strong>fortalecer la comunicación y la cooperación</strong>.</p>
+            <p class="sec1-text"><strong>Principios de la Facilitación de Diálogos</strong></p>
+            <p class="sec1-text"></p>
+            <p class="sec1-text"></p>
+            <p class="sec1-text"></p>
+        </div>
+    </section>
+
+
+
+<section class="sec-info1" id="sec3">
+    <div class="title">2.2 Gobernanza en Redes</div>
+    <div class="sec1-content">
+        <p class="sec1-text">La importancia de los consensos y las alianzas en el desarrollo sostenible radica en su capacidad para generar soluciones colaborativas que aborden de manera efectiva los desafíos sociales, económicos y ambientales. El desarrollo sostenible, definido como aquel que satisface las necesidades del presente sin comprometer la capacidad de las futuras generaciones para satisfacer sus propias necesidades, requiere la participación activa de diversos actores: gobiernos, empresas, ONGs, comunidades y ciudadanos. Los consensos permiten integrar diferentes perspectivas y conocimientos en la formulación de políticas y proyectos, garantizando que las decisiones reflejen una diversidad de intereses y necesidades.</p>
+        <p class="sec1-text">Las alianzas son, a su vez, herramientas fundamentales para el desarrollo sostenible, ya que permiten unir recursos y capacidades de diferentes sectores. Por ejemplo, las alianzas público-privadas han sido clave para la creación de infraestructuras sostenibles, como sistemas de energía renovable y transporte limpio, al combinar la inversión y el conocimiento del sector privado con la capacidad de regulación y coordinación del sector público. Un ejemplo claro de este tipo de alianza es la colaboración entre gobiernos y empresas en proyectos de energías renovables, que contribuyen a reducir la huella de carbono y a promover la transición hacia economías bajas en emisiones.</p>
+        <p class="sec1-text">Por otro lado, las alianzas entre ONGs y comunidades permiten la implementación de proyectos de desarrollo local que atienden necesidades específicas y promueven la participación comunitaria. Estas colaboraciones pueden generar empoderamiento local, fortalecer la resiliencia de las comunidades y fomentar la autosuficiencia. En este sentido, la importancia de los consensos radica en garantizar que los proyectos y políticas reflejen las realidades y aspiraciones de las comunidades involucradas, lo que aumenta la efectividad y sostenibilidad de los resultados.</p>
+        <p class="sec1-text">Las alianzas globales también juegan un papel crucial en el desarrollo sostenible, en especial en la implementación de los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas. Estos objetivos exigen una cooperación internacional sin precedentes para abordar desafíos como la pobreza, la igualdad de género, la educación y el cambio climático. “Las alianzas internacionales, como el Acuerdo de París sobre el cambio climático, demuestran cómo los consensos y la colaboración entre naciones pueden producir acuerdos que tienen un impacto positivo en el bienestar global y en la preservación del medio ambiente.” (Rondinelli, How Corporations and Environmental Groups Cooperate: Assessing Cross-sector Alliances and Collaborations. , 2003)</p>
+        <p class="sec1-text">Los consensos y las alianzas son conceptos esenciales para enfrentar los retos que el mundo moderno presenta, especialmente en el contexto del desarrollo sostenible. La creación de consensos permite que se reconozcan y respeten los diversos intereses y perspectivas de los actores involucrados, facilitando decisiones justas e inclusivas. Las alianzas, por su parte, permiten la integración de recursos y capacidades de múltiples actores, amplificando el impacto de las acciones y proyectos. La combinación de ambos conceptos es fundamental para promover soluciones colaborativas, sostenibles y equitativas que aborden los desafíos sociales, económicos y ambientales de manera efectiva y duradera. La negociación y la mediación son prácticas fundamentales para la creación de consensos en procesos de desarrollo.</p>
+
+        <div class="flashcard1" style="margin-top: 7rem;">
+            <div class="flashcard1-inner">
+                <div class="flashcard1-front">
+                    <p>¿Qué es negociación?</p>
+                </div>
+                <div class="flashcard1-back" style="display: flex; flex-wrap: wrap;">
+                    <p style="font-size: 16px;">La negociación es un proceso en el que dos o más partes con intereses diferentes intentan llegar a un acuerdo que satisfaga a todos (Puig G. , 2009)</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-button">
+            <button class="flipButton button">CONOCER</button>
+            </div><br>
+
+        <div class="flashcard1" style="margin-top: 7rem;">
+            <div class="flashcard1-inner">
+                <div class="flashcard1-front">
+                    <p>¿Qué es la mediación?</p>
+                </div>
+                <div class="flashcard1-back" style="display: flex; flex-wrap: wrap;">
+                    <p style="font-size: 16px;">La mediación, por otro lado, es un proceso de resolución de conflictos en el que un tercero imparcial facilita la comunicación entre las partes en conflicto para ayudarles a alcanzar un acuerdo (Elkington, 2000). </p>
+                </div>
+            </div>
+        </div>
+        <div class="container-button">
+            <button class="flipButton button">CONOCER</button>
+            </div><br>
+
+        <p class="sec1-text">La negociación implica un intercambio de propuestas, la identificación de puntos en común y la creación de soluciones que integren las necesidades de las partes involucradas. En el ámbito del desarrollo, la negociación es esencial para gestionar los conflictos y encontrar acuerdos que faciliten la colaboración y la implementación de proyectos.</p>
+        <p class="sec1-text">A diferencia de la negociación, en la mediación, el mediador no toma decisiones por las partes, sino que las guía para que puedan encontrar una solución que les resulte satisfactoria. La mediación es especialmente valiosa en los procesos de desarrollo porque ayuda a resolver tensiones y promover la colaboración entre actores con intereses divergentes, como comunidades locales, gobiernos y empresas.</p>
+        <p class="sec1-text">Ambas prácticas, negociación y mediación, son particularmente útiles en la creación de consensos en contextos de desarrollo donde los actores tienen diferentes intereses, perspectivas y prioridades. Por ejemplo, en proyectos de desarrollo de infraestructura o iniciativas de desarrollo económico, la negociación puede ayudar a alinear los intereses de las partes involucradas, mientras que la mediación puede ser el mecanismo para resolver desacuerdos y garantizar que todos los actores se sientan escuchados y respetados.</p>
+
+    </div>
+</section>
+
+<section class="sec-info1" id="sec4">
+    <div class="title">2.3 Participación ciudadana y Gobernanza inclusiva</div>
+    <div class="sec1-content">
+        <p class="sec1-text">En la era contemporánea, el desarrollo sostenible se enfrenta a retos complejos que requieren la cooperación y colaboración entre diversos sectores y actores. Las alianzas juegan un papel esencial en la implementación de proyectos que buscan mejorar la calidad de vida, proteger el medio ambiente y fomentar la equidad social. Este ensayo examina los tipos de alianzas más relevantes en el contexto del desarrollo sostenible: las alianzas público-privadas, las alianzas entre ONGs y comunidades, y las alianzas globales para el desarrollo sostenible. Se explorarán sus características y ejemplos de aplicación para entender su impacto y eficacia.</p>
+        <p class="sec1-text"><strong>Alianzas público-privadas: colaboración para la innovación y la infraestructura</strong></p>
+        <p class="sec1-text">Las alianzas público-privadas (APP) son asociaciones estratégicas entre entidades gubernamentales y empresas privadas que buscan desarrollar proyectos de infraestructura y servicios públicos. (Rondinelli D. A., 2003) Este tipo de alianza combina la capacidad de inversión y la eficiencia del sector privado con la capacidad reguladora y de coordinación del sector público. Las APP son especialmente relevantes en el desarrollo de proyectos de infraestructura sostenible, como la construcción de parques de energía renovable, sistemas de transporte público limpio y obras de tratamiento de aguas.</p>
+        <p class="sec1-text">Uno de los aspectos más destacados de las APP es su capacidad para atraer inversión y aprovechar la experiencia del sector privado, lo que puede reducir la carga financiera sobre los gobiernos y mejorar la calidad de los servicios. (Kania, 2011) Por ejemplo, en muchos países, las APP han sido fundamentales para la construcción de proyectos de energía renovable, como parques eólicos y plantas solares. Estas iniciativas permiten a los gobiernos cumplir con sus objetivos de reducción de emisiones de gases de efecto invernadero y transición hacia economías más sostenibles, mientras que las empresas privadas se benefician de ingresos a largo plazo.</p>
+        <p class="sec1-text">Sin embargo, las APP también enfrentan desafíos, como la necesidad de garantizar una distribución justa de los beneficios y evitar problemas de corrupción o falta de transparencia. La clave para el éxito de las APP radica en establecer acuerdos claros, equitativos y bien regulados, que aseguren que los proyectos beneficien a todas las partes involucradas y respeten los principios de sostenibilidad y justicia social.</p>
+        <p class="sec1-text"><strong>Alianzas entre ONGs y comunidades: fortalecimiento local y empoderamiento</strong></p>
+        <p class="sec1-text">Las alianzas entre organizaciones no gubernamentales (ONGs) y comunidades son una forma efectiva de fomentar el desarrollo local y empoderar a las poblaciones en la toma de decisiones que afectan sus vidas. Estas alianzas se centran en la colaboración para implementar proyectos de desarrollo que respondan a las necesidades y prioridades locales. (ustin, 2012) Las ONGs aportan recursos, conocimientos técnicos y experiencia en la gestión de proyectos, mientras que las comunidades ofrecen su conocimiento local, participación y compromiso en la implementación y sostenibilidad de las iniciativas.</p>
+        <p class="sec1-text">Las alianzas entre ONGs y comunidades han demostrado ser efectivas en proyectos de desarrollo social, como la educación, la salud, la agricultura sostenible y la mejora de la infraestructura básica. Por ejemplo, en regiones rurales de África y América Latina, ONGs han trabajado junto a comunidades locales para crear programas de agricultura sostenible, promover la conservación de los recursos naturales y fomentar la autosuficiencia económica. (Mayo, 2004) Estas iniciativas no solo mejoran la calidad de vida de los habitantes, sino que también fortalecen la capacidad de las comunidades para gestionar sus propios recursos y adaptarse a los desafíos ambientales y económicos.</p>
+        <p class="sec1-text">Uno de los mayores beneficios de estas alianzas es que priorizan la participación activa de las comunidades en todas las fases del proyecto, desde la planificación hasta la evaluación. Esta participación aumenta la probabilidad de éxito y sostenibilidad de las iniciativas, ya que las soluciones son más relevantes y adaptadas a las realidades locales. Sin embargo, las ONGs deben trabajar con un enfoque respetuoso y colaborativo para evitar la imposición de ideas y asegurar que las comunidades realmente se sientan dueñas del proceso y sus resultados.</p>
+        <p class="sec1-text"><strong>Alianzas globales para el desarrollo sostenible: cooperación internacional y los ODS</strong></p>
+        <p class="sec1-text">Las alianzas globales son fundamentales para alcanzar los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas. Estos objetivos, que abordan desafíos globales como la pobreza, la desigualdad de género, la educación de calidad y la acción climática, requieren una cooperación internacional sin precedentes. (CEPAL, 2016) Las alianzas globales pueden incluir la colaboración entre gobiernos, ONGs, sector privado y organismos internacionales para coordinar acciones que promuevan el desarrollo sostenible a nivel mundial.</p>
+        <p class="sec1-text">Un ejemplo de una alianza global exitosa es el Acuerdo de París sobre el cambio climático, en el que 195 países se unieron para establecer compromisos de reducción de emisiones y adopción de políticas climáticas que beneficien al planeta. (Bodansky, 2017) Este tipo de alianza es esencial para abordar problemas que trascienden las fronteras de los países y afectan a la humanidad en su conjunto. Otro ejemplo es la colaboración entre la ONU y empresas a través de la Iniciativa Pacto Global, que alienta a las empresas a alinear sus estrategias con los principios de sostenibilidad y a contribuir activamente a los ODS. (Nations, Transforming Our World: The 2030 Agenda for Sustainable Development. , 2015)</p>
+        <p class="sec1-text">Las alianzas globales tienen el potencial de movilizar recursos financieros, tecnológicos y humanos a una escala mayor, permitiendo iniciativas de desarrollo que pueden tener un impacto transformador. Sin embargo, la cooperación a nivel global también enfrenta retos, como la falta de compromiso real de algunos países y la necesidad de abordar desigualdades económicas y políticas entre los participantes. La clave para la efectividad de las alianzas globales radica en la transparencia, la rendición de cuentas y la voluntad de los actores involucrados de trabajar juntos para lograr objetivos comunes.</p>
+        <p class="sec1-text">Las alianzas, ya sean público-privadas, entre ONGs y comunidades, o globales, son herramientas poderosas para promover el desarrollo sostenible. Las APP permiten la implementación de proyectos de infraestructura y servicios públicos, optimizando recursos y capacidades. Las alianzas entre ONGs y comunidades fortalecen el desarrollo local y fomentan la participación activa de las poblaciones en su propio progreso. Por último, las alianzas globales son fundamentales para coordinar esfuerzos internacionales y enfrentar desafíos globales como el cambio climático y la desigualdad. La clave para la efectividad de estas alianzas radica en la colaboración equitativa, la transparencia y el compromiso compartido con los principios de sostenibilidad y justicia social. La cooperación entre sectores y actores es, sin duda, esencial para construir un futuro más justo y sostenible para todos.</p>
+        <p class="sec1-text">A continuación te presentamos las diferentes etapas que se siguen en la implementación de Consensos y alianzas para el desarrollo.</p>
+
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/Consensos-y-Alianzas-Para-el-Desarrollo.png" alt="">
+            <div class="source-container">
+                <div class="source">Fuente: Elaboración propia</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <div class="card-section-container">
+    <p class="card-title-section">Para saber más...</p><br>
+    <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+        info
+        </span>
+    <div class="card-container">
+        <a href="https://www.redalyc.org/pdf/105/10504711.pdf" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">library_books</span>
+            <p class="title1 fade-in invisible">Ver Artículo</p>
+            <p class="text fade-in invisible">Alcañiz Morcadó, M. (2008). El desarrollo local en el contexto de la globalización, Convergencia, Revista de Ciencias Sociales, Universidad Autónoma del Estado de México, Núm. 47, mayo-agosto 2008, pp. 285-315.</p>
+        </a>
+        <a href="https://es.slideshare.net/slideshow/una-introduccin-a-la-teora-del-desarrollo/7594644" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">library_books</span>
+            <p class="title1 fade-in invisible">Ver Artículo</p>
+            <p class="text fade-in invisible">Pike, A., Rodríguez-Pose, A., & Tomaney J. (2011). Qué clase de desarrollo local y regional y para quién?, Universitat de Valencia, pp.49-90.
+                Una introducción a la teoría del desarrollo.</p>
+        </a>
+    </div>
+</div> -->
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.flipButton');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const flashcard = this.closest('.flashcard');
+            if (flashcard) {
+                flashcard.classList.toggle('flipped');
+            }
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.flipButton');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.parentElement.previousElementSibling.classList.toggle('flipped');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
