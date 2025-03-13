@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap" rel="stylesheet">
+    <title>Componente de Política Pública</title>
+    <style>
+
+/* ESTILOS GLOBALES */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+
+    /* Hero Layout */
+
+        .hero {
+            position: relative;
+            background-image: url('https://usbmexicoonline.neolms.com/files/11461125/2248.jpg'); 
+            background-position: center;
+            border-radius: 0 0 16px 16px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .overlay {
+            border-radius: 0 0 16px 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Efecto de oscurecimiento */
+        }
+
+        .content-hero {
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .content-hero h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .content-hero p {
+            font-size: 18px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-hero .unit-button {
+            background-color: #7f1734;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            font-family: "Sora", sans-serif;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-left: 10px;
+        }
+
+        .usb-online {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .usb-online img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content-hero-1st{
+            font-size: 24px !important;
+            font-family: "Sora", sans-serif;
+            font-weight: 200;
+        }
+        .content-hero-2nd{
+            margin: 0;
+            font-family: "Catamaran", sans-serif;
+            font-size: 32px !important;
+            font-weight: 700;
+        }
+        .content-hero-3rd{
+            margin: 0;
+            font-family: "Sora", sans-serif;
+            font-size: 18px !important;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        @media only screen and (max-width: 767px) {
+            .content-hero-2nd {
+                font-size: 20px !important;
+
+        }
+    }
+
+    .container {
+            width: 80%;
+            background-image: url('https://images.pexels.com/photos/891059/pexels-photo-891059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10rem !important;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(20, 0, 0, 0.8); 
+            border-radius: 20px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 5rem;
+        }
+
+        h1 {
+            font-size: 32px; 
+            margin-bottom: 2%;
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro {
+            line-height: 1.6;
+            font-size: 16px; 
+            text-align: justify;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                height: 60%; 
+                padding: 3rem;
+            }
+            .content{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro {
+            line-height: 1.6;
+            font-size: 14px;
+            text-align: justify;
+        }
+        }
+        .container2 {
+            width: 80%;
+            background-color: #7f1734;
+            height: 50%; 
+            border-radius: 20px;
+            padding: 5rem; 
+            color: white;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 2rem !important;
+            padding: 3rem;
+        }
+        .content2 {
+            padding: 5rem; 
+            font-family: "Sora", sans-serif;
+        }
+
+        .content-intro2 {
+            line-height: 1.6;
+            font-size: 16px;
+            text-align: justify;
+        }
+        @media (max-width: 768px) {
+            .container2 {
+                width: 90%;
+                height: 60%; 
+            }
+            .content2{
+                padding: 1rem;
+            }
+            h1{
+                font-size: 20px;
+                margin-bottom: 3rem;
+            }
+            .content-intro2 {
+            line-height: 1.6;
+            font-size: 14px; 
+            text-align: justify;
+        }
+        }
+
+
+/* TEMARIO NAVBAR*/
+        
+.container-temario {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    flex-wrap: wrap;
+    top: 0;
+    width: 100%;
+    padding: 5rem;
+    transition: all 0.2s ease ease-in;
+    z-index: 1000;
+}
+
+
+.container-temario.temario-navbar {
+    padding: 3rem;
+    background-color: #3f0015;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+
+.temario.temario-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    padding: 0;
+    color: #ffffff; 
+    transition: all 0.3s ease;
+}
+
+.temario-navbar h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar ul {
+    display: flex;
+    gap: 1rem; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.temario-navbar a {
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+}
+.temario-navbar a:hover{
+    font-size: 1.4rem; 
+    padding: 1rem 1rem;
+    background-color: #83062f; 
+    border-radius: 16px;
+}
+
+.sub-1{
+    width: 100%;
+    line-height: 2;
+}
+.temario{
+    flex-basis: 50%;
+    padding: 5rem;
+    border-radius: 30px;
+    background-color: #3f0015;
+    text-align: center;
+    color: #ffffff;
+}
+
+.temario-list{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-list em{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+.temario-ulist a {
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.temario-1list{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.temario-ulist{
+    margin-top: 3rem;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+.temario {
+    flex-basis: 90%; 
+    padding: 5rem 3rem 5rem 3rem;
+}
+}
+
+@media (max-width: 768px) {
+    .container-temario {
+        position: static; 
+        z-index: auto; 
+        width: 100%; 
+        padding: 1rem; 
+        box-shadow: none;
+}
+}
+/* Estilos del botón de minimizar/expandir */
+.toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #83062f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2000;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #54021D;
+}
+.hidden {
+    display: none;
+}
+/* Oculta el botón en pantallas pequeñas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: none; 
+    }
+}
+
+/* Estilos Generales */
+
+.title{
+    margin: 0 auto;
+    background-color: #7f1734;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 90%;
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+    padding: 5rem;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.title em{
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: "Sora", sans-serif;
+}
+
+@media (max-width: 768px) {
+.title {
+    font-size: 2.5rem;
+}
+}
+.sec-info1{
+    margin-top: 5rem;
+}
+.sec1-content{
+    margin-top: 5rem !important;
+    width: 85%;
+    margin: 0 auto;
+}
+.sec1-text{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text strong{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+.sec1-text em{
+    font-size: 19px;
+    text-align: justify;
+    padding: 1.7rem 0;
+}
+@media (max-width: 768px) {
+.sec1-text {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+@media (max-width: 768px) {
+.sec1-text strong {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    padding: 1.7rem 2rem;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec1-text-quote strong{
+    background-color: #eaeaea;
+    font-size: 16px;
+    text-align: justify;
+    border-radius: 16px;
+}
+@media (max-width: 768px) {
+.sec1-text-quote strong {
+    line-height: 30px;
+    font-size: 18px;
+    padding: 1.7rem 0;
+}
+}
+.sec-video{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+}
+.video{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    border-radius: 16px;
+}
+.vid-title{
+    font-size: 32px;
+    width: 80%;
+    text-align: center;
+    padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .vid-title{
+        font-size: 20px;
+    }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+.material-symbols-outlined {
+  width: 80%;
+  text-align: center;
+  padding: 20px;
+  font-size: 60px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  animation: bounce 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .video{
+        position: relative;
+            width: 80%;
+            max-width: 660px;
+            padding-top: 56.25%;
+            overflow: hidden;
+    }
+    .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+    
+}
+.card {
+    	background-color: #54021D;
+    	padding: 5rem 4rem;
+    	border-radius: 16px;
+    	width: 400px;
+    	text-align: left;
+    	color: white;
+    	margin: 3rem 3rem;
+    }
+    
+    .card h2 {
+    	font-size: 2rem;
+    	margin-bottom: 15px;
+    }
+    
+    .card p {
+    	font-size: 1.6rem;
+    	margin-bottom: 30px;
+    }
+    
+    .btn-card {
+    	font-family: "Poppins", sans-serif;
+    	background-color: #83062F;
+    	margin-top: 2rem !important;
+    	color: white;
+    	padding: 1rem 3rem;
+    	border: none;
+    	border-radius: 25px;
+    	cursor: pointer;
+    	font-size: 1.6rem;
+        text-decoration: none !important;
+    	transition: background-color 0.3s ease;
+    }
+    
+    .btn-card:hover {
+    	background-color: #3e0115;
+    }
+    
+    .card-section2 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    .card-section1 {
+    	display: flex;
+    	align-items: center;
+    	align-content: center;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	margin-top: 5rem;
+    }
+    
+    @media (max-width: 768px) {
+    	.card {
+    		margin: 1rem 2rem;
+            width: 350px;
+    	}
+    }
+
+    /* CAMBIAR EN TODOS LOS DC QUE DESBORDE */
+
+    .container-img {
+    display: flex;
+    justify-content: center;
+    margin: 5rem 5rem 1rem 5rem;
+    flex-wrap: wrap;
+}
+
+.img-sources {
+    border-radius: 30px;
+    width: 80%;
+    max-width: 100%; 
+    box-sizing: border-box; 
+}
+
+.source-container {
+    display: flex;
+    width: 80%;
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .container-img {
+        margin: 1rem;
+    }
+    
+    .img-sources {
+        width: 90%;
+        max-width: 100%; /* Para asegurarnos que no haya desbordamiento */
+    }
+    
+    .source-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.source {
+    background-color: rgb(67, 67, 67);
+    color: #ffffff;
+    font-size: 12px;
+    padding: 1rem 2rem;
+    border-radius: 16px;
+    margin: 1rem 1rem 1rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+/* PARA SABER MAS SECTION */
+
+.card-section-container {
+    border-radius: 16px 16px 0 0;
+    background-color: #3F0015;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title-section {
+    padding: 6rem 0 0 0;
+    font-size: 2.4rem !important;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-title-section {
+        font-size: 1.6rem !important; 
+        padding: 6rem 2rem 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card-title-section {
+        font-size: 1.6rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 4rem;
+}
+
+.card-s {
+    background-color: rgb(246, 246, 246);
+    margin: 1rem;
+    padding: 4rem 4rem 6rem 4rem;
+    border-radius: 16px;
+    text-decoration: none;
+    width: 40%;
+}
+
+.text {
+    font-size: 13px;
+    color: #504544;
+    text-align: center;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.title1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #504544;
+    text-align: center !important;
+    padding-bottom: 2rem;
+}
+
+.material-symbols-rounded {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #504544;
+    padding: 1rem 0 2rem 0;
+}
+
+.invisible {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-s:hover .fade-in {
+    opacity: 1;
+}
+@media only screen and (max-width: 768px) {
+    .card-s {
+        width: calc(100% - 2rem); 
+        margin: 1rem 0; 
+    }
+}
+
+/* FLASHCARD */
+.container-flashcard {
+        display: flex;
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
+        margin: 5rem 0 5rem 0;
+    }
+
+    .flashcard {
+        perspective: 1000px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        align-content: center;
+        flex: 0 0 30%; 
+        box-sizing: border-box;
+    }
+
+    .flashcard-inner {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flashcard-front, .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 48px;
+        color: #5c5c5c;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .flashcard-front {
+        background-color: #dbdbdb;
+        text-align: center;
+    }
+
+    .flashcard-back {
+        background-color: #dbdbdb;
+        transform: rotateY(180deg);
+    }
+
+    .flashcard.flipped .flashcard-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard-front p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .flashcard-back li {
+        font-size: 10px;
+    }
+
+    .button {
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 20px 102px;
+        font-size: 20px;
+        background-color: #83062F;
+        cursor: pointer;
+        color: white;
+        border: none;
+        border-radius: 16px;
+        font-weight: 600;
+        margin-top: 6px;
+    }
+
+    .container-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%; 
+    }
+
+    .button:hover {
+        background-color: #83062f;
+        transition: ease-in 200ms;
+    }
+    .button:active {
+        background-color: #390a1b;
+        transition: ease-in 200ms;
+    }
+
+        .flashcard1 {
+        perspective: 1000px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        align-content: center;
+        flex: 0 0 30%;
+        box-sizing: border-box;
+    }
+
+    .flashcard1-inner {
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .flashcard1-front, .flashcard1-back {
+        font-family: "Sora", sans-serif;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 48px;
+        color: #5c5c5c;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .flashcard1-front {
+        background-color: #dbdbdb;
+        text-align: center;
+    }
+
+    .flashcard1-back {
+        background-color: #dbdbdb;
+        transform: rotateY(180deg);
+    }
+
+    .flashcard1.flipped .flashcard1-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flashcard1-front p {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .flashcard1-back p {
+        font-size: 12px;
+        font-family: "Sora", sans-serif;
+        font-weight: 600;
+    }
+
+
+    </style>
+</head>
+<body>
+    <section>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="logo-container">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxBco_(6).png" alt="Logo USB">
+        </div>
+        <div class="usb-online">
+            <img src="https://usbmexicoonline.neolms.com/files/11461125/usbonline-logo-white.png" alt="USB Online Logo">
+        </div>
+        <div class="content-hero">
+            <h1 class="content-hero-1st">Especialidad en</h1><br>
+            <h1 class="content-hero-2nd">Políticas Públicas para el Desarrollo</h1>
+            <p class="content-hero-3rd">Consensos y Alianzas para el Desarrollo</p>
+            <button class="unit-button">Unidad 3</button>
+        </div>
+    </div>
+</section>
+    <div class="container">
+        <div class="content">
+            <h1>Introducción</h1>
+            <p class="content-intro">En un mundo cada vez más interconectado, las alianzas estratégicas se han consolidado como un mecanismo para abordar los retos del Desarrollo. La capacidad de establecer consensos y colaborar eficazmente con diversos actores se convierte en un factor crítico para alcanzar objetivos comunes y generar impacto positivo en las comunidades. La tercera unidad Diseño, gestión y construcción de alianzas, explora las estrategias y procesos necesarios para construir asociaciones sólidas y sostenibles, destacando su importancia en la promoción del desarrollo.</p><br>
+            <p class="content-intro">Su contenido está organizado en tres subtemas. En el primero conocerá las etapas en la formación de alianzas,  para lo cual identificará a los actores clave y realizará un análisis de los intereses y objetivos comunes, para alcanzar una colaboración efectiva.</p><br>
+            <p class="content-intro">A través del análisis de la gestión de recursos y roles en alianzas,  se obtendrán conocimientos que permitan optimizar las capacidades complementarias de los aliados en la generación de valor compartido, destacando la importancia de la claridad en los roles y responsabilidades para maximizar su impacto.</p><br>
+            <p class="content-intro">Finalmente, el subtema  de colaboración regional e internacional introduce herramientas para medir el éxito y la sostenibilidad de las alianzas, así como principios clave de negociación y evaluación que fortalecen su eficacia en el tiempo.</p><br>
+            <p class="content-intro">A lo largo de esta unidad, el estudiante desarrollará competencias para diseñar, implementar y gestionar alianzas estratégicas que contribuyan al desarrollo local, regional e internacional, bajo un enfoque de sostenibilidad y cooperación. Este conocimiento no sólo es crucial para los líderes del Desarrollo, sino que también, fomenta la construcción de un mundo más equitativo y colaborativo.</p><br>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="content2">
+            <h1>Objetivos específicos</h1>
+            <p class="content-intro2">Al término de la unidad, el alumnado será capaz de identificar actores clave para el establecimiento de alianzas estratégicas, considerando su relevancia y potencial contribución a los objetivos comunes. Serán capaces de desarrollar estrategias de colaboración regional e internacional, aplicando indicadores de éxito y principios de sostenibilidad que fortalezcan la continuidad de las alianzas y conocerán los  principios de negociación y evaluación para garantizar la efectividad y la mejora continua en los procesos de alianza.</p>
+        </div>
+    </div>
+
+<!-- Botón para minimizar o expandir la navbar -->
+<button id="toggle-btn" class="toggle-btn">–</button> 
+
+<div class="container-temario" id="navbar-temario">
+    <div class="temario">
+        <div class="sub-1">
+            <h1>Temas y Subtemas</h1>
+            <h2 class="temario-1list">3. Diseño, Gestión y Construcción de Alianzas</h2><br>
+        </div>
+        <ul class="temario-ulist">
+            <a href="#sec2" class="temario-list">3.1 Etapas en la formación de alianzas</a><br>
+            <a href="#sec3" class="temario-list">3.2 Gestión de recursos y roles en alianzas</a><br>
+            <a href="#sec4" class="temario-list">3.3 Colaboración regional e internacional</a><br>
+        </ul>
+    </div>
+</div>
+
+    
+
+    <section class="sec-info1" id="sec1">
+        <div class="title">3. Diseño, Gestión y Construcción de Alianzas</div>
+        <div class="sec1-content">
+            <p class="sec1-text">La formación y consolidación de alianzas estratégicas representa un pilar esencial para abordar los retos complejos que enfrentan las sociedades modernas. Estas alianzas facilitan que organizaciones y comunidades unan esfuerzos para lograr objetivos comunes que, de manera individual, resultarían inaccesibles (Fisher, 1991). Aquí examinaremos tres áreas clave en el diseño, la gestión y la construcción de alianzas: las etapas iniciales de su formación, la gestión eficiente de recursos y roles, y las estrategias para la colaboración regional e internacional. Cada sección detallará los conceptos, procesos y prácticas más relevantes para asegurar el éxito y la sostenibilidad de tales asociaciones.</p>
+            <p class="sec1-text">En un mundo donde los problemas del desarrollo son cada vez más complejos, la colaboración entre gobiernos, empresas, organizaciones de la sociedad civil y comunidades es fundamental para generar impactos sostenibles y de largo plazo.</p>
+            <p class="sec1-text">Este proceso implica tres fases interconectadas:</p>
+            <ol>
+                <li class="sec1-text"><strong>Diseño de alianzas</strong> Cómo se estructuran y planifican</li>
+                <li class="sec1-text"><strong>Gestión de alianzas</strong> Cómo se implementan y coordinan</li>
+                <li class="sec1-text"><strong>Construcción y fortalecimiento</strong> Cómo se consolidan para garantizar su sostenibilidad (Selsky, 2010)</li>
+            </ol>
+            
+            <p class="sec1-text"><strong>¿Qué es el Diseño, Gestión y Construcción de Alianzas?</strong></p>
+            <p class="sec1-text">Las alianzas estratégicas son <strong>acuerdos de colaboración entre dos o más actores</strong> que buscan alcanzar un objetivo común a través de la combinación de recursos, conocimientos y capacidades. Estas alianzas pueden darse entre diferentes sectores:</p>
+            <ul>
+                <li class="sec1-text"><strong>Sector público</strong> (gobiernos, organismos internacionales).</li>
+                <li class="sec1-text"><strong>Sector privado</strong> (empresas, cooperativas, emprendedores).</li>
+                <li class="sec1-text"><strong>Organizaciones de la sociedad civil</strong> (ONGs, sindicatos, movimientos comunitarios).</li>
+                <li class="sec1-text"><strong>Academia</strong> (universidades, centros de investigación).</li>
+                <li class="sec1-text"><strong>Ciudadanía</strong> (grupos comunitarios, líderes sociales) (Austin, 2014)</li>
+            </ul>
+            <p class="sec1-text">Dependiendo del objetivo y los actores involucrados, las alianzas pueden clasificarse en distintos tipos:</p>
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/Tipos-de-Alianzas-en-el-Desarrollo-.png" alt="">
+                <div class="source-container">
+                    <div class="source">Fuente: (Austin J., 2014)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="sec-info1" id="sec2">
+        <div class="title">3.1. Etapas en la formación de alianzas</div>
+        <div class="sec1-content">
+            <p class="sec1-text">La creación de alianzas efectivas implica un proceso sistemático que comienza con la identificación de actores clave y culmina en la definición de intereses y objetivos comunes.</p>
+            <p class="sec1-text"><strong>Identificación de actores clave:</strong></p>
+            <p class="sec1-text">El primer paso en la formación de alianzas es identificar a los actores relevantes que podrían contribuir al logro de los objetivos compartidos. Estos actores pueden incluir gobiernos, organizaciones de la sociedad civil, empresas privadas, instituciones académicas y comunidades locales (Thomson, 2006). La identificación efectiva requiere un análisis profundo del contexto, así como una comprensión clara de los recursos, capacidades e influencias que cada actor puede aportar.</p>
+            <p class="sec1-text"><strong>Análisis situacional, de intereses y objetivos comunes:</strong></p>
+            <p class="sec1-text">Después de identificar a los actores clave, es crucial realizar un análisis situacional que evalúe el contexto, los retos y oportunidades, y las posibles áreas de colaboración. Este proceso también abarca la identificación de los intereses de las partes involucradas y la definición de metas comunes (Susskind, 1987). La claridad en estos aspectos reduce el riesgo de malentendidos y conflictos, y facilita la construcción de una visión compartida.</p>
+            <div class="container-img">
+                <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/Analisis-Situacional-de-Intereses--y-Objetivos-Comunes.png" alt="">
+                <div class="source-container">
+                    <div class="source">Fuente: Elaboración propia</div>
+                </div>
+        </div>
+    </section>
+
+
+
+<section class="sec-info1" id="sec3">
+    <div class="title">3.2 Gestión de recursos y roles en alianzas</div>
+    <div class="sec1-content">
+        <p class="sec1-text">La gestión eficiente de recursos y la asignación clara de roles son elementos críticos para el éxito de cualquier alianza. (Lederach, 1997) Estas prácticas permiten maximizar el impacto colectivo y evitar duplicidades o desperdicios de recursos.</p>
+        <p class="sec1-text"><strong>Complementariedad de capacidades:</strong></p>
+        <p class="sec1-text">Uno de los principios fundamentales en la gestión de alianzas es la complementariedad de capacidades. Cada actor aporta fortalezas únicas que, al combinarse, generan sinergias y amplían el alcance de las intervenciones. Por ejemplo, una ONG podría aportar experiencia en la implementación de programas comunitarios, mientras que una empresa privada podría ofrecer recursos financieros y logísticos.</p>
+        <p class="sec1-text"><strong>Generación de valor compartido:</strong></p>
+        <p class="sec1-text">La generación de valor compartido implica el desarrollo de beneficios tangibles que se distribuyen entre todas las partes involucradas en la alianza y las comunidades que se ven afectadas, cubriendo aspectos económicos, sociales y medioambientales (Rondinelli, 2003). Para lograrlo, es necesario establecer mecanismos de comunicación efectivos, promover la transparencia y garantizar que todos los participantes tengan voz en la toma de decisiones.</p>
+    </div>
+</section>
+
+<section class="sec-info1" id="sec4">
+    <div class="title">3.3 Colaboración regional e internacional</div>
+    <div class="sec1-content">
+        <p class="sec1-text">Las alianzas que trascienden fronteras nacionales ofrecen oportunidades únicas para abordar problemas globales, pero también presentan retos específicos que deben gestionarse cuidadosamente.</p>
+
+        <div class="container-img">
+            <img class="img-sources" src="https://usbmexicoonline.neolms.com/files/11461125/Las-5P-del-Desarrollo-Sostenible.png" alt="">
+            <div class="source-container">
+                <div class="source">Fuente: Naciones Unidas. (2015, 25 de septiembre). La Asamblea General adopta la Agenda 2030 para el Desarrollo Sostenible. Centro de Noticias ONU. Recuperado de https://www.un.org/sustainabledevelopment/es/2015/09/la-asamblea-general-adopta-la-agenda-2030-para-el-desarrollo-sostenible/</div>
+            </div>
+        </div>
+        <p class="sec1-text"><strong>Indicadores de éxito y sostenibilidad:</strong></p>
+        <p class="sec1-text">Para evaluar el éxito de una alianza, es esencial establecer indicadores claros desde el principio. Estos indicadores deben ser específicos, medibles, alcanzables, relevantes y con plazos definidos (Kania, 2011). Además, la sostenibilidad debe ser una consideración central, asegurando que los resultados de la alianza se mantengan a largo plazo, incluso después de que la colaboración formal haya concluido.</p>
+        <p class="sec1-text"><strong>Principios de negociación y evaluación de alianzas:</strong></p>
+        <p class="sec1-text">La negociación en alianzas regionales e internacionales requiere sensibilidad cultural, así como una comprensión profunda de los marcos legales y políticos que afectan a los diferentes actores. La evaluación periódica de la alianza también es crucial para identificar áreas de mejora, celebrar éxitos y ajustar estrategias cuando sea necesario.</p>
+        <p class="sec1-text">La colaboración regional e internacional es un mecanismo fundamental dentro de la materia Consensos y Alianzas para el Desarrollo, ya que permite a los países, regiones y organizaciones trabajar conjuntamente para abordar desafíos comunes y promover el desarrollo sostenible.</p>
+        
+        <div class="flashcard1" style="margin-top: 7rem;">
+            <div class="flashcard1-inner">
+                <div class="flashcard1-front">
+                    <p>¿Qué es la Colaboración Regional e Internacional</p>
+                </div>
+                <div class="flashcard1-back" style="display: flex; flex-wrap: wrap;">
+                    <p style="font-size: 14px;">La colaboración regional e internacional se refiere a los procesos de cooperación entre países, gobiernos, organismos multilaterales, empresas y organizaciones no gubernamentales (ONGs) con el fin de alcanzar objetivos comunes en áreas como el comercio, la seguridad, la educación, la salud, la protección del medio ambiente y el desarrollo económico.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-button">
+            <button class="flipButton button">CONOCER</button>
+            </div><br>
+
+        <p class="sec1-text"><strong>Características de la colaboración regional e internacional</strong></p>
+        <ul>
+        <li class="sec1-text"><strong>Interdependencia</strong> Los países dependen unos de otros para resolver problemas globales como el cambio climático o el comercio internacional.</li>
+        <li class="sec1-text"><strong>Beneficio mutuo</strong> La cooperación debe generar ventajas para todas las partes involucradas.</li>
+        <li class="sec1-text"><strong>Diálogo y consenso</strong> Se requiere negociación para establecer acuerdos que equilibren los intereses de los distintos actores.</li>
+        <li class="sec1-text"><strong>Participación de múltiples sectores</strong> Gobiernos, empresas, academia y sociedad civil contribuyen a la construcción de soluciones.</li>
+        <li class="sec1-text"><strong>Uso de marcos institucionales</strong> Tratados, acuerdos y organizaciones internacionales facilitan la implementación de la cooperación.</li>
+        </ul>
+        <p class="sec1-text">Ejemplo: <strong>La Unión Europea (UE)</strong> es un modelo de colaboración regional, donde los países miembros comparten políticas económicas y sociales para fortalecer su desarrollo conjunto.</p>
+        <p class="sec1-text"><strong>Tipos de Colaboración Regional e Internacional</strong></p>
+        <p class="sec1-text">Existen diversas formas de cooperación según el alcance geográfico, el tipo de actores involucrados y los objetivos perseguidos.</p>
+        <p class="sec1-text"><strong>A. Colaboración Regional</strong></p>
+        <p class="sec1-text">Es la cooperación entre países de una misma región geográfica, que comparten desafíos y oportunidades similares.</p>
+        <p class="sec1-text"><strong>Ejemplos de cooperación regional:</strong></p>
+        <ul>
+            <li class="sec1-text"><strong>MERCOSUR (Mercado Común del Sur)</strong> Promueve el comercio y la integración económica entre Argentina, Brasil, Paraguay y Uruguay.</li>
+            <li class="sec1-text"><strong>Comunidad Andina (CAN)</strong> Fomenta la cooperación económica y social entre Bolivia, Colombia, Ecuador y Perú.</li>
+            <li class="sec1-text"><strong>Sistema de la Integración Centroamericana (SICA)</strong> Aborda temas de seguridad, desarrollo sostenible y comercio en Centroamérica.</li>
+            <li class="sec1-text"><strong>Alianza del Pacífico</strong> Fortalece la cooperación comercial entre Chile, Colombia, México y Perú. (Austin J. &., Creating Value in Nonprofit-Business Collaborations: New Thinking and Practice, 2014)</li>
+        </ul>
+        <p class="sec1-text"><strong>Beneficios de la colaboración regional:</strong></p>
+        <ul>
+            <li class="sec1-text">Mayor estabilidad económica y política.</li>
+            <li class="sec1-text">Integración comercial y reducción de barreras arancelarias.</li>
+            <li class="sec1-text">Desarrollo de infraestructura compartida (carreteras, puertos, energía).</li>
+            <li class="sec1-text">Coordinación en temas de seguridad y migración. (Keohane, 2011)</li>
+        </ul>
+        <p class="sec1-text">Ejemplo: <strong>El Tren Bioceánico en Sudamérica</strong>, que busca conectar el Atlántico con el Pacífico a través de Bolivia, Perú y Brasil, es un proyecto de colaboración regional para fortalecer el comercio.</p>
+        <p class="sec1-text"><strong>Colaboración Internacional</strong></p>
+        <p class="sec1-text">Es la cooperación entre países de diferentes regiones o a nivel global, generalmente facilitada por <strong>organismos internacionales</strong> como la ONU, el FMI o el Banco Mundial.</p>
+        <p class="sec1-text"><strong>Ejemplos de colaboración internacional:</strong></p>
+        <ul>
+            <li class="sec1-text"><strong>Acuerdo de París sobre Cambio Climático</strong> Compromiso global para reducir las emisiones de gases de efecto invernadero.</li>
+            <li class="sec1-text"><strong>Organización Mundial del Comercio (OMC)</strong> Regula el comercio internacional y resuelve disputas comerciales entre países.</li>
+            <li class="sec1-text"><strong>Fondo Monetario Internacional (FMI)</strong> Brinda asistencia financiera a países en crisis económica.</li>
+            <li class="sec1-text"><strong>Programa de las Naciones Unidas para el Desarrollo (PNUD)</strong> Promueve el desarrollo sostenible en países en vías de desarrollo (Held, 2007).</li>
+        </ul>
+        <p class="sec1-text"><strong>Beneficios de la colaboración internacional:</strong></p>
+        <ul>
+        <li class="sec1-text">Respuesta coordinada a problemas globales como el cambio climático y la pobreza.</li>
+        <li class="sec1-text">Acceso a financiamiento internacional para el desarrollo.</li>
+        <li class="sec1-text">Transferencia de tecnología y conocimiento.</li>
+        <li class="sec1-text">Mayor estabilidad política y diplomática.</li>
+        </ul>
+        <p class="sec1-text">Ejemplo: Durante la <strong>pandemia de COVID-19</strong>, la Organización Mundial de la Salud (OMS) coordinó la distribución global de vacunas a través del mecanismo COVAX, asegurando acceso equitativo para países en desarrollo.</p>
+        <p class="sec1-text"><strong>¿Cómo opera la colaboración regional e internacional?</strong></p>
+        <p class="sec1-text">Para que la colaboración sea efectiva, debe estructurarse mediante <strong>mecanismos de coordinación, financiamiento y monitoreo.</strong></p>
+        <p class="sec1-text"><strong>Mecanismos de Coordinación</strong></p>
+        <ul>
+            <li class="sec1-text"><strong>Organizaciones internacionales y regionales Actúan como mediadores y facilitadores.</strong> Ejemplo: ONU, OEA, BID.</li>
+            <li class="sec1-text"><strong>Acuerdos y tratados Definen los compromisos y reglas de cooperación entre países.</strong> Ejemplo: Tratado de Libre Comercio de América del Norte (T-MEC).</li>
+            <li class="sec1-text"><strong>Cumbres y foros internacionales Espacios donde los países negocian y establecen prioridades de cooperación.</strong> Ejemplo: Cumbre del G20.</li>
+            <li class="sec1-text"><strong>Redes de cooperación Colaboración entre universidades, empresas y ONGs para intercambiar conocimientos y experiencias.</strong> (Riggirozzi, 2012)</li>
+        </ul>
+        <p class="sec1-text"><strong>Mecanismos de Financiamiento</strong></p>
+        <p class="sec1-text">Para sostener la colaboración, se requiere financiamiento proveniente de:</p>
+        <ul>
+            <li class="sec1-text"><strong>Organismos multilaterales</strong> Banco Mundial, FMI, BID.</li>
+            <li class="sec1-text"><strong>Inversión privada</strong> Empresas que apoyan proyectos internacionales de desarrollo.</li>
+            <li class="sec1-text"><strong>Fondos de cooperación bilateral</strong> Acuerdos entre dos países para financiar programas específicos (Ocampo, 2009)</li>
+        </ul>
+        <p class="sec1-text"><strong>Monitoreo y Evaluación</strong></p>
+        <ul>
+            <li class="sec1-text">Para garantizar que los acuerdos se cumplan y tengan impacto real, se utilizan herramientas como:</li>
+            <li class="sec1-text">Indicadores de desarrollo (Pobreza, salud, educación).</li>
+            <li class="sec1-text">Informes de transparencia y auditoría.</li>
+            <li class="sec1-text">Revisiones periódicas por parte de organismos internacionales (Thakur, 2016).</li>
+        </ul>
+<p class="sec1-text">Ejemplo: La ONU publica <strong>informes de progreso</strong> sobre los <strong>Objetivos de Desarrollo Sostenible (ODS)</strong> para medir el impacto de la cooperación internacional.</p>
+<p class="sec1-text"><strong>Desafíos de la Colaboración Regional e Internacional</strong></p>
+<p class="sec1-text">A pesar de sus beneficios, la cooperación enfrenta obstáculos que dificultan su implementación efectiva:</p>
+<ul>
+    <li class="sec1-text"><strong>Desigualdad de poder</strong> Países más fuertes pueden imponer sus intereses sobre los más débiles.</li>
+    <li class="sec1-text"><strong>Burocracia y corrupción</strong> Procesos administrativos lentos o mal uso de fondos.</li>
+    <li class="sec1-text"><strong>Falta de compromiso político</strong> Cambios de gobierno pueden afectar la continuidad de los acuerdos.</li>
+    <li class="sec1-text"><strong>Tensiones geopolíticas</strong> Conflictos entre países pueden frenar la colaboración.</li>
+    <li class="sec1-text"><strong>Impacto limitado</strong> Algunos acuerdos no generan cambios reales si no se implementan adecuadamente (Börzel, 2016).</li>
+</ul>
+<div class="flashcard1" style="margin-top: 7rem;">
+    <div class="flashcard1-inner">
+        <div class="flashcard1-front">
+            <p>Ejemplo</p>
+        </div>
+        <div class="flashcard1-back" style="display: flex; flex-wrap: wrap;">
+            <p style="font-size: 13px;">La retirada de Estados Unidos del Acuerdo de París bajo la administración Trump debilitó la cooperación internacional en cambio climático, aunque luego se reincorporó con Biden. La colaboración regional e internacional es un pilar esencial para enfrentar los desafíos del desarrollo en un mundo interconectado. Permite movilizar recursos, compartir conocimientos y construir soluciones conjuntas para problemas globales como la pobreza, el cambio climático y la desigualdad.</p>
+        </div>
+    </div>
+</div>
+<div class="container-button">
+    <button class="flipButton button">CONOCER</button>
+    </div><br>
+    <p class="sec1-text">Para que estas alianzas sean exitosas, es clave contar con instituciones sólidas, mecanismos de financiamiento eficientes y sistemas de monitoreo transparentes. A medida que las problemáticas del siglo XXI exigen respuestas colectivas, la cooperación entre países y regiones se vuelve más importante que nunca. Ningún país puede desarrollarse en aislamiento: la cooperación es la clave del progreso global.</p>
+    </div>
+</section>
+
+
+
+<!-- <div class="card-section-container">
+    <p class="card-title-section">Para saber más...</p><br>
+    <span class="material-symbols-rounded" style="color: #ffffff; font-size: 7rem;">
+        info
+        </span>
+    <div class="card-container">
+        <a href="https://www.redalyc.org/pdf/105/10504711.pdf" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">library_books</span>
+            <p class="title1 fade-in invisible">Ver Artículo</p>
+            <p class="text fade-in invisible">Alcañiz Morcadó, M. (2008). El desarrollo local en el contexto de la globalización, Convergencia, Revista de Ciencias Sociales, Universidad Autónoma del Estado de México, Núm. 47, mayo-agosto 2008, pp. 285-315.</p>
+        </a>
+        <a href="https://es.slideshare.net/slideshow/una-introduccin-a-la-teora-del-desarrollo/7594644" target="_blank" class="card-s">
+            <span class="material-symbols-rounded fade-in invisible">library_books</span>
+            <p class="title1 fade-in invisible">Ver Artículo</p>
+            <p class="text fade-in invisible">Pike, A., Rodríguez-Pose, A., & Tomaney J. (2011). Qué clase de desarrollo local y regional y para quién?, Universitat de Valencia, pp.49-90.
+                Una introducción a la teoría del desarrollo.</p>
+        </a>
+    </div>
+</div> -->
+
+    <script>
+        
+window.addEventListener("scroll", function () {
+    const containerTemario = document.querySelector(".container-temario");
+    const triggerPosition = containerTemario.offsetTop - 60;
+
+    // Verifica si el ancho de la ventana es mayor a 768px
+    if (window.innerWidth > 768) {
+        if (window.scrollY > triggerPosition) {
+            containerTemario.classList.add("temario-navbar");
+            containerTemario.querySelector(".temario").classList.add("temario-navbar");
+        } else {
+            containerTemario.classList.remove("temario-navbar");
+            containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+        }
+    } else {
+        // Si el ancho es menor o igual a 768px, remueve la clase
+        containerTemario.classList.remove("temario-navbar");
+        containerTemario.querySelector(".temario").classList.remove("temario-navbar");
+    }
+});
+
+document.getElementById("toggle-btn").addEventListener("click", function () {
+    const containerTemario = document.getElementById("navbar-temario");
+    
+    // Alternar la clase 'hidden' para mostrar/ocultar
+    containerTemario.classList.toggle("hidden");
+    
+    // Cambiar el icono del botón entre "–" y "+"
+    if (containerTemario.classList.contains("hidden")) {
+        this.textContent = "+"; // Botón de expandir
+    } else {
+        this.textContent = "–"; // Botón de minimizar
+    }
+});
+document.querySelectorAll('.temario-list').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.flipButton');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const flashcard = this.closest('.flashcard');
+            if (flashcard) {
+                flashcard.classList.toggle('flipped');
+            }
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.flipButton');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.parentElement.previousElementSibling.classList.toggle('flipped');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
