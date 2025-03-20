@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            height: 10vh;
+            width: 100%;
+        }
+            .img-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            width: 30rem;
+            padding: 3vh 6vw;
+        }
+
+        .img-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        /* Media Querys  */
+
+        @media only screen and (min-width: 992px) {
+            .img-header {
+                padding: 2vh 0vw;
+            }
+        }
+        .img-1{
+            height: auto;
+            width: 100%;
+            padding: 0 3rem;
+        }
+
+        @media only screen and (min-width: 1300px) {
+            .header{
+                justify-content: space-around;
+            }
+        }
+
+        /* SECTIONF1 */
+
+        .sectionf1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .containerf1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .f-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%; 
+            margin: 3rem auto;
+            height: auto;
+            flex-wrap: nowrap; 
+            gap: 10px;
+        }
+
+        .title-containerf1 {
+            font-family: "Sora", sans-serif;
+            background-color: #54021d;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            flex-basis: 80%; 
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 20%; 
+            background-color: #54021d;
+            border-radius: 30px;
+            flex-grow: 0;
+            min-width: 0;
+        }
+
+        .container-infof1{
+            font-size: 16px;
+            padding: 3rem 5rem 2rem 5rem;
+            text-align: justify;
+            margin: 0 auto;
+        }
+        .container-infof1 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infof1 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .foro{
+            background-color: #e6e6e6;
+            padding: 2rem 2rem;
+            border-radius: 16px;
+        }
+        .foro p{
+            font-size: 14px;
+        }
+        .foro strong{
+            font-size: 14px;
+        }
+        lord-icon {
+            display: block;
+            margin: 0 auto;
+        }
+        @media only screen and (max-width: 768px) {
+            .f-container {
+                flex-wrap: wrap;
+                width: 90%;
+                gap: 10px;
+            }
+
+            .title-containerf1, .icon-container {
+                flex-basis: calc(70% - 10px);
+                max-width: 70%;
+                font-size: 3rem;
+            }
+            .container-infof1 {
+                padding: 0 4rem 2rem 4rem;
+            }
+            .icon-container {
+                flex-basis: calc(30% - 10px);
+                max-width: 30%;
+            }
+            lord-icon{
+                width: 50px !important;
+                height: 50px !important;
+            }
+        }
+</style>
+        </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+    <div class="sectionf1">
+        <div class="containerf1">
+            <div class="f-container">
+            <div class="title-containerf1"><p>Foro de bienvenida</p></div>
+            <div class="icon-container">
+            <lord-icon
+            src="https://cdn.lordicon.com/ayhtotha.json"
+            trigger="in"
+            delay="500"
+            state="in-chat"
+            colors="primary:#ffffff"
+            style="width:100px;height:100px">
+            </lord-icon>
+            </div>
+            </div>
+            <div class="container-infof1">
+                <p>Bienvenido a la asignatura de <strong>Perspectivas de Desarrollo para Agendas Globales y Locales</strong>. Con el fin de que todos los participantes se conozcan, ingresa al foro en el tema de discusión y comparte una breve descripción de lo que te gusta, si tienes otra carrera, qué haces en tus tiempos libres y lo que esperas del curso.</p><br>
+                <div class="foro">
+                    <p>Pulsa el botón <strong>Participar en el foro.</strong></p><br>
+                    <p>Redacta tu comentario en el área de texto y da clic en el botón <strong>Publicar</strong> y luego en <strong>Enviar Publicar</strong> y, posteriormente, en <strong>Enviar</strong>.</p>
+                    </div>
+                    </div>  
+            </div>
+            </div>
+            </div>
+        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+</html

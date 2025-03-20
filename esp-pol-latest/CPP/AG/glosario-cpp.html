@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=target" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=list_alt" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu_book" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .img-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            width: 30rem;
+        }
+
+        .img-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        @media only screen and (min-width: 767px) {
+            .img-header {
+                padding: 3rem 3rem 0 3rem;
+            }
+        }
+        @media only screen and (min-width: 1300px) {
+            .header{
+                justify-content: space-around;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .img-header{
+                width: 15rem;
+            }
+        }
+
+        .sectionf1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .containerf1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .f-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%; 
+            margin: 3rem auto;
+            height: auto;
+            flex-wrap: nowrap; 
+            gap: 10px;
+        }
+
+        .title-containerf1 {
+            font-family: "Sora", sans-serif;
+            background-color: #54021d;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            flex-basis: 95%; 
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 15%; 
+            background-color: #54021d;
+            border-radius: 30px;
+            flex-grow: 0;
+            min-width: 0;
+        }
+                @keyframes iconInSimple {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icon-container .material-symbols-outlined {
+            animation: iconInSimple 0.3s ease-out forwards;
+        }
+
+        .container-infof1{
+            background-color: #e6e6e6;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3rem 5rem 2rem 5rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .container-infof1 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infof1 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .foro{
+            background-color: #e6e6e6;
+            padding: 2rem 2rem;
+            border-radius: 16px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .f-container {
+                flex-wrap: wrap;
+                width: 90%;
+                gap: 10px;
+            }
+
+            .title-containerf1, .icon-container {
+                flex-basis: calc(70% - 10px);
+                max-width: 70%;
+                font-size: 3rem;
+            }
+            .icon-container {
+                flex-basis: calc(30% - 10px);
+                max-width: 30%;
+            }
+            .material-symbols-outlined {
+                font-size: 50px;
+                color: #ffffff;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 500,
+                'GRAD' 0,
+                'opsz' 40
+            }
+        }
+            .material-symbols-outlined {
+            font-size: 75px;
+            color: #ffffff;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 40
+            }
+            .contenedor {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            padding: 5rem;
+            gap: 20px;
+        }
+
+        .contenido {
+            background-color: #e0e0e0;
+            font-family: "Sora", sans-serif;
+            padding: 10rem;
+            width: 75%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contenido h2 {
+            margin: 0;
+            font-size: 24px;
+            padding: 3rem 0 2rem 0;
+            color: #000;
+        }
+
+        .contenido ul {
+            list-style-type: none;
+            margin-top: 10px;
+            color: #333;
+            font-size: 24px;
+            padding: 0 0 2rem 0;
+        }
+
+        .contenido ul li {
+            margin-bottom: 5px;
+        }
+
+        .unidad {
+            background-color: #3a0a16;
+            color: white;
+            width: 25%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            font-family: "Sora", sans-serif;
+        }
+
+        .unidad .texto {
+            font-size: 35px;
+            margin: 0;
+        }
+        .glosario{
+            width: 80%;
+            margin-top: 5rem;
+            text-align: justify;
+        }
+
+        .glosa{
+            font-size: 16px;
+        }
+        .glosa strong{
+            font-size: 16px;
+        }
+        .glosa strong em{
+            font-size: 16px;
+        }
+        .unidad .numero {
+            font-size: 72px; /* Aquí se ajusta el tamaño del número */
+            line-height: 1;
+        }
+                /* Responsive design */
+                @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column-reverse;
+                padding: 5rem 0;
+                width: 90%;
+                height: auto;
+            }
+
+            .unidad {
+                width: 100%;
+                height: 100px;
+            }
+
+            .contenido {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .contenido ul {
+                font-size: 14px;
+            }
+            .contenido ul li{
+                font-size: 12px;
+            }
+
+            .unidad .texto {
+                font-size: 18px;
+            }
+
+            .unidad .numero {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+    <div class="sectionf1">
+        <div class="containerf1">
+            <div class="f-container">
+            <div class="title-containerf1"><p>Glosario</p></div>
+            <div class="icon-container">
+                <span class="material-symbols-outlined">
+                    menu_book
+                    </span>
+            </div>
+        </div>
+        <div class="glosario">
+            <p class="glosa"><strong>Agenda:</strong> en Políticas Públicas, es una lista de problemas   que se ha decidido discutir, con la intención de establecer acciones para su atención. Se pueden distinguir al menos tres niveles en la Agenda, o en relación con ella: El nivel de las inquietudes sociales, la agenda mediática y la agenda institucional.</p><br>
+            <p class="glosa"><strong>Emprendedores de política pública:</strong> son actores del proceso de las Políticas públicas que se caracterizan por una capacidad probada para aprovechar las oportunidades ofrecidas por momentos de cambio súbito y profundo en las definiciones de los problemas públicos.</p><br>
+            <p class="glosa"><strong>Interés público:</strong> es el principio que orienta decisiones y acciones hacia el bienestar colectivo de la sociedad, priorizando las necesidades, derechos y preocupaciones que afectan al conjunto de la población, en contraposición a intereses individuales o privados. Implica abordar temas de relevancia común, como la salud, la justicia social entre otros. Es un concepto normativo que guía la actuación de gobiernos, instituciones públicas y otras organizaciones al tomar decisiones que buscan beneficiar a la mayoría, especialmente a los sectores más vulnerables.</p><br>
+            <p class="glosa"><strong>Normatividad y políticas públicas:</strong> en Estados de Derecho (Repúblicas), el poder público sólo puede actuar con apego a la Ley. El análisis de Políticas Públicas, al ocuparse de la forma en que el poder público interviene o podría intervenir en pos de la solución de los problemas públicos, requiere necesariamente incorporar esta dimensión jurídica en sus deliberaciones. Las Leyes proveen, entre otros elementos, definiciones de problemas públicos.</p><br>
+            <p class="glosa"><strong>Partes interesadas (stakeholders):</strong> son los actores sociales potencial o efectivamente beneficiados o afectados por una Política Pública. Por lo tanto, invariablemente se esfuerzan por incidir en todas las dimensiones del proceso, especialmente en la definición del problema. </p><br>
+            <p class="glosa"><strong>Poder y Políticas Públicas:</strong> el Poder es la causa eficiente de una Política Pública; ésta puede entenderse como una forma determinada de aplicar el Poder público para resolver Problemas Públicos. Sin Poder no hay Política Pública. El Poder también las determina, las deforma, las desvía de sus propósitos manifiestos, y en muchos casos, impide su existencia, o simplemente las suprime. Al ser un recurso desigualmente distribuido, el Poder imprime invariablemente sesgos en todas las facetas del proceso de Política Pública, sesgos favorables a quién lo detenta.</p><br>
+            <p class="glosa"><strong>Política o Proceso político (politics):</strong> en regímenes democráticos, es el proceso en el que distintas organizaciones, normalmente partidos políticos, compiten por el derecho a gobernar. Su complemento es  el proceso de las Políticas Públicas, al que precede y determina. La Política es el proceso por el que el Estado asume la voluntad colectiva (¿qué quiere la gente? En el contexto de una República democrática: ¿qué quieren los electores?); la Política Pública es el proceso por el que se determina cómo ejecutar esa voluntad del modo más fiel y eficaz posible.</p><br>
+            <p class="glosa"><strong>Políticas públicas (policy):</strong> es el conjunto de intervenciones realizadas por el poder público para atender situaciones sociales definidas como problemas públicos. Habitualmente se describe la Política Pública como un Ciclo, divisible en etapas básicas: definición del Problema Público, Formulación de la Política Pública, Implementación y Evaluación de la misma.</p><br>
+            <p class="glosa"><strong>Problema Público:</strong> es una situación social percibida como indeseable o amenazante. Los Problemas Públicos resultan del contraste entre una situación determinada, y los valores socialmente vigentes. Las relaciones de poder y el entramado de intereses también son determinantes en la construcción de los Problemas Públicos.  El Problema Público es el núcleo de una Política Pública, y por ello, uno de los valores decisivos del análisis, es la precisión tanto en la comprensión de sus orígenes, como en la estimación de sus consecuencias.</p><br>
+            <p class="glosa"><strong>Ventana de (oportunidad) política (policy window):</strong> son momentos extraordinarios de cambio contundente y decisivo de las Políticas Públicas, habitualmente se presentan por los cambios en la Agenda. Por lo general son desatadas por eventos súbitos, como desastres naturales, hechos violentos, o escándalos públicos. El concepto se relaciona estrechamente con el de Emprendedores de Política Pública (véase): son éstos los actores capaces de aprovechar la dinámica emanada de las Ventanas de oportunidad, y concretar los cambios posibilitados por ellas. </p><br>
+        </div>
+    </div>
+</body>
+</html>

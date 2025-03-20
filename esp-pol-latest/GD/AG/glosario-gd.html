@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=target" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=list_alt" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu_book" />
+    <title>Document</title>
+    <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        body {
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    html{
+            font-size: 62.5%;
+            font-family: "Poppins", sans-serif;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .img-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            width: 30rem;
+        }
+
+        .img-header img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        @media only screen and (min-width: 767px) {
+            .img-header {
+                padding: 3rem 3rem 0 3rem;
+            }
+        }
+        @media only screen and (min-width: 1300px) {
+            .header{
+                justify-content: space-around;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .img-header{
+                width: 15rem;
+            }
+        }
+
+        .sectionf1{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .containerf1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .f-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%; 
+            margin: 3rem auto;
+            height: auto;
+            flex-wrap: nowrap; 
+            gap: 10px;
+        }
+
+        .title-containerf1 {
+            font-family: "Sora", sans-serif;
+            background-color: #54021d;
+            color: #ffffff;
+            font-size: 5rem;
+            text-align: center;
+            padding: 3.5rem 2rem;
+            font-weight: 600;
+            border-radius: 30px;
+            flex-basis: 95%; 
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-basis: 15%; 
+            background-color: #54021d;
+            border-radius: 30px;
+            flex-grow: 0;
+            min-width: 0;
+        }
+                @keyframes iconInSimple {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .icon-container .material-symbols-outlined {
+            animation: iconInSimple 0.3s ease-out forwards;
+        }
+
+        .container-infof1{
+            background-color: #e6e6e6;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 3rem 5rem 2rem 5rem;
+            text-align: justify;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .container-infof1 p{
+            font-size: 16px;
+            text-align: justify;
+        }
+        .container-infof1 p strong{
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .foro{
+            background-color: #e6e6e6;
+            padding: 2rem 2rem;
+            border-radius: 16px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .f-container {
+                flex-wrap: wrap;
+                width: 90%;
+                gap: 10px;
+            }
+
+            .title-containerf1, .icon-container {
+                flex-basis: calc(70% - 10px);
+                max-width: 70%;
+                font-size: 3rem;
+            }
+            .icon-container {
+                flex-basis: calc(30% - 10px);
+                max-width: 30%;
+            }
+            .material-symbols-outlined {
+                font-size: 50px;
+                color: #ffffff;
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 500,
+                'GRAD' 0,
+                'opsz' 40
+            }
+        }
+            .material-symbols-outlined {
+            font-size: 75px;
+            color: #ffffff;
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 40
+            }
+            .contenedor {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            padding: 5rem;
+            gap: 20px;
+        }
+
+        .contenido {
+            background-color: #e0e0e0;
+            font-family: "Sora", sans-serif;
+            padding: 10rem;
+            width: 75%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contenido h2 {
+            margin: 0;
+            font-size: 24px;
+            padding: 3rem 0 2rem 0;
+            color: #000;
+        }
+
+        .contenido ul {
+            list-style-type: none;
+            margin-top: 10px;
+            color: #333;
+            font-size: 24px;
+            padding: 0 0 2rem 0;
+        }
+
+        .contenido ul li {
+            margin-bottom: 5px;
+        }
+
+        .unidad {
+            background-color: #3a0a16;
+            color: white;
+            width: 25%;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+            font-family: "Sora", sans-serif;
+        }
+
+        .unidad .texto {
+            font-size: 35px;
+            margin: 0;
+        }
+        .glosario{
+            width: 80%;
+            margin-top: 5rem;
+            text-align: justify;
+        }
+
+        .glosa{
+            font-size: 16px;
+        }
+        .glosa strong{
+            font-size: 16px;
+        }
+        .unidad .numero {
+            font-size: 72px; /* Aquí se ajusta el tamaño del número */
+            line-height: 1;
+        }
+                /* Responsive design */
+                @media (max-width: 768px) {
+            .contenedor {
+                flex-direction: column-reverse;
+                padding: 5rem 0;
+                width: 90%;
+                height: auto;
+            }
+
+            .unidad {
+                width: 100%;
+                height: 100px;
+            }
+
+            .contenido {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .contenido ul {
+                font-size: 14px;
+            }
+            .contenido ul li{
+                font-size: 12px;
+            }
+
+            .unidad .texto {
+                font-size: 18px;
+            }
+
+            .unidad .numero {
+                font-size: 48px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/LogoUSBMxNgo.png" alt=""></div>
+        <div class="img-header"><img src="https://usbmexicoonline.neolms.com/files/11461125/USBOnline_ngo.png" alt=""></div>
+    </div>
+    <div class="sectionf1">
+        <div class="containerf1">
+            <div class="f-container">
+            <div class="title-containerf1"><p>Glosario</p></div>
+            <div class="icon-container">
+                <span class="material-symbols-outlined">
+                    menu_book
+                    </span>
+            </div>
+        </div>
+        <div class="glosario">
+            <p class="glosa"><strong>Cambio climático:</strong> Variaciones a largo plazo en los patrones de clima y temperatura de la Tierra, principalmente debido a actividades humanas. Estas alteraciones pueden manifestarse en el aumento de las temperaturas globales, cambios en los patrones de precipitaciones, el aumento del nivel del mar y fenómenos meteorológicos más extremos, como tormentas, inundaciones y sequías.</p><br>
+            <p class="glosa"><strong>Cooperación:</strong> Proceso encaminado a la realización de un objetivo, desarrollado por grupos de personas o instituciones que comparten una perspectiva común. En este proceso generalmente se emplean métodos colaborativos y asociativos que facilitan la consecución de la meta perseguida.</p><br>
+            <p class="glosa"><strong>Cooperación internacional:</strong> Conjunto de acciones y acuerdos que realizan los gobiernos de distintos países, apoyado por el dinamismo de organismos internacionales, sociedad civil, academia y sector privado, con el objetivo de abordar problemas comunes, promover el desarrollo y garantizar la estabilidad y el bienestar en el ámbito global.</p><br>
+            <p class="glosa"><strong>Desarrollo:</strong> Es un concepto polisémico, pero además polémico, tiene distintas dimensiones, enfoques e indicadores de medición, según lo que se considere como el o los elementos más relevantes en torno al cual o los cuales se estructura, aquí lo identificamos como un proceso de mejora en las condiciones de vida de los individuos y las sociedades.</p><br>
+            <p class="glosa"><strong>Desarrollo local:</strong> Proceso de mejora en las distintas dimensiones que tiene lugar dentro de una comunidad o región específica, impulsado de manera endógena por las propias personas, instituciones y recursos locales. Se enfoca en satisfacer las necesidades y prioridades de una comunidad concreta, aprovechando sus particularidades y potenciando sus capacidades.</p><br>
+            <p class="glosa"><strong>Desarrollo sostenible:</strong> Propuesta de crecimiento encaminado a la satisfacción de necesidades del presente sin comprometer la capacidad de las futuras generaciones para satisfacer sus propias necesidades. Este enfoque se basa en la idea de que el progreso económico debe equilibrarse con la equidad social y la protección del medio ambiente, garantizando un bienestar duradero y equitativo para todas las personas y para el planeta.</p><br>
+            <p class="glosa"><strong>Desempeño público:</strong> Hace referencia a la eficacia, eficiencia y calidad con que los servidores públicos y las instituciones gubernamentales cumplen sus funciones y responsabilidades en la gestión de los asuntos públicos. Está vinculado a la capacidad del Estado para ofrecer servicios y bienes públicos de manera oportuna, transparente y equitativa, atendiendo las necesidades de la población y utilizando de manera óptima los recursos disponibles.</p><br>
+            <p class="glosa"><strong>Evaluación en políticas públicas:</strong> Ejercicio sistemático encaminado al análisis, medición y valoración del diseño, implementación y resultados de una política pública para determinar si cumple con sus objetivos y si ha tenido el impacto esperado. Persigue mejorar la efectividad y eficiencia de la acción gubernamental, así como identificar sus fortalezas y debilidades mediante información soportada en evidencia.</p><br>
+            <p class="glosa"><strong>Gobernabilidad:</strong> Capacidad de un gobierno para ejercer el poder y gestionar eficazmente los recursos, las instituciones y las políticas públicas de un país, asegurando la estabilidad política, el cumplimiento de las leyes y el bienestar general de la sociedad. No solo involucra la habilidad del Estado para mantener el orden y la paz social, sino también para responder a las demandas y necesidades de la ciudadanía, garantizando una administración eficiente, justa y transparente.</p><br>
+            <p class="glosa"><strong>Gobernanza:</strong> Es el conjunto de procesos, prácticas e instituciones mediante los cuales los actores de una sociedad (gobiernos, empresas, organizaciones civiles y ciudadanos) toman decisiones, implementan políticas y gestionan los recursos de manera conjunta y participativa. En esta perspectiva se pone énfasis en la colaboración entre múltiples actores y sectores, quienes concurren en un mismo escenario, y en la forma como se organiza el poder para lograr resultados en beneficio del interés público. Por lo anterior, ésta descansa en la participación; la transparencia; la rendición de cuentas; la eficiencia y efectividad; la equidad e inclusión, así como en la consideración permanente al estado de derecho.</p><br>
+            <p class="glosa"><strong>Gobernanza global:</strong> Conjunto de procesos donde participan distintas instituciones y concurren mecanismos de cooperación internacional, para gestionar de manera efectiva los desafíos y problemas que trascienden las fronteras nacionales y afectan a la comunidad global. Aquí participan de manera colaborativa países, organizaciones internacionales, empresas, ONGs y otros actores no estatales para abordar temas que requieren respuestas coordinadas y concertadas a nivel regional e internacional.</p><br>
+            <p class="glosa"><strong>Gobernanza local:</strong> Conjunto de procesos, prácticas e instituciones mediante los cuales los actores que concurren en una localidad o región (gobiernos, empresas, organizaciones civiles y ciudadanos) toman decisiones, implementan políticas y gestionan los recursos de manera conjunta y participativa. Como en otro tipo de gobernanza, participan empresas, ONGs y otros actores no estatales para abordar los temas que requieren respuestas coordinadas y concertadas.</p><br>
+            <p class="glosa"><strong>Gobernanza territorial:</strong> Se refiere a los procesos y estructuras mediante los cuales se gestionan y toman decisiones sobre un territorio específico, considerando sus recursos, necesidades y dinámicas sociales, económicas y ambientales. Por añadidura, además del gobierno, también participan empresas, ONGs y otros actores no estatales para abordar los temas que requieren respuestas coordinadas y concertadas.</p><br>
+            <p class="glosa"><strong>Participación ciudadana:</strong> Es el involucramiento de las y los ciudadanos a través de distintos mecanismos e instrumentos normados, mediante los cuales se promueve la democracia participativa y por los cuales se toma parte de las decisiones públicas que realizan los distintos gobiernos e impactan en la comunidad y contextos de la vida cotidiana de las personas.</p><br>
+            <p class="glosa"><strong>Sociedades empáticas:</strong> Agregado social, cuyos integrantes son capaces de comprender y compartir los sentimientos y experiencias de los demás, lo que fomenta un sentido de conexión y solidaridad. La empatía se traduce en acciones que reflejan la comprensión de las necesidades, aspiraciones y sufrimientos de los demás, promoviendo así un ambiente de apoyo y respeto mutuo. Los ejes en torno a los cuales se estructura una sociedad empática son: a) comprensión mutua; b) la solidaridad; c) la comunicación abierta; d) la diversidad e inclusión, y e) la educación emocional.</p><br>            
+        </div>
+    </div>
+</body>
+</html>
