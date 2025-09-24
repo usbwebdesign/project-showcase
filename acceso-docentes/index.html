@@ -24,19 +24,24 @@
     </form>
   </div>
 
-  <!-- Dashboard Profesores -->
+  <!-- Dashboard Profesores y Coordinadores -->
   <div id="dashboard" class="hidden">
     <h2>Profesores Activos</h2>
     <div id="profList" class="prof-list"></div>
+
+    <h2>Coordinadores</h2>
+    <div id="coordList" class="prof-list"></div>
+
     <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
   </div>
 
-  <!-- Detalle Profesor -->
+  <!-- Detalle Profesor/Coordinador -->
   <div id="profDetail" class="card hidden">
     <button id="backBtn" class="back-btn">&larr; Regresar</button>
     <img id="detailImg" src="" alt="Foto de perfil">
     <h2 id="detailName"></h2>
     <p><strong>Programa académico:</strong> <span id="detailPrograma"></span></p>
+
     <h3>Sesiones</h3>
     <table id="sessionTable">
       <thead>
@@ -47,7 +52,9 @@
           <th>Duración</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody>
+        <!-- Sesiones generadas con JS -->
+      </tbody>
     </table>
   </div>
 
