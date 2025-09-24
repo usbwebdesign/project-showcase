@@ -9,9 +9,10 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
   background: #f3f4f6;
+  padding: 2rem;
 }
 
 /* === Contenedores === */
@@ -22,16 +23,18 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 500px;
   width: 100%;
-  text-align: center;
+  margin-bottom: 2rem;
 }
 
 h1, h2, h3 {
   font-weight: bold;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 h2 {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* === Formularios === */
@@ -69,32 +72,29 @@ button:hover {
 }
 
 /* === Dashboard === */
-#dashboard {
-  max-width: 900px;
-  padding: 2rem;
-}
-
 .prof-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .prof-card {
   background: #fff;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 1.5rem 1rem; /* Aumentamos padding vertical */
   display: flex;
   align-items: center;
   gap: 1rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: 0.2s;
+  min-height: 100px; /* Altura mínima aumentada */
 }
 
 .prof-card:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
 
 .prof-card img {
   width: 64px;
@@ -105,10 +105,6 @@ button:hover {
 }
 
 /* === Detalle Profesor === */
-#profDetail {
-  max-width: 600px;
-}
-
 #profDetail img {
   width: 96px;
   height: 96px;
@@ -136,7 +132,6 @@ button:hover {
   background: #dc2626;
 }
 
-/* === Tabla Sesiones === */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -144,15 +139,13 @@ table {
 }
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   padding: 0.5rem;
-  font-size: 0.85rem;
   text-align: center;
 }
 
 th {
-  background: #2563eb;
-  color: #fff;
+  background: #f9fafb;
 }
 
 /* === Utilidades === */
@@ -164,11 +157,5 @@ th {
 @media (min-width: 600px) {
   .prof-list {
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 900px) {
-  .prof-list {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
