@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Profesores</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  
+  <!-- Login -->
+  <div id="loginPage" class="card">
+    <h1>Portal Profesores</h1>
+    <form id="loginForm">
+      <div>
+        <label>Usuario</label>
+        <input type="text" id="username" placeholder="ProfesorX" required>
+      </div>
+      <div>
+        <label>Contraseña</label>
+        <input type="password" id="password" placeholder="********" required>
+      </div>
+      <button type="submit">Iniciar sesión</button>
+    </form>
+  </div>
+
+  <!-- Dashboard Profesores -->
+  <div id="dashboard" class="hidden">
+    <h2>Profesores Activos</h2>
+    <div id="profList" class="prof-list"></div>
+    <button id="logoutBtn" class="logout-btn">Cerrar sesión</button>
+  </div>
+
+  <!-- Detalle Profesor -->
+  <div id="profDetail" class="card hidden">
+    <button id="backBtn" class="back-btn">&larr; Regresar</button>
+    <img id="detailImg" src="" alt="Foto de perfil">
+    <h2 id="detailName"></h2>
+    <p><strong>Programa académico:</strong> <span id="detailPrograma"></span></p>
+    <h3>Sesiones</h3>
+    <table id="sessionTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Iniciar sesión</th>
+          <th>Cerrar sesión</th>
+          <th>Duración</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="./scripts.js"></script>
+</body>
+</html>
