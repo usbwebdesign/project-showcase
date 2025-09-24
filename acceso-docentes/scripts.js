@@ -1,41 +1,44 @@
-// === Datos Profesores ===
+// === Datos dummy de Profesores y Coordinadores ===
 const professors = [
   {
     name: "Leonardo Hernández Martínez",
-    program: "Mercadotecnia Estratégica y Logística",
+    program: "Especialidad en Logística y Mercadotecnia Estratégica",
     sessions: [
       { login: "18 Sep, 6:23 pm", logout: "18 Sep, 6:33 pm", duration: "10 minutos" },
       { login: "27 Ago, 7:16 pm", logout: "27 Ago, 7:26 pm", duration: "10 minutos" },
       { login: "27 Ago, 7:02 pm", logout: "27 Ago, 7:12 pm", duration: "10 minutos" },
     ],
-    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar"
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "professor"
   },
   {
     name: "Fernando Radillo Ruíz",
-    program: "Mercadotecnia Estratégica y Logística",
+    program: "Especialidad en Logística y Mercadotecnia Estratégica",
     sessions: [
       { login: "23 Sep, 7:32 pm", logout: "23 Sep, 7:42 pm", duration: "10 minutos" },
       { login: "23 Sep, 6:49 pm", logout: "23 Sep, 6:59 pm", duration: "10 minutos" },
       { login: "22 Sep, 3:56 pm", logout: "22 Sep, 4:06 pm", duration: "10 minutos" },
       { login: "22 Sep, 3:20 pm", logout: "22 Sep, 3:30 pm", duration: "10 minutos" },
       { login: "11 Sep, 6:31 pm", logout: "11 Sep, 6:41 pm", duration: "10 minutos" },
-      { login: "9 Sep, 11:28 am", logout: "9 Sep, 11:38 am", duration: "10 minutos" },
+      { login: "9 Sep, 11:28 am", logout: "9 Sep, 11:38 am", duration: "10 minutos" }
     ],
-    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar"
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "professor"
   },
   {
     name: "Felipe De Jesús Castro Hernández",
-    program: "Mercadotecnia Estratégica y Logística",
+    program: "Especialidad en Logística y Mercadotecnia Estratégica",
     sessions: [
       { login: "23 Sep, 7:07 pm", logout: "23 Sep, 7:17 pm", duration: "10 minutos" },
       { login: "23 Sep, 9:48 am", logout: "23 Sep, 10:06 am", duration: "18 minutos" },
-      { login: "26 Ago, 3:24 pm", logout: "26 Ago, 3:34 pm", duration: "10 minutos" },
+      { login: "26 Ago, 3:24 pm", logout: "26 Ago, 3:34 pm", duration: "10 minutos" }
     ],
-    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar"
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "professor"
   },
   {
     name: "Paola Adriana Benitez Moreno",
-    program: "Mercadotecnia Estratégica y Logística",
+    program: "Especialidad en Logística y Mercadotecnia Estratégica",
     sessions: [
       { login: "17 Sep, 11:33 am", logout: "17 Sep, 11:43 am", duration: "10 minutos" },
       { login: "11 Sep, 1:11 pm", logout: "11 Sep, 1:21 pm", duration: "10 minutos" },
@@ -43,13 +46,14 @@ const professors = [
       { login: "5 Sep, 7:42 pm", logout: "5 Sep, 7:52 pm", duration: "10 minutos" },
       { login: "2 Sep, 4:28 pm", logout: "2 Sep, 4:38 pm", duration: "10 minutos" },
       { login: "1 Sep, 8:03 pm", logout: "1 Sep, 8:13 pm", duration: "10 minutos" },
-      { login: "25 Ago, 1:21 pm", logout: "25 Ago, 1:31 pm", duration: "10 minutos" },
+      { login: "25 Ago, 1:21 pm", logout: "25 Ago, 1:31 pm", duration: "10 minutos" }
     ],
-    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar"
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "professor"
   },
   {
     name: "Claudia Valeria Guarella Medina",
-    program: "Gestión Educativa y Talento Humano",
+    program: "Especialidad en Gestión Educativa y Talento Humano",
     sessions: [
       { login: "21 Sep, 1:33 pm", logout: "21 Sep, 1:43 pm", duration: "10 minutos" },
       { login: "19 Sep, 1:19 pm", logout: "19 Sep, 1:29 pm", duration: "10 minutos" },
@@ -65,9 +69,10 @@ const professors = [
       { login: "1 Sep, 4:21 pm", logout: "1 Sep, 4:31 pm", duration: "10 minutos" },
       { login: "31 Ago, 11:26 am", logout: "31 Ago, 11:36 am", duration: "10 minutos" },
       { login: "28 Ago, 5:28 pm", logout: "28 Ago, 5:38 pm", duration: "10 minutos" },
-      { login: "26 Ago, 7:03 pm", logout: "26 Ago, 7:13 pm", duration: "10 minutos" },
+      { login: "26 Ago, 7:03 pm", logout: "26 Ago, 7:13 pm", duration: "10 minutos" }
     ],
-    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar"
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "professor"
   },
   {
     name: "María Esther Chamosa Sandoval",
@@ -80,9 +85,10 @@ const professors = [
       { login: "3 Sep, 1:54 pm", logout: "3 Sep, 2:04 pm", duration: "10 minutos" },
       { login: "29 Ago, 1:30 pm", logout: "29 Ago, 1:40 pm", duration: "10 minutos" },
       { login: "26 Ago, 4:28 pm", logout: "26 Ago, 4:38 pm", duration: "10 minutos" },
-      { login: "26 Ago, 1:30 pm", logout: "26 Ago, 1:40 pm", duration: "10 minutos" },
+      { login: "26 Ago, 1:30 pm", logout: "26 Ago, 1:40 pm", duration: "10 minutos" }
     ],
-    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar"
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "professor"
   },
   {
     name: "Laura Georgina Ortega Luna",
@@ -100,9 +106,10 @@ const professors = [
       { login: "29 Ago, 6:05 pm", logout: "29 Ago, 6:15 pm", duration: "10 minutos" },
       { login: "29 Ago, 4:03 pm", logout: "29 Ago, 4:13 pm", duration: "10 minutos" },
       { login: "29 Ago, 12:11 pm", logout: "29 Ago, 12:21 pm", duration: "10 minutos" },
-      { login: "25 Ago, 8:36 pm", logout: "25 Ago, 8:46 pm", duration: "10 minutos" },
+      { login: "25 Ago, 8:36 pm", logout: "25 Ago, 8:46 pm", duration: "10 minutos" }
     ],
-    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar"
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "professor"
   },
   {
     name: "Tanya Gabriela Garciarivas y Reyes",
@@ -120,39 +127,84 @@ const professors = [
       { login: "29 Ago, 6:05 pm", logout: "29 Ago, 6:15 pm", duration: "10 minutos" },
       { login: "29 Ago, 4:03 pm", logout: "29 Ago, 4:13 pm", duration: "10 minutos" },
       { login: "29 Ago, 12:11 pm", logout: "29 Ago, 12:21 pm", duration: "10 minutos" },
-      { login: "25 Ago, 8:36 pm", logout: "25 Ago, 8:46 pm", duration: "10 minutos" },
+      { login: "25 Ago, 8:36 pm", logout: "25 Ago, 8:46 pm", duration: "10 minutos" }
     ],
-    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar"
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "professor"
+  },
+
+  // Coordinadores
+  {
+    name: "Eduardo Fernando Aguado Cruz",
+    program: "Doctorado en Comunicación Audiovisual Estratégica",
+    sessions: [
+      { login: "30 Ago, 1:12 pm", logout: "30 Ago, 1:22 pm", duration: "10 minutos" }
+    ],
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "coordinator"
+  },
+  {
+    name: "José Miguel Ramírez Ramos",
+    program: "Especialidad en Logística y Mercadotecnia Estratégica",
+    sessions: [
+      { login: "22 Sep, 7:24 pm", logout: "22 Sep, 7:34 pm", duration: "10 minutos" },
+      { login: "20 Sep, 2:50 pm", logout: "20 Sep, 3:00 pm", duration: "10 minutos" },
+      { login: "17 Sep, 1:14 pm", logout: "17 Sep, 1:24 pm", duration: "10 minutos" },
+      { login: "17 Sep, 11:33 am", logout: "17 Sep, 11:43 am", duration: "10 minutos" },
+      { login: "10 Sep, 8:21 pm", logout: "10 Sep, 8:31 pm", duration: "10 minutos" },
+      { login: "5 Sep, 2:57 pm", logout: "5 Sep, 3:07 pm", duration: "10 minutos" },
+      { login: "3 Sep, 10:26 am", logout: "3 Sep, 10:36 am", duration: "10 minutos" },
+      { login: "30 Ago, 3:03 pm", logout: "30 Ago, 3:13 pm", duration: "10 minutos" },
+      { login: "27 Ago, 7:15 pm", logout: "27 Ago, 7:25 pm", duration: "10 minutos" }
+    ],
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "coordinator"
+  },
+  {
+    name: "Jorge Díaz Vázquez",
+    program: "Especialidad en Gestión Educativa y Talento Humano",
+    sessions: [
+      { login: "6:57 am", logout: "-", duration: "-" },
+      { login: "23 Sep, 12:15 pm", logout: "23 Sep, 12:25 pm", duration: "10 minutos" },
+      { login: "23 Sep, 12:06 pm", logout: "23 Sep, 12:14 pm", duration: "8 minutos" },
+      { login: "20 Sep, 1:39 pm", logout: "22 Sep, 8:17 pm", duration: "2 días" }
+      // Se puede agregar el resto si deseas
+    ],
+    img: "https://via.placeholder.com/100/cccccc/ffffff?text=Avatar",
+    role: "coordinator"
   }
 ];
 
-// === Referencias DOM ===
+// === Elementos DOM ===
 const loginForm = document.getElementById("loginForm");
 const loginPage = document.getElementById("loginPage");
 const dashboard = document.getElementById("dashboard");
 const profList = document.getElementById("profList");
+const coordList = document.getElementById("coordList");
 const profDetail = document.getElementById("profDetail");
 
 const detailImg = document.getElementById("detailImg");
 const detailName = document.getElementById("detailName");
 const detailPrograma = document.getElementById("detailPrograma");
-const sessionTableBody = document.querySelector("#sessionTable tbody");
+const sessionTable = document.querySelector("#sessionTable tbody");
 
 const logoutBtn = document.getElementById("logoutBtn");
 const backBtn = document.getElementById("backBtn");
 
 // === Login dummy ===
-loginForm.addEventListener("submit", (e) => {
+loginForm.addEventListener("submit", e => {
   e.preventDefault();
   loginPage.classList.add("hidden");
   dashboard.classList.remove("hidden");
   renderProfesores();
 });
 
-// === Renderizar lista de profesores ===
+// === Renderizar lista de profesores y coordinadores ===
 function renderProfesores() {
   profList.innerHTML = "";
-  professors.forEach((prof, idx) => {
+  coordList.innerHTML = "";
+
+  professors.forEach(prof => {
     const card = document.createElement("div");
     card.className = "prof-card";
     card.innerHTML = `
@@ -163,7 +215,12 @@ function renderProfesores() {
       </div>
     `;
     card.addEventListener("click", () => showDetail(prof));
-    profList.appendChild(card);
+
+    if(prof.role === "coordinator"){
+      coordList.appendChild(card);
+    } else {
+      profList.appendChild(card);
+    }
   });
 }
 
@@ -175,16 +232,16 @@ function showDetail(prof) {
   detailName.textContent = prof.name;
   detailPrograma.textContent = prof.program;
 
-  sessionTableBody.innerHTML = "";
-  prof.sessions.forEach((sess, i) => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${i + 1}</td>
-      <td>${sess.login}</td>
-      <td>${sess.logout}</td>
-      <td>${sess.duration}</td>
+  sessionTable.innerHTML = "";
+  prof.sessions.forEach((s, index) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${index + 1}</td>
+      <td>${s.login}</td>
+      <td>${s.logout}</td>
+      <td>${s.duration}</td>
     `;
-    sessionTableBody.appendChild(row);
+    sessionTable.appendChild(tr);
   });
 }
 
