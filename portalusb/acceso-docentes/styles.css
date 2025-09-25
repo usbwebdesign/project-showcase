@@ -1,0 +1,495 @@
+/* === Reset === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    width: 1200px; /* 1200px en rem */
+    margin: 0 auto;
+  }
+}
+/* Estilo del nav */
+nav {
+    position: fixed; 
+    top: 0;               
+    left: 0;
+    width: 100%;        
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 2rem; /* Reducido para mejor visualización en móviles */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+    display: flex;
+    align-items: center;       /* Centra verticalmente */
+    justify-content: flex-start; /* Logo a la izquierda */
+}
+
+/* Logo responsive */
+nav img {
+    max-width: 250px; /* Máximo ancho, ajustable según necesidad */
+    width: 100%;      /* Se adapta al contenedor */
+    height: auto;     /* Mantiene proporción */
+    display: block;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 600px) {
+    nav {
+        padding: 0.5rem 1rem;
+    }
+
+    nav img {
+        max-width: 100px;
+    }
+}
+
+
+
+
+.nav-logo {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-user img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-user span {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+
+/* === Body vistas específicas === */
+.login-view {
+  background: linear-gradient(135deg, #2563eb, #05113a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-view {
+    margin-top: 10rem;
+  background: #f3f4f6;
+}
+
+.detail-view {
+  background: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* === Card General === */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  padding: 6rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.1);
+  max-width: 50rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* === Headers === */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+p{
+font-weight: 400;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+h1{
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+h3{
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+h2 {
+    margin: 4rem 0;
+  font-size: 2.2rem;
+}
+
+/* === Login Form === */
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+#loginForm div {
+  display: flex;
+  flex-direction: column;
+}
+
+#loginForm label {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #59595b;
+  border: none;
+  font-weight: 700;
+}
+
+#loginForm input {
+  padding: 1.4rem;
+  border: none;
+  background-color: #e4e6e8;
+  color: #1b1b1b;
+  border-radius: 0.75rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+#loginForm input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.2);
+}
+
+.form-title{
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 3rem 0;
+}
+
+.btn-form {
+    margin: 1.5rem 0 0 0;
+  background: #244dd7;
+  color: #fff;
+  padding: 1.6rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-form:hover {
+  background: #1d3bb5;
+}
+
+/* === Dashboard === */
+.prof-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  font-size: 2rem;
+}
+
+.prof-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.2s;
+  min-height: 10rem;
+}
+
+.prof-card:hover {
+  box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.2);
+}
+
+.prof-card img {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* === Detalle Profesor === */
+#profDetail {
+  position: relative;
+  max-width: 60rem;
+  text-align: center;
+  padding-top: 4rem; /* espacio para el botón */
+}
+
+/* Botón circular */
+.back-btn {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #9a9a9a;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.back-btn span.material-symbols-outlined {
+  font-size: 3rem;
+}
+
+/* Hover / Active */
+.back-btn:hover {
+  background: #292929;
+  transform: translateX(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn:active {
+  transform: translateX(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 40rem) {
+  .back-btn {
+    top: 2rem;
+    left: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .back-btn span.material-symbols-outlined {
+    font-size: 2rem;
+  }
+}
+
+
+#profDetail img {
+  width: 9.6rem;
+  height: 9.6rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+.card-user {
+margin-top: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  padding: 6rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  max-width: 50rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+@media (max-width: 767px) {
+.card-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  max-width: 100rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+}
+
+.program-title strong{
+font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  text-align: start;
+}
+
+.program{
+font-weight: 400;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.table-title{
+    margin-top: 3rem;
+}
+
+.logout-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem;
+  background: #e74c3c; /* rojo intenso */
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-top: 4rem;
+}
+
+.logout-btn:hover {
+  background: #c0392b; /* rojo más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* === Table Detalles === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+th {
+  background: #dadee2;
+  font-weight: 600;
+}
+/* === Tabla Detalle Sesiones Mejorada === */
+#sessionTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff;
+}
+
+#sessionTable thead {
+  background: linear-gradient(90deg, #2563eb, #244dd7);
+  color: #1b1b1b;
+}
+
+#sessionTable th {
+  padding: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+#sessionTable tbody tr {
+  transition: background 0.2s, transform 0.2s;
+  cursor: default;
+}
+
+#sessionTable tbody tr:nth-child(even) {
+  background: #f4f6f8;
+}
+
+
+#sessionTable td {
+  padding: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+#sessionTable td:first-child {
+  font-weight: 600;
+}
+
+/* === Utilities === */
+.hidden {
+  display: none;
+}
+
+/* === Responsive === */
+@media (min-width: 60rem) {
+  .prof-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 75rem) {
+  .prof-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.input-icon {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.input-icon input {
+  width: 100%;
+  padding-left: 3rem; /* separamos más el placeholder/texto */
+  box-sizing: border-box;
+}
+
+.input-icon .material-symbols-outlined {
+  position: absolute;
+  left: 0.8rem;  /* se mantiene dentro */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 1.4rem;
+  pointer-events: none; /* no bloquea clics */
+}
+
